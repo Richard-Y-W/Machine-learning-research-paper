@@ -1,0 +1,14 @@
+{
+  "seed": 96,
+  "capacity": "spare",
+  "representation": "transformed",
+  "task": "action_gain",
+  "coefficients": [
+    0.704832907540689,
+    0.5802652127139689,
+    0.33133454830163855,
+    0.9779091819117331
+  ],
+  "true_c": 0.5802652127139689,
+  "source_training_steps": 6000
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "seed": 22,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00012538820737972856,
+    "base_rmse": 0.011258856592212109
+  }
+]

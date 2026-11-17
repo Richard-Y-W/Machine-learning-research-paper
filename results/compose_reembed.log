@@ -1,0 +1,26 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  67%|██████▋   | 207/310 [00:00<00:00, 1743.27it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2145.99it/s]
+[reembed] fitting R on 5400 word tokens (letters and ordinal items excluded); 600 held out
+[reembed] native letters: next 0.90 +2 0.01
+[reembed] native calibration: next 0.97 +2 0.00
+[reembed] lambda 0.001: held-out R^2 0.55
+[reembed]   letters: re-embedded TRUE next token fed to A -> +2 0.91
+[reembed]   letters: A o R o A replacing A's output (+2 / next): g1.0:0.16/0.75 g2.0:0.29/0.65 g4.0:0.29/0.53
+[reembed]   letters: A o R o A added to A's output   (+2 / next): g1.0:0.00/0.95 g2.0:0.07/0.90 g4.0:0.20/0.62
+[reembed]   calibration: re-embedded TRUE next token fed to A -> +2 0.90
+[reembed]   calibration: A o R o A replacing A's output (+2 / next): g1.0:0.31/0.46 g2.0:0.46/0.22 g4.0:0.34/0.09
+[reembed]   calibration: A o R o A added to A's output   (+2 / next): g1.0:0.01/0.95 g2.0:0.22/0.64 g4.0:0.30/0.18
+[reembed] lambda 0.01: held-out R^2 0.55
+[reembed]   letters: re-embedded TRUE next token fed to A -> +2 0.91
+[reembed]   letters: A o R o A replacing A's output (+2 / next): g1.0:0.15/0.78 g2.0:0.28/0.68 g4.0:0.29/0.54
+[reembed]   letters: A o R o A added to A's output   (+2 / next): g1.0:0.00/0.95 g2.0:0.07/0.90 g4.0:0.23/0.62
+[reembed]   calibration: re-embedded TRUE next token fed to A -> +2 0.90
+[reembed]   calibration: A o R o A replacing A's output (+2 / next): g1.0:0.30/0.47 g2.0:0.46/0.24 g4.0:0.37/0.08
+[reembed]   calibration: A o R o A added to A's output   (+2 / next): g1.0:0.01/0.96 g2.0:0.19/0.69 g4.0:0.31/0.20
+[reembed] lambda 0.1: held-out R^2 0.57
+[reembed]   letters: re-embedded TRUE next token fed to A -> +2 0.88
+[reembed]   letters: A o R o A replacing A's output (+2 / next): g1.0:0.11/0.76 g2.0:0.26/0.69 g4.0:0.30/0.57
+[reembed]   letters: A o R o A added to A's output   (+2 / next): g1.0:0.00/0.95 g2.0:0.05/0.93 g4.0:0.21/0.69
+[reembed]   calibration: re-embedded TRUE next token fed to A -> +2 0.88
+[reembed]   calibration: A o R o A replacing A's output (+2 / next): g1.0:0.28/0.48 g2.0:0.44/0.26 g4.0:0.42/0.11
+[reembed]   calibration: A o R o A added to A's output   (+2 / next): g1.0:0.01/0.97 g2.0:0.16/0.75 g4.0:0.35/0.24
+[reembed] DONE

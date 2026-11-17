@@ -1,0 +1,23 @@
+{
+  "config": {
+    "source": "results/deployment-heldout",
+    "output": "results/dense-heldout",
+    "seed_start": 20,
+    "seeds": 12,
+    "steps": [
+      600,
+      2400
+    ]
+  },
+  "status": "complete",
+  "started_utc": "2026-11-11T01:03:41.810653+00:00",
+  "git_commit": "64bee215e9f5807a98ac35d6c0bc8b92d99bc394",
+  "source_sha256": "8890591b8e8c1453d97d5db2260a0cba395fa0ddff0a6564f7e907709715479a",
+  "torch": "2.9.0+cpu",
+  "calibration_queries": 128,
+  "synthetic_labels": 4096,
+  "note": "Synthetic labels use fitted coefficients only; original physical labels withheld.",
+  "rows": 96,
+  "elapsed_seconds": 186.860876099905,
+  "completed_utc": "2026-11-11T01:06:48.705279+00:00"
+}

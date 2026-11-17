@@ -1,0 +1,7 @@
+# Versions used for the archived CPU measurements; see results/main/audit.json.
+# The installed Torch build was 2.9.0+cpu. Choose the CPU wheel for your platform.
+numpy==2.3.4
+scipy==1.16.3
+torch==2.9.0
+matplotlib==3.10.7
+pytest==8.4.2

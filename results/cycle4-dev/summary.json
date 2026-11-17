@@ -1,0 +1,2681 @@
+{
+  "rows": 288,
+  "source_models": 8,
+  "nonfinite_rollout_rows": 0,
+  "source_hash": "passed",
+  "nonfinite_metrics": {
+    "id_rmse": 0,
+    "ood_rmse": 0,
+    "rollout_rmse": 0
+  },
+  "contrasts": {
+    "rbf_residual_minus_warm_full_id_rmse": {
+      "mean": -0.012808884135720483,
+      "low": -0.025235283579791445,
+      "high": -0.0003824846916495213,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "rbf_residual_minus_warm_full_ood_rmse": {
+      "mean": -0.017897758195256862,
+      "low": -0.05256942380675652,
+      "high": 0.016773907416242795,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "rbf_residual_minus_warm_full_rollout_rmse": {
+      "mean": -0.002516730511671753,
+      "low": -0.008340825874902858,
+      "high": 0.003307364851559352,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "rbf_residual_minus_learned_head_id_rmse": {
+      "mean": -0.07113738825233933,
+      "low": -0.08435511238557365,
+      "high": -0.057919664119105,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "rbf_residual_minus_learned_head_ood_rmse": {
+      "mean": -0.07724349185024035,
+      "low": -0.10476932761414245,
+      "high": -0.04971765608633823,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "rbf_residual_minus_learned_head_rollout_rmse": {
+      "mean": -0.03353279889811121,
+      "low": -0.03999429079078595,
+      "high": -0.027071307005436467,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "rbf_residual_minus_fresh_full_id_rmse": {
+      "mean": -0.012618287887923933,
+      "low": -0.01611316658556342,
+      "high": -0.009123409190284447,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "rbf_residual_minus_fresh_full_ood_rmse": {
+      "mean": -0.07728944653009362,
+      "low": -0.11000164769401136,
+      "high": -0.044577245366175876,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "rbf_residual_minus_fresh_full_rollout_rmse": {
+      "mean": -0.012727214426050473,
+      "low": -0.023327630083819224,
+      "high": -0.002126798768281722,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "ard_rbf_residual_minus_warm_full_id_rmse": {
+      "mean": -0.050161449024969135,
+      "low": -0.056391792103390806,
+      "high": -0.04393110594654747,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "ard_rbf_residual_minus_warm_full_ood_rmse": {
+      "mean": -0.05804948392454931,
+      "low": -0.1083956858294958,
+      "high": -0.007703282019602825,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "ard_rbf_residual_minus_warm_full_rollout_rmse": {
+      "mean": -0.020711169911625228,
+      "low": -0.02894228654994229,
+      "high": -0.012480053273308166,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "ard_rbf_residual_minus_learned_head_id_rmse": {
+      "mean": -0.10848995314158798,
+      "low": -0.11551162090917302,
+      "high": -0.10146828537400293,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "ard_rbf_residual_minus_learned_head_ood_rmse": {
+      "mean": -0.1173952175795328,
+      "low": -0.16059558963688175,
+      "high": -0.07419484552218385,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "ard_rbf_residual_minus_learned_head_rollout_rmse": {
+      "mean": -0.051727238298064686,
+      "low": -0.05578170891565347,
+      "high": -0.0476727676804759,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "ard_rbf_residual_minus_fresh_full_id_rmse": {
+      "mean": -0.049970852777172586,
+      "low": -0.052672030445182386,
+      "high": -0.04726967510916278,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "ard_rbf_residual_minus_fresh_full_ood_rmse": {
+      "mean": -0.11744117225938608,
+      "low": -0.16582790971675065,
+      "high": -0.0690544348020215,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "ard_rbf_residual_minus_fresh_full_rollout_rmse": {
+      "mean": -0.030921653826003946,
+      "low": -0.03911504820868674,
+      "high": -0.022728259443321155,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "neural_residual_minus_warm_full_id_rmse": {
+      "mean": -0.027663805109814865,
+      "low": -0.04248291966663248,
+      "high": -0.012844690552997253,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "neural_residual_minus_warm_full_ood_rmse": {
+      "mean": -0.01826725501033885,
+      "low": -0.03594365268278308,
+      "high": -0.0005908573378946222,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "neural_residual_minus_warm_full_rollout_rmse": {
+      "mean": -0.009651419601331975,
+      "low": -0.026759704808680465,
+      "high": 0.007456865606016513,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "neural_residual_minus_learned_head_id_rmse": {
+      "mean": -0.08599230922643372,
+      "low": -0.1016027484724147,
+      "high": -0.07038186998045273,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "neural_residual_minus_learned_head_ood_rmse": {
+      "mean": -0.07761298866532233,
+      "low": -0.08814355649016903,
+      "high": -0.06708242084047564,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "neural_residual_minus_learned_head_rollout_rmse": {
+      "mean": -0.040667487987771436,
+      "low": -0.04549018593921408,
+      "high": -0.035844790036328796,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "neural_residual_minus_fresh_full_id_rmse": {
+      "mean": -0.02747320886201832,
+      "low": -0.03336080267240446,
+      "high": -0.02158561505163218,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "neural_residual_minus_fresh_full_ood_rmse": {
+      "mean": -0.0776589433451756,
+      "low": -0.09337587657003792,
+      "high": -0.06194201012031329,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "neural_residual_minus_fresh_full_rollout_rmse": {
+      "mean": -0.019861903515710697,
+      "low": -0.02054567770205933,
+      "high": -0.01917812932936206,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "linear_residual_minus_warm_full_id_rmse": {
+      "mean": 0.09593297529592412,
+      "low": 0.09061929575889724,
+      "high": 0.10124665483295102,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "linear_residual_minus_warm_full_ood_rmse": {
+      "mean": -0.030277820563135743,
+      "low": -0.06249736368823263,
+      "high": 0.0019417225619611442,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "linear_residual_minus_warm_full_rollout_rmse": {
+      "mean": 0.057038693565035006,
+      "low": 0.03969396516479789,
+      "high": 0.07438342196527213,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "linear_residual_minus_learned_head_id_rmse": {
+      "mean": 0.03760447117930529,
+      "low": 0.031499466953115035,
+      "high": 0.043709475405495544,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "linear_residual_minus_learned_head_ood_rmse": {
+      "mean": -0.08962355421811923,
+      "low": -0.11469726749561857,
+      "high": -0.06454984094061988,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "linear_residual_minus_learned_head_rollout_rmse": {
+      "mean": 0.02602262517859555,
+      "low": 0.020963484034264276,
+      "high": 0.03108176632292682,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "linear_residual_minus_fresh_full_id_rmse": {
+      "mean": 0.0961235715437207,
+      "low": 0.0925057303343161,
+      "high": 0.09974141275312529,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "linear_residual_minus_fresh_full_ood_rmse": {
+      "mean": -0.0896695088979725,
+      "low": -0.11992958757548747,
+      "high": -0.059409430220457526,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    },
+    "linear_residual_minus_fresh_full_rollout_rmse": {
+      "mean": 0.04682820965065629,
+      "low": 0.04590799227141902,
+      "high": 0.047748427029893556,
+      "n_seeds": 2,
+      "nonfinite_seed_values": 0
+    }
+  },
+  "strata": [
+    {
+      "shift": "parameter",
+      "budget": 16,
+      "method": "source",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.46991990321485205,
+          "low": 0.3373093178893404,
+          "high": 0.6025304885403637,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.9083620799360408,
+          "low": 0.6860084228488036,
+          "high": 1.1307157370232779,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.14777061677321712,
+          "low": 0.1329721632506988,
+          "high": 0.16256907029573547,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.5396928392712648,
+          "low": 0.33330879987510514,
+          "high": 0.7460768786674243,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 5.473750934470445e-05,
+          "low": 5.385000258684158e-05,
+          "high": 5.5625016102567315e-05,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 16,
+      "method": "warm_full",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.05152425549396947,
+          "low": 0.038632988173719,
+          "high": 0.06441552281421993,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.19711556808428832,
+          "low": 0.19629210239198763,
+          "high": 0.197939033776589,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.016169768206082985,
+          "low": 0.014242663820825088,
+          "high": 0.01809687259134088,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.0010863563078200391,
+          "low": 0.00027382447646318497,
+          "high": 0.0018988881391768932,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.14216628750727978,
+          "low": 0.0975569500005804,
+          "high": 0.18677562501397915,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 1552.5,
+          "low": 1469.0,
+          "high": 1636.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 16,
+      "method": "fresh_full",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.18573729963521463,
+          "low": 0.14657481116513518,
+          "high": 0.22489978810529407,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.6332622736399769,
+          "low": 0.6243388967051597,
+          "high": 0.6421856505747939,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.06127561302262978,
+          "low": 0.04865565402668778,
+          "high": 0.07389557201857179,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.010242377502650649,
+          "low": 0.0022186630059379607,
+          "high": 0.018266091999363337,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.24258099996950477,
+          "low": 0.24257627496263012,
+          "high": 0.24258572497637942,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 2177.0,
+          "low": 1946.0,
+          "high": 2408.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 16,
+      "method": "learned_head",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.10483402652985455,
+          "low": 0.08860294490553894,
+          "high": 0.12106510815417015,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.3180187830173122,
+          "low": 0.29924406894478894,
+          "high": 0.3367934970898354,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.031685902383705555,
+          "low": 0.02440619271216871,
+          "high": 0.038965612055242405,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.018001122995068116,
+          "low": 0.006166437047986616,
+          "high": 0.029835808942149614,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0020187125192023814,
+          "low": 0.0019090250134468079,
+          "high": 0.002128400024957955,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 16,
+      "method": "linear_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.014418892892519557,
+          "low": 0.013183546751363172,
+          "high": 0.015654239033675944,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.128769443787906,
+          "low": 0.10307310443718479,
+          "high": 0.15446578313862724,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.006093435826002249,
+          "low": 0.004041038852499416,
+          "high": 0.008145832799505082,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.013871399067835914,
+          "low": 0.013529991776570828,
+          "high": 0.014212806359100999,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0011230249947402626,
+          "low": 0.001112400001147762,
+          "high": 0.0011336499883327633,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 4.0,
+          "low": 4.0,
+          "high": 4.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 16,
+      "method": "cubic_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.14189192476382087,
+          "low": 0.09242803592614829,
+          "high": 0.19135581360149345,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.51419745445279,
+          "low": 0.4742179827754072,
+          "high": 0.5541769261301728,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.04917456349918403,
+          "low": 0.048622666396798464,
+          "high": 0.04972646060156959,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.046384485578951334,
+          "low": 0.0073173547931515235,
+          "high": 0.08545161636475114,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0013205750001361594,
+          "low": 0.0012660250067710876,
+          "high": 0.001375124993501231,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 20.0,
+          "low": 20.0,
+          "high": 20.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 16,
+      "method": "rbf_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.04497392674095421,
+          "low": 0.024210885406656238,
+          "high": 0.06573696807525219,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.24944085883363457,
+          "low": 0.23377645502757116,
+          "high": 0.26510526263969797,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.012691882749353187,
+          "low": 0.010960616838565845,
+          "high": 0.01442314866014053,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.006536849642269497,
+          "low": 0.0038133925986590603,
+          "high": 0.009260306685879934,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.003543349972460419,
+          "low": 0.0033912499784491956,
+          "high": 0.0036954499664716423,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 68.0,
+          "low": 68.0,
+          "high": 68.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 16,
+      "method": "ard_rbf_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.047003880865446615,
+          "low": 0.028270793655641037,
+          "high": 0.06573696807525219,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.2581043382983077,
+          "low": 0.2511034139569175,
+          "high": 0.26510526263969797,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.01323364428988726,
+          "low": 0.010960616838565845,
+          "high": 0.015506671741208674,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.00613525656084639,
+          "low": 0.0038133925986590603,
+          "high": 0.008457120523033719,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.040626674992381595,
+          "low": 0.03678785002557561,
+          "high": 0.04446549995918758,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 68.0,
+          "low": 68.0,
+          "high": 68.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 16,
+      "method": "neural_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.06931695986072114,
+          "low": 0.05079494781639303,
+          "high": 0.08783897190504925,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.23720307645272606,
+          "low": 0.2328411766792165,
+          "high": 0.24156497622623563,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.02832409955086258,
+          "low": 0.01614441296167044,
+          "high": 0.04050378614005472,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.0006280381461264683,
+          "low": 0.00043244531623997913,
+          "high": 0.0008236309760129574,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.2108852124947589,
+          "low": 0.1915603999805171,
+          "high": 0.23021002500900067,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 1217.0,
+          "low": 1217.0,
+          "high": 1217.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 2117.5,
+          "low": 2072.0,
+          "high": 2163.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 64,
+      "method": "source",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.46991990321485205,
+          "low": 0.3373093178893404,
+          "high": 0.6025304885403637,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.9083620799360408,
+          "low": 0.6860084228488036,
+          "high": 1.1307157370232779,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.14777061677321712,
+          "low": 0.1329721632506988,
+          "high": 0.16256907029573547,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.6182628823567515,
+          "low": 0.4058626750327627,
+          "high": 0.8306630896807403,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 3.461251617409289e-05,
+          "low": 3.1125033274292946e-05,
+          "high": 3.809999907389283e-05,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 64,
+      "method": "warm_full",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.0246999324093825,
+          "low": 0.02441638925879455,
+          "high": 0.02498347555997045,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.1438642568780529,
+          "low": 0.11367881252876412,
+          "high": 0.1740497012273417,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.009501602917801121,
+          "low": 0.007639559815589935,
+          "high": 0.01136364602001231,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.00815834977709404,
+          "low": 0.007724840607275235,
+          "high": 0.008591858946912848,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 1.0188472750160145,
+          "low": 0.9406176750489976,
+          "high": 1.0970768749830313,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 30298.0,
+          "low": 27360.0,
+          "high": 33236.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 64,
+      "method": "fresh_full",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.0625035161805118,
+          "low": 0.05204617206778009,
+          "high": 0.0729608602932435,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.22422132323746083,
+          "low": 0.20801061328440562,
+          "high": 0.24043203319051604,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.020763828201660565,
+          "low": 0.01483364220918944,
+          "high": 0.02669401419413169,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.0037709385628137055,
+          "low": 0.0019152742381394782,
+          "high": 0.005626602887487933,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 1.3778801875014324,
+          "low": 1.0082818750233855,
+          "high": 1.7474784999794792,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 45820.0,
+          "low": 41372.0,
+          "high": 50268.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 64,
+      "method": "learned_head",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.04272043110112955,
+          "low": 0.037975091684204855,
+          "high": 0.04746577051805426,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.16440107067104712,
+          "low": 0.1643661151063262,
+          "high": 0.16443602623576803,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.01605456364234336,
+          "low": 0.014399118112187024,
+          "high": 0.017710009172499694,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.027737298012813598,
+          "low": 0.025792369193460316,
+          "high": 0.029682226832166883,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.003477950012893416,
+          "low": 0.0024511500087101012,
+          "high": 0.004504750017076731,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 64,
+      "method": "linear_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.01300212552861869,
+          "low": 0.01196098067329885,
+          "high": 0.014043270383938532,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.12512355906218825,
+          "low": 0.09893916580494774,
+          "high": 0.15130795231942878,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.005307672631421995,
+          "low": 0.003224085747420492,
+          "high": 0.007391259515423498,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.01485579004171425,
+          "low": 0.014285566033464162,
+          "high": 0.01542601404996434,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.001622325013158843,
+          "low": 0.0015897750272415578,
+          "high": 0.001654874999076128,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 4.0,
+          "low": 4.0,
+          "high": 4.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 64,
+      "method": "cubic_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.015162961896569273,
+          "low": 0.013578565729294848,
+          "high": 0.016747358063843698,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.12407044914186918,
+          "low": 0.09840929875465099,
+          "high": 0.14973159952908738,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.005965193381449126,
+          "low": 0.0036091620249458544,
+          "high": 0.0083212247379524,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.012059441798454182,
+          "low": 0.011264317633008272,
+          "high": 0.012854565963900092,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0021289249561959878,
+          "low": 0.0018839999684132636,
+          "high": 0.002373849943978712,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 20.0,
+          "low": 20.0,
+          "high": 20.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 64,
+      "method": "rbf_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.016179865559059717,
+          "low": 0.015328521293409097,
+          "high": 0.017031209824710337,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.13882606142817774,
+          "low": 0.11760222560685868,
+          "high": 0.1600498972494968,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.006160704245526371,
+          "low": 0.004461898112965344,
+          "high": 0.007859510378087398,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.011913470110421688,
+          "low": 0.011555004713668613,
+          "high": 0.012271935507174765,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0060578374832402915,
+          "low": 0.005901799973798916,
+          "high": 0.006213874992681667,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 260.0,
+          "low": 260.0,
+          "high": 260.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 64,
+      "method": "ard_rbf_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.01675684175492457,
+          "low": 0.016482473685138804,
+          "high": 0.017031209824710337,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.14242598280034685,
+          "low": 0.11760222560685868,
+          "high": 0.16724973999383502,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.006175422358255026,
+          "low": 0.004461898112965344,
+          "high": 0.007888946603544708,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.011444827628725104,
+          "low": 0.011334650543781598,
+          "high": 0.011555004713668613,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.09154652500001248,
+          "low": 0.085569074988598,
+          "high": 0.09752397501142696,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 260.0,
+          "low": 260.0,
+          "high": 260.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "parameter",
+      "budget": 64,
+      "method": "neural_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.02728402612314621,
+          "low": 0.026315813264182947,
+          "high": 0.028252238982109473,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.1388017125897671,
+          "low": 0.11880710052681165,
+          "high": 0.1587963246527225,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.010799085058668226,
+          "low": 0.009863581588918525,
+          "high": 0.011734588528417928,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.0029314095638780786,
+          "low": 0.0012822706569004015,
+          "high": 0.004580548470855756,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 1.8278549499955261,
+          "low": 1.471939974988345,
+          "high": 2.183769925002707,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 1217.0,
+          "low": 1217.0,
+          "high": 1217.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 48196.0,
+          "low": 42740.0,
+          "high": 53652.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 16,
+      "method": "source",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.3025678643207984,
+          "low": 0.29789599530354205,
+          "high": 0.30723973333805477,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.36364581285488584,
+          "low": 0.35350824821357657,
+          "high": 0.37378337749619517,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.1396761308251481,
+          "low": 0.11259085475732848,
+          "high": 0.1667614068929677,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.3303168224991834,
+          "low": 0.32468448873608047,
+          "high": 0.3359491562622864,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 4.767504287883639e-05,
+          "low": 4.685003659687936e-05,
+          "high": 4.8500049160793424e-05,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 16,
+      "method": "warm_full",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.2048655194315977,
+          "low": 0.19086349394243549,
+          "high": 0.21886754492075994,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.38006469401301163,
+          "low": 0.3715897984754649,
+          "high": 0.38853958955055834,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.10410699877857471,
+          "low": 0.09561908182394281,
+          "high": 0.11259491573320661,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.001600431575932513,
+          "low": 5.444416688002365e-06,
+          "high": 0.0031954187351770236,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.24863038750481792,
+          "low": 0.22131199997966178,
+          "high": 0.27594877502997406,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 2582.5,
+          "low": 2205.0,
+          "high": 2960.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 16,
+      "method": "fresh_full",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.27087049425592746,
+          "low": 0.22370935693354999,
+          "high": 0.3180316315783049,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.5798584279182668,
+          "low": 0.5770269785813346,
+          "high": 0.5826898772551992,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.10653978904068609,
+          "low": 0.08671014015776132,
+          "high": 0.12636943792361086,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.007402463646146383,
+          "low": 0.004419232894932714,
+          "high": 0.01038569439736005,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.2675337624968961,
+          "low": 0.25754399999277666,
+          "high": 0.2775235250010155,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 2774.0,
+          "low": 2730.0,
+          "high": 2818.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 16,
+      "method": "learned_head",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.33272669041275615,
+          "low": 0.1805889256316427,
+          "high": 0.48486445519386956,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.6344056437740611,
+          "low": 0.3656287659633146,
+          "high": 0.9031825215848075,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.09609816012460916,
+          "low": 0.09355872835113618,
+          "high": 0.09863759189808213,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.0795280130458876,
+          "low": 0.06242565289090013,
+          "high": 0.09663037320087506,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0019594374898588285,
+          "low": 0.0019180499657522887,
+          "high": 0.0020008250139653683,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 16,
+      "method": "linear_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.1801907638293374,
+          "low": 0.17910546356303786,
+          "high": 0.18127606409563696,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.23656839426047985,
+          "low": 0.22698982388608052,
+          "high": 0.24614696463487917,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.0895990326482655,
+          "low": 0.07646600324390959,
+          "high": 0.10273206205262142,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.14379247073013496,
+          "low": 0.12926601209299055,
+          "high": 0.1583189293672794,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0011430125014157966,
+          "low": 0.0010222999844700098,
+          "high": 0.0012637250183615834,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 4.0,
+          "low": 4.0,
+          "high": 4.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 16,
+      "method": "cubic_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.23341566381365342,
+          "low": 0.20637718084064413,
+          "high": 0.2604541467866627,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.8419676690416842,
+          "low": 0.4653723402843145,
+          "high": 1.218562997799054,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.09769262589535575,
+          "low": 0.0758653072277796,
+          "high": 0.11951994456293191,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.05588167532528875,
+          "low": 0.02162390171333674,
+          "high": 0.09013944893724077,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.001475937504437752,
+          "low": 0.0013131500163581222,
+          "high": 0.001638724992517382,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 20.0,
+          "low": 20.0,
+          "high": 20.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 16,
+      "method": "rbf_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.18902831750014437,
+          "low": 0.18479919841016768,
+          "high": 0.1932574365901211,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.28425930693496815,
+          "low": 0.27774675965913054,
+          "high": 0.2907718542108057,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.08928969475790735,
+          "low": 0.07539968023804926,
+          "high": 0.10317970927776544,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.053812144336471315,
+          "low": 7.121693880577177e-05,
+          "high": 0.10755307173413686,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.003308612504042685,
+          "low": 0.003258775017457083,
+          "high": 0.003358449990628287,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 68.0,
+          "low": 68.0,
+          "high": 68.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 16,
+      "method": "ard_rbf_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.11675835840419327,
+          "low": 0.09892582158525054,
+          "high": 0.134590895223136,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.2671737883108698,
+          "low": 0.22522228252391527,
+          "high": 0.3091252940978243,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.054342026974840724,
+          "low": 0.026636367884276473,
+          "high": 0.08204768606540498,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.0032198903530260867,
+          "low": 0.001279677863405878,
+          "high": 0.005160102842646295,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.045489750016713515,
+          "low": 0.04439082500175573,
+          "high": 0.0465886750316713,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 68.0,
+          "low": 68.0,
+          "high": 68.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 16,
+      "method": "neural_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.19425683474579916,
+          "low": 0.1677895067861525,
+          "high": 0.22072416270544581,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.33933745858131376,
+          "low": 0.32727881508142176,
+          "high": 0.35139610208120575,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.08817117379244901,
+          "low": 0.08107254433260894,
+          "high": 0.09526980325228909,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.010092834141464141,
+          "low": 2.3652070558423867e-06,
+          "high": 0.02018330307587244,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.23624989998643287,
+          "low": 0.19276289999834262,
+          "high": 0.2797368999745231,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 1217.0,
+          "low": 1217.0,
+          "high": 1217.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 2373.0,
+          "low": 2115.0,
+          "high": 2631.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 64,
+      "method": "source",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.3025678643207984,
+          "low": 0.29789599530354205,
+          "high": 0.30723973333805477,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.36364581285488584,
+          "low": 0.35350824821357657,
+          "high": 0.37378337749619517,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.1396761308251481,
+          "low": 0.11259085475732848,
+          "high": 0.1667614068929677,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.31359606393748696,
+          "low": 0.30778187574238713,
+          "high": 0.3194102521325868,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 3.2374984584748745e-05,
+          "low": 2.9449991416186094e-05,
+          "high": 3.5299977753311396e-05,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 64,
+      "method": "warm_full",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.08433124083744956,
+          "low": 0.07901624463476188,
+          "high": 0.08964623704013724,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.254810415966366,
+          "low": 0.2069220197699093,
+          "high": 0.30269881216282274,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.032810891951446784,
+          "low": 0.028583628344199457,
+          "high": 0.03703815555869411,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.016975947185077857,
+          "low": 0.009543461496114914,
+          "high": 0.024408432874040802,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.9623676624905784,
+          "low": 0.8599342749803327,
+          "high": 1.064801050000824,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 36950.0,
+          "low": 36132.0,
+          "high": 37768.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 64,
+      "method": "fresh_full",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.08414064458965301,
+          "low": 0.08052412004590923,
+          "high": 0.0877571691333968,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.31420210430120277,
+          "low": 0.26827317255232797,
+          "high": 0.36013103605007757,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.0430213758658255,
+          "low": 0.030824128452072972,
+          "high": 0.055218623279578036,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.01200931605680422,
+          "low": 0.0010067844541064015,
+          "high": 0.023011847659502038,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.9840204249776434,
+          "low": 0.7079021749668755,
+          "high": 1.2601386749884114,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 40828.0,
+          "low": 27760.0,
+          "high": 53896.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 64,
+      "method": "learned_head",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.1426597449540684,
+          "low": 0.13655342406221738,
+          "high": 0.14876606584591948,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.3141561496213495,
+          "low": 0.2734135832724903,
+          "high": 0.3548987159702087,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.06382696033788623,
+          "low": 0.05576863668922772,
+          "high": 0.07188528398654476,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.09123420174228136,
+          "low": 0.08500493950997709,
+          "high": 0.09746346397458563,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.002196137487771921,
+          "low": 0.002167750004446134,
+          "high": 0.0022245249710977077,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 64,
+      "method": "linear_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.18026421613337368,
+          "low": 0.1802628994677129,
+          "high": 0.18026553279903448,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.22453259540323028,
+          "low": 0.20886374233187044,
+          "high": 0.24020144847459013,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.08984958551648178,
+          "low": 0.07673212072349199,
+          "high": 0.10296705030947159,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.1669942647740808,
+          "low": 0.16613405873692078,
+          "high": 0.16785447081124083,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0016172749892575666,
+          "low": 0.0016166249697562307,
+          "high": 0.0016179250087589025,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 4.0,
+          "low": 4.0,
+          "high": 4.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 64,
+      "method": "cubic_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.08119428483577487,
+          "low": 0.07940230750436161,
+          "high": 0.08298626216718812,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.6353606917261567,
+          "low": 0.6112818377971582,
+          "high": 0.6594395456551554,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.03486203253123095,
+          "low": 0.02780185361750295,
+          "high": 0.04192221144495895,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.06198599473141865,
+          "low": 0.05836480509489078,
+          "high": 0.06560718436794652,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0017840750078903511,
+          "low": 0.0017026250425260514,
+          "high": 0.0018655249732546508,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 20.0,
+          "low": 20.0,
+          "high": 20.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 64,
+      "method": "rbf_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.07152235670172907,
+          "low": 0.0644109534603458,
+          "high": 0.07863375994311236,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.23691265777110915,
+          "low": 0.22369592718615205,
+          "high": 0.25012938835606624,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.03029416143977503,
+          "low": 0.02869732968379125,
+          "high": 0.031890993195758804,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.006337958390888373,
+          "low": 0.005967224435713063,
+          "high": 0.0067086923460636825,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.005768275004811585,
+          "low": 0.005705650022719055,
+          "high": 0.0058308999869041145,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 260.0,
+          "low": 260.0,
+          "high": 260.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 64,
+      "method": "ard_rbf_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.03416979181248042,
+          "low": 0.03325444493674644,
+          "high": 0.03508513868821441,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.19676093204181672,
+          "low": 0.19430312633332694,
+          "high": 0.19921873775030646,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.012099722039821554,
+          "low": 0.008095869008751817,
+          "high": 0.01610357507089129,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.005787041364302027,
+          "low": 0.004281791322283634,
+          "high": 0.007292291406320419,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 0.0858454499830259,
+          "low": 0.07933332500397228,
+          "high": 0.09235757496207952,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 260.0,
+          "low": 260.0,
+          "high": 260.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "shift": "nonlinear",
+      "budget": 64,
+      "method": "neural_residual",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.05666743572763469,
+          "low": 0.047163317373504765,
+          "high": 0.06617155408176462,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.23654316095602718,
+          "low": 0.20633116243201466,
+          "high": 0.2667551594800397,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.023159472350114806,
+          "low": 0.010278450750013641,
+          "high": 0.03604049395021597,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "calibration_noisy_rmse": {
+          "mean": 0.003195493700834348,
+          "low": 0.0011871034898532312,
+          "high": 0.005203883911815465,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "adaptation_seconds": {
+          "mean": 1.320968037500279,
+          "low": 0.8618982750049327,
+          "high": 1.7800377999956254,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "extra_scalars": {
+          "mean": 1217.0,
+          "low": 1217.0,
+          "high": 1217.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "gradient_points": {
+          "mean": 40686.0,
+          "low": 28340.0,
+          "high": 53032.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    }
+  ],
+  "family_strata": [
+    {
+      "family": "duffing",
+      "method": "source",
+      "id_rmse": {
+        "mean": 0.3028296002172329,
+        "low": 0.2990077370765862,
+        "high": 0.3066514633578796,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "duffing",
+      "method": "warm_full",
+      "id_rmse": {
+        "mean": 0.09117267544732761,
+        "low": 0.0779032079309486,
+        "high": 0.10444214296370663,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "duffing",
+      "method": "fresh_full",
+      "id_rmse": {
+        "mean": 0.08880804845604917,
+        "low": 0.07445936898536605,
+        "high": 0.1031567279267323,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "duffing",
+      "method": "learned_head",
+      "id_rmse": {
+        "mean": 0.14416784034938596,
+        "low": 0.12147090501607241,
+        "high": 0.16686477568269953,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "duffing",
+      "method": "linear_residual",
+      "id_rmse": {
+        "mean": 0.18045697883818035,
+        "low": 0.17983300365713042,
+        "high": 0.18108095401923027,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "duffing",
+      "method": "cubic_residual",
+      "id_rmse": {
+        "mean": 0.08136957744941958,
+        "low": 0.07895379148923638,
+        "high": 0.08378536340960278,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "duffing",
+      "method": "rbf_residual",
+      "id_rmse": {
+        "mean": 0.07271880851735886,
+        "low": 0.0661760198946102,
+        "high": 0.07926159714010753,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "duffing",
+      "method": "ard_rbf_residual",
+      "id_rmse": {
+        "mean": 0.03268581751679841,
+        "low": 0.030776261742340758,
+        "high": 0.03459537329125606,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "duffing",
+      "method": "neural_residual",
+      "id_rmse": {
+        "mean": 0.05923969831303383,
+        "low": 0.04911371231718533,
+        "high": 0.06936568430888233,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "pendulum",
+      "method": "source",
+      "id_rmse": {
+        "mean": 0.3019951875219403,
+        "low": 0.2973329034595283,
+        "high": 0.3066574715843523,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "pendulum",
+      "method": "warm_full",
+      "id_rmse": {
+        "mean": 0.09047258601515135,
+        "low": 0.08265888238910468,
+        "high": 0.098286289641198,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "pendulum",
+      "method": "fresh_full",
+      "id_rmse": {
+        "mean": 0.08399112927639657,
+        "low": 0.07453029739471366,
+        "high": 0.09345196115807947,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "pendulum",
+      "method": "learned_head",
+      "id_rmse": {
+        "mean": 0.13573762634066033,
+        "low": 0.13048474388719994,
+        "high": 0.14099050879412076,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "pendulum",
+      "method": "linear_residual",
+      "id_rmse": {
+        "mean": 0.17978009216622748,
+        "low": 0.17975750009875674,
+        "high": 0.1798026842336982,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "pendulum",
+      "method": "cubic_residual",
+      "id_rmse": {
+        "mean": 0.08029906840533699,
+        "low": 0.07695446776422595,
+        "high": 0.08364366904644803,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "pendulum",
+      "method": "rbf_residual",
+      "id_rmse": {
+        "mean": 0.0702492560357038,
+        "low": 0.06097579307171326,
+        "high": 0.07952271899969433,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "pendulum",
+      "method": "ard_rbf_residual",
+      "id_rmse": {
+        "mean": 0.03451797056321454,
+        "low": 0.03341711058562503,
+        "high": 0.03561883054080405,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "pendulum",
+      "method": "neural_residual",
+      "id_rmse": {
+        "mean": 0.051419385723279455,
+        "low": 0.04578615016682893,
+        "high": 0.05705262127972998,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "contact",
+      "method": "source",
+      "id_rmse": {
+        "mean": 0.30287000167938005,
+        "low": 0.29836699701651304,
+        "high": 0.307373006342247,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "contact",
+      "method": "warm_full",
+      "id_rmse": {
+        "mean": 0.0773117774416102,
+        "low": 0.0772390105512908,
+        "high": 0.07738454433192961,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "contact",
+      "method": "fresh_full",
+      "id_rmse": {
+        "mean": 0.07337742503850196,
+        "low": 0.07059665201943692,
+        "high": 0.076158198057567,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "contact",
+      "method": "learned_head",
+      "id_rmse": {
+        "mean": 0.1304311037514845,
+        "low": 0.11319254180997727,
+        "high": 0.14766966569299175,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "contact",
+      "method": "linear_residual",
+      "id_rmse": {
+        "mean": 0.17954402655930893,
+        "low": 0.179086276009815,
+        "high": 0.18000177710880286,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "contact",
+      "method": "cubic_residual",
+      "id_rmse": {
+        "mean": 0.08121743444079171,
+        "low": 0.07974369815395868,
+        "high": 0.08269117072762475,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "contact",
+      "method": "rbf_residual",
+      "id_rmse": {
+        "mean": 0.07048725680412618,
+        "low": 0.0641629719726607,
+        "high": 0.07681154163559165,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "contact",
+      "method": "ard_rbf_residual",
+      "id_rmse": {
+        "mean": 0.03244341694529546,
+        "low": 0.03231775595320144,
+        "high": 0.03256907793738949,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "contact",
+      "method": "neural_residual",
+      "id_rmse": {
+        "mean": 0.060513039540858474,
+        "low": 0.054389522886728284,
+        "high": 0.06663655619498866,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "vanderpol",
+      "method": "source",
+      "id_rmse": {
+        "mean": 0.3025766678646404,
+        "low": 0.29687634366154064,
+        "high": 0.3082769920677401,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "vanderpol",
+      "method": "warm_full",
+      "id_rmse": {
+        "mean": 0.07836792444570909,
+        "low": 0.07811834388706461,
+        "high": 0.07861750500435356,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "vanderpol",
+      "method": "fresh_full",
+      "id_rmse": {
+        "mean": 0.09038597558766434,
+        "low": 0.07802695198262437,
+        "high": 0.10274499919270431,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "vanderpol",
+      "method": "learned_head",
+      "id_rmse": {
+        "mean": 0.1603024093747428,
+        "low": 0.1395393132138658,
+        "high": 0.1810655055356198,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "vanderpol",
+      "method": "linear_residual",
+      "id_rmse": {
+        "mean": 0.18127576696977804,
+        "low": 0.18017671583440667,
+        "high": 0.1823748181051494,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "vanderpol",
+      "method": "cubic_residual",
+      "id_rmse": {
+        "mean": 0.08189105904755116,
+        "low": 0.08182484548507689,
+        "high": 0.08195727261002543,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "vanderpol",
+      "method": "rbf_residual",
+      "id_rmse": {
+        "mean": 0.07263410544972748,
+        "low": 0.06632902890239906,
+        "high": 0.07893918199705591,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "vanderpol",
+      "method": "ard_rbf_residual",
+      "id_rmse": {
+        "mean": 0.03703196222461329,
+        "low": 0.032436217932715186,
+        "high": 0.0416277065165114,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "family": "vanderpol",
+      "method": "neural_residual",
+      "id_rmse": {
+        "mean": 0.05549761933336701,
+        "low": 0.039363884123276516,
+        "high": 0.07163135454345751,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    }
+  ]
+}

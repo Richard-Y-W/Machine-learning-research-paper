@@ -1,0 +1,6 @@
+# Dependencies for the routing-edit experiments. This is not a historical lockfile.
+-r requirements.txt
+transformers>=4.56
+datasets
+psutil
+anthropic

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "source_snapshots": 2,
+  "files": {
+    "fitting.csv": {
+      "rows": 16,
+      "numeric_cells": 144,
+      "max_absolute_difference": 0.0
+    },
+    "identification.csv": {
+      "rows": 36,
+      "numeric_cells": 288,
+      "max_absolute_difference": 0.0
+    },
+    "trace.csv": {
+      "rows": 256,
+      "numeric_cells": 768,
+      "max_absolute_difference": 0.0
+    }
+  },
+  "numeric_cells": 1200
+}

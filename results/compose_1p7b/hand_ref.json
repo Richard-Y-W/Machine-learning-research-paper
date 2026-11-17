@@ -1,0 +1,53 @@
+{
+ "model": "Qwen/Qwen3-1.7B-Base",
+ "ops": [
+  {
+   "op": "attention_program",
+   "layer": 21,
+   "head": 6,
+   "query_role": "final",
+   "key_role": "queried_value",
+   "contrast": "other_positions",
+   "ridge": 1.0,
+   "rank": 64,
+   "rope_band": "low"
+  },
+  {
+   "op": "scale_output",
+   "layer": 21,
+   "head": 6,
+   "gain": 3.0
+  }
+ ],
+ "unedited": {
+  "dev_successor_rate": 0.315,
+  "dev_lookup_rate": 0.405,
+  "word_lookup_accuracy": 0.647,
+  "sequence_continuation": 1.0,
+  "wikitext_loss": 2.833
+ },
+ "hand": {
+  "dev_successor_rate": 0.535,
+  "dev_lookup_rate": 0.095,
+  "word_lookup_accuracy": 0.6,
+  "sequence_continuation": 0.6,
+  "wikitext_loss": 3.173,
+  "attention_on_queried_value": {
+   "L21h6": 0.73
+  }
+ },
+ "confirm_native": {
+  "letters": 0.06,
+  "numwords": 0.06,
+  "days": 0.225,
+  "months": 0.155,
+  "ordinals": 0.253
+ },
+ "confirm_hand": {
+  "letters": 0.36,
+  "numwords": 0.3,
+  "days": 0.338,
+  "months": 0.54,
+  "ordinals": 0.5
+ }
+}

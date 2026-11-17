@@ -1,0 +1,10 @@
+\begin{tabular}{llccccccc}
+\toprule
+Method & Supervision & Let. & Num. & Days & Mon. & Ord. & Word lookup & WikiText \\
+\midrule
+Unedited & -- & .02 & .02 & .10 & .01 & .07 & .64 & +0.0\% \\
+Closed-form, gain 3 & Routing labels & .67 & .41 & .61 & .66 & .71 & .54 & +17.0\% \\
+Gradient Q/K, gain 3 & Routing labels & .78 & .40 & .62 & .64 & .74 & .55 & +13.5\% \\
+Fine-tuning & Composed examples & .87 & 1.00 & 1.00 & .99 & 1.00 & .82 & +0.4\% \\
+\bottomrule
+\end{tabular}

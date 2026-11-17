@@ -1,0 +1,5 @@
+case_id,seed,capacity,representation,task,method,attempted,valid_patch,status,success,edit_nrmse,ood_nrmse,collateral_rmse,changed_parameters,estimated_c,coefficient_abs_error,own_estimate_compilation_nrmse,source_physical_rmse,estimated_cost_usd,stop_reason
+34c7d25aff446737,89,dense,original,action_gain,llm,1,1,valid,1,4.0830674945440306e-16,3.717757451409533e-16,0.0,12,0.4,,,0.01766495804020962,0.028552,end_turn
+34c7d25aff446737,89,dense,original,action_gain,unchanged,1,1,reference,0,1.0,1.0,0.0,0,,,,0.01766495804020962,0.0,
+34c7d25aff446737,89,dense,original,action_gain,analytic_compiler,1,1,reference,1,4.0574980501989997e-16,3.6320030197197665e-16,0.0,12,0.2286913208919216,,,0.01766495804020962,0.0,
+34c7d25aff446737,89,dense,original,action_gain,numerical_head_fit,1,1,reference,0,0.028167824701411357,0.12424651631954896,0.00838874576807664,13,0.2286913208919216,,,0.01766495804020962,0.0,

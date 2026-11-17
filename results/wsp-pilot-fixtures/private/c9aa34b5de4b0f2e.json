@@ -1,0 +1,14 @@
+{
+  "seed": 91,
+  "capacity": "spare",
+  "representation": "transformed",
+  "task": "add_drag",
+  "coefficients": [
+    1.2151956047112087,
+    0.285056992165308,
+    0.2601815782779604,
+    0.9038802889669519
+  ],
+  "true_c": 0.285056992165308,
+  "source_training_steps": 6000
+}

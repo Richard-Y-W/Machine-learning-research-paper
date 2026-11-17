@@ -1,0 +1,82 @@
+{
+ "name": "A",
+ "generations": [
+  {
+   "gen": 1,
+   "parent_fitness": -4.617499351501465,
+   "parent": {
+    "fitness": -4.617499351501465,
+    "acc": 0.029411764815449715,
+    "protected": -0.6802927135140635,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.169419765472412
+   },
+   "accepted": 1,
+   "meta": {
+    "call": "skill_A_g01",
+    "cost_usd": 0.06246685,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Base model copies the input letter for 'ENC: x ->' and predicts a space for 'ENC(x) ='. The latent next-letter signal appears late, around L24, carried by heads L23h14 and L21h6. Latent knowledge is weak, so this generation wires the ENC trigger patterns to the error directions in late layers and amplifies the heads that already promote the next letter. The six edits vary in layer (L20-L27), mechanism (MLP down, attn.o rank-1, head scaling) and template (both formats), with small alphas to protect benchmarks."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Late MLP writes the final error direction when the arrow-format ENC pattern fires.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L27.mlp.down\", \"u\": \"err:final\", \"v\": \"act:mlp:L27:ENC: {x} ->\", \"alpha\": 0.1}]",
+     "error": "InvalidEdit: unknown vector ref 'err:final'"
+    },
+    {
+     "k": 1,
+     "rationale": "Amplify the heads with the largest positive next-letter attribution.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.5}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.5}]",
+     "desc": "scale L23.attn.o col[1792:1920] x1.5; scale L21.attn.o col[768:896] x1.5",
+     "ev": {
+      "fitness": -4.34261417388916,
+      "acc": 0.029411764815449715,
+      "protected": -0.6848291192320175,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1690914630889893
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.2749, acc 0.029, dprot -0.0045, dNLL -0.0003"
+    },
+    {
+     "k": 2,
+     "rationale": "Attention output at L23 writes the L24 error direction on the ENC trigger pattern.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.attn.o\", \"u\": \"err:L24\", \"v\": \"act:attn:L23:ENC: {x} ->\", \"alpha\": 0.2}]",
+     "error": "InvalidEdit: unknown vector ref 'err:L24'"
+    },
+    {
+     "k": 3,
+     "rationale": "Conservative mid-late MLP edit on the parenthesis format, aimed at suppressing the space prediction.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L20.mlp.down\", \"u\": \"err:L21\", \"v\": \"act:mlp:L20:ENC({x}) =\", \"alpha\": 0.05}]",
+     "error": "InvalidEdit: unknown vector ref 'err:L21'"
+    },
+    {
+     "k": 4,
+     "rationale": "L26 MLP steers toward the error direction for the parenthesis format.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L26.mlp.down\", \"u\": \"err:final\", \"v\": \"act:mlp:L26:ENC({x}) =\", \"alpha\": 0.15}]",
+     "error": "InvalidEdit: unknown vector ref 'err:final'"
+    },
+    {
+     "k": 5,
+     "rationale": "Combine mild head boosting with a mild late MLP trigger edit.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.3}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.3}, {\"op\": \"rank1\", \"tensor\": \"L27.mlp.down\", \"u\": \"err:final\", \"v\": \"act:mlp:L27:ENC: {x} ->\", \"alpha\": 0.05}]",
+     "error": "InvalidEdit: unknown vector ref 'err:final'"
+    }
+   ],
+   "n_valid": 1,
+   "seconds": 54.7,
+   "genome_len": 1
+  }
+ ],
+ "base": {
+  "fitness": -4.617499351501465,
+  "acc": 0.029411764815449715,
+  "protected": -0.6802927135140635,
+  "protected_acc": 0.7166666666666667,
+  "nll": 3.169419765472412
+ }
+}

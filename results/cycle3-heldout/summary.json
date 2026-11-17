@@ -1,0 +1,800 @@
+{
+  "source_hash": "passed",
+  "source_models": 24,
+  "threshold": 0.002,
+  "threshold_attainment": {
+    "warm": 24,
+    "fresh": 24
+  },
+  "matched_fit_warm_minus_fresh": {
+    "mean": -0.011658123105059565,
+    "low": -0.015093306727007812,
+    "high": -0.00832891290336726,
+    "n_seeds": 12,
+    "nonfinite_seed_values": 0,
+    "paired_model_conditions": 24
+  },
+  "final_warm_minus_fresh": {
+    "mean": -0.011020099576236939,
+    "low": -0.014015233067905038,
+    "high": -0.008040672757995566,
+    "n_seeds": 12,
+    "nonfinite_seed_values": 0,
+    "paired_model_conditions": 24
+  },
+  "mixed64_minus_narrow256": {
+    "mean": -0.19125855744701062,
+    "low": -0.2461116606200718,
+    "high": -0.13694772306925387,
+    "n_seeds": 12,
+    "nonfinite_seed_values": 0,
+    "paired_model_conditions": 24
+  },
+  "nonfinite_fitting_metrics": {
+    "id_rmse": 0,
+    "teacher_fit_rmse": 0,
+    "calibration_fit_rmse": 0,
+    "ood_rmse": 0
+  },
+  "fitting_summary": [
+    {
+      "event": "fixed",
+      "budget": 120,
+      "method": "fresh",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.010445339812299288,
+          "low": 0.009475889328307046,
+          "high": 0.011447876222157254,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.03582361981203364,
+          "low": 0.031210190787069565,
+          "high": 0.04047921808528735,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.03631058665978069,
+          "low": 0.031735325656122075,
+          "high": 0.04088044567620912,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 120.0,
+          "low": 120.0,
+          "high": 120.0,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 120,
+      "method": "warm",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.006106233041973078,
+          "low": 0.005351299294708797,
+          "high": 0.006928948841998552,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.019960117086931788,
+          "low": 0.017878016984669426,
+          "high": 0.021963691240525576,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.02027288842653502,
+          "low": 0.018250959659258773,
+          "high": 0.022247732966638786,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 120.0,
+          "low": 120.0,
+          "high": 120.0,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 480,
+      "method": "fresh",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0022244226217460416,
+          "low": 0.0019218495998169238,
+          "high": 0.0025355589821127833,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.0320328783294048,
+          "low": 0.027680603637672826,
+          "high": 0.03638665942967197,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.03252955129459525,
+          "low": 0.028199989564495268,
+          "high": 0.036859316471675986,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 480.0,
+          "low": 480.0,
+          "high": 480.0,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 480,
+      "method": "warm",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0022646001452208196,
+          "low": 0.0019456349487874715,
+          "high": 0.002618891498585151,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.020342386308081762,
+          "low": 0.01791926916376333,
+          "high": 0.02273626449887072,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.020631917576935676,
+          "low": 0.018357908250137698,
+          "high": 0.02283414040521079,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 480.0,
+          "low": 480.0,
+          "high": 480.0,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 1920,
+      "method": "fresh",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0003313027684526576,
+          "low": 0.00023304178466587776,
+          "high": 0.00048128219394668307,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.03231550200041127,
+          "low": 0.028148941288223782,
+          "high": 0.03643558219060501,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.03277658518590248,
+          "low": 0.028645468750447142,
+          "high": 0.036868529073389014,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 1698.25,
+          "low": 1608.6229166666667,
+          "high": 1783.6697916666667,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 1920,
+      "method": "warm",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0006740065247271178,
+          "low": 0.0004823095061286829,
+          "high": 0.0008702773704348619,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.021536723280427033,
+          "low": 0.0190731262283987,
+          "high": 0.023926326492547962,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.021756485609665532,
+          "low": 0.019397789221840676,
+          "high": 0.023987081863856334,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 1763.4583333333333,
+          "low": 1607.375,
+          "high": 1882.4583333333333,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "threshold",
+      "budget": null,
+      "method": "fresh",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0019058399688357882,
+          "low": 0.0018811043192741464,
+          "high": 0.0019290067526435697,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.03196696756968323,
+          "low": 0.02765163313125808,
+          "high": 0.03630882497095939,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.03244681660603767,
+          "low": 0.028166787981729096,
+          "high": 0.03676286169908377,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 542.5,
+          "low": 485.0,
+          "high": 607.5312499999995,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "threshold",
+      "budget": null,
+      "method": "warm",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0019527798181930773,
+          "low": 0.0019401927279338554,
+          "high": 0.0019641123972471775,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.020488082850606642,
+          "low": 0.017979735235782206,
+          "high": 0.0229348420339219,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.0207886935009781,
+          "low": 0.018445187516774774,
+          "high": 0.02305014616420423,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 587.5,
+          "low": 493.75,
+          "high": 687.5312499999995,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    }
+  ],
+  "identification_summary": [
+    {
+      "budget": 16,
+      "design": "narrow",
+      "accuracy": {
+        "mean": 0.4583333333333333,
+        "low": 0.25,
+        "high": 0.6666666666666666,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.515560516167017,
+        "low": 0.3236825429309374,
+        "high": 0.7786644128832539,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.4117037949999056,
+        "low": 0.2743573700636111,
+        "high": 0.5756149894211747,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "joint_seed_success": {
+        "successful_seeds": 3,
+        "seeds": 12,
+        "low": 0.05486064452799241,
+        "high": 0.5718584618780997,
+        "event": "Both candidate-system models in a seed are identified correctly"
+      },
+      "selected_ood_rmse": {
+        "mean": 2.7249218215065603,
+        "low": 1.6552475135481068,
+        "high": 4.184271687530242,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 2.163843879244723,
+        "low": 1.4017398851535525,
+        "high": 3.079451815108747,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 62.18087419848735,
+        "low": 49.091870008475205,
+        "high": 76.53934069313304,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 16,
+      "design": "broad",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.013249856539086342,
+        "low": 0.009877022398009782,
+        "high": 0.01669373841320481,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.013249856539086342,
+        "low": 0.009877022398009782,
+        "high": 0.01669373841320481,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "joint_seed_success": {
+        "successful_seeds": 12,
+        "seeds": 12,
+        "low": 0.7353515306029488,
+        "high": 1.0,
+        "event": "Both candidate-system models in a seed are identified correctly"
+      },
+      "selected_ood_rmse": {
+        "mean": 0.01991304540266066,
+        "low": 0.016712655942740223,
+        "high": 0.023265159746169568,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.01991304540266066,
+        "low": 0.016712655942740223,
+        "high": 0.023265159746169568,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 8.14347366482158,
+        "low": 7.563768480674825,
+        "high": 8.707443139803042,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 16,
+      "design": "mixed",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.028189293002051374,
+        "low": 0.02185310387863135,
+        "high": 0.03473424105515165,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.028189293002051374,
+        "low": 0.02185310387863135,
+        "high": 0.03473424105515165,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "joint_seed_success": {
+        "successful_seeds": 12,
+        "seeds": 12,
+        "low": 0.7353515306029488,
+        "high": 1.0,
+        "event": "Both candidate-system models in a seed are identified correctly"
+      },
+      "selected_ood_rmse": {
+        "mean": 0.0452935585936759,
+        "low": 0.03696558653439595,
+        "high": 0.054036612313370105,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.0452935585936759,
+        "low": 0.03696558653439595,
+        "high": 0.054036612313370105,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 8.642671714380723,
+        "low": 7.951976907262334,
+        "high": 9.365737595560805,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 64,
+      "design": "narrow",
+      "accuracy": {
+        "mean": 0.5833333333333334,
+        "low": 0.375,
+        "high": 0.7916666666666666,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.16809704268364986,
+        "low": 0.12527709723085778,
+        "high": 0.20885079255961803,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.13683887650371818,
+        "low": 0.09049600657989235,
+        "high": 0.1939137885316817,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "joint_seed_success": {
+        "successful_seeds": 4,
+        "seeds": 12,
+        "low": 0.0992460911495833,
+        "high": 0.6511244935807181,
+        "event": "Both candidate-system models in a seed are identified correctly"
+      },
+      "selected_ood_rmse": {
+        "mean": 0.8578652809965158,
+        "low": 0.5978850022428852,
+        "high": 1.126576951878147,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.6589852930935663,
+        "low": 0.3637122937127918,
+        "high": 1.02081567639567,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 46.72739724149386,
+        "low": 36.97444926819969,
+        "high": 57.197083203892795,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 64,
+      "design": "broad",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.0064272629895328545,
+        "low": 0.0044263481947125465,
+        "high": 0.008685802457297316,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.0064272629895328545,
+        "low": 0.0044263481947125465,
+        "high": 0.008685802457297316,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "joint_seed_success": {
+        "successful_seeds": 12,
+        "seeds": 12,
+        "low": 0.7353515306029488,
+        "high": 1.0,
+        "event": "Both candidate-system models in a seed are identified correctly"
+      },
+      "selected_ood_rmse": {
+        "mean": 0.010164993899170824,
+        "low": 0.007587901319691997,
+        "high": 0.013135290885587307,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.010164993899170824,
+        "low": 0.007587901319691997,
+        "high": 0.013135290885587307,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 6.858312599008493,
+        "low": 6.646834516536137,
+        "high": 7.089340973470568,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 64,
+      "design": "mixed",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.007174979827877009,
+        "low": 0.005157322428430005,
+        "high": 0.00954026196018403,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.007174979827877009,
+        "low": 0.005157322428430005,
+        "high": 0.00954026196018403,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "joint_seed_success": {
+        "successful_seeds": 12,
+        "seeds": 12,
+        "low": 0.7353515306029488,
+        "high": 1.0,
+        "event": "Both candidate-system models in a seed are identified correctly"
+      },
+      "selected_ood_rmse": {
+        "mean": 0.011382708379020003,
+        "low": 0.00897570292203008,
+        "high": 0.014322388356785743,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.011382708379020003,
+        "low": 0.00897570292203008,
+        "high": 0.014322388356785743,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 6.794441000328628,
+        "low": 6.548844761745721,
+        "high": 7.044126438593567,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 256,
+      "design": "narrow",
+      "accuracy": {
+        "mean": 0.4166666666666667,
+        "low": 0.25,
+        "high": 0.5833333333333334,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.19843353727488766,
+        "low": 0.14468749779067158,
+        "high": 0.25364745141619344,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.12002880871618639,
+        "low": 0.07474632579337963,
+        "high": 0.1870954534071454,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "joint_seed_success": {
+        "successful_seeds": 1,
+        "seeds": 12,
+        "low": 0.002107593231861633,
+        "high": 0.38479616515094384,
+        "event": "Both candidate-system models in a seed are identified correctly"
+      },
+      "selected_ood_rmse": {
+        "mean": 1.0246982918624852,
+        "low": 0.7063327643176038,
+        "high": 1.3491385937108122,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.6201276836601529,
+        "low": 0.3498419039011901,
+        "high": 1.0260610682143374,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 39.65181764288488,
+        "low": 30.780799700291738,
+        "high": 49.302824438536575,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 256,
+      "design": "broad",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.004470424991711548,
+        "low": 0.003247016240409214,
+        "high": 0.005677942457771545,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.004470424991711548,
+        "low": 0.003247016240409214,
+        "high": 0.005677942457771545,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "joint_seed_success": {
+        "successful_seeds": 12,
+        "seeds": 12,
+        "low": 0.7353515306029488,
+        "high": 1.0,
+        "event": "Both candidate-system models in a seed are identified correctly"
+      },
+      "selected_ood_rmse": {
+        "mean": 0.0060133025097804825,
+        "low": 0.004614065893157627,
+        "high": 0.007459641368042673,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.0060133025097804825,
+        "low": 0.004614065893157627,
+        "high": 0.007459641368042673,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 6.625261286396204,
+        "low": 6.530049538265476,
+        "high": 6.732633606746477,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 256,
+      "design": "mixed",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.004644693812315877,
+        "low": 0.003360882291198018,
+        "high": 0.005903889483156361,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.004644693812315877,
+        "low": 0.003360882291198018,
+        "high": 0.005903889483156361,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "joint_seed_success": {
+        "successful_seeds": 12,
+        "seeds": 12,
+        "low": 0.7353515306029488,
+        "high": 1.0,
+        "event": "Both candidate-system models in a seed are identified correctly"
+      },
+      "selected_ood_rmse": {
+        "mean": 0.006105463678368135,
+        "low": 0.004668815683481553,
+        "high": 0.007627776041949315,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.006105463678368135,
+        "low": 0.004668815683481553,
+        "high": 0.007627776041949315,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 6.600394752825676,
+        "low": 6.5084491337076935,
+        "high": 6.707616967743657,
+        "n_seeds": 12,
+        "nonfinite_seed_values": 0
+      }
+    }
+  ]
+}

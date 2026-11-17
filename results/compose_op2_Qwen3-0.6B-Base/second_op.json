@@ -1,0 +1,519 @@
+{
+ "model": "Qwen/Qwen3-0.6B-Base",
+ "ops": {
+  "capitalise": {
+   "native_acc": 0.9,
+   "scan": [
+    {
+     "layer": 16,
+     "head": 11,
+     "d_margin": -0.8778586705525717,
+     "acc": 0.7333333333333333
+    },
+    {
+     "layer": 22,
+     "head": 7,
+     "d_margin": -0.7515965143839519,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 18,
+     "head": 1,
+     "d_margin": -0.6491729100545248,
+     "acc": 0.8666666666666667
+    },
+    {
+     "layer": 15,
+     "head": 10,
+     "d_margin": -0.4926903406778973,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 17,
+     "head": 6,
+     "d_margin": -0.46292959849039717,
+     "acc": 0.8666666666666667
+    },
+    {
+     "layer": 16,
+     "head": 10,
+     "d_margin": -0.38011023203531913,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 18,
+     "head": 4,
+     "d_margin": -0.32382005055745444,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 23,
+     "head": 6,
+     "d_margin": -0.2859337488810223,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 13,
+     "head": 0,
+     "d_margin": -0.21371644337972007,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 14,
+     "head": 12,
+     "d_margin": -0.21082604726155618,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 24,
+     "head": 5,
+     "d_margin": -0.19686679840087895,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 8,
+     "head": 1,
+     "d_margin": -0.1638718287150065,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 5,
+     "head": 10,
+     "d_margin": -0.08964252471923828,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 16,
+     "head": 7,
+     "d_margin": -0.08472563425699886,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 3,
+     "head": 13,
+     "d_margin": -0.07981510162353533,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 18,
+     "head": 7,
+     "d_margin": -0.06987895965576185,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 13,
+     "head": 6,
+     "d_margin": -0.060192298889160334,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 18,
+     "head": 5,
+     "d_margin": -0.058580970764160245,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 11,
+     "head": 2,
+     "d_margin": -0.056026776631673325,
+     "acc": 0.9333333333333333
+    },
+    {
+     "layer": 23,
+     "head": 15,
+     "d_margin": -0.05366141001383462,
+     "acc": 0.9333333333333333
+    }
+   ],
+   "oracle": [
+    {
+     "layer": 16,
+     "head": 11,
+     "donor_operation": 0.0,
+     "own_operation": 0.5333333333333333
+    },
+    {
+     "layer": 22,
+     "head": 7,
+     "donor_operation": 0.0,
+     "own_operation": 0.9666666666666667
+    },
+    {
+     "layer": 18,
+     "head": 1,
+     "donor_operation": 0.0,
+     "own_operation": 0.5
+    },
+    {
+     "layer": 15,
+     "head": 10,
+     "donor_operation": 0.0,
+     "own_operation": 0.9
+    },
+    {
+     "layer": 17,
+     "head": 6,
+     "donor_operation": 0.0,
+     "own_operation": 0.8333333333333334
+    },
+    {
+     "layer": 16,
+     "head": 10,
+     "donor_operation": 0.0,
+     "own_operation": 0.9
+    }
+   ],
+   "best": {
+    "layer": 16,
+    "head": 11,
+    "donor_operation": 0.0,
+    "own_operation": 0.5333333333333333
+   },
+   "verdict": "no single head carries the operation; stop"
+  },
+  "plural": {
+   "native_acc": 0.95,
+   "scan": [
+    {
+     "layer": 16,
+     "head": 11,
+     "d_margin": -1.4759118556976318,
+     "acc": 0.75
+    },
+    {
+     "layer": 16,
+     "head": 10,
+     "d_margin": -1.1582860469818115,
+     "acc": 0.85
+    },
+    {
+     "layer": 13,
+     "head": 0,
+     "d_margin": -1.0514246463775634,
+     "acc": 0.95
+    },
+    {
+     "layer": 24,
+     "head": 12,
+     "d_margin": -0.7317451953887939,
+     "acc": 0.85
+    },
+    {
+     "layer": 17,
+     "head": 6,
+     "d_margin": -0.7143053531646728,
+     "acc": 0.9
+    },
+    {
+     "layer": 19,
+     "head": 9,
+     "d_margin": -0.6191815853118896,
+     "acc": 0.95
+    },
+    {
+     "layer": 19,
+     "head": 15,
+     "d_margin": -0.45511012077331525,
+     "acc": 0.9
+    },
+    {
+     "layer": 22,
+     "head": 7,
+     "d_margin": -0.4529948711395262,
+     "acc": 0.95
+    },
+    {
+     "layer": 18,
+     "head": 4,
+     "d_margin": -0.36464314460754377,
+     "acc": 0.95
+    },
+    {
+     "layer": 5,
+     "head": 10,
+     "d_margin": -0.29501023292541495,
+     "acc": 0.95
+    },
+    {
+     "layer": 18,
+     "head": 1,
+     "d_margin": -0.27628674507141104,
+     "acc": 0.95
+    },
+    {
+     "layer": 16,
+     "head": 7,
+     "d_margin": -0.2576310634613037,
+     "acc": 0.95
+    },
+    {
+     "layer": 9,
+     "head": 0,
+     "d_margin": -0.21635766029357928,
+     "acc": 0.95
+    },
+    {
+     "layer": 23,
+     "head": 6,
+     "d_margin": -0.18104815483093262,
+     "acc": 0.95
+    },
+    {
+     "layer": 14,
+     "head": 12,
+     "d_margin": -0.13559184074401864,
+     "acc": 0.95
+    },
+    {
+     "layer": 19,
+     "head": 2,
+     "d_margin": -0.12479805946350098,
+     "acc": 0.95
+    },
+    {
+     "layer": 13,
+     "head": 6,
+     "d_margin": -0.12252602577209482,
+     "acc": 0.95
+    },
+    {
+     "layer": 13,
+     "head": 5,
+     "d_margin": -0.07835526466369647,
+     "acc": 0.95
+    },
+    {
+     "layer": 17,
+     "head": 13,
+     "d_margin": -0.025056123733520508,
+     "acc": 0.95
+    },
+    {
+     "layer": 8,
+     "head": 1,
+     "d_margin": -0.006935453414917081,
+     "acc": 0.95
+    }
+   ],
+   "oracle": [
+    {
+     "layer": 16,
+     "head": 11,
+     "donor_operation": 0.0,
+     "own_operation": 0.775
+    },
+    {
+     "layer": 16,
+     "head": 10,
+     "donor_operation": 0.0,
+     "own_operation": 0.875
+    },
+    {
+     "layer": 13,
+     "head": 0,
+     "donor_operation": 0.0,
+     "own_operation": 0.975
+    },
+    {
+     "layer": 24,
+     "head": 12,
+     "donor_operation": 0.0,
+     "own_operation": 0.875
+    },
+    {
+     "layer": 17,
+     "head": 6,
+     "donor_operation": 0.0,
+     "own_operation": 0.85
+    },
+    {
+     "layer": 19,
+     "head": 9,
+     "donor_operation": 0.0,
+     "own_operation": 0.15
+    }
+   ],
+   "best": {
+    "layer": 16,
+    "head": 11,
+    "donor_operation": 0.0,
+    "own_operation": 0.775
+   },
+   "verdict": "no single head carries the operation; stop"
+  },
+  "past": {
+   "native_acc": 1.0,
+   "scan": [
+    {
+     "layer": 16,
+     "head": 11,
+     "d_margin": -1.2987317085266117,
+     "acc": 1.0
+    },
+    {
+     "layer": 16,
+     "head": 10,
+     "d_margin": -1.2766411781311038,
+     "acc": 1.0
+    },
+    {
+     "layer": 19,
+     "head": 9,
+     "d_margin": -1.218561172485352,
+     "acc": 1.0
+    },
+    {
+     "layer": 22,
+     "head": 7,
+     "d_margin": -0.8256439208984379,
+     "acc": 1.0
+    },
+    {
+     "layer": 13,
+     "head": 0,
+     "d_margin": -0.8055887222290044,
+     "acc": 1.0
+    },
+    {
+     "layer": 18,
+     "head": 5,
+     "d_margin": -0.7059422492980962,
+     "acc": 1.0
+    },
+    {
+     "layer": 18,
+     "head": 4,
+     "d_margin": -0.5608813285827638,
+     "acc": 1.0
+    },
+    {
+     "layer": 19,
+     "head": 8,
+     "d_margin": -0.5427259445190433,
+     "acc": 1.0
+    },
+    {
+     "layer": 5,
+     "head": 10,
+     "d_margin": -0.5325310707092288,
+     "acc": 1.0
+    },
+    {
+     "layer": 19,
+     "head": 6,
+     "d_margin": -0.4559695243835451,
+     "acc": 1.0
+    },
+    {
+     "layer": 17,
+     "head": 6,
+     "d_margin": -0.4350815773010259,
+     "acc": 1.0
+    },
+    {
+     "layer": 22,
+     "head": 12,
+     "d_margin": -0.41198921203613326,
+     "acc": 1.0
+    },
+    {
+     "layer": 3,
+     "head": 13,
+     "d_margin": -0.37833719253540066,
+     "acc": 0.95
+    },
+    {
+     "layer": 18,
+     "head": 1,
+     "d_margin": -0.35996742248535174,
+     "acc": 1.0
+    },
+    {
+     "layer": 16,
+     "head": 7,
+     "d_margin": -0.3593384742736818,
+     "acc": 1.0
+    },
+    {
+     "layer": 19,
+     "head": 2,
+     "d_margin": -0.3504693984985354,
+     "acc": 1.0
+    },
+    {
+     "layer": 8,
+     "head": 6,
+     "d_margin": -0.3490797996520998,
+     "acc": 1.0
+    },
+    {
+     "layer": 25,
+     "head": 0,
+     "d_margin": -0.34191770553588885,
+     "acc": 1.0
+    },
+    {
+     "layer": 14,
+     "head": 9,
+     "d_margin": -0.32279090881347683,
+     "acc": 0.95
+    },
+    {
+     "layer": 14,
+     "head": 12,
+     "d_margin": -0.31406793594360405,
+     "acc": 1.0
+    }
+   ],
+   "oracle": [
+    {
+     "layer": 16,
+     "head": 11,
+     "donor_operation": 0.0,
+     "own_operation": 0.975
+    },
+    {
+     "layer": 16,
+     "head": 10,
+     "donor_operation": 0.0,
+     "own_operation": 0.95
+    },
+    {
+     "layer": 19,
+     "head": 9,
+     "donor_operation": 0.0,
+     "own_operation": 0.8
+    },
+    {
+     "layer": 22,
+     "head": 7,
+     "donor_operation": 0.0,
+     "own_operation": 1.0
+    },
+    {
+     "layer": 13,
+     "head": 0,
+     "donor_operation": 0.0,
+     "own_operation": 1.0
+    },
+    {
+     "layer": 18,
+     "head": 5,
+     "donor_operation": 0.0,
+     "own_operation": 0.975
+    }
+   ],
+   "best": {
+    "layer": 16,
+    "head": 11,
+    "donor_operation": 0.0,
+    "own_operation": 0.975
+   },
+   "verdict": "no single head carries the operation; stop"
+  },
+  "antonym": {
+   "native_acc": 0.78125,
+   "verdict": "native competence below .80; stop"
+  }
+ }
+}

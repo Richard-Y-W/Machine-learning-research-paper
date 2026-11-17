@@ -1,0 +1,15 @@
+W1114 16:55:52.158000 12660 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  11%|█▏        | 35/311 [00:00<00:00, 333.69it/s]Loading weights:  22%|██▏       | 69/311 [00:00<00:00, 312.71it/s]Loading weights:  32%|███▏      | 101/311 [00:00<00:00, 287.02it/s]Loading weights:  44%|████▎     | 136/311 [00:00<00:00, 302.42it/s]Loading weights:  55%|█████▍    | 171/311 [00:00<00:00, 310.54it/s]Loading weights:  67%|██████▋   | 207/311 [00:00<00:00, 325.16it/s]Loading weights:  77%|███████▋  | 240/311 [00:00<00:00, 320.84it/s]Loading weights:  88%|████████▊ | 273/311 [00:00<00:00, 318.73it/s]Loading weights:  99%|█████████▊| 307/311 [00:00<00:00, 322.59it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 320.22it/s]
+[v1] lookup_2hop   think           acc 0.07  tokens   975.9  no-answer 0.77  hit-cap 0.77  budgets {256: 0.0, 512: 0.0, 1024: 0.06666666666666667}  832.6s
+[v1] lookup_2hop   direct          acc 0.07  tokens     7.0  no-answer 0.00  hit-cap 0.00  budgets None  6.4s
+[v1] lookup_2hop   direct_fewshot  acc 0.13  tokens     5.0  no-answer 0.00  hit-cap 0.00  budgets None  19.4s
+[v1] lookup_4hop   think           acc 0.67  tokens   633.5  no-answer 0.17  hit-cap 0.17  budgets {256: 0.0, 512: 0.3333333333333333, 1024: 0.6666666666666666}  949.7s
+[v1] lookup_4hop   direct          acc 0.17  tokens     7.0  no-answer 0.00  hit-cap 0.00  budgets None  7.1s
+[v1] lookup_4hop   direct_fewshot  acc 0.10  tokens     5.0  no-answer 0.00  hit-cap 0.00  budgets None  19.8s
+[v1] code_noarith  think           acc 0.99  tokens   358.3  no-answer 0.00  hit-cap 0.00  budgets {256: 0.08, 512: 0.86, 1024: 0.99}  1401.9s
+[v1] code_noarith  direct          acc 0.16  tokens    25.7  no-answer 0.00  hit-cap 0.14  budgets None  95.5s
+[v1] code_noarith  direct_fewshot  acc 0.06  tokens     3.0  no-answer 0.00  hit-cap 0.00  budgets None  45.1s
+[v1] code_arith    think           acc 1.00  tokens   326.5  no-answer 0.00  hit-cap 0.00  budgets {256: 0.14, 512: 0.99, 1024: 1.0}  1195.7s
+[v1] code_arith    direct          acc 0.02  tokens    17.0  no-answer 0.04  hit-cap 0.09  budgets None  109.7s
+[v1] code_arith    direct_fewshot  acc 0.09  tokens     4.0  no-answer 0.00  hit-cap 0.00  budgets None  49.5s
+[v1] TOTAL seconds 4732

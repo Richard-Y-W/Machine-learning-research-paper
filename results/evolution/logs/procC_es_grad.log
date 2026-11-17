@@ -1,0 +1,83 @@
+W1113 02:45:01.443000 42624 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+Loading weights:  14%|#3        | 42/310 [00:00<00:00, 378.00it/s]
+Loading weights:  28%|##8       | 87/310 [00:00<00:00, 399.91it/s]
+Loading weights:  42%|####1     | 129/310 [00:00<00:00, 398.13it/s]
+Loading weights:  55%|#####4    | 169/310 [00:00<00:00, 396.70it/s]
+Loading weights:  67%|######7   | 209/310 [00:00<00:00, 383.00it/s]
+Loading weights:  83%|########2 | 257/310 [00:00<00:00, 413.12it/s]
+Loading weights: 100%|##########| 310/310 [00:00<00:00, 424.15it/s]
+[es tune_sigma0.03] evals 16 best -1.2321032807424974
+[es tune_sigma0.03] evals 32 best -1.214792166041055
+[es tune_sigma0.03] evals 48 best -1.2092967632343061
+[es tune_sigma0.1] evals 16 best -1.2672451699036174
+[es tune_sigma0.1] evals 32 best -1.2672451699036174
+[es tune_sigma0.1] evals 48 best -1.2668546059867367
+[es tune_sigma0.3] evals 16 best None
+[es tune_sigma0.3] evals 32 best None
+[es tune_sigma0.3] evals 48 best None
+ES sigma tuning: {0.03: -1.2092967632343061, 0.1: -1.2668546059867367, 0.3: -inf} chosen 0.03
+W1113 03:26:39.775000 12608 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+Loading weights:  10%|#         | 31/310 [00:00<00:00, 304.70it/s]
+Loading weights:  23%|##2       | 70/310 [00:00<00:00, 347.35it/s]
+Loading weights:  34%|###3      | 105/310 [00:00<00:00, 335.82it/s]
+Loading weights:  45%|####5     | 141/310 [00:00<00:00, 341.40it/s]
+Loading weights:  58%|#####8    | 180/310 [00:00<00:00, 353.92it/s]
+Loading weights:  73%|#######3  | 227/310 [00:00<00:00, 391.23it/s]
+Loading weights:  86%|########6 | 267/310 [00:00<00:00, 389.66it/s]
+Loading weights: 100%|##########| 310/310 [00:00<00:00, 386.71it/s]
+[es ES-56_seed1] evals 16 best -1.1771523246789002
+[es ES-56_seed1] evals 32 best -1.1568771207443205
+[es ES-56_seed1] evals 48 best -1.1235623641434358
+[es ES-56_seed1] evals 64 best -1.1041144333954436
+[es ES-56_seed1] evals 80 best -1.0926896199875045
+[es ES-56_seed1] evals 96 best -1.0921635194827104
+[es ES-56_seed1] evals 112 best -1.0817594858177473
+[es ES-56_seed1] evals 128 best -1.0688869613557472
+[es ES-56_seed1] evals 144 best -1.0565268275837298
+[es ES-56_seed1] evals 160 best -1.0565268275837298
+[es ES-56_seed1] evals 176 best -1.0524379020702326
+[es ES-56_seed1] evals 192 best -1.0427652704864159
+[es ES-56_seed1] evals 208 best -1.0427652704864159
+[es ES-56_seed1] evals 224 best -1.034079525670677
+[es ES-56_seed1] evals 240 best -1.034079525670677
+[es ES-56_seed1] evals 256 best -1.034079525670677
+[es ES-56_seed1] evals 272 best -1.0286352512863233
+[es ES-56_seed1] evals 288 best -1.0175378751155222
+[es ES-56_seed1] evals 300 best -1.0142143044577097
+[es ES-56_seed2] evals 16 best -1.1836819880089025
+[es ES-56_seed2] evals 32 best -1.1667304292524932
+[es ES-56_seed2] evals 48 best -1.1354326002736344
+[es ES-56_seed2] evals 64 best -1.1269040390267038
+[es ES-56_seed2] evals 80 best -1.1121790111472365
+[es ES-56_seed2] evals 96 best -1.0975191034958698
+[es ES-56_seed2] evals 112 best -1.093149782787077
+[es ES-56_seed2] evals 128 best -1.0833077762959875
+[es ES-56_seed2] evals 144 best -1.073887615588319
+[es ES-56_seed2] evals 160 best -1.0586367892392445
+[es ES-56_seed2] evals 176 best -1.054502025716647
+[es ES-56_seed2] evals 192 best -1.038996334222611
+[es ES-56_seed2] evals 208 best -1.0372319925445481
+[es ES-56_seed2] evals 224 best -1.0282990464751491
+[es ES-56_seed2] evals 240 best -1.0282990464751491
+[es ES-56_seed2] evals 256 best -1.0241778477968182
+[es ES-56_seed2] evals 272 best -1.0082807667800808
+[es ES-56_seed2] evals 288 best -1.0030004690212082
+[es ES-56_seed2] evals 300 best -0.9884781079446838
+W1113 07:17:37.538000 15900 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+Loading weights:  11%|#         | 34/310 [00:00<00:00, 330.47it/s]
+Loading weights:  23%|##2       | 71/310 [00:00<00:00, 352.21it/s]
+Loading weights:  35%|###4      | 107/310 [00:00<00:00, 355.02it/s]
+Loading weights:  46%|####6     | 143/310 [00:00<00:00, 333.49it/s]
+Loading weights:  60%|#####9    | 185/310 [00:00<00:00, 359.06it/s]
+Loading weights:  75%|#######5  | 234/310 [00:00<00:00, 394.33it/s]
+Loading weights:  93%|#########2| 287/310 [00:00<00:00, 433.15it/s]
+Loading weights: 100%|##########| 310/310 [00:00<00:00, 405.94it/s]
+<LOCAL_REPOSITORY>\experiments\evolution\baselines_cli.py:269: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  loss = loss / len(enc.items); loss.backward(); total += float(loss)

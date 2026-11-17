@@ -1,0 +1,28 @@
+{
+  "heldout_source_snapshot": "passed",
+  "dense_source_snapshot": "passed",
+  "heldout_rows": 2688,
+  "dense_rows": 96,
+  "deployment_parameters": 1217,
+  "primary_contrast": {
+    "mean": -0.018197691913355296,
+    "low": -0.022554263558894352,
+    "high": -0.014007365192536543,
+    "n_seeds": 12,
+    "nonfinite_seed_values": 0
+  },
+  "dense_warm_minus_fresh": {
+    "mean": -0.005626718008723913,
+    "low": -0.006614000000852453,
+    "high": -0.004549638036199127,
+    "n_seeds": 12,
+    "nonfinite_seed_values": 0
+  },
+  "nonfinite_rollout_rows": 0,
+  "dense_nonfinite_metrics": {
+    "id_rmse": 0,
+    "ood_rmse": 0,
+    "teacher_fit_rmse": 0,
+    "rollout_rmse": 0
+  }
+}

@@ -1,0 +1,16 @@
+\begin{tabular}{lccccc}
+\toprule
+Condition & Letters & Number words & Weekdays & Months & Ordinals \\
+\midrule
+Unedited model & .02 & .02 & .14 & .04 & .09 \\
+Edit (successor head, gain 3) & .60 & .53 & .66 & .64 & .69 \\
+\midrule
+Same attention, six other heads (mean) & .01 & .01 & .05 & .02 & .03 \\
+Same attention, six other heads (max) & .02 & .03 & .19 & .04 & .09 \\
+Attention fitted to a wrong position & .00 & .01 & .09 & .02 & .06 \\
+Random attention, matched spectrum (mean of 3) & .03 & .01 & .12 & .02 & .07 \\
+Gain only, native attention & .05 & .04 & .23 & .09 & .10 \\
+Edit with another head's output projection & .03 & .04 & .08 & .02 & .03 \\
+Edit, neighbour head (shared keys) removed & .61 & .52 & .67 & .66 & .69 \\
+\bottomrule
+\end{tabular}

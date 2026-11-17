@@ -1,0 +1,57 @@
+{
+ "model": "Qwen/Qwen3-1.7B-Base",
+ "attempts": [
+  {
+   "attempt": 1,
+   "cost_usd": 0.012157800000000002,
+   "error": null,
+   "analysis": null,
+   "exec_error": "KeyError: 'build'",
+   "trace": "Traceback (most recent call last):\n  File \"/workspace/wsp/experiments/compose/opus_design.py\", line 148, in main\n    new = ns[\"build\"](data); row[\"build_seconds\"] = round(time.time() - t0, 1)\n          ~~^^^^^^^^^\nKeyError: 'build'\n",
+   "feedback": null
+  },
+  {
+   "attempt": 2,
+   "cost_usd": 0.0020920799999999996,
+   "error": null,
+   "analysis": null,
+   "exec_error": "KeyError: 'build'",
+   "trace": "Traceback (most recent call last):\n  File \"/workspace/wsp/experiments/compose/opus_design.py\", line 148, in main\n    new = ns[\"build\"](data); row[\"build_seconds\"] = round(time.time() - t0, 1)\n          ~~^^^^^^^^^\nKeyError: 'build'\n",
+   "feedback": null
+  },
+  {
+   "attempt": 3,
+   "cost_usd": 0.0027544799999999993,
+   "error": null,
+   "analysis": null,
+   "exec_error": "KeyError: 'build'",
+   "trace": "Traceback (most recent call last):\n  File \"/workspace/wsp/experiments/compose/opus_design.py\", line 148, in main\n    new = ns[\"build\"](data); row[\"build_seconds\"] = round(time.time() - t0, 1)\n          ~~^^^^^^^^^\nKeyError: 'build'\n",
+   "feedback": null
+  }
+ ],
+ "base": {
+  "attention_to_queried_value_by_head": [
+   0.06,
+   0.09,
+   0.02,
+   0.0,
+   0.06,
+   0.01,
+   0.03,
+   0.0,
+   0.28,
+   0.04,
+   0.0,
+   0.05,
+   0.05,
+   0.11,
+   0.05,
+   0.22
+  ],
+  "word_lookup_accuracy": 0.655,
+  "wikitext_loss": 2.833,
+  "dev_successor_rate": 0.28,
+  "dev_lookup_rate": 0.467
+ },
+ "spent_usd": 0.017
+}

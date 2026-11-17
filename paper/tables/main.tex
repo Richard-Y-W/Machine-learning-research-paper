@@ -1,0 +1,25 @@
+\begin{tabular}{llcccccc}
+\toprule
+ & & \multicolumn{3}{c}{Qwen3-0.6B-Base} & \multicolumn{3}{c}{Qwen3-1.7B-Base} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+Format & Values & Unedited & Edited & W / L & Unedited & Edited & W / L \\
+\midrule
+$k \rightarrow v$ & Letters & .02 & \textbf{.67} & 261 / 4 & .06 & \textbf{.41} & 144 / 5 \\
+ & Number words & .01 & \textbf{.46} & 182 / 1 & .06 & \textbf{.32} & 116 / 11 \\
+ & Weekdays & .12 & \textbf{.68} & 237 / 10 & .23 & \textbf{.37} & 96 / 39 \\
+ & Months & .01 & \textbf{.68} & 268 / 0 & .15 & \textbf{.52} & 175 / 29 \\
+ & Ordinals & .10 & \textbf{.69} & 254 / 18 & .25 & \textbf{.48} & 145 / 55 \\
+\midrule
+$k$: $v$ & Letters & .02 & \textbf{.59} & 231 / 0 & .04 & \textbf{.47} & 179 / 8 \\
+ & Number words & .07 & \textbf{.57} & 211 / 12 & .04 & \textbf{.41} & 154 / 5 \\
+ & Weekdays & .22 & \textbf{.61} & 192 / 34 & .16 & \textbf{.49} & 162 / 31 \\
+ & Months & .05 & \textbf{.62} & 235 / 7 & .14 & \textbf{.51} & 177 / 28 \\
+ & Ordinals & .21 & \textbf{.65} & 216 / 40 & .23 & \textbf{.51} & 171 / 63 \\
+\midrule
+$k = v$ & Letters & .05 & \textbf{.49} & 184 / 9 & .02 & \textbf{.42} & 164 / 3 \\
+ & Number words & .08 & \textbf{.45} & 166 / 18 & .04 & \textbf{.29} & 107 / 4 \\
+ & Weekdays & .30 & \textbf{.59} & 169 / 53 & .21 & \textbf{.48} & 133 / 27 \\
+ & Months & .09 & \textbf{.69} & 254 / 15 & .08 & \textbf{.55} & 199 / 11 \\
+ & Ordinals & .24 & \textbf{.60} & 182 / 41 & .26 & \textbf{.41} & 118 / 58 \\
+\bottomrule
+\end{tabular}

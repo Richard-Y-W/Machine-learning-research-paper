@@ -1,0 +1,18 @@
+# Keep archived execution sources byte-stable across Windows/Linux checkouts.
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.bib text eol=lf
+*.txt text eol=lf
+*.tex text eol=lf
+*.cff text eol=lf
+*.svg text eol=lf
+LICENSE text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+*.pdf binary
+*.png binary
+*.pt binary
+*.tar.gz binary

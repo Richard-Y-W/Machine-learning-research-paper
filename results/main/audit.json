@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "source_snapshot_sha256": "b18733dc3156939b427f8aac5fbf0c6165b040a0f9244264e3a53397735c5d83",
+  "reproduced_rows": 24,
+  "reproduced_numeric_cells": 192,
+  "max_absolute_reproduction_difference": 0.0,
+  "oracle_change_check": "passed",
+  "base_checkpoints": 36,
+  "package_versions": {
+    "numpy": "2.3.4",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.7",
+    "pytest": "8.4.2",
+    "torch": "2.9.0+cpu"
+  },
+  "scope": "One independently re-executed seed/family/budget/intervention subset; all methods and parameterizations. Timings excluded."
+}

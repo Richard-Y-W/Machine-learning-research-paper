@@ -1,0 +1,219 @@
+{
+ "inherit": true,
+ "constrained": true,
+ "generations": [
+  {
+   "gen": 1,
+   "parent_fitness": -1.245958227009396,
+   "parent": {
+    "fitness": -1.245958227009396,
+    "target_acc": 0.525,
+    "protected": -0.6802923681796529,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.169419288635254,
+    "tasks": {
+     "arc_challenge": 0.65,
+     "commonsense_qa": 0.525,
+     "hellaswag": 0.55,
+     "mmlu": 0.375
+    }
+   },
+   "meta": {
+    "call": "pilot_p3_g01",
+    "cost_usd": 0.036328400000000004,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "First generation. Error direction at late layers promotes generic letter-combination tokens (ABC/AD) \u2014 likely letter-position bias (favoring A) rather than content. Helpful heads L25h9, L21h1, L22h12 carry answer info; harmful head L23h7 and harmful late MLP neurons (L25n1154, L27n343, L26n297, L25n279) push wrong letters. Plan: diverse edits \u2014 boost helpful heads, damp harmful head/neurons, project out err direction from late writers, and a small A-bias reduction via final norm/o rank1."
+   },
+   "accepted": 3,
+   "seconds": 213.3,
+   "n_valid": 6,
+   "n_improving": 5,
+   "n_admissible_improving": 5,
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Boost top answer-carrying heads moderately",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.3}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 1, \"factor\": 1.2}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 12, \"factor\": 1.2}]",
+     "desc": "scale L25.attn.o col[1152:1280] x1.3; scale L21.attn.o col[128:256] x1.2; scale L22.attn.o col[1536:1664] x1.2",
+     "rel_change": {
+      "L22.self_attn.o_proj.weight": 0.0455,
+      "L21.self_attn.o_proj.weight": 0.0489,
+      "L25.self_attn.o_proj.weight": 0.0625
+     },
+     "ev": {
+      "fitness": -1.2397325889091007,
+      "target_acc": 0.5125,
+      "protected": -0.6818243053896974,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1699423789978027,
+      "tasks": {
+       "arc_challenge": 0.65,
+       "commonsense_qa": 0.525,
+       "hellaswag": 0.525,
+       "mmlu": 0.35
+      }
+     },
+     "delta": "dfit +0.0062, dprot -0.0015, dNLL +0.0005",
+     "admissible": true,
+     "improves": true
+    },
+    {
+     "k": 1,
+     "rationale": "Damp harmful head L23h7 (conservative)",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.5}]",
+     "desc": "scale L23.attn.o col[896:1024] x0.5",
+     "rel_change": {
+      "L23.self_attn.o_proj.weight": 0.1116
+     },
+     "ev": {
+      "fitness": -1.2357809501641897,
+      "target_acc": 0.51875,
+      "protected": -0.6789566160645336,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.169360637664795,
+      "tasks": {
+       "arc_challenge": 0.65,
+       "commonsense_qa": 0.525,
+       "hellaswag": 0.525,
+       "mmlu": 0.375
+      }
+     },
+     "delta": "dfit +0.0102, dprot +0.0013, dNLL -0.0001",
+     "admissible": true,
+     "improves": true
+    },
+    {
+     "k": 2,
+     "rationale": "Damp most harmful late MLP neurons pushing wrong letters",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L25.mlp.down\", \"axis\": \"col\", \"index\": [1154, 279, 313, 482, 568, 307], \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L27.mlp.down\", \"axis\": \"col\", \"index\": [343, 652, 629], \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L26.mlp.down\", \"axis\": \"col\", \"index\": [297, 1324], \"factor\": 0.5}]",
+     "desc": "scale L25.mlp.down col[1154,279,313,482,568,307] x0.5; scale L27.mlp.down col[343,652,629] x0.5; scale L26.mlp.down col[297,1324] x0.5",
+     "rel_change": {
+      "L27.mlp.down_proj.weight": 0.0114,
+      "L26.mlp.down_proj.weight": 0.0116,
+      "L25.mlp.down_proj.weight": 0.0185
+     },
+     "ev": {
+      "fitness": -1.4124564327423286,
+      "target_acc": 0.49374999999999997,
+      "protected": -0.9539190535191059,
+      "protected_acc": 0.55,
+      "nll": 3.1699821949005127,
+      "tasks": {
+       "arc_challenge": 0.7,
+       "commonsense_qa": 0.45,
+       "hellaswag": 0.475,
+       "mmlu": 0.35
+      }
+     },
+     "delta": "dfit -0.1665, dprot -0.2736, dNLL +0.0006",
+     "admissible": false,
+     "improves": false
+    },
+    {
+     "k": 3,
+     "rationale": "Remove error direction from what late MLPs write when their error pattern fires (bold)",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L26.mlp.down\", \"u\": \"err:L27\", \"v\": \"mlperr:L26\", \"alpha\": -0.15}, {\"op\": \"rank1\", \"tensor\": \"L25.mlp.down\", \"u\": \"err:L26\", \"v\": \"mlperr:L25\", \"alpha\": -0.15}]",
+     "desc": "rank1 L26.mlp.down u=err:L27 v=mlperr:L26 alpha=-0.15; rank1 L25.mlp.down u=err:L26 v=mlperr:L25 alpha=-0.15",
+     "rel_change": {
+      "L26.mlp.down_proj.weight": 0.0098,
+      "L25.mlp.down_proj.weight": 0.0101
+     },
+     "ev": {
+      "fitness": -1.201567503035767,
+      "target_acc": 0.53125,
+      "protected": -0.6666695062885992,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1687324047088623,
+      "tasks": {
+       "arc_challenge": 0.65,
+       "commonsense_qa": 0.525,
+       "hellaswag": 0.55,
+       "mmlu": 0.4
+      }
+     },
+     "delta": "dfit +0.0444, dprot +0.0136, dNLL -0.0007",
+     "admissible": true,
+     "improves": true
+    },
+    {
+     "k": 4,
+     "rationale": "Steer attention output in L25 away from error direction when head pattern matches error pattern",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L25.attn.o\", \"u\": \"err:L26\", \"v\": \"attnerr:L25\", \"alpha\": -0.1}, {\"op\": \"rank1\", \"tensor\": \"L23.attn.o\", \"u\": \"err:L24\", \"v\": \"attnerr:L23\", \"alpha\": -0.08}]",
+     "desc": "rank1 L25.attn.o u=err:L26 v=attnerr:L25 alpha=-0.1; rank1 L23.attn.o u=err:L24 v=attnerr:L23 alpha=-0.08",
+     "rel_change": {
+      "L23.self_attn.o_proj.weight": 0.0065,
+      "L25.self_attn.o_proj.weight": 0.0078
+     },
+     "ev": {
+      "fitness": -1.2293323031859473,
+      "target_acc": 0.525,
+      "protected": -0.6767501042224466,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.169074296951294,
+      "tasks": {
+       "arc_challenge": 0.65,
+       "commonsense_qa": 0.525,
+       "hellaswag": 0.55,
+       "mmlu": 0.375
+      }
+     },
+     "delta": "dfit +0.0166, dprot +0.0035, dNLL -0.0003",
+     "admissible": true,
+     "improves": true
+    },
+    {
+     "k": 5,
+     "rationale": "Combined small: boost helpful L24 neurons and head L25h9 slightly, damp L23h7",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L24.mlp.down\", \"axis\": \"col\", \"index\": [561, 912, 658, 470, 505, 485], \"factor\": 1.3}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.15}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.7}]",
+     "desc": "scale L24.mlp.down col[561,912,658,470,505,485] x1.3; scale L25.attn.o col[1152:1280] x1.15; scale L23.attn.o col[896:1024] x0.7",
+     "rel_change": {
+      "L23.self_attn.o_proj.weight": 0.067,
+      "L25.self_attn.o_proj.weight": 0.0312,
+      "L24.mlp.down_proj.weight": 0.0119
+     },
+     "ev": {
+      "fitness": -1.2275659222446849,
+      "target_acc": 0.51875,
+      "protected": -0.6751569879008457,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.169942617416382,
+      "tasks": {
+       "arc_challenge": 0.65,
+       "commonsense_qa": 0.525,
+       "hellaswag": 0.55,
+       "mmlu": 0.35
+      }
+     },
+     "delta": "dfit +0.0184, dprot +0.0051, dNLL +0.0005",
+     "admissible": true,
+     "improves": true
+    }
+   ],
+   "genome_len": 1
+  }
+ ],
+ "tests": {},
+ "split_hash": {
+  "dev_target": "f65212be90e4ccd61953547e3c81e3597f62ca4861b77b7fc08bb12fddad7d8f",
+  "dev_protected": "2daa8d3f87ad2e69cf0b72c153cdf7c7f91629ad144ceeef45ef3f2842d10896",
+  "test_target": "4f4dbd85f4a1fcd07e20d5bf2454f916b1687f0e2fd342e95e52aead12de223f",
+  "test_protected": "05b6a33e6ad081b5811e3ac7a4382c869952f55ae6624366898ad4644352073e",
+  "calib_target": "9d0a95a3dc610c31114fec5f174c16dea2635c44520caa5c4588336371493bc4",
+  "wiki_dev": "a387ee3cdd3239b8ac22f0a2ca805a12c69f64e2c0f88a9463125f1068850e90",
+  "wiki_test": "46ec7db27fc9433ce67d4bbda2cca8af0dd46c0b663434d90d7d08a4893c3b2b"
+ },
+ "base": {
+  "fitness": -1.245958227009396,
+  "target_acc": 0.525,
+  "protected": -0.6802923681796529,
+  "protected_acc": 0.7166666666666667,
+  "nll": 3.169419288635254,
+  "tasks": {
+   "arc_challenge": 0.65,
+   "commonsense_qa": 0.525,
+   "hellaswag": 0.55,
+   "mmlu": 0.375
+  }
+ }
+}

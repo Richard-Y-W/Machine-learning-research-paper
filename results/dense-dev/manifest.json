@@ -1,0 +1,23 @@
+{
+  "config": {
+    "source": "results/deployment-dev",
+    "output": "results/dense-dev",
+    "seed_start": 0,
+    "seeds": 2,
+    "steps": [
+      600,
+      2400
+    ]
+  },
+  "status": "complete",
+  "started_utc": "2026-11-11T00:59:22.188016+00:00",
+  "git_commit": "64bee215e9f5807a98ac35d6c0bc8b92d99bc394",
+  "source_sha256": "5e7f53c3fab921608521aa14e4dfeb58e9a457c3b9f1ceab901a60d891760ea1",
+  "torch": "2.9.0+cpu",
+  "calibration_queries": 128,
+  "synthetic_labels": 4096,
+  "note": "Synthetic labels use fitted coefficients only; original physical labels withheld.",
+  "rows": 16,
+  "elapsed_seconds": 24.67833869997412,
+  "completed_utc": "2026-11-11T00:59:46.898270+00:00"
+}

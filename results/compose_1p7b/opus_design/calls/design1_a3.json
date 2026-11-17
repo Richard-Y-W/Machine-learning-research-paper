@@ -1,0 +1,28 @@
+{
+ "label": "design1_a3",
+ "model": "claude-opus-5-5",
+ "effort": "high",
+ "ledger_id": "a472301b710e43a0b60f9560c2d520dc",
+ "seconds": 1.6,
+ "stop_reason": "refusal",
+ "usage": {
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 1936,
+  "inference_geo": "global",
+  "input_tokens": 502,
+  "output_tokens": 0,
+  "output_tokens_details": null,
+  "server_tool_use": null,
+  "service_tier": "standard",
+  "speed": "standard"
+ },
+ "cost_usd": 0.0027544799999999993,
+ "error": null,
+ "user_text": "Unedited model on development data (ordinals is the ordinal development domain): {\"attention_to_queried_value_by_head\": [0.06, 0.09, 0.02, 0.0, 0.06, 0.01, 0.03, 0.0, 0.28, 0.04, 0.0, 0.05, 0.05, 0.11, 0.05, 0.22], \"word_lookup_accuracy\": 0.655, \"wikitext_loss\": 2.833, \"dev_successor_rate\": 0.28, \"dev_lookup_rate\": 0.467}\n\n\n## Your attempt 1\nAnalysis: None\nCode:\n```python\n\n```\nExecution error: KeyError: 'build'\nTraceback (most recent call last):\n  File \"/workspace/wsp/experiments/compose/opus_design.py\", line 148, in main\n    new = ns[\"build\"](data); row[\"build_seconds\"] = round(time.time() - t0, 1)\n          ~~^^^^^^^^^\nKeyError: 'build'\n\n\n## Your attempt 2\nAnalysis: None\nCode:\n```python\n\n```\nExecution error: KeyError: 'build'\nTraceback (most recent call last):\n  File \"/workspace/wsp/experiments/compose/opus_design.py\", line 148, in main\n    new = ns[\"build\"](data); row[\"build_seconds\"] = round(time.time() - t0, 1)\n          ~~^^^^^^^^^\nKeyError: 'build'\n\n\n\nAttempt 3 of 3. Return JSON with \"analysis\" and \"code\".",
+ "response_text": null,
+ "utc": "2026-11-15T23:32:16.643779+00:00"
+}

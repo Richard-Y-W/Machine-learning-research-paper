@@ -1,0 +1,21 @@
+{
+  "cases": [
+    "34c7d25aff446737",
+    "fb18481cf318547c",
+    "81c40244fe532841",
+    "6109c3ac86b58f84",
+    "c6b9b4aacfa3c1f4",
+    "fd29f424e1d2b618",
+    "e8de7c10fe650151",
+    "57c3eee04914970b",
+    "c91054cab20803ef",
+    "be93777e631e4eec",
+    "d4929587ea0ffbfa",
+    "6b3e6853e59ec3b6"
+  ],
+  "source_seeds": [
+    89
+  ],
+  "case_count": 12,
+  "description": "API runner may read public files only; evaluator reads private metadata after calls"
+}

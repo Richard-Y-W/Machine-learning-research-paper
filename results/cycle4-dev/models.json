@@ -1,0 +1,42 @@
+[
+  {
+    "seed": 0,
+    "family": "duffing",
+    "source_rmse": 0.014412415334322826
+  },
+  {
+    "seed": 0,
+    "family": "pendulum",
+    "source_rmse": 0.016630918941981616
+  },
+  {
+    "seed": 0,
+    "family": "contact",
+    "source_rmse": 0.008921785434913182
+  },
+  {
+    "seed": 0,
+    "family": "vanderpol",
+    "source_rmse": 0.014919637474733308
+  },
+  {
+    "seed": 1,
+    "family": "duffing",
+    "source_rmse": 0.010452885214478855
+  },
+  {
+    "seed": 1,
+    "family": "pendulum",
+    "source_rmse": 0.011623076730670118
+  },
+  {
+    "seed": 1,
+    "family": "contact",
+    "source_rmse": 0.008321704848937706
+  },
+  {
+    "seed": 1,
+    "family": "vanderpol",
+    "source_rmse": 0.013473728225258205
+  }
+]

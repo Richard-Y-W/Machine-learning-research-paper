@@ -1,0 +1,56 @@
+{
+  "config": {
+    "output": "results/main",
+    "seeds": 12,
+    "seed_start": 0,
+    "steps": 2400,
+    "width": 32,
+    "threads": 2,
+    "budgets": [
+      8,
+      32,
+      128
+    ],
+    "families": [
+      "duffing",
+      "pendulum",
+      "duffing_mismatch"
+    ],
+    "interventions": [
+      "damping",
+      "restoring",
+      "combined"
+    ],
+    "gauges": [
+      "original",
+      "permuted",
+      "rescaled"
+    ],
+    "methods": [
+      "unedited",
+      "query_residual",
+      "query_symbolic",
+      "head_ridge",
+      "jacobian_ridge",
+      "normalized_jacobian",
+      "finetune_adam",
+      "oracle_residual"
+    ],
+    "test_points": 1024,
+    "horizon": 100,
+    "ridge": 0.0001,
+    "edit_iterations": 3
+  },
+  "started_utc": "2026-11-10T23:04:26.982307+00:00",
+  "python": "3.13.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.9.0+cpu",
+  "numpy": "2.3.4",
+  "device": "cpu",
+  "source_sha256": "b18733dc3156939b427f8aac5fbf0c6165b040a0f9244264e3a53397735c5d83",
+  "status": "complete",
+  "git_commit": null,
+  "rows": 7776,
+  "elapsed_seconds": 354.77338750008494,
+  "completed_utc": "2026-11-10T23:10:21.832075+00:00"
+}

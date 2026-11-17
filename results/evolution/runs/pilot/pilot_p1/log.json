@@ -1,0 +1,220 @@
+{
+ "inherit": true,
+ "constrained": true,
+ "generations": [
+  {
+   "gen": 1,
+   "parent_fitness": -1.245958227009396,
+   "parent": {
+    "fitness": -1.245958227009396,
+    "target_acc": 0.525,
+    "protected": -0.6802923681796529,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.169419288635254,
+    "tasks": {
+     "arc_challenge": 0.65,
+     "commonsense_qa": 0.525,
+     "hellaswag": 0.55,
+     "mmlu": 0.375
+    }
+   },
+   "meta": {
+    "call": "pilot_p1_g01",
+    "cost_usd": 0.050374,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "First generation. Error directions late (L24-final) promote letter-combo tokens (ABC, AD, AB) \u2014 wrong items seem driven by an early-letter (A) bias / letter-cluster direction. Harmful late MLP neurons (L25n1154, L27n343, L26n297, L25n279) and head L23h7 push against correct letter; helpful heads L25h9, L21h1. Mutations: ablate harmful neurons, damp harmful head, amplify helpful heads, rank1 projection of err:final out of late MLP down / attn o, and a letter-A bias reduction."
+   },
+   "accepted": 4,
+   "seconds": 236.8,
+   "n_valid": 6,
+   "n_improving": 3,
+   "n_admissible_improving": 3,
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: ablate top harmful late MLP neurons by DLA.",
+     "raw_ops": "[{\"op\": \"ablate\", \"tensor\": \"L25.mlp.down\", \"axis\": \"col\", \"index\": [1154, 279, 313, 482, 568, 307]}, {\"op\": \"ablate\", \"tensor\": \"L27.mlp.down\", \"axis\": \"col\", \"index\": [343]}, {\"op\": \"ablate\", \"tensor\": \"L26.mlp.down\", \"axis\": \"col\", \"index\": [297]}]",
+     "desc": "scale L25.mlp.down col[1154,279,313,482,568,307] x0; scale L27.mlp.down col[343] x0; scale L26.mlp.down col[297] x0",
+     "rel_change": {
+      "L27.mlp.down_proj.weight": 0.013,
+      "L26.mlp.down_proj.weight": 0.0154,
+      "L25.mlp.down_proj.weight": 0.0371
+     },
+     "ev": {
+      "fitness": -1.3211047935052194,
+      "target_acc": 0.48125,
+      "protected": -0.8200226368319514,
+      "protected_acc": 0.55,
+      "nll": 3.173743486404419,
+      "tasks": {
+       "arc_challenge": 0.625,
+       "commonsense_qa": 0.5,
+       "hellaswag": 0.4,
+       "mmlu": 0.4
+      }
+     },
+     "delta": "dfit -0.0751, dprot -0.1397, dNLL +0.0043",
+     "admissible": false,
+     "improves": false
+    },
+    {
+     "k": 1,
+     "rationale": "Damp harmful head L23h7 and boost helpful letter-routing heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.2}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 1, \"factor\": 1.15}]",
+     "desc": "scale L23.attn.o col[896:1024] x0.5; scale L25.attn.o col[1152:1280] x1.2; scale L21.attn.o col[128:256] x1.15",
+     "rel_change": {
+      "L23.self_attn.o_proj.weight": 0.1116,
+      "L21.self_attn.o_proj.weight": 0.0367,
+      "L25.self_attn.o_proj.weight": 0.0416
+     },
+     "ev": {
+      "fitness": -1.2327055016430677,
+      "target_acc": 0.5125,
+      "protected": -0.6816461662684257,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1695985794067383,
+      "tasks": {
+       "arc_challenge": 0.65,
+       "commonsense_qa": 0.525,
+       "hellaswag": 0.525,
+       "mmlu": 0.35
+      }
+     },
+     "delta": "dfit +0.0133, dprot -0.0014, dNLL +0.0002",
+     "admissible": true,
+     "improves": true
+    },
+    {
+     "k": 2,
+     "rationale": "Remove error direction written by L27 MLP when error-pattern neurons fire.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L27.mlp.down\", \"u\": \"err:final\", \"v\": \"mlperr:L27\", \"alpha\": -0.08}]",
+     "desc": "rank1 L27.mlp.down u=err:final v=mlperr:L27 alpha=-0.08",
+     "rel_change": {
+      "L27.mlp.down_proj.weight": 0.0062
+     },
+     "ev": {
+      "fitness": -1.331071590881038,
+      "target_acc": 0.4375,
+      "protected": -0.738867494572575,
+      "protected_acc": 0.6833333333333333,
+      "nll": 3.2566943168640137,
+      "tasks": {
+       "arc_challenge": 0.575,
+       "commonsense_qa": 0.475,
+       "hellaswag": 0.45,
+       "mmlu": 0.25
+      }
+     },
+     "delta": "dfit -0.0851, dprot -0.0586, dNLL +0.0873",
+     "admissible": false,
+     "improves": false
+    },
+    {
+     "k": 3,
+     "rationale": "Steer L26 MLP and L25 attention away from final error direction (letter-cluster bias).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L26.mlp.down\", \"u\": \"err:L27\", \"v\": \"mlperr:L26\", \"alpha\": -0.06}, {\"op\": \"rank1\", \"tensor\": \"L25.attn.o\", \"u\": \"err:L26\", \"v\": \"attnerr:L25\", \"alpha\": -0.05}]",
+     "desc": "rank1 L26.mlp.down u=err:L27 v=mlperr:L26 alpha=-0.06; rank1 L25.attn.o u=err:L26 v=attnerr:L25 alpha=-0.05",
+     "rel_change": {
+      "L26.mlp.down_proj.weight": 0.0039,
+      "L25.self_attn.o_proj.weight": 0.0039
+     },
+     "ev": {
+      "fitness": -1.2350904295948566,
+      "target_acc": 0.525,
+      "protected": -0.6784764485045647,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.169522762298584,
+      "tasks": {
+       "arc_challenge": 0.65,
+       "commonsense_qa": 0.525,
+       "hellaswag": 0.55,
+       "mmlu": 0.375
+      }
+     },
+     "delta": "dfit +0.0109, dprot +0.0018, dNLL +0.0001",
+     "admissible": true,
+     "improves": true
+    },
+    {
+     "k": 4,
+     "rationale": "Bolder: amplify helpful L24 neurons and helpful head cluster.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L24.mlp.down\", \"axis\": \"col\", \"index\": [561, 912, 658, 470, 505, 485], \"factor\": 1.5}, {\"op\": \"scale\", \"tensor\": \"L22.mlp.down\", \"axis\": \"col\", \"index\": [1182], \"factor\": 1.5}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 12, \"factor\": 1.2}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 13, \"factor\": 1.2}]",
+     "desc": "scale L24.mlp.down col[561,912,658,470,505,485] x1.5; scale L22.mlp.down col[1182] x1.5; scale L22.attn.o col[1536:1664] x1.2; scale L21.attn.o col[1664:1792] x1.2",
+     "rel_change": {
+      "L22.self_attn.o_proj.weight": 0.0455,
+      "L22.mlp.down_proj.weight": 0.0077,
+      "L21.self_attn.o_proj.weight": 0.0384,
+      "L24.mlp.down_proj.weight": 0.0199
+     },
+     "ev": {
+      "fitness": -1.2152856864398927,
+      "target_acc": 0.51875,
+      "protected": -0.6627971679903567,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1690151691436768,
+      "tasks": {
+       "arc_challenge": 0.65,
+       "commonsense_qa": 0.525,
+       "hellaswag": 0.525,
+       "mmlu": 0.375
+      }
+     },
+     "delta": "dfit +0.0307, dprot +0.0175, dNLL -0.0004",
+     "admissible": true,
+     "improves": true
+    },
+    {
+     "k": 5,
+     "rationale": "Reduce A-letter bias: subtract letter:A direction written by L27 MLP along its mean input pattern, small.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L27.mlp.down\", \"u\": \"letter:A\", \"v\": \"mlperr:L27\", \"alpha\": -0.05}, {\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"err:L24\", \"v\": \"mlperr:L23\", \"alpha\": -0.05}]",
+     "desc": "rank1 L27.mlp.down u=letter:A v=mlperr:L27 alpha=-0.05; rank1 L23.mlp.down u=err:L24 v=mlperr:L23 alpha=-0.05",
+     "rel_change": {
+      "L27.mlp.down_proj.weight": 0.0039,
+      "L23.mlp.down_proj.weight": 0.0038
+     },
+     "ev": {
+      "fitness": -3.50365746259543,
+      "target_acc": 0.23125,
+      "protected": -2.8281114562077465,
+      "protected_acc": 0.35,
+      "nll": 4.493830680847168,
+      "tasks": {
+       "arc_challenge": 0.325,
+       "commonsense_qa": 0.225,
+       "hellaswag": 0.35,
+       "mmlu": 0.025
+      }
+     },
+     "delta": "dfit -2.2577, dprot -2.1478, dNLL +1.3244",
+     "admissible": false,
+     "improves": false
+    }
+   ],
+   "genome_len": 1
+  }
+ ],
+ "tests": {},
+ "split_hash": {
+  "dev_target": "f65212be90e4ccd61953547e3c81e3597f62ca4861b77b7fc08bb12fddad7d8f",
+  "dev_protected": "2daa8d3f87ad2e69cf0b72c153cdf7c7f91629ad144ceeef45ef3f2842d10896",
+  "test_target": "4f4dbd85f4a1fcd07e20d5bf2454f916b1687f0e2fd342e95e52aead12de223f",
+  "test_protected": "05b6a33e6ad081b5811e3ac7a4382c869952f55ae6624366898ad4644352073e",
+  "calib_target": "9d0a95a3dc610c31114fec5f174c16dea2635c44520caa5c4588336371493bc4",
+  "wiki_dev": "a387ee3cdd3239b8ac22f0a2ca805a12c69f64e2c0f88a9463125f1068850e90",
+  "wiki_test": "46ec7db27fc9433ce67d4bbda2cca8af0dd46c0b663434d90d7d08a4893c3b2b"
+ },
+ "base": {
+  "fitness": -1.245958227009396,
+  "target_acc": 0.525,
+  "protected": -0.6802923681796529,
+  "protected_acc": 0.7166666666666667,
+  "nll": 3.169419288635254,
+  "tasks": {
+   "arc_challenge": 0.65,
+   "commonsense_qa": 0.525,
+   "hellaswag": 0.55,
+   "mmlu": 0.375
+  }
+ }
+}

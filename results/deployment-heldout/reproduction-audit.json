@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "source_snapshots": 4,
+  "deployment": {
+    "rows": 6,
+    "numeric_cells": 60,
+    "max_absolute_difference": 0.0
+  },
+  "dense": {
+    "rows": 4,
+    "numeric_cells": 20,
+    "max_absolute_difference": 0.0
+  }
+}

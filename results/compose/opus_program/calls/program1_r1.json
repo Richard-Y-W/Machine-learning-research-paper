@@ -1,0 +1,30 @@
+{
+ "label": "program1_r1",
+ "model": "claude-opus-5-5",
+ "effort": "high",
+ "ledger_id": "931f445cd0f64b1fb800295744c483d4",
+ "seconds": 21.6,
+ "stop_reason": "end_turn",
+ "usage": {
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 3487
+  },
+  "cache_creation_input_tokens": 3487,
+  "cache_read_input_tokens": 0,
+  "inference_geo": "global",
+  "input_tokens": 38,
+  "output_tokens": 1602,
+  "output_tokens_details": {
+   "thinking_tokens": 782
+  },
+  "server_tool_use": null,
+  "service_tier": "standard",
+  "speed": "standard"
+ },
+ "cost_usd": 0.05707105,
+ "error": null,
+ "user_text": "No programmes have been tried yet.\n\nRound 1 of 5. Return up to 3 programmes.",
+ "response_text": "{\"analysis\":\"Hypothesis: L21h6 is a successor head. Its OV circuit maps the token it attends to onto that token's successor. Evidence: it has the largest ablation effect on sequence prompts, and the oracle swap gives two-steps-ahead answers 92% of the time. On lookup prompts it barely attends to the queried value (0.01). If it is redirected from the final position to the queried value, it should write successor(value) into the residual. L22h7 is a late copy head that writes the value itself, so damping it may be needed. Removing L21h6 costs only +0.043 WikiText, well under budget. An alternative test: transplant h6's OV into L21h8, which already attends to the queried value (0.24). These candidates separate the QK-redirect route from the OV-transplant route, and test whether suppressing the competing copy head matters.\",\"candidates\":[{\"rationale\":\"Core test: reprogram L21h6 QK to attend from final to queried_value. Use slow RoPE dims and an other_values contrast so it picks the right line's value. Amplify the output modestly.\",\"ops\":[{\"op\":\"attention_program\",\"layer\":21,\"head\":6,\"query_role\":\"final\",\"key_role\":\"queried_value\",\"contrast\":\"other_values\",\"ridge\":1.0,\"rank\":32,\"rope_band\":\"low\"},{\"op\":\"scale_output\",\"layer\":21,\"head\":6,\"gain\":1.5}]},{\"rationale\":\"Same redirect with a stronger gain. Also remove the downstream copy head L22h7 so the literal value competes less with its successor. Layers 16 and 19 are kept intact so h6's input statistics still encode the lookup.\",\"ops\":[{\"op\":\"attention_program\",\"layer\":21,\"head\":6,\"query_role\":\"final\",\"key_role\":\"queried_value\",\"contrast\":\"other_values\",\"ridge\":1.0,\"rank\":32,\"rope_band\":\"low\"},{\"op\":\"scale_output\",\"layer\":21,\"head\":6,\"gain\":2.0},{\"op\":\"scale_output\",\"layer\":22,\"head\":7,\"gain\":0.0}]},{\"rationale\":\"OV-transplant route: L21h8 already attends to the queried value. Give its value group and output columns h6's successor OV, which keeps h6 itself intact. This tests whether the successor mapping lives in OV alone.\",\"ops\":[{\"op\":\"copy_ov\",\"layer\":21,\"from_head\":6,\"to_head\":8},{\"op\":\"scale_output\",\"layer\":21,\"head\":8,\"gain\":2.0}]}]}",
+ "utc": "2026-11-16T01:19:15.128274+00:00"
+}

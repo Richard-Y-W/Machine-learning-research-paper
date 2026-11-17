@@ -1,0 +1,26 @@
+W1114 20:24:12.675000 49116 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 37/311 [00:00<00:00, 326.44it/s]Loading weights:  23%|██▎       | 72/311 [00:00<00:00, 339.51it/s]Loading weights:  34%|███▍      | 107/311 [00:00<00:00, 335.69it/s]Loading weights:  48%|████▊     | 149/311 [00:00<00:00, 357.58it/s]Loading weights:  63%|██████▎   | 196/311 [00:00<00:00, 395.23it/s]Loading weights:  80%|████████  | 249/311 [00:00<00:00, 436.68it/s]Loading weights:  96%|█████████▌| 299/311 [00:00<00:00, 446.47it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 418.44it/s]
+[trivial] base                   @256 0.10 @384 0.37 @512 0.80 median tok  431 (894s)
+[trivial] non-thinking zero-shot  acc 0.18 mean tok 42 by family {'F1': 0.8333333333333334, 'F2': 0.6666666666666666, 'F3': 0.0, 'F4': 0.0, 'F5': 0.0, 'F6': 0.06666666666666667}
+[trivial] prompt:brief           @256 0.08 @384 0.45 @512 0.83 median tok  394 (889s)
+[trivial] prompt:under100        @256 0.32 @384 0.82 @512 0.93 median tok  292 (633s)
+[trivial] prompt:trace_once      @256 0.07 @384 0.50 @512 0.87 median tok  382 (768s)
+[trivial] endthink_bias:1        @256 0.10 @384 0.37 @512 0.80 median tok  431 (873s)
+[trivial] endthink_bias:2        @256 0.10 @384 0.37 @512 0.80 median tok  431 (775s)
+[trivial] endthink_bias:3        @256 0.10 @384 0.37 @512 0.80 median tok  431 (889s)
+[trivial] endthink_bias:4        @256 0.10 @384 0.37 @512 0.80 median tok  431 (884s)
+[trivial] endthink_bias:6        @256 0.10 @384 0.37 @512 0.80 median tok  431 (877s)
+[trivial] steer:L8:c2            @256 0.05 @384 0.30 @512 0.62 median tok  447 (906s)
+[trivial] steer:L8:c4            @256 0.05 @384 0.20 @512 0.37 median tok  512 (949s)
+[trivial] steer:L14:c2           @256 0.17 @384 0.43 @512 0.53 median tok  346 (865s)
+[trivial] steer:L14:c4           @256 0.00 @384 0.00 @512 0.00 median tok  512 (943s)
+[trivial] random_edit:1          @256 0.10 @384 0.40 @512 0.82 median tok  418 (861s)
+[trivial] random_edit:2          @256 0.10 @384 0.37 @512 0.77 median tok  424 (926s)
+[trivial] random_edit:3          @256 0.08 @384 0.38 @512 0.75 median tok  429 (955s)
+[trivial] random_edit:4          @256 0.10 @384 0.40 @512 0.78 median tok  432 (934s)
+[trivial] random_edit:5          @256 0.10 @384 0.37 @512 0.80 median tok  431 (875s)
+[trivial] random_edit:6          @256 0.10 @384 0.47 @512 0.77 median tok  391 (967s)
+[trivial] random_edit:7          @256 0.02 @384 0.38 @512 0.75 median tok  438 (925s)
+[trivial] random_edit:8          @256 0.08 @384 0.45 @512 0.73 median tok  392 (584s)
+[trivial] base@1024 {256: 0.0, 384: 0.35, 512: 0.75, 1024: 0.9166666666666666}
+[trivial] DONE

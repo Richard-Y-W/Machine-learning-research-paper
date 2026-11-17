@@ -1,0 +1,23 @@
+{
+  "config": {
+    "output": "results/cycle3-reproduction",
+    "seed_start": 43,
+    "seeds": 1,
+    "train_steps": 2400,
+    "cap": 1920
+  },
+  "status": "complete",
+  "started_utc": "2026-11-11T02:27:01.323537+00:00",
+  "git_commit": "934987488b5636685d6a058cf2507c29c4ecd699",
+  "source_sha256": "6ef6e019225a903d1ce2c66788bcad2a584bd7d579ccf456555a53e4343a4a57",
+  "python": "3.13.7",
+  "torch": "2.9.0+cpu",
+  "numpy": "2.3.4",
+  "device": "cpu",
+  "threshold": 0.002,
+  "cap": 1920,
+  "fitting_rows": 16,
+  "identification_rows": 36,
+  "elapsed_seconds": 21.155026599997655,
+  "completed_utc": "2026-11-11T02:27:22.521645+00:00"
+}

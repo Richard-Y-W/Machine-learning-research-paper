@@ -1,0 +1,42 @@
+{
+ "capitalise_3shot": {
+  "pairs": 15,
+  "prompts": 45,
+  "native_accuracy": 0.733
+ },
+ "plural_3shot": {
+  "pairs": 20,
+  "prompts": 60,
+  "native_accuracy": 0.833
+ },
+ "past_3shot": {
+  "pairs": 20,
+  "prompts": 60,
+  "native_accuracy": 0.9
+ },
+ "antonym_3shot": {
+  "pairs": 16,
+  "prompts": 48,
+  "native_accuracy": 0.812
+ },
+ "capitalise_8shot": {
+  "pairs": 15,
+  "prompts": 45,
+  "native_accuracy": 0.933
+ },
+ "plural_8shot": {
+  "pairs": 20,
+  "prompts": 60,
+  "native_accuracy": 1.0
+ },
+ "past_8shot": {
+  "pairs": 20,
+  "prompts": 60,
+  "native_accuracy": 1.0
+ },
+ "antonym_8shot": {
+  "pairs": 16,
+  "prompts": 48,
+  "native_accuracy": 0.875
+ }
+}

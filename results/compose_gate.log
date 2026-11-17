@@ -1,0 +1,56 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  61%|██████▏   | 190/310 [00:00<00:00, 1896.43it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2398.11it/s]
+[gate] 0 native dev {'x': 0.0, 'x+1': 1.0, 'x+2': 0.0, 'margin_next_vs_cur': 4.644072592258453, 'margin_plus2_vs_next': -3.2331088185310364}
+[gate] 0 native reserved {'x': 0.0, 'x+1': 1.0, 'x+2': 0.0, 'margin_next_vs_cur': 4.88872504234314, 'margin_plus2_vs_next': -3.6730594635009766}
+[gate] 0   alphabet  next 1.00 +2 0.00
+[gate] 0   bare      next 1.00 +2 0.00
+[gate] 0   prose     next 1.00 +2 0.00
+[gate] 0   seq       next 1.00 +2 0.00
+[gate] 1 heads whose removal hurts next-letter margin most (d_margin, next-letter acc after removal):
+[gate] 1   L21h6: -1.93  acc 0.77
+[gate] 1   L22h8: -1.18  acc 0.98
+[gate] 1   L11h9: -1.12  acc 0.98
+[gate] 1   L24h4: -0.87  acc 1.00
+[gate] 1   L25h4: -0.78  acc 1.00
+[gate] 1   L19h8: -0.43  acc 1.00
+[gate] 1   L23h10: -0.42  acc 1.00
+[gate] 1   L16h10: -0.33  acc 1.00
+[gate] 1   L12h1: -0.28  acc 0.98
+[gate] 1   L13h0: -0.25  acc 1.00
+[gate] 1 weights-located heads: L21h6 rank 1/448 d_margin -1.93, L22h8 rank 2/448 d_margin -1.18, L25h8 rank 431/448 d_margin +0.12, L25h9 rank 424/448 d_margin +0.11
+[gate] 2 forced self-attention L21h6: next 1.00 +2 0.00 margin(next-cur) +5.47 (base +4.64) margin(+2-next) -3.69
+[gate] 2 forced self-attention L22h8: next 1.00 +2 0.00 margin(next-cur) +6.89 (base +4.64) margin(+2-next) -2.83
+[gate] 2 forced self-attention L25h8: next 1.00 +2 0.00 margin(next-cur) +5.29 (base +4.64) margin(+2-next) -3.00
+[gate] 2 forced self-attention L25h9: next 1.00 +2 0.00 margin(next-cur) +5.17 (base +4.64) margin(+2-next) -3.08
+[gate] 2 forced self-attention L11h9: next 1.00 +2 0.00 margin(next-cur) +4.67 (base +4.64) margin(+2-next) -3.24
+[gate] 2 forced self-attention L24h4: next 1.00 +2 0.00 margin(next-cur) +7.51 (base +4.64) margin(+2-next) -3.29
+[gate] 2 forced self-attention L25h4: next 1.00 +2 0.00 margin(next-cur) +8.33 (base +4.64) margin(+2-next) -3.36
+[gate] 2 forced self-attention L19h8: next 1.00 +2 0.00 margin(next-cur) +4.76 (base +4.64) margin(+2-next) -3.27
+[gate] 2 forced self-attention L23h10: next 1.00 +2 0.00 margin(next-cur) +7.94 (base +4.64) margin(+2-next) -2.96
+[gate] 2 forced self-attention L16h10: next 1.00 +2 0.00 margin(next-cur) +4.71 (base +4.64) margin(+2-next) -3.26
+[gate] 3 routing L21h6->L22h8: +2 0.00 next 1.00 margin(+2-next) -3.21
+[gate] 3 routing L21h6->L25h8: +2 0.00 next 1.00 margin(+2-next) -3.35
+[gate] 3 routing L21h6->L25h9: +2 0.00 next 1.00 margin(+2-next) -3.46
+[gate] 3 routing L21h6->L24h4: +2 0.00 next 1.00 margin(+2-next) -3.79
+[gate] 3 routing L21h6->L25h4: +2 0.00 next 1.00 margin(+2-next) -3.85
+[gate] 4 oracle patch of one layer's attention input (+2 rate by layer): 0:0.71 1:0.00 2:0.00 3:0.00 4:0.00 5:0.00 6:0.00 7:0.00 8:0.00 9:0.00 10:0.00 11:0.08 12:0.00 13:0.00 14:0.00 15:0.00 16:0.00 17:0.00 18:0.00 19:0.00 20:0.00 21:0.90 22:0.04 23:0.00 24:0.00 25:0.00 26:0.00 27:0.00
+[gate] 4 oracle patch of attention inputs of all layers >= l (+2 rate): 0:1.00 2:1.00 4:1.00 6:1.00 8:1.00 10:1.00 12:1.00 14:1.00 16:1.00 18:1.00 20:0.98 22:0.38 24:0.08 26:0.00
+[gate] 4 oracle value patch L21h6: +2 0.94 next 0.06 margin(+2-next) +2.09
+[gate] 4 oracle value patch L22h8: +2 0.65 next 0.00 margin(+2-next) +4.98
+[gate] 4 oracle value patch L25h8: +2 0.15 next 0.85 margin(+2-next) -0.78
+[gate] 4 oracle value patch L25h9: +2 0.08 next 0.92 margin(+2-next) -1.16
+[gate] 4 oracle value patch L11h9: +2 0.58 next 0.42 margin(+2-next) +0.27
+[gate] 4 oracle value patch L24h4: +2 0.40 next 0.25 margin(+2-next) +0.62
+[gate] 4 oracle value patch L25h4: +2 0.27 next 0.44 margin(+2-next) +0.47
+[gate] 4 oracle value patch L19h8: +2 0.00 next 1.00 margin(+2-next) -3.06
+[gate] 4 oracle value patch L23h10: +2 0.54 next 0.04 margin(+2-next) +3.47
+[gate] 4 oracle value patch L16h10: +2 0.00 next 1.00 margin(+2-next) -3.28
+[gate] 4 oracle value patch, all 10 candidate heads together: +2 1.00 next 0.00
+[gate] 5 interchange (dev) single layer 21: {'donor_successor': 0.5208333333333334, 'donor_itself': 0.0, 'original_next': 0.3541666666666667}
+[gate] 5 interchange (dev) layers >= 0: {'donor_successor': 0.9166666666666666, 'donor_itself': 0.0, 'original_next': 0.0}
+[gate] 5 control, wrong position (dev) layer 21: {'donor_successor': 0.0, 'donor_itself': 0.0, 'original_next': 1.0}
+[gate] 5 interchange (reserved) single layer 21: {'donor_successor': 0.53125, 'donor_itself': 0.0, 'original_next': 0.46875}
+[gate] 5 interchange (reserved) layers >= 0: {'donor_successor': 0.90625, 'donor_itself': 0.0, 'original_next': 0.0}
+[gate] 5 control, wrong position (reserved) layer 21: {'donor_successor': 0.0, 'donor_itself': 0.0, 'original_next': 1.0}
+[gate] 4 reserved letters: single layer 21 +2 0.84; layers >= 0 +2 0.94
+[gate] VERDICT {'native_ok': True, 'unpatched_plus2': 0.0, 'best_single_layer': 21, 'single_layer_plus2': 0.8958333432674408, 'best_from_layer': 0, 'from_layer_plus2': 1.0, 'go_single_layer': True, 'reserved_single_layer_plus2': 0.84375, 'note': 'from-layer (cumulative) patches import donor computation and are diagnostic only'} (70s)
+[gate] DONE

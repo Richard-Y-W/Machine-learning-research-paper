@@ -1,0 +1,9 @@
+{
+  "source_pdf": "output/pdf/research-draft.pdf",
+  "note": "Historical validation of an earlier draft, not of the current preprint.",
+  "pages": 6,
+  "words": 2610,
+  "rendered_pages": 6,
+  "renderer": "PyMuPDF; Poppler unavailable",
+  "text_checks": "passed"
+}

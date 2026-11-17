@@ -1,0 +1,9 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<01:07,  4.56it/s]Loading weights:  61%|██████▏   | 190/310 [00:00<00:00, 745.58it/s]Loading weights:  97%|█████████▋| 301/310 [00:00<00:00, 672.67it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 612.20it/s]
+[design] unedited model: {'attention_to_queried_value_by_head': [0.06, 0.09, 0.02, 0.0, 0.06, 0.01, 0.03, 0.0, 0.28, 0.04, 0.0, 0.05, 0.05, 0.11, 0.05, 0.22], 'word_lookup_accuracy': 0.655, 'wikitext_loss': 2.833, 'dev_successor_rate': 0.28, 'dev_lookup_rate': 0.467}
+[design] attempt 1: $0.012 | KeyError: 'build'
+[design]   analysis: 
+[design] attempt 2: $0.002 | KeyError: 'build'
+[design]   analysis: 
+[design] attempt 3: $0.003 | KeyError: 'build'
+[design]   analysis: 
+[design] DONE; editor spend for this experiment $0.02

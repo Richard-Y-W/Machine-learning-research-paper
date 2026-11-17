@@ -1,0 +1,14 @@
+{
+  "seed": 89,
+  "capacity": "spare",
+  "representation": "original",
+  "task": "semantic_damping",
+  "coefficients": [
+    0.9087890827411325,
+    0.2286913208919216,
+    0.2618804479760559,
+    1.0186422995872844
+  ],
+  "true_c": 0.2286913208919216,
+  "source_training_steps": 6000
+}

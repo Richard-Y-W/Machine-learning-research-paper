@@ -1,0 +1,231 @@
+## Current model
+Accepted edits so far: 1.
+This round's sample (40 problems): acc@256 0.75, acc@384 0.95, mean generated tokens 228, unfinished at 384 tokens 0.00.
+Validation (held-out problems, aggregate only): acc@256 0.42 (original 0.40), acc@512 0.85 (original 0.87), median tokens 262 (original 288).
+Protected bounds: multiple-choice fitness must stay >= -1.0081; WikiText loss must stay <= 3.7179.
+Approximate share of thinking text by type (rule-based): re-checking 6%, state updates 32%, final answer 23%, restating / setup 13%, other 26%.
+
+## Example traces (short successes, correct but over budget, wrong or unfinished)
+### Example (family F4, 108 tokens, correct within 256; target 49)
+```python
+a = 41
+acc = 47
+if a > acc:
+    item = a
+else:
+    item = acc
+item = item + 2
+print(item)
+```
+Model output:
+<think>
+Okay, let's see. The program starts with a = 41 and acc = 47. Then it checks if a is greater than acc. Since 41 is less than 47, the else block runs. So item is set to acc, which is 47. Then it adds 2 to item, making it 49. Finally, it prints 49. So the answer should be 49.
+</think>
+
+Answer: 49
+
+Answer: 49<|im_end|>
+
+### Example (family F5, 161 tokens, correct within 256; target 70)
+```python
+k = 52
+for acc in range(3):
+    k += 6
+print(k)
+```
+Model output:
+<think>
+Okay, let's see. The code starts with k set to 52. Then there's a loop for acc in range(3). So the loop runs three times. In each iteration, k is increased by 6. So after the first iteration, k becomes 52 + 6 = 58. Second iteration adds another 6, making it 64. Third iteration adds another 6, making it 70. Then the print statement prints k, which is 70. So the answer should be 70. Let me check again. 52 + 6*3 is 52+18=70. Yep, that's correct. Answer: 70.
+</think>
+
+Answer: 70.<|im_end|>
+
+### Example (family F1, 311 tokens, correct but over 256 tokens; target 12)
+```python
+val = 12
+tmp = val
+val = 59
+b = 27
+item = b
+b = tmp
+print(b)
+```
+Model output:
+<think>
+Okay, let's see. The Python code given is:
+
+val = 12
+tmp = val
+val = 59
+b = 27
+item = b
+b = tmp
+print(b)
+
+So, first, let's trace the steps. Starting with val = 12. Then tmp is set to val, which is still 12. Then val is set to 59. Next, b is initialized to 27. Then item is assigned to b, so item becomes 27. Then b is set back to tmp, which was originally 12. Finally, print(b) outputs 12.
+
+Wait, but let me check again. The first line sets val to 12, then tmp is val (so tmp is 12). Then val is set to 59. Then b is 27. Then item is b, so item is 27. Then b is set to tmp (which was 12). So after that, the value of b is 12 again. So when we print(b), it should print 12. So the answer is 12. Let me confirm once more. Yes, the steps lead to b being 12. So the answer is 12.
+</think>
+
+Answer: 12
+
+The Python program prints the value of `b`, which starts at 27, then becomes 12 after the final assignment. 
+
+Answer: 12<|im_end|>
+
+### Example (family F3, 381 tokens, correct but over 256 tokens; target 14)
+```python
+right = 13
+x = 40
+right += 9
+x -= 17
+right -= 8
+x += 12
+print(right)
+```
+Model output:
+<think>
+Okay, let's see. The Python code given is supposed to print the value of 'right' after some assignments. Let me go through each line step by step.
+
+First, right is initialized to 13. Then x is set to 40. Then right is increased by 9, so right becomes 13 + 9 = 22. Then x is decreased by 17, making x 40 -17 = 23. Then right is decreased by 8, so 22 -8 = 14. Finally, x is increased by 12, making it 23 +12 = 35. The question is, what does the print statement output? The print statement is just print(right), so the output should be 14. Let me check again to make sure I didn't make any mistakes.
+
+Yes, right starts at 13, then adds 9, subtracts 17, subtracts 8, adds 12. Let's do the math again:
+
+13 +9 = 22.
+
+22 -8 = 14.
+
+14 +12 = 26? Wait, wait, no. Wait, the steps are:
+
+right +=9 → 22.
+
+x -=17 → 23.
+
+right -=8 → 14.
+
+x +=12 → 23 +12 = 35.
+
+So right is 14 after the last operation. So the print statement would output 14. Therefore, the answer is 14.
+</think>
+
+Answer: 14
+
+```python
+right = 13
+x = 40
+right += 9
+x -= 17
+right -= 8
+x += 12
+print(right)
+```<|im_end|>
+
+### Example (family F2, 227 tokens, wrong or unfinished at 384; target 26)
+```python
+count = 26
+v = 80
+y = 60
+left = count
+count = v
+v = left
+y = count
+print(v)
+```
+Model output:
+<think>
+Okay, let's see. The Python code has some variables. Let me go through it step by step. 
+
+First, count is initialized as 26, v as 80, and y as 60. Then left is set to count, which is 26. Then count is assigned to v, which was 80. Then v is set to left, which is 26. Then y is set to count, which is now 80. 
+
+The print statement is just print(v). So after all these assignments, v should be 80 again. Because count was changed to v, then v changed to left, which was 26. Then y is set to count, which is 80. So the final value of v is 80. 
+
+So the answer should be 80.
+</think>
+
+Answer: 80
+
+```python
+count = 26
+v = 80
+y = 60
+left = count
+count = v
+v = left
+y = count
+print(v)
+```<|im_end|>
+
+### Example (family F1, 247 tokens, wrong or unfinished at 384; target 18)
+```python
+k = 93
+acc = k
+k = 97
+val = 18
+p = val
+val = acc
+print(p)
+```
+Model output:
+<think>
+Okay, let's see. I need to figure out what this Python program prints. Let me start by looking at the code step by step.
+
+First, there's a variable k initialized to 93. Then acc is set to k, so acc becomes 93. Then k is updated to 97. Then val is assigned 18. p is set to val, so p is 18. Then val is updated to acc, which was 93. Finally, the program prints p.
+
+So, starting from the first line, k starts at 93. Then acc is 93. Then k becomes 97. Then val is 18, p is 18. Then val becomes acc (93), so p is 93. Then print(p) outputs 93. So the answer should be 93.
+</think>
+
+Answer: 93
+
+The program starts with k=93, acc=93, then k=97, val=18, p=18, then val=acc (93), and finally prints p, which becomes 93. 
+
+Answer: 93<|im_end|>
+
+## Diagnostics
+positions available: start 40, mid 120, recheck 11, end 40
+
+Direct logit attribution toward the end-of-thinking token </think>: value at 'end' positions minus value at 'mid' positions
+heads: L27h14:-0.90, L24h6:+0.90, L23h6:+0.84, L25h7:+0.81, L26h0:+0.70, L24h2:+0.65, L23h7:-0.51, L21h8:+0.48, L23h5:+0.45, L23h0:+0.39, L24h5:+0.38, L27h1:-0.35
+MLP neurons: L27n1574:+10.55, L27n1371:+6.78, L27n222:+0.84, L27n0:-0.62, L27n19:+0.51, L27n8:+0.49, L27n39:-0.49, L27n50:-0.48, L27n98:-0.45, L27n33:-0.45, L27n49:+0.40, L27n26:+0.36
+logit lens p(token) at 'end' / 'mid': L8: 0.000/0.000  L12: 0.000/0.000  L16: 0.000/0.000  L20: 0.000/0.000  L24: 0.000/0.000  L28: 0.999/0.000
+
+Direct logit attribution toward the re-check token ' Wait': value at 'recheck' positions minus value at 'mid' positions
+heads: L25h0:+0.86, L27h15:+0.78, L25h4:-0.75, L24h0:+0.74, L25h6:+0.56, L23h3:+0.55, L27h5:+0.52, L23h6:+0.51, L23h7:-0.46, L24h3:-0.32, L27h13:+0.32, L24h9:+0.24
+MLP neurons: L25n162:-2.57, L24n1610:+1.14, L23n179:+0.65, L19n1969:+0.57, L24n400:+0.52, L27n39:+0.49, L22n67:+0.47, L26n20:+0.46, L27n386:-0.35, L24n43:+0.34, L25n944:-0.33, L26n269:-0.31
+logit lens p(token) at 'recheck' / 'mid': L8: 0.000/0.000  L12: 0.000/0.000  L16: 0.000/0.000  L20: 0.059/0.000  L24: 0.094/0.000  L28: 0.224/0.000
+
+## Results of your probes from the previous round
+- {"kind": "act_stats", "site": "mlp", "layer": 25, "event": "recheck"} -> norm 100.936; largest coordinates 162:+37.18, 24:-29.82, 22:-24.51, 41:+20.46, 6:+17.91, 11:-17.69, 40:-17.06, 55:+16.68
+- {"kind": "act_stats", "site": "mlp", "layer": 24, "event": "recheck"} -> norm 92.856; largest coordinates 1610:+47.25, 43:-30.91, 42:-28.62, 302:+23.71, 31:-20.21, 11:-20.20, 140:-16.02, 400:+13.17
+- {"kind": "act_stats", "site": "resid", "layer": 20, "event": "start"} -> norm 124.170; largest coordinates 35:+40.78, 27:+21.98, 2:+19.37, 4:+19.08, 41:+17.65, 16:-14.88, 3:-13.98, 22:+13.80
+- {"kind": "weight_stats", "tensor": "L25.mlp.down"} -> shape (1024, 3072), Frobenius norm 58.713, mean |w| 0.0259, top singular values [3.948, 3.316, 3.265, 3.228, 3.182]
+
+## History (oldest first). Each candidate was scored on that round's fresh sample.
+Round 1: current model acc@256 0.55, acc@384 0.95, mean tokens 255; nothing kept (not confirmed on the second sample)
+  [0] scale L24.attn.o col[0:128] x0.6; scale L25.attn.o col[0:128] x0.7 -> acc@256 0.55, acc@384 0.95, mean tokens 252 (n=40)
+      rationale: Damp the main heads writing ' Wait' at recheck positions.
+  [1] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.15 -> acc@256 0.75, acc@384 0.97, mean tokens 232 (n=40)
+      rationale: Subtract the recheck-minus-mid residual direction from L24 attention output when the head pattern matches recheck positions.
+  [2] rank1 L27.mlp.down u=tok: Wait v=act:mlp:L27:recheck alpha=-0.1 -> acc@256 0.50, acc@384 0.85, mean tokens 244 (n=20)
+      rationale: Make the L27 MLP write against the ' Wait' unembedding when the recheck neuron pattern fires.
+  [3] scale L24.attn.o col[0:128] x0.85; scale L27.mlp.down col[1574] x1.12 -> acc@256 0.55, acc@384 0.95, mean tokens 247 (n=20)
+      rationale: Conservative: mild Wait damping plus a slight strengthening of the natural end-of-thinking neuron.
+Round 2: current model acc@256 0.50, acc@384 0.95, mean tokens 251; nothing kept (not confirmed on the second sample)
+  [0] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.2 -> acc@256 0.45, acc@384 1.00, mean tokens 255 (n=20)
+      rationale: Repeat the best-performing edit, slightly stronger, to confirm the recheck suppression.
+  [1] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.15; rank1 L25.attn.o u=act:resid:L26:recheck - act:resid:L26:mid v=act:attn:L25:recheck alpha=-0.1 -> acc@256 0.62, acc@384 0.93, mean tokens 249 (n=40)
+      rationale: The same mechanism spread across L24 and L25 attention outputs (the two main heads writing ' Wait') at moderate strength.
+  [2] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.1 -> acc@256 0.45, acc@384 0.93, mean tokens 251 (n=40)
+      rationale: Conservative version of the best edit, to reduce the risk of harming accuracy at 384 tokens or on protected abilities.
+  [3] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.15; rank1 L26.attn.o u=act:resid:L27:end - act:resid:L27:recheck v=act:attn:L26:recheck alpha=+0.08 -> acc@256 0.50, acc@384 0.95, mean tokens 261 (n=20)
+      rationale: Best edit plus a mild push toward the end-of-thinking direction from late attention when the end-like pattern appears.
+Round 3: current model acc@256 0.47, acc@384 0.88, mean tokens 264; KEPT candidate 0
+  [0] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.15; rank1 L25.attn.o u=act:resid:L26:recheck - act:resid:L26:mid v=act:attn:L25:recheck alpha=-0.1 -> acc@256 0.55, acc@384 0.90, mean tokens 249 (n=40)
+      rationale: Re-test the best recent combination: subtract the recheck-minus-mid residual direction from L24 and L25 attention outputs.
+  [1] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck - act:attn:L24:mid alpha=-0.15; rank1 L25.attn.o u=act:resid:L26:recheck - act:resid:L26:mid v=act:attn:L25:recheck - act:attn:L25:mid alpha=-0.1 -> acc@256 0.55, acc@384 0.88, mean tokens 249 (n=40)
+      rationale: Same subtraction, but keyed on the contrastive head pattern (recheck minus mid), so the edit fires mainly at recheck positions and leaves ordinary steps alone.
+  [2] scale L25.mlp.down col[162] x1.4; scale L24.mlp.down col[1610] x0.7 -> acc@256 0.45, acc@384 0.80, mean tokens 264 (n=20)
+      rationale: Conservative neuron-level edit: strengthen L25n162 (pushes against ' Wait') and weaken L24n1610 (pushes toward ' Wait').
+  [3] rank1 L25.mlp.down u=act:resid:L26:recheck - act:resid:L26:mid v=act:mlp:L25:recheck alpha=-0.1 -> acc@256 0.45, acc@384 0.85, mean tokens 255 (n=20)
+      rationale: MLP-side mechanism: when the L25 neuron pattern matches recheck positions, have L25.mlp.down write against the recheck-minus-mid residual direction.
+
+Propose exactly 4 diverse mutations of the current model, and up to 6 probes.

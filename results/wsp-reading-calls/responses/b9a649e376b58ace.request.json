@@ -1,0 +1,76 @@
+{
+  "model": "claude-opus-5-5",
+  "system": "You are editing a neural network directly from numerical weights. No tools are available. Return the requested final JSON patch with a brief public explanation.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are performing direct weight-space programming. Reason from the raw numerical weights below; you have no tools, execution, examples, probes, or feedback. Produce explicit numerical parameter replacements, not code or a training recipe. You may change existing tensor entries but cannot change architecture. Unlisted entries remain identical.\nInputs x=[q,v,u] are physical position, velocity, applied force. Output is acceleration. This network was trained to approximate the family -k*sin(q)-c*v-a*v*abs(v)+g*u, with positive unknown coefficients. Coefficient values are NOT supplied. The intended domain is [-1,1]^3.\nArchitecture: z=ReLU(W1*x+b1); f(x)=sum_i W2[i]*z[i]+b2[0]. W1 shape [14,3]; b1 and W2 length 14; b2 length 1. All indices are zero-based. Some representations may contain unused hidden capacity.\nRequest: Infer the unknown positive linear viscous damping coefficient c from these weights, then double that coefficient ONLY: f_new(x)=f_old(x)-c*v. Preserve the quadratic drag, restoring response, action response, and other original behavior. Report your estimated_c.\nWeights:\n{\"W1\":[[0.0,0.0,0.0],[0.01795916,-0.33744696,0.30358164],[0.03616848,-0.01102539,0.16205867],[1.31267389,-0.00907702,0.0043516],[0.00034657,0.75971902,0.00604655],[-2.48650359,0.00786744,-0.00686749],[0.01862599,-0.21154406,0.19397522],[0.0,0.0,0.0],[-0.12347417,0.22299908,-0.24942411],[-0.01491073,0.13968696,-0.12791478],[0.26047503,-0.13178329,-0.58877083],[0.22682524,-0.66218615,0.55059961],[-0.02757498,0.40008986,-0.35634551],[0.00255807,-0.45880855,-0.00141073]],\"b1\":[0.0,0.15415579,0.28587207,1.07384975,-0.51774991,2.08749198,0.10737118,0.0,0.82676209,0.40806168,1.29183593,1.99889404,-0.19087584,-0.30890596],\"W2\":[0.0,0.6399754,0.85760541,-0.28542355,-0.72014571,0.15652162,0.73104449,0.0,-0.27968301,-1.23118061,-0.23432926,0.25290424,-0.95159047,1.21088523],\"b2\":[0.08889423]}\nReturn JSON with summary (brief public explanation, not detailed chain of thought), estimated_c (number for semantic damping, otherwise null), and patches. Each patch is {tensor: W1/b1/W2/b2, index: [row,column] for W1 or [i] for vectors, value: a numerical replacement}. Do not return an executable expression. Use enough decimal precision. If you cannot find an edit, return an empty patches list."
+    }
+  ],
+  "max_tokens": 4096,
+  "thinking": {
+    "type": "adaptive"
+  },
+  "output_config": {
+    "effort": "medium",
+    "format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "summary": {
+            "type": "string"
+          },
+          "estimated_c": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "patches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tensor": {
+                  "type": "string",
+                  "enum": [
+                    "W1",
+                    "b1",
+                    "W2",
+                    "b2"
+                  ]
+                },
+                "index": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "tensor",
+                "index",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "summary",
+          "estimated_c",
+          "patches"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

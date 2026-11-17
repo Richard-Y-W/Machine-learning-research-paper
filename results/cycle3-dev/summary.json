@@ -1,0 +1,737 @@
+{
+  "source_hash": "passed",
+  "source_models": 4,
+  "threshold": 0.002,
+  "threshold_attainment": {
+    "warm": 4,
+    "fresh": 4
+  },
+  "matched_fit_warm_minus_fresh": {
+    "mean": -0.013386624173673868,
+    "low": -0.015426720834403615,
+    "high": -0.011346527512944122,
+    "n_seeds": 2,
+    "nonfinite_seed_values": 0,
+    "paired_model_conditions": 4
+  },
+  "final_warm_minus_fresh": {
+    "mean": -0.01219595480828337,
+    "low": -0.014261084922818737,
+    "high": -0.010130824693748004,
+    "n_seeds": 2,
+    "nonfinite_seed_values": 0,
+    "paired_model_conditions": 4
+  },
+  "mixed64_minus_narrow256": {
+    "mean": -0.19102251998896388,
+    "low": -0.20832837846506808,
+    "high": -0.1737166615128597,
+    "n_seeds": 2,
+    "nonfinite_seed_values": 0,
+    "paired_model_conditions": 4
+  },
+  "nonfinite_fitting_metrics": {
+    "id_rmse": 0,
+    "teacher_fit_rmse": 0,
+    "calibration_fit_rmse": 0,
+    "ood_rmse": 0
+  },
+  "fitting_summary": [
+    {
+      "event": "fixed",
+      "budget": 120,
+      "method": "fresh",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.011336930474930113,
+          "low": 0.010791266797513552,
+          "high": 0.011882594152346673,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.03861043993226154,
+          "low": 0.03520354081163614,
+          "high": 0.042017339052886946,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.041316298478291186,
+          "low": 0.03918329594481283,
+          "high": 0.04344930101176954,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 120.0,
+          "low": 120.0,
+          "high": 120.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 120,
+      "method": "warm",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.005863307656008532,
+          "low": 0.004795027874177769,
+          "high": 0.0069315874378392955,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.019091801094446997,
+          "low": 0.017282220863036192,
+          "high": 0.020901381325857803,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.02020803930783599,
+          "low": 0.018683182838959953,
+          "high": 0.02173289577671203,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 120.0,
+          "low": 120.0,
+          "high": 120.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 480,
+      "method": "fresh",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0021291178576593878,
+          "low": 0.0015476591996118946,
+          "high": 0.002710576515706881,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.031508525857032316,
+          "low": 0.02933941882975165,
+          "high": 0.033677632884312976,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.03429591637178736,
+          "low": 0.03348224900246611,
+          "high": 0.035109583741108605,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 480.0,
+          "low": 480.0,
+          "high": 480.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 480,
+      "method": "warm",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0023825330008972892,
+          "low": 0.0019088518295929486,
+          "high": 0.00285621417220163,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.01873898123290433,
+          "low": 0.01731038847166858,
+          "high": 0.02016757399414008,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.019773324038836318,
+          "low": 0.018253062107148763,
+          "high": 0.021293585970523873,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 480.0,
+          "low": 480.0,
+          "high": 480.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 1920,
+      "method": "fresh",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.00044367506078930033,
+          "low": 0.00017601788229968353,
+          "high": 0.0007113322392789172,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.030940027374621336,
+          "low": 0.029547604280917805,
+          "high": 0.032332450468324864,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.033581667389515596,
+          "low": 0.033275476128167704,
+          "high": 0.033887858650863495,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 1855.0,
+          "low": 1835.5,
+          "high": 1874.5,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "fixed",
+      "budget": 1920,
+      "method": "warm",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0005373710206812225,
+          "low": 0.00033259563632124714,
+          "high": 0.0007421464050411978,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.02045497504926299,
+          "low": 0.018240990569668387,
+          "high": 0.022668959528857592,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.02138571258123223,
+          "low": 0.019014391205348966,
+          "high": 0.023757033957115495,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 1666.0,
+          "low": 1623.5,
+          "high": 1708.5,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "threshold",
+      "budget": null,
+      "method": "fresh",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0018910809869678588,
+          "low": 0.0018690651114249297,
+          "high": 0.001913096862510788,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.030855275699574136,
+          "low": 0.02944005753372829,
+          "high": 0.03227049386541998,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.03360841941020683,
+          "low": 0.03359330733439726,
+          "high": 0.03362353148601639,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 532.5,
+          "low": 450.0,
+          "high": 615.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "event": "threshold",
+      "budget": null,
+      "method": "warm",
+      "metrics": {
+        "calibration_fit_rmse": {
+          "mean": 0.0019228006309658285,
+          "low": 0.0018674089541226234,
+          "high": 0.0019781923078090336,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.019168712973435448,
+          "low": 0.017314945287077454,
+          "high": 0.021022480659793445,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "id_rmse": {
+          "mean": 0.02022179523653296,
+          "low": 0.01819681065161278,
+          "high": 0.022246779821453143,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        },
+        "accepted_iterations": {
+          "mean": 607.5,
+          "low": 510.0,
+          "high": 705.0,
+          "n_seeds": 2,
+          "nonfinite_seed_values": 0
+        }
+      }
+    }
+  ],
+  "identification_summary": [
+    {
+      "budget": 16,
+      "design": "narrow",
+      "accuracy": {
+        "mean": 0.5,
+        "low": 0.5,
+        "high": 0.5,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.35912331347081083,
+        "low": 0.27941939901292884,
+        "high": 0.4388272279286928,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.4161350886375167,
+        "low": 0.3684381956370248,
+        "high": 0.46383198163800854,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_ood_rmse": {
+        "mean": 1.5088511327445309,
+        "low": 1.3220313444949792,
+        "high": 1.6956709209940823,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 2.0482084777261296,
+        "low": 1.8672195240308818,
+        "high": 2.229197431421377,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 33.09616977147783,
+        "low": 32.83205271003228,
+        "high": 33.36028683292338,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 16,
+      "design": "broad",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.0067421058135679265,
+        "low": 0.0054563504886307075,
+        "high": 0.008027861138505146,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.0067421058135679265,
+        "low": 0.0054563504886307075,
+        "high": 0.008027861138505146,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_ood_rmse": {
+        "mean": 0.010480248564189323,
+        "low": 0.007298031292818389,
+        "high": 0.013662465835560257,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.010480248564189323,
+        "low": 0.007298031292818389,
+        "high": 0.013662465835560257,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 7.578413618834224,
+        "low": 7.536560115095313,
+        "high": 7.620267122573134,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 16,
+      "design": "mixed",
+      "accuracy": {
+        "mean": 0.75,
+        "low": 0.5,
+        "high": 1.0,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.03941436946988523,
+        "low": 0.020078671807300618,
+        "high": 0.058750067132469844,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.024705111812698872,
+        "low": 0.020078671807300618,
+        "high": 0.029331551818097126,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_ood_rmse": {
+        "mean": 0.11672102443400971,
+        "low": 0.0424446520957204,
+        "high": 0.19099739677229902,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.04220315351908108,
+        "low": 0.04196165494244176,
+        "high": 0.0424446520957204,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 6.857309370501348,
+        "low": 5.866430724900051,
+        "high": 7.848188016102645,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 64,
+      "design": "narrow",
+      "accuracy": {
+        "mean": 0.25,
+        "low": 0.0,
+        "high": 0.5,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.24578763039988794,
+        "low": 0.20672208517107457,
+        "high": 0.2848531756287013,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.09843957706136275,
+        "low": 0.05881957866889041,
+        "high": 0.13805957545383507,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_ood_rmse": {
+        "mean": 1.1746861255951555,
+        "low": 1.0307163169779265,
+        "high": 1.3186559342123847,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.41032040206467846,
+        "low": 0.2367087568990136,
+        "high": 0.5839320472303433,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 39.26806839956403,
+        "low": 29.140960305453767,
+        "high": 49.39517649367429,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 64,
+      "design": "broad",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.004175045479475354,
+        "low": 0.0034880531794510995,
+        "high": 0.004862037779499609,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.004175045479475354,
+        "low": 0.0034880531794510995,
+        "high": 0.004862037779499609,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_ood_rmse": {
+        "mean": 0.011933857928512629,
+        "low": 0.010811629304462857,
+        "high": 0.0130560865525624,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.011933857928512629,
+        "low": 0.010811629304462857,
+        "high": 0.0130560865525624,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 6.340554799938615,
+        "low": 5.887922342546892,
+        "high": 6.793187257330338,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 64,
+      "design": "mixed",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.005234628601661535,
+        "low": 0.003741847203175215,
+        "high": 0.006727410000147855,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.005234628601661535,
+        "low": 0.003741847203175215,
+        "high": 0.006727410000147855,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_ood_rmse": {
+        "mean": 0.012459147292675485,
+        "low": 0.010746864768597757,
+        "high": 0.014171429816753215,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.012459147292675485,
+        "low": 0.010746864768597757,
+        "high": 0.014171429816753215,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 6.332697527689556,
+        "low": 5.840395795183736,
+        "high": 6.824999260195376,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 256,
+      "design": "narrow",
+      "accuracy": {
+        "mean": 0.5,
+        "low": 0.5,
+        "high": 0.5,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.19625714859062543,
+        "low": 0.1774585087160349,
+        "high": 0.21505578846521595,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.15743600734715538,
+        "low": 0.15136221992700916,
+        "high": 0.1635097947673016,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_ood_rmse": {
+        "mean": 0.9105267592489528,
+        "low": 0.7397384412264523,
+        "high": 1.0813150772714533,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.7073912667559693,
+        "low": 0.6893146596563202,
+        "high": 0.7254678738556184,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 23.4520452831338,
+        "low": 22.245449659477526,
+        "high": 24.658640906790072,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 256,
+      "design": "broad",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.005391861930156937,
+        "low": 0.004862015142530256,
+        "high": 0.005921708717783618,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.005391861930156937,
+        "low": 0.004862015142530256,
+        "high": 0.005921708717783618,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_ood_rmse": {
+        "mean": 0.0071739995478529005,
+        "low": 0.006691778530675423,
+        "high": 0.0076562205650303776,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.0071739995478529005,
+        "low": 0.006691778530675423,
+        "high": 0.0076562205650303776,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 6.4586097343401585,
+        "low": 6.3495236717898145,
+        "high": 6.5676957968905025,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    },
+    {
+      "budget": 256,
+      "design": "mixed",
+      "accuracy": {
+        "mean": 1.0,
+        "low": 1.0,
+        "high": 1.0,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_id_rmse": {
+        "mean": 0.0049737076782506474,
+        "low": 0.0048158276512992974,
+        "high": 0.0051315877052019974,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_id_rmse": {
+        "mean": 0.0049737076782506474,
+        "low": 0.0048158276512992974,
+        "high": 0.0051315877052019974,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "selected_ood_rmse": {
+        "mean": 0.006865969455814974,
+        "low": 0.005895423685342945,
+        "high": 0.007836515226287002,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "known_ood_rmse": {
+        "mean": 0.006865969455814974,
+        "low": 0.005895423685342945,
+        "high": 0.007836515226287002,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      },
+      "mean_condition_number": {
+        "mean": 6.439004707667853,
+        "low": 6.345068589090099,
+        "high": 6.532940826245607,
+        "n_seeds": 2,
+        "nonfinite_seed_values": 0
+      }
+    }
+  ]
+}

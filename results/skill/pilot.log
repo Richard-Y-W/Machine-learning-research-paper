@@ -1,0 +1,22 @@
+W1114 02:30:43.351000 19324 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  13%|#3        | 41/310 [00:00<00:00, 401.50it/s]Loading weights:  26%|##6       | 82/310 [00:00<00:00, 364.98it/s]Loading weights:  38%|###8      | 119/310 [00:00<00:00, 367.02it/s]Loading weights:  50%|#####     | 156/310 [00:00<00:00, 348.67it/s]Loading weights:  62%|######1   | 192/310 [00:00<00:00, 336.33it/s]Loading weights:  74%|#######3  | 229/310 [00:00<00:00, 330.23it/s]Loading weights:  85%|########4 | 263/310 [00:00<00:00, 330.55it/s]Loading weights:  96%|#########5| 297/310 [00:00<00:00, 332.44it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 347.52it/s]
+[skill A] gen 1: practice acc 0.029 -> 0.029, fit -4.617 -> -4.209, valid 6/6, accepted 3 (141.8s, $0.0821)
+[skill A] gen 2: practice acc 0.029 -> 0.029, fit -4.209 -> -4.027, valid 6/6, accepted 3 (143.2s, $0.0691)
+[skill A] gen 3: practice acc 0.029 -> 0.118, fit -4.027 -> -3.690, valid 6/6, accepted 1 (132.7s, $0.0713)
+[skill A] gen 4: practice acc 0.118 -> 0.176, fit -3.690 -> -3.580, valid 6/6, accepted 1 (144.5s, $0.0728)
+[skill A] gen 5: practice acc 0.176 -> 0.176, fit -3.580 -> -3.474, valid 6/6, accepted 2 (144.9s, $0.0745)
+[skill A] gen 6: practice acc 0.176 -> 0.206, fit -3.474 -> -3.391, valid 6/6, accepted 2 (131.2s, $0.0749)
+[skill A] gen 7: practice acc 0.206 -> 0.235, fit -3.391 -> -3.295, valid 6/6, accepted 3 (135.2s, $0.0682)
+[skill A] gen 8: practice acc 0.235 -> 0.294, fit -3.295 -> -3.219, valid 6/6, accepted 4 (136.1s, $0.0565)
+[skill A] gen 9: practice acc 0.294 -> 0.294, fit -3.219 -> -3.123, valid 6/6, accepted 4 (146.2s, $0.0718)
+[skill A] gen 10: practice acc 0.294 -> 0.265, fit -3.123 -> -3.024, valid 6/6, accepted 4 (149.8s, $0.0765)
+[skill A] gen 11: practice acc 0.265 -> 0.294, fit -3.024 -> -2.937, valid 6/6, accepted 3 (149.0s, $0.0794)
+[skill A] gen 12: practice acc 0.294 -> 0.294, fit -2.937 -> -2.867, valid 6/6, accepted 0 (145.6s, $0.0753)
+[skill A] gen 13: practice acc 0.294 -> 0.294, fit -2.867 -> -2.830, valid 6/6, accepted 0 (142.9s, $0.0759)
+[skill A] gen 14: practice acc 0.294 -> 0.294, fit -2.830 -> -2.811, valid 6/6, accepted 1 (143.8s, $0.0857)
+[skill A] gen 15: practice acc 0.294 -> 0.294, fit -2.811 -> -2.805, valid 6/6, accepted 4 (148.4s, $0.0802)
+W1114 03:06:51.091000 16420 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  14%|#3        | 42/310 [00:00<00:00, 391.34it/s]Loading weights:  28%|##7       | 86/310 [00:00<00:00, 390.44it/s]Loading weights:  41%|####      | 126/310 [00:00<00:00, 383.18it/s]Loading weights:  53%|#####3    | 165/310 [00:00<00:00, 335.40it/s]Loading weights:  65%|######4   | 200/310 [00:00<00:00, 324.70it/s]Loading weights:  75%|#######5  | 233/310 [00:00<00:00, 326.20it/s]Loading weights:  89%|########8 | 275/310 [00:00<00:00, 350.51it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 362.15it/s]
+[skill B] gen 1: practice acc 0.029 -> 0.059, fit -4.617 -> -4.213, valid 6/6, accepted 5 (137.6s, $0.0547)
+[skill B] gen 2: practice acc 0.059 -> 0.206, fit -4.213 -> -3.848, valid 6/6, accepted 3 (135.9s, $0.0617)
+[skill B] gen 3: practice acc 0.206 -> 0.294, fit -3.848 -> -3.552, valid 6/6, accepted 0 (124.7s, $0.0467)

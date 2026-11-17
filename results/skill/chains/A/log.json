@@ -1,0 +1,1812 @@
+{
+ "name": "A",
+ "generations": [
+  {
+   "gen": 1,
+   "parent_fitness": -4.617499351501465,
+   "parent": {
+    "fitness": -4.617499351501465,
+    "acc": 0.029411764815449715,
+    "protected": -0.6802927135140635,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.169419765472412
+   },
+   "accepted": 3,
+   "meta": {
+    "call": "skill_A_g01",
+    "cost_usd": 0.0820571,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Baseline mostly copies the input letter (' x' for 'ENC: x ->') or emits ' ' in the ENC(x)= format. Late heads L23h14, L21h6, L25h8/9 and L22h8 already push toward the correct successor (letter-specific), so amplifying them should implement the rule generally. Heads L23h7 and L22h9 push against it. The ENC(x)= format collapses to ' ', so I also try trigger-gated rank-1 edits. These map the paren-format state onto the arrow-format state, where letter predictions emerge by L24. Mutations vary in strength and mechanism."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: amplify top successor head L23h14.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.8}]",
+     "desc": "scale L23.attn.o col[1792:1920] x1.8",
+     "ev": {
+      "fitness": -4.458102226257324,
+      "acc": 0.029411764815449715,
+      "protected": -0.6797753969168601,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1693902015686035
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1594, acc 0.029, dprot +0.0005, dNLL -0.0000"
+    },
+    {
+     "k": 1,
+     "rationale": "Amplify the main successor heads L21h6 and L23h14.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 2.2}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 2.2}]",
+     "desc": "scale L23.attn.o col[1792:1920] x2.2; scale L21.attn.o col[768:896] x2.2",
+     "ev": {
+      "fitness": -4.0524067878723145,
+      "acc": 0.0882352963089943,
+      "protected": -0.6914402844151482,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.20793080329895
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.5651, acc 0.088, dprot -0.0111, dNLL +0.0385"
+    },
+    {
+     "k": 2,
+     "rationale": "Broad boost of positive heads; damp negative heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 2.0}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 2.0}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.8}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.8}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 8, \"factor\": 1.8}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.4}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 9, \"factor\": 0.4}]",
+     "desc": "scale L23.attn.o col[1792:1920] x2; scale L21.attn.o col[768:896] x2; scale L25.attn.o col[1152:1280] x1.8; scale L25.attn.o col[1024:1152] x1.8; scale L22.attn.o col[1024:1152] x1.8; scale L23.attn.o col[896:1024] x0.4; scale L22.attn.o col[1152:1280] x0.4",
+     "ev": {
+      "fitness": -3.723761558532715,
+      "acc": 0.3235294222831726,
+      "protected": -0.6952627997496166,
+      "protected_acc": 0.7,
+      "nll": 3.2108798027038574
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.8937, acc 0.324, dprot -0.0150, dNLL +0.0415"
+    },
+    {
+     "k": 3,
+     "rationale": "Trigger-gated at L20 attn.o: map the paren-format state onto the arrow-format state so late letter circuits engage.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L20.attn.o\", \"u\": \"act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) =\", \"v\": \"act:attn:L20:ENC({x}) =\", \"alpha\": 0.3}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.6}]",
+     "desc": "rank1 L20.attn.o u=act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) = v=act:attn:L20:ENC({x}) = alpha=+0.3; scale L23.attn.o col[1792:1920] x1.6",
+     "ev": {
+      "fitness": -4.208953857421875,
+      "acc": 0.029411764815449715,
+      "protected": -0.6789663485173757,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1677629947662354
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.4085, acc 0.029, dprot +0.0013, dNLL -0.0017"
+    },
+    {
+     "k": 4,
+     "rationale": "Late MLP fix: at L27, push the paren-format output away from ' ' toward the arrow-format state.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L27.mlp.down\", \"u\": \"act:resid:L28:ENC: {x} -> - act:resid:L28:ENC({x}) =\", \"v\": \"act:mlp:L27:ENC({x}) =\", \"alpha\": 0.25}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.8}]",
+     "desc": "rank1 L27.mlp.down u=act:resid:L28:ENC: {x} -> - act:resid:L28:ENC({x}) = v=act:mlp:L27:ENC({x}) = alpha=+0.25; scale L21.attn.o col[768:896] x1.8",
+     "ev": {
+      "fitness": -5.911129951477051,
+      "acc": 0.0,
+      "protected": -0.9264065136512121,
+      "protected_acc": 0.5,
+      "nll": 4.7638092041015625
+     },
+     "admissible": false,
+     "improves": false,
+     "delta": "dfit -1.2936, acc 0.000, dprot -0.2461, dNLL +1.5944"
+    },
+    {
+     "k": 5,
+     "rationale": "Strong push on successor heads plus a gated L24 MLP format-steering term.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 2.6}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 2.6}, {\"op\": \"rank1\", \"tensor\": \"L24.mlp.down\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:mlp:L24:ENC({x}) =\", \"alpha\": 0.2}]",
+     "desc": "scale L23.attn.o col[1792:1920] x2.6; scale L21.attn.o col[768:896] x2.6; rank1 L24.mlp.down u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:mlp:L24:ENC({x}) = alpha=+0.2",
+     "ev": {
+      "fitness": -3.5737853050231934,
+      "acc": 0.1764705926179886,
+      "protected": -0.7016283934780707,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.23880672454834
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +1.0437, acc 0.176, dprot -0.0213, dNLL +0.0694"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 141.8,
+   "genome_len": 1
+  },
+  {
+   "gen": 2,
+   "parent_fitness": -4.208953857421875,
+   "parent": {
+    "fitness": -4.208953857421875,
+    "acc": 0.029411764815449715,
+    "protected": -0.6789663485173757,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.1677629947662354
+   },
+   "accepted": 3,
+   "meta": {
+    "call": "skill_A_g02",
+    "cost_usd": 0.06914398,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "The kept edit gates L20 attn.o to map the paren format onto the arrow format, plus a modest L23h14 boost. Global head scaling raises fitness but breaks the NLL budget, since successor heads also fire on normal text. Remaining margins are small (prot 0.021, NLL 0.022). So I prefer trigger-gated rank-1 edits. Their v is the ENC-specific head/neuron pattern and u is what the successor layer writes in ENC context, which amplifies the existing successor computation only on ENC inputs. I also extend the format mapping at other layers and include small conservative head boosts."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Gated self-amplification of L23 attention output on the ENC arrow pattern.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.attn.o\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L23:ENC: {x} ->\", \"v\": \"act:attn:L23:ENC: {x} ->\", \"alpha\": 0.15}]",
+     "desc": "rank1 L23.attn.o u=act:resid:L24:ENC: {x} -> - act:resid:L23:ENC: {x} -> v=act:attn:L23:ENC: {x} -> alpha=+0.15",
+     "ev": {
+      "fitness": -4.160907745361328,
+      "acc": 0.029411764815449715,
+      "protected": -0.6813367670789983,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1670687198638916
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0480, acc 0.029, dprot -0.0024, dNLL -0.0007"
+    },
+    {
+     "k": 1,
+     "rationale": "Gated L21 amplification: the paren-format head pattern triggers the arrow-format L21 write.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L21.attn.o\", \"u\": \"act:resid:L22:ENC: {x} -> - act:resid:L21:ENC: {x} ->\", \"v\": \"act:attn:L21:ENC({x}) =\", \"alpha\": 0.15}]",
+     "desc": "rank1 L21.attn.o u=act:resid:L22:ENC: {x} -> - act:resid:L21:ENC: {x} -> v=act:attn:L21:ENC({x}) = alpha=+0.15",
+     "ev": {
+      "fitness": -4.170211315155029,
+      "acc": 0.029411764815449715,
+      "protected": -0.6796430710082253,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.166980743408203
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0387, acc 0.029, dprot -0.0007, dNLL -0.0008"
+    },
+    {
+     "k": 2,
+     "rationale": "Conservative small boosts of successor heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.15}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.2}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.2}]",
+     "desc": "scale L23.attn.o col[1792:1920] x1.15; scale L25.attn.o col[1024:1152] x1.2; scale L25.attn.o col[1152:1280] x1.2",
+     "ev": {
+      "fitness": -4.144297122955322,
+      "acc": 0.029411764815449715,
+      "protected": -0.6804769681339773,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.168853521347046
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0647, acc 0.029, dprot -0.0015, dNLL +0.0011"
+    },
+    {
+     "k": 3,
+     "rationale": "Small gated L24 MLP format steering, without the head scaling that broke the bounds before.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L24.mlp.down\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:mlp:L24:ENC({x}) =\", \"alpha\": 0.12}]",
+     "desc": "rank1 L24.mlp.down u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:mlp:L24:ENC({x}) = alpha=+0.12",
+     "ev": {
+      "fitness": -4.027438640594482,
+      "acc": 0.029411764815449715,
+      "protected": -0.6822579874579484,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1625897884368896
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1815, acc 0.029, dprot -0.0033, dNLL -0.0052"
+    },
+    {
+     "k": 4,
+     "rationale": "Extend the accepted format-mapping mechanism at L22.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.2}]",
+     "desc": "rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.2",
+     "ev": {
+      "fitness": -4.068653106689453,
+      "acc": 0.029411764815449715,
+      "protected": -0.6831754266517237,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1645214557647705
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1403, acc 0.029, dprot -0.0042, dNLL -0.0032"
+    },
+    {
+     "k": 5,
+     "rationale": "Combine gated L23 amplification with mild L24 format steering.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.attn.o\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L23:ENC: {x} ->\", \"v\": \"act:attn:L23:ENC: {x} ->\", \"alpha\": 0.1}, {\"op\": \"rank1\", \"tensor\": \"L24.mlp.down\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:mlp:L24:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "rank1 L23.attn.o u=act:resid:L24:ENC: {x} -> - act:resid:L23:ENC: {x} -> v=act:attn:L23:ENC: {x} -> alpha=+0.1; rank1 L24.mlp.down u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:mlp:L24:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -4.056696891784668,
+      "acc": 0.029411764815449715,
+      "protected": -0.6826191244724517,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1631245613098145
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1523, acc 0.029, dprot -0.0037, dNLL -0.0046"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 143.2,
+   "genome_len": 2
+  },
+  {
+   "gen": 3,
+   "parent_fitness": -4.027438640594482,
+   "parent": {
+    "fitness": -4.027438640594482,
+    "acc": 0.029411764815449715,
+    "protected": -0.6822579874579484,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.1625897884368896
+   },
+   "accepted": 1,
+   "meta": {
+    "call": "skill_A_g03",
+    "cost_usd": 0.07131978,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "The model mostly copies the input letter. Successor heads (L23h14, L21h6, L25h8/9, L22h8) push toward the next letter, and boosting them raises fitness but costs NLL. Gated format-steering rank-1 edits (paren-format pattern mapped to arrow-format state) at L20 and L24 were accepted. The margins are thin: protected 0.018, NLL 0.027. So I combine the trigger-gated format mapping at L22 and L25 with modest head boosts and damping of the negative heads L23h7 and L22h9. One mutation is a conservative head boost."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Gated format mapping at L22 (previously +0.14 and within bounds).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.2}]",
+     "desc": "rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.2",
+     "ev": {
+      "fitness": -3.917466640472412,
+      "acc": 0.029411764815449715,
+      "protected": -0.6868212506097431,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1609644889831543
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1100, acc 0.029, dprot -0.0046, dNLL -0.0016"
+    },
+    {
+     "k": 1,
+     "rationale": "Moderate multi-head successor boost and damping of the negative heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.25}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.35}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.2}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.2}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.6}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 9, \"factor\": 0.6}]",
+     "desc": "scale L23.attn.o col[1792:1920] x1.25; scale L21.attn.o col[768:896] x1.35; scale L25.attn.o col[1024:1152] x1.2; scale L25.attn.o col[1152:1280] x1.2; scale L23.attn.o col[896:1024] x0.6; scale L22.attn.o col[1152:1280] x0.6",
+     "ev": {
+      "fitness": -3.6904752254486084,
+      "acc": 0.11764705926179886,
+      "protected": -0.6868155078225148,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.164503335952759
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.3370, acc 0.118, dprot -0.0046, dNLL +0.0019"
+    },
+    {
+     "k": 2,
+     "rationale": "Boost L21h6 (not yet boosted in the lineage) and damp the anti-successor head L23h7.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.5}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.5}]",
+     "desc": "scale L21.attn.o col[768:896] x1.5; scale L23.attn.o col[896:1024] x0.5",
+     "ev": {
+      "fitness": -3.8122074604034424,
+      "acc": 0.05882352963089943,
+      "protected": -0.684336865945564,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1633026599884033
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.2152, acc 0.059, dprot -0.0021, dNLL +0.0007"
+    },
+    {
+     "k": 3,
+     "rationale": "Combine L22 gated mapping with a small extra boost of L23h14.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.15}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.2}]",
+     "desc": "rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.15; scale L23.attn.o col[1792:1920] x1.2",
+     "ev": {
+      "fitness": -3.8998184204101562,
+      "acc": 0.029411764815449715,
+      "protected": -0.685967815364711,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.16144061088562
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1276, acc 0.029, dprot -0.0037, dNLL -0.0011"
+    },
+    {
+     "k": 4,
+     "rationale": "Gated format steering at the L25 MLP, after the successor heads have written.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L25.mlp.down\", \"u\": \"act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) =\", \"v\": \"act:mlp:L25:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L25.mlp.down u=act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) = v=act:mlp:L25:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -3.9437270164489746,
+      "acc": 0.029411764815449715,
+      "protected": -0.689045809294718,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1677820682525635
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0837, acc 0.029, dprot -0.0068, dNLL +0.0052"
+    },
+    {
+     "k": 5,
+     "rationale": "Conservative: small boosts of the secondary successor heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.25}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.25}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 8, \"factor\": 1.2}]",
+     "desc": "scale L25.attn.o col[1024:1152] x1.25; scale L25.attn.o col[1152:1280] x1.25; scale L22.attn.o col[1024:1152] x1.2",
+     "ev": {
+      "fitness": -3.9263978004455566,
+      "acc": 0.05882352963089943,
+      "protected": -0.6854416044040893,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.165879487991333
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1010, acc 0.059, dprot -0.0032, dNLL +0.0033"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 132.7,
+   "genome_len": 3
+  },
+  {
+   "gen": 4,
+   "parent_fitness": -3.6904752254486084,
+   "parent": {
+    "fitness": -3.6904752254486084,
+    "acc": 0.11764705926179886,
+    "protected": -0.6868155078225148,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.164503335952759
+   },
+   "accepted": 1,
+   "meta": {
+    "call": "skill_A_g04",
+    "cost_usd": 0.07276878,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Successor heads (L23h14, L21h6, L25h8/9) push toward the next letter, but copying of the current letter still dominates. In the paren format, ' ' also dominates. The protected-score margin is small (0.0135), so edits must be modest. Plan: (1) re-try the L22 format mapping, which has given positive dfit within bounds; (2) make small boosts to the successor heads; (3) damp the anti-successor heads; (4) add small gated MLP steering at L26 against the paren format's ' ' prediction; (5) add gated self-amplification at L23; (6) combine the L22 mapping with L25 head boosts."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: L22 gated paren-to-arrow mapping, which was consistently positive and within bounds.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.15}]",
+     "desc": "rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.15",
+     "ev": {
+      "fitness": -3.6005568504333496,
+      "acc": 0.11764705926179886,
+      "protected": -0.690351143750983,
+      "protected_acc": 0.7,
+      "nll": 3.1631991863250732
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0899, acc 0.118, dprot -0.0035, dNLL -0.0013"
+    },
+    {
+     "k": 1,
+     "rationale": "Small further boosts of L21h6 and L23h14.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"axis\": \"col\", \"index\": [768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860, 861, 862, 863, 864, 865, 866, 867, 868, 869, 870, 871, 872, 873, 874, 875, 876, 877, 878, 879, 880, 881, 882, 883, 884, 885, 886, 887, 888, 889, 890, 891, 892, 893, 894, 895], \"factor\": 1.2}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.12}]",
+     "desc": "scale L21.attn.o col[768:896] x1.2; scale L23.attn.o col[1792:1920] x1.12",
+     "ev": {
+      "fitness": -3.5798873901367188,
+      "acc": 0.1764705926179886,
+      "protected": -0.689415909947517,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1698877811431885
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1106, acc 0.176, dprot -0.0026, dNLL +0.0054"
+    },
+    {
+     "k": 2,
+     "rationale": "Damp the anti-successor heads L23h7, L20h0 and L24h5 further.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.6}, {\"op\": \"scale\", \"tensor\": \"L20.attn.o\", \"head\": 0, \"factor\": 0.7}, {\"op\": \"scale\", \"tensor\": \"L24.attn.o\", \"head\": 5, \"factor\": 0.7}]",
+     "desc": "scale L23.attn.o col[896:1024] x0.6; scale L20.attn.o col[0:128] x0.7; scale L24.attn.o col[640:768] x0.7",
+     "ev": {
+      "fitness": -3.681936264038086,
+      "acc": 0.11764705926179886,
+      "protected": -0.6854848853545263,
+      "protected_acc": 0.7,
+      "nll": 3.166311264038086
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0085, acc 0.118, dprot +0.0013, dNLL +0.0018"
+    },
+    {
+     "k": 3,
+     "rationale": "Small gated L26 MLP steering of the paren format toward the arrow-format state (reduces the ' ' prediction).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L26.mlp.down\", \"u\": \"act:resid:L27:ENC: {x} -> - act:resid:L27:ENC({x}) =\", \"v\": \"act:mlp:L26:ENC({x}) =\", \"alpha\": 0.06}]",
+     "desc": "rank1 L26.mlp.down u=act:resid:L27:ENC: {x} -> - act:resid:L27:ENC({x}) = v=act:mlp:L26:ENC({x}) = alpha=+0.06",
+     "ev": {
+      "fitness": -3.6271610260009766,
+      "acc": 0.1764705926179886,
+      "protected": -0.6927188174488644,
+      "protected_acc": 0.7,
+      "nll": 3.165544271469116
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0633, acc 0.176, dprot -0.0059, dNLL +0.0010"
+    },
+    {
+     "k": 4,
+     "rationale": "Gated L23 self-amplification on the arrow pattern, plus a small L24 MLP format-steering term.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.attn.o\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L23:ENC: {x} ->\", \"v\": \"act:attn:L23:ENC: {x} ->\", \"alpha\": 0.12}, {\"op\": \"rank1\", \"tensor\": \"L24.mlp.down\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:mlp:L24:ENC({x}) =\", \"alpha\": 0.06}]",
+     "desc": "rank1 L23.attn.o u=act:resid:L24:ENC: {x} -> - act:resid:L23:ENC: {x} -> v=act:attn:L23:ENC: {x} -> alpha=+0.12; rank1 L24.mlp.down u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:mlp:L24:ENC({x}) = alpha=+0.06",
+     "ev": {
+      "fitness": -3.593919515609741,
+      "acc": 0.1764705926179886,
+      "protected": -0.690295627891707,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1646792888641357
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0966, acc 0.176, dprot -0.0035, dNLL +0.0002"
+    },
+    {
+     "k": 5,
+     "rationale": "Combine the L22 mapping with modest L25 successor-head boosts.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.12}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.15}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.15}]",
+     "desc": "rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.12; scale L25.attn.o col[1024:1152] x1.15; scale L25.attn.o col[1152:1280] x1.15",
+     "ev": {
+      "fitness": -3.5867507457733154,
+      "acc": 0.11764705926179886,
+      "protected": -0.6913262767988877,
+      "protected_acc": 0.7,
+      "nll": 3.164588689804077
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1037, acc 0.118, dprot -0.0045, dNLL +0.0001"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 144.5,
+   "genome_len": 4
+  },
+  {
+   "gen": 5,
+   "parent_fitness": -3.5798873901367188,
+   "parent": {
+    "fitness": -3.5798873901367188,
+    "acc": 0.1764705926179886,
+    "protected": -0.689415909947517,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.1698877811431885
+   },
+   "accepted": 2,
+   "meta": {
+    "call": "skill_A_g05",
+    "cost_usd": 0.07454438000000001,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "The successor heads (L21h6, L23h14, L25h8/9) drive the progress so far. The paren format still mostly predicts ' ', and many arrow prompts copy the input letter. The protected-score margin is small (about 0.011 left; NLL margin about 0.02), so edits must stay modest. The L22 gated paren-to-arrow mapping has been positive every time but never won. This round I combine it with small head boosts, extend gated format steering to L24 attention and the L26 MLP, and damp the anti-successor head L23h7. Magnitudes are kept small to stay within bounds."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: L22 gated paren-to-arrow mapping alone.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.15}]",
+     "desc": "rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.15",
+     "ev": {
+      "fitness": -3.4897401332855225,
+      "acc": 0.1764705926179886,
+      "protected": -0.6929349742790996,
+      "protected_acc": 0.7,
+      "nll": 3.168595552444458
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0901, acc 0.176, dprot -0.0035, dNLL -0.0013"
+    },
+    {
+     "k": 1,
+     "rationale": "Small further successor-head boosts (this kind of edit won last generation).",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"axis\": \"col\", \"index\": [768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860, 861, 862, 863, 864, 865, 866, 867, 868, 869, 870, 871, 872, 873, 874, 875, 876, 877, 878, 879, 880, 881, 882, 883, 884, 885, 886, 887, 888, 889, 890, 891, 892, 893, 894, 895], \"factor\": 1.12}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.08}]",
+     "desc": "scale L21.attn.o col[768:896] x1.12; scale L23.attn.o col[1792:1920] x1.08",
+     "ev": {
+      "fitness": -3.508075475692749,
+      "acc": 0.20588235557079315,
+      "protected": -0.6912956809974276,
+      "protected_acc": 0.7,
+      "nll": 3.1781861782073975
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0718, acc 0.206, dprot -0.0019, dNLL +0.0083"
+    },
+    {
+     "k": 2,
+     "rationale": "Gated format steering at L26 MLP combined with a mild L22 mapping, to reduce the ' ' prediction in the paren format.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L26.mlp.down\", \"u\": \"act:resid:L27:ENC: {x} -> - act:resid:L27:ENC({x}) =\", \"v\": \"act:mlp:L26:ENC({x}) =\", \"alpha\": 0.05}, {\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L26.mlp.down u=act:resid:L27:ENC: {x} -> - act:resid:L27:ENC({x}) = v=act:mlp:L26:ENC({x}) = alpha=+0.05; rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -3.4735634326934814,
+      "acc": 0.1764705926179886,
+      "protected": -0.6964117310941219,
+      "protected_acc": 0.7,
+      "nll": 3.169862985610962
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1063, acc 0.176, dprot -0.0070, dNLL -0.0000"
+    },
+    {
+     "k": 3,
+     "rationale": "New site: gated paren-to-arrow mapping at L24 attention output.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L24.attn.o\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:attn:L24:ENC({x}) =\", \"alpha\": 0.15}]",
+     "desc": "rank1 L24.attn.o u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:attn:L24:ENC({x}) = alpha=+0.15",
+     "ev": {
+      "fitness": -3.523076295852661,
+      "acc": 0.20588235557079315,
+      "protected": -0.6906702836393379,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.169276237487793
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0568, acc 0.206, dprot -0.0013, dNLL -0.0006"
+    },
+    {
+     "k": 4,
+     "rationale": "Damp the anti-successor head L23h7 and add the L22 mapping.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.7}, {\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.12}]",
+     "desc": "scale L23.attn.o col[896:1024] x0.7; rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.12",
+     "ev": {
+      "fitness": -3.4931986331939697,
+      "acc": 0.20588235557079315,
+      "protected": -0.6916206811244289,
+      "protected_acc": 0.7,
+      "nll": 3.168896436691284
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0867, acc 0.206, dprot -0.0022, dNLL -0.0010"
+    },
+    {
+     "k": 5,
+     "rationale": "Mild boost of the L25 successor heads plus L21h6.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.12}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.12}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.08}]",
+     "desc": "scale L25.attn.o col[1024:1152] x1.12; scale L25.attn.o col[1152:1280] x1.12; scale L21.attn.o col[768:896] x1.08",
+     "ev": {
+      "fitness": -3.5174970626831055,
+      "acc": 0.20588235557079315,
+      "protected": -0.6917139703679519,
+      "protected_acc": 0.7,
+      "nll": 3.1758108139038086
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0624, acc 0.206, dprot -0.0023, dNLL +0.0059"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 144.9,
+   "genome_len": 5
+  },
+  {
+   "gen": 6,
+   "parent_fitness": -3.4735634326934814,
+   "parent": {
+    "fitness": -3.4735634326934814,
+    "acc": 0.1764705926179886,
+    "protected": -0.6964117310941219,
+    "protected_acc": 0.7,
+    "nll": 3.169862985610962
+   },
+   "accepted": 2,
+   "meta": {
+    "call": "skill_A_g06",
+    "cost_usd": 0.07493998,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Successor heads (L21h6, L23h14, L25h8/9) carry the rule. Boosting them gave the biggest gains, but the protected margin is now tight (0.0039). The main error is copying the current letter. The paren format also leaks ' '. Damping the anti-successor heads improved the protected score before. So I pair successor boosts with those dampings to offset protected-score cost. I also try new gated format-mapping sites (L24 and L25 attention output, L20 again) at small alpha, plus one conservative pure-damping edit."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Small successor boost offset by damping anti-successor L23h7 (protected-positive).",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.1}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.05}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.7}]",
+     "desc": "scale L21.attn.o col[768:896] x1.1; scale L23.attn.o col[1792:1920] x1.05; scale L23.attn.o col[896:1024] x0.7",
+     "ev": {
+      "fitness": -3.402430772781372,
+      "acc": 0.20588235557079315,
+      "protected": -0.6972048304664592,
+      "protected_acc": 0.7,
+      "nll": 3.176485300064087
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0711, acc 0.206, dprot -0.0008, dNLL +0.0066"
+    },
+    {
+     "k": 1,
+     "rationale": "Gated paren-to-arrow mapping at L24 attention output (previously +0.057, small dprot).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L24.attn.o\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:attn:L24:ENC({x}) =\", \"alpha\": 0.15}]",
+     "desc": "rank1 L24.attn.o u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:attn:L24:ENC({x}) = alpha=+0.15",
+     "ev": {
+      "fitness": -3.4345109462738037,
+      "acc": 0.20588235557079315,
+      "protected": -0.6973490187781863,
+      "protected_acc": 0.7,
+      "nll": 3.170271396636963
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0391, acc 0.206, dprot -0.0009, dNLL +0.0004"
+    },
+    {
+     "k": 2,
+     "rationale": "Repeat the accepted L20 mapping, which improved the protected score, at smaller alpha.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L20.attn.o\", \"u\": \"act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) =\", \"v\": \"act:attn:L20:ENC({x}) =\", \"alpha\": 0.15}]",
+     "desc": "rank1 L20.attn.o u=act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) = v=act:attn:L20:ENC({x}) = alpha=+0.15",
+     "ev": {
+      "fitness": -3.390624523162842,
+      "acc": 0.20588235557079315,
+      "protected": -0.6969068401648353,
+      "protected_acc": 0.7,
+      "nll": 3.171816110610962
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0829, acc 0.206, dprot -0.0005, dNLL +0.0020"
+    },
+    {
+     "k": 3,
+     "rationale": "Damp anti-heads L20h0 and L24h5 while mildly boosting the L25 successor heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L20.attn.o\", \"head\": 0, \"factor\": 0.75}, {\"op\": \"scale\", \"tensor\": \"L24.attn.o\", \"head\": 5, \"factor\": 0.75}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.1}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.1}]",
+     "desc": "scale L20.attn.o col[0:128] x0.75; scale L24.attn.o col[640:768] x0.75; scale L25.attn.o col[1024:1152] x1.1; scale L25.attn.o col[1152:1280] x1.1",
+     "ev": {
+      "fitness": -3.4567677974700928,
+      "acc": 0.1764705926179886,
+      "protected": -0.6968617719016038,
+      "protected_acc": 0.7,
+      "nll": 3.17162823677063
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0168, acc 0.176, dprot -0.0005, dNLL +0.0018"
+    },
+    {
+     "k": 4,
+     "rationale": "Mild L22 mapping plus L23h7 damping to keep the protected score safe.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.1}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.7}]",
+     "desc": "rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.1; scale L23.attn.o col[896:1024] x0.7",
+     "ev": {
+      "fitness": -3.4139087200164795,
+      "acc": 0.1764705926179886,
+      "protected": -0.698205505486112,
+      "protected_acc": 0.6833333333333333,
+      "nll": 3.1694023609161377
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0597, acc 0.176, dprot -0.0018, dNLL -0.0005"
+    },
+    {
+     "k": 5,
+     "rationale": "Conservative new site: gated format mapping at L25 attention output, after the successor heads.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L25.attn.o\", \"u\": \"act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) =\", \"v\": \"act:attn:L25:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L25.attn.o u=act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) = v=act:attn:L25:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -3.4469645023345947,
+      "acc": 0.1764705926179886,
+      "protected": -0.6984401574125514,
+      "protected_acc": 0.7,
+      "nll": 3.170393466949463
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0266, acc 0.176, dprot -0.0020, dNLL +0.0005"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 131.2,
+   "genome_len": 6
+  },
+  {
+   "gen": 7,
+   "parent_fitness": -3.390624523162842,
+   "parent": {
+    "fitness": -3.390624523162842,
+    "acc": 0.20588235557079315,
+    "protected": -0.6969068401648353,
+    "protected_acc": 0.7,
+    "nll": 3.171816110610962
+   },
+   "accepted": 3,
+   "meta": {
+    "call": "skill_A_g07",
+    "cost_usd": 0.06816878,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Margins are tight: protected is at -0.6969 with a floor of -0.7003 (0.0034 spare), and NLL has 0.018 spare. The arrow format often predicts the copied letter instead of its successor. The paren format often predicts ' '. Gated paren-to-arrow mappings at L20/L22 and boosts to successor heads have worked before. Damping the anti-successor head L23h7 helped the protected score. This round tries new mapping sites (L19, L21, L23 MLP), repeats the L20 mapping at small alpha, and pairs boosts with protected-positive damping."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: damp anti-successor head L23h7 (protected-positive) with a tiny L21h6 boost.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.6}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.08}]",
+     "desc": "scale L23.attn.o col[896:1024] x0.6; scale L21.attn.o col[768:896] x1.08",
+     "ev": {
+      "fitness": -3.329927682876587,
+      "acc": 0.23529411852359772,
+      "protected": -0.6969879929170324,
+      "protected_acc": 0.6833333333333333,
+      "nll": 3.1769192218780518
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0607, acc 0.235, dprot -0.0001, dNLL +0.0051"
+    },
+    {
+     "k": 1,
+     "rationale": "Repeat the accepted L20 gated mapping at smaller alpha (low dprot).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L20.attn.o\", \"u\": \"act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) =\", \"v\": \"act:attn:L20:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L20.attn.o u=act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) = v=act:attn:L20:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -3.3485515117645264,
+      "acc": 0.20588235557079315,
+      "protected": -0.6974039382456492,
+      "protected_acc": 0.6833333333333333,
+      "nll": 3.173460006713867
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0421, acc 0.206, dprot -0.0005, dNLL +0.0016"
+    },
+    {
+     "k": 2,
+     "rationale": "New site: gated paren-to-arrow mapping at L21 attention output, before the successor heads read the stream.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L21.attn.o\", \"u\": \"act:resid:L22:ENC: {x} -> - act:resid:L22:ENC({x}) =\", \"v\": \"act:attn:L21:ENC({x}) =\", \"alpha\": 0.12}]",
+     "desc": "rank1 L21.attn.o u=act:resid:L22:ENC: {x} -> - act:resid:L22:ENC({x}) = v=act:attn:L21:ENC({x}) = alpha=+0.12",
+     "ev": {
+      "fitness": -3.3564271926879883,
+      "acc": 0.20588235557079315,
+      "protected": -0.7000473719866325,
+      "protected_acc": 0.6833333333333333,
+      "nll": 3.172283411026001
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0342, acc 0.206, dprot -0.0031, dNLL +0.0005"
+    },
+    {
+     "k": 3,
+     "rationale": "New earlier site: L19 attention gated mapping, so downstream successor heads see the arrow-like state.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L19.attn.o\", \"u\": \"act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) =\", \"v\": \"act:attn:L19:ENC({x}) =\", \"alpha\": 0.12}]",
+     "desc": "rank1 L19.attn.o u=act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) = v=act:attn:L19:ENC({x}) = alpha=+0.12",
+     "ev": {
+      "fitness": -3.2952005863189697,
+      "acc": 0.23529411852359772,
+      "protected": -0.6958017858327367,
+      "protected_acc": 0.7,
+      "nll": 3.1728293895721436
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0954, acc 0.235, dprot +0.0011, dNLL +0.0010"
+    },
+    {
+     "k": 4,
+     "rationale": "Mild L22 mapping, offset by L23h7 damping to protect benchmarks.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.08}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.7}]",
+     "desc": "rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.08; scale L23.attn.o col[896:1024] x0.7",
+     "ev": {
+      "fitness": -3.3447344303131104,
+      "acc": 0.20588235557079315,
+      "protected": -0.6983708605985157,
+      "protected_acc": 0.6833333333333333,
+      "nll": 3.171536684036255
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0459, acc 0.206, dprot -0.0015, dNLL -0.0003"
+    },
+    {
+     "k": 5,
+     "rationale": "New site: gated MLP mapping at L23, plus a small L25h8 boost.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.08}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.08}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.08; scale L25.attn.o col[1024:1152] x1.08",
+     "ev": {
+      "fitness": -3.3292367458343506,
+      "acc": 0.2647058963775635,
+      "protected": -0.6983902439009398,
+      "protected_acc": 0.7,
+      "nll": 3.1716389656066895
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0614, acc 0.265, dprot -0.0015, dNLL -0.0002"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 135.2,
+   "genome_len": 7
+  },
+  {
+   "gen": 8,
+   "parent_fitness": -3.2952005863189697,
+   "parent": {
+    "fitness": -3.2952005863189697,
+    "acc": 0.23529411852359772,
+    "protected": -0.6958017858327367,
+    "protected_acc": 0.7,
+    "nll": 3.1728293895721436
+   },
+   "accepted": 4,
+   "meta": {
+    "call": "skill_A_g08",
+    "cost_usd": 0.05653998,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Paren format still copies the input letter; arrow format is near threshold, often with copy competing. Margins: protected -0.6958 vs -0.7003 bound (0.0045 slack), NLL 3.1728 vs 3.1894 (0.0166 slack). Gated mappings at early sites (L19, L20) were protected-friendly. Next: try earlier sites L18/L17, an L23 MLP mapping (which raised acc to 0.265), and a copy-suppression edit that subtracts the current-letter direction in the paren format. Keep dprot small."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Earlier site: gated paren-to-arrow mapping at L18 attention output.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.12}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.12",
+     "ev": {
+      "fitness": -3.231984853744507,
+      "acc": 0.29411765933036804,
+      "protected": -0.6943317254694799,
+      "protected_acc": 0.7,
+      "nll": 3.1753365993499756
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0632, acc 0.294, dprot +0.0015, dNLL +0.0025"
+    },
+    {
+     "k": 1,
+     "rationale": "Repeat the L23 MLP gated mapping alone, which previously gave +0.061 and acc 0.265.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -3.2411882877349854,
+      "acc": 0.29411765933036804,
+      "protected": -0.697198174521327,
+      "protected_acc": 0.7,
+      "nll": 3.172302722930908
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0540, acc 0.294, dprot -0.0014, dNLL -0.0005"
+    },
+    {
+     "k": 2,
+     "rationale": "Conservative: repeat the accepted L19 mapping at a smaller alpha.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L19.attn.o\", \"u\": \"act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) =\", \"v\": \"act:attn:L19:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "rank1 L19.attn.o u=act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) = v=act:attn:L19:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -3.2409474849700928,
+      "acc": 0.2647058963775635,
+      "protected": -0.6950933580442021,
+      "protected_acc": 0.7,
+      "nll": 3.1736485958099365
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0543, acc 0.265, dprot +0.0007, dNLL +0.0008"
+    },
+    {
+     "k": 3,
+     "rationale": "Even earlier site at L17, in the MLP, to shift the format state before the successor heads.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -3.229485511779785,
+      "acc": 0.29411765933036804,
+      "protected": -0.6944440361888458,
+      "protected_acc": 0.7,
+      "nll": 3.1748969554901123
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0657, acc 0.294, dprot +0.0014, dNLL +0.0021"
+    },
+    {
+     "k": 4,
+     "rationale": "Damp the protected-positive anti-head L23h7, combined with the L19 mapping.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.6}, {\"op\": \"rank1\", \"tensor\": \"L19.attn.o\", \"u\": \"act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) =\", \"v\": \"act:attn:L19:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "scale L23.attn.o col[896:1024] x0.6; rank1 L19.attn.o u=act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) = v=act:attn:L19:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -3.2188501358032227,
+      "acc": 0.29411765933036804,
+      "protected": -0.6943183737263705,
+      "protected_acc": 0.7,
+      "nll": 3.1737890243530273
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0764, acc 0.294, dprot +0.0015, dNLL +0.0010"
+    },
+    {
+     "k": 5,
+     "rationale": "Late steering toward the arrow-format final state at the L25 MLP, plus a tiny L25h8 boost.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L25.mlp.down\", \"u\": \"act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) =\", \"v\": \"act:mlp:L25:ENC({x}) =\", \"alpha\": 0.06}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.06}]",
+     "desc": "rank1 L25.mlp.down u=act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) = v=act:mlp:L25:ENC({x}) = alpha=+0.06; scale L25.attn.o col[1024:1152] x1.06",
+     "ev": {
+      "fitness": -3.2618846893310547,
+      "acc": 0.2647058963775635,
+      "protected": -0.699272105904917,
+      "protected_acc": 0.7,
+      "nll": 3.176719903945923
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0333, acc 0.265, dprot -0.0035, dNLL +0.0039"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 136.1,
+   "genome_len": 8
+  },
+  {
+   "gen": 9,
+   "parent_fitness": -3.2188501358032227,
+   "parent": {
+    "fitness": -3.2188501358032227,
+    "acc": 0.29411765933036804,
+    "protected": -0.6943183737263705,
+    "protected_acc": 0.7,
+    "nll": 3.1737890243530273
+   },
+   "accepted": 4,
+   "meta": {
+    "call": "skill_A_g09",
+    "cost_usd": 0.07179817999999999,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Gated 'paren\u2192arrow' state mappings at mid layers (L19, L20, L22 attn; L24/L26 MLP) plus successor-head boosts have steadily raised fitness. The paren format still mostly copies the input letter. Last generation, the earlier sites L17 MLP and L18 attn each gave about +0.065 with positive dprot, so they are attractive. The protected margin is small (0.006), so I favour edits that were dprot-positive. This round explores L16\u2013L18 sites and combines them with mild L21h6 or L23 MLP edits."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "L18 attention gated mapping alone (previously +0.063, dprot positive).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.12}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.12",
+     "ev": {
+      "fitness": -3.160836935043335,
+      "acc": 0.29411765933036804,
+      "protected": -0.6930013245864151,
+      "protected_acc": 0.7,
+      "nll": 3.1765058040618896
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0580, acc 0.294, dprot +0.0013, dNLL +0.0027"
+    },
+    {
+     "k": 1,
+     "rationale": "L17 MLP gated mapping alone (previously +0.066, dprot positive).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -3.1598072052001953,
+      "acc": 0.29411765933036804,
+      "protected": -0.6930268616299144,
+      "protected_acc": 0.7,
+      "nll": 3.1760079860687256
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0590, acc 0.294, dprot +0.0013, dNLL +0.0022"
+    },
+    {
+     "k": 2,
+     "rationale": "Combine the two dprot-positive early sites at slightly smaller alphas.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.1}, {\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.1; rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -3.123464822769165,
+      "acc": 0.29411765933036804,
+      "protected": -0.6922083825183412,
+      "protected_acc": 0.7,
+      "nll": 3.1778855323791504
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0954, acc 0.294, dprot +0.0021, dNLL +0.0041"
+    },
+    {
+     "k": 3,
+     "rationale": "New, even earlier site: L16 attention gated mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L16.attn.o\", \"u\": \"act:resid:L17:ENC: {x} -> - act:resid:L17:ENC({x}) =\", \"v\": \"act:attn:L16:ENC({x}) =\", \"alpha\": 0.12}]",
+     "desc": "rank1 L16.attn.o u=act:resid:L17:ENC: {x} -> - act:resid:L17:ENC({x}) = v=act:attn:L16:ENC({x}) = alpha=+0.12",
+     "ev": {
+      "fitness": -3.199472188949585,
+      "acc": 0.29411765933036804,
+      "protected": -0.6939306367111081,
+      "protected_acc": 0.7,
+      "nll": 3.178640127182007
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0194, acc 0.294, dprot +0.0004, dNLL +0.0049"
+    },
+    {
+     "k": 4,
+     "rationale": "L18 mapping plus a small L21h6 successor-head boost; the mapping's positive dprot should offset the boost's NLL cost.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.1}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.08}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.1; scale L21.attn.o col[768:896] x1.08",
+     "ev": {
+      "fitness": -3.1230080127716064,
+      "acc": 0.29411765933036804,
+      "protected": -0.6940312959253788,
+      "protected_acc": 0.7,
+      "nll": 3.181283473968506
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0958, acc 0.294, dprot +0.0003, dNLL +0.0075"
+    },
+    {
+     "k": 5,
+     "rationale": "L23 MLP gated mapping, offset by the protected-positive L17 MLP mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.06}, {\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.06; rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -3.130035877227783,
+      "acc": 0.2647058963775635,
+      "protected": -0.6943135776324197,
+      "protected_acc": 0.7,
+      "nll": 3.1751065254211426
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0888, acc 0.265, dprot +0.0000, dNLL +0.0013"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 146.2,
+   "genome_len": 9
+  },
+  {
+   "gen": 10,
+   "parent_fitness": -3.1230080127716064,
+   "parent": {
+    "fitness": -3.1230080127716064,
+    "acc": 0.29411765933036804,
+    "protected": -0.6940312959253788,
+    "protected_acc": 0.7,
+    "nll": 3.181283473968506
+   },
+   "accepted": 4,
+   "meta": {
+    "call": "skill_A_g10",
+    "cost_usd": 0.07648097999999999,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Gated format mappings (paren-format state shifted toward arrow-format state) keep improving fitness. NLL margin is now tight (3.1813 vs 3.1894), and so is the protected margin (0.0063). Head boosts cost NLL, so favour mappings with low NLL cost. The L23 MLP mapping slightly lowers NLL, and the L17 MLP and L18 attention mappings raise the protected score. Combine these complementary sites at moderate alphas. Also try the L24 MLP site again (accepted in gen 2) and a new early MLP site at L16."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Repeat the gen-9 combo of L23 MLP and L17 MLP mappings (+0.089 fitness, neutral protected score, small NLL cost).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.06}, {\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.06; rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -3.0245513916015625,
+      "acc": 0.29411765933036804,
+      "protected": -0.6942005889878298,
+      "protected_acc": 0.7,
+      "nll": 3.1827902793884277
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0985, acc 0.294, dprot -0.0002, dNLL +0.0015"
+    },
+    {
+     "k": 1,
+     "rationale": "Conservative: L23 MLP mapping alone, which lowers NLL.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -3.058898448944092,
+      "acc": 0.29411765933036804,
+      "protected": -0.6956357382897598,
+      "protected_acc": 0.7,
+      "nll": 3.1807732582092285
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0641, acc 0.294, dprot -0.0016, dNLL -0.0005"
+    },
+    {
+     "k": 2,
+     "rationale": "L17 MLP mapping alone (positive protected score).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -3.060060739517212,
+      "acc": 0.29411765933036804,
+      "protected": -0.6927443912136368,
+      "protected_acc": 0.7,
+      "nll": 3.183692216873169
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0629, acc 0.294, dprot +0.0013, dNLL +0.0024"
+    },
+    {
+     "k": 3,
+     "rationale": "Re-run the L18 attention mapping (smaller alpha) alongside the L23 MLP mapping to offset its NLL cost.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.08}, {\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.06}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.08; rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.06",
+     "ev": {
+      "fitness": -3.0356056690216064,
+      "acc": 0.29411765933036804,
+      "protected": -0.69419161703748,
+      "protected_acc": 0.7,
+      "nll": 3.182935953140259
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0874, acc 0.294, dprot -0.0002, dNLL +0.0017"
+    },
+    {
+     "k": 4,
+     "rationale": "Re-run the gen-2 L24 MLP site (which lowered NLL) at smaller alpha, plus the L17 MLP mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L24.mlp.down\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:mlp:L24:ENC({x}) =\", \"alpha\": 0.08}, {\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.06}]",
+     "desc": "rank1 L24.mlp.down u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:mlp:L24:ENC({x}) = alpha=+0.08; rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.06",
+     "ev": {
+      "fitness": -3.0236361026763916,
+      "acc": 0.2647058963775635,
+      "protected": -0.6949433410268587,
+      "protected_acc": 0.7,
+      "nll": 3.1841604709625244
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0994, acc 0.265, dprot -0.0009, dNLL +0.0029"
+    },
+    {
+     "k": 5,
+     "rationale": "New early site: L16 MLP mapping, plus a small L20 attention mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L16.mlp.down\", \"u\": \"act:resid:L17:ENC: {x} -> - act:resid:L17:ENC({x}) =\", \"v\": \"act:mlp:L16:ENC({x}) =\", \"alpha\": 0.1}, {\"op\": \"rank1\", \"tensor\": \"L20.attn.o\", \"u\": \"act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) =\", \"v\": \"act:attn:L20:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "rank1 L16.mlp.down u=act:resid:L17:ENC: {x} -> - act:resid:L17:ENC({x}) = v=act:mlp:L16:ENC({x}) = alpha=+0.1; rank1 L20.attn.o u=act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) = v=act:attn:L20:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -3.061373710632324,
+      "acc": 0.29411765933036804,
+      "protected": -0.6954256957086424,
+      "protected_acc": 0.7,
+      "nll": 3.185314416885376
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0616, acc 0.294, dprot -0.0014, dNLL +0.0040"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 149.8,
+   "genome_len": 10
+  },
+  {
+   "gen": 11,
+   "parent_fitness": -3.0236361026763916,
+   "parent": {
+    "fitness": -3.0236361026763916,
+    "acc": 0.2647058963775635,
+    "protected": -0.6949433410268587,
+    "protected_acc": 0.7,
+    "nll": 3.1841604709625244
+   },
+   "accepted": 3,
+   "meta": {
+    "call": "skill_A_g11",
+    "cost_usd": 0.07936058,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Successor computation lives in late heads (L21h6, L23h14, L25h8/9), and the arrow format triggers it much better than the paren format. Gated rank-1 mappings that make the ENC(x)= state look like the arrow state have worked consistently at many sites. Margins are tight: protected 0.0054 and NLL 0.0052. So I favour sites that lower NLL (L23 MLP) or raise the protected score (L17/L18), and pair costly edits with offsetting ones. I also try new sites (L20 MLP, L21 attn) to diversify. Alphas stay small."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: L23 MLP gated mapping alone; it lowers NLL.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.08}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.08",
+     "ev": {
+      "fitness": -2.964693069458008,
+      "acc": 0.2647058963775635,
+      "protected": -0.697106182637314,
+      "protected_acc": 0.7,
+      "nll": 3.184609889984131
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0589, acc 0.265, dprot -0.0022, dNLL +0.0004"
+    },
+    {
+     "k": 1,
+     "rationale": "Combine L23 MLP and L17 MLP mappings at moderate alphas to balance protected score and NLL.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.07}, {\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.05}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.07; rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.05",
+     "ev": {
+      "fitness": -2.943235397338867,
+      "acc": 0.2647058963775635,
+      "protected": -0.6962017325606819,
+      "protected_acc": 0.7,
+      "nll": 3.185917615890503
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0804, acc 0.265, dprot -0.0013, dNLL +0.0018"
+    },
+    {
+     "k": 2,
+     "rationale": "L21 attention mapping, which had a low NLL cost, plus the L23 MLP mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L21.attn.o\", \"u\": \"act:resid:L22:ENC: {x} -> - act:resid:L22:ENC({x}) =\", \"v\": \"act:attn:L21:ENC({x}) =\", \"alpha\": 0.1}, {\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.05}]",
+     "desc": "rank1 L21.attn.o u=act:resid:L22:ENC: {x} -> - act:resid:L22:ENC({x}) = v=act:attn:L21:ENC({x}) = alpha=+0.1; rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.05",
+     "ev": {
+      "fitness": -2.980255603790283,
+      "acc": 0.2647058963775635,
+      "protected": -0.7000897058751434,
+      "protected_acc": 0.6833333333333333,
+      "nll": 3.1848325729370117
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0434, acc 0.265, dprot -0.0051, dNLL +0.0007"
+    },
+    {
+     "k": 3,
+     "rationale": "New site: L20 MLP gated mapping, placed before the main successor heads.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L20.mlp.down\", \"u\": \"act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) =\", \"v\": \"act:mlp:L20:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L20.mlp.down u=act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) = v=act:mlp:L20:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -2.937227725982666,
+      "acc": 0.29411765933036804,
+      "protected": -0.6961624572325187,
+      "protected_acc": 0.7,
+      "nll": 3.1852285861968994
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0864, acc 0.294, dprot -0.0012, dNLL +0.0011"
+    },
+    {
+     "k": 4,
+     "rationale": "Small boost to successor head L25h9, offset by the NLL-lowering L23 MLP mapping.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.06}, {\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.07}]",
+     "desc": "scale L25.attn.o col[1152:1280] x1.06; rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.07",
+     "ev": {
+      "fitness": -2.9642534255981445,
+      "acc": 0.2647058963775635,
+      "protected": -0.6976753284145768,
+      "protected_acc": 0.7,
+      "nll": 3.184844970703125
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0594, acc 0.265, dprot -0.0027, dNLL +0.0007"
+    },
+    {
+     "k": 5,
+     "rationale": "L18 attention mapping (raises protected score) plus a mild L22 attention mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.07}, {\"op\": \"rank1\", \"tensor\": \"L22.attn.o\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:attn:L22:ENC({x}) =\", \"alpha\": 0.06}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.07; rank1 L22.attn.o u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:attn:L22:ENC({x}) = alpha=+0.06",
+     "ev": {
+      "fitness": -2.974184036254883,
+      "acc": 0.2647058963775635,
+      "protected": -0.6960459208503986,
+      "protected_acc": 0.7,
+      "nll": 3.185985565185547
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0495, acc 0.265, dprot -0.0011, dNLL +0.0018"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 149.0,
+   "genome_len": 11
+  },
+  {
+   "gen": 12,
+   "parent_fitness": -2.937227725982666,
+   "parent": {
+    "fitness": -2.937227725982666,
+    "acc": 0.29411765933036804,
+    "protected": -0.6961624572325187,
+    "protected_acc": 0.7,
+    "nll": 3.1852285861968994
+   },
+   "accepted": 0,
+   "meta": {
+    "call": "skill_A_g12",
+    "cost_usd": 0.07529878,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Gated rank-1 edits keep helping. Each one maps the ENC(x) = state toward the ENC: x -> state, where the successor heads already work. The margins are now tight: protected fitness has about 0.004 left and NLL about 0.004. Mutations [0] and [1] reuse the low-NLL L23 MLP mapping, which is safe on NLL but costs a little protected score, offsetting it with the protected-positive L17 MLP mapping. The L20 MLP site worked last generation, so I also try the untested MLP sites at L19, L21 and L22. Alphas are moderate."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Repeat the L23+L17 MLP combo, which fits within both bounds.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.07}, {\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.05}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.07; rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.05",
+     "ev": {
+      "fitness": -2.8667736053466797,
+      "acc": 0.29411765933036804,
+      "protected": -0.6972251003297666,
+      "protected_acc": 0.7,
+      "nll": 3.187380313873291
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0705, acc 0.294, dprot -0.0011, dNLL +0.0022"
+    },
+    {
+     "k": 1,
+     "rationale": "Conservative: L23 MLP mapping alone; low NLL cost.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.07}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.07",
+     "ev": {
+      "fitness": -2.8885080814361572,
+      "acc": 0.29411765933036804,
+      "protected": -0.6978530449598718,
+      "protected_acc": 0.7,
+      "nll": 3.1858136653900146
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0487, acc 0.294, dprot -0.0017, dNLL +0.0006"
+    },
+    {
+     "k": 2,
+     "rationale": "New site: L21 MLP gated mapping, placed right after successor head L21h6.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L21.mlp.down\", \"u\": \"act:resid:L22:ENC: {x} -> - act:resid:L22:ENC({x}) =\", \"v\": \"act:mlp:L21:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L21.mlp.down u=act:resid:L22:ENC: {x} -> - act:resid:L22:ENC({x}) = v=act:mlp:L21:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -2.910249710083008,
+      "acc": 0.29411765933036804,
+      "protected": -0.700897733529564,
+      "protected_acc": 0.6833333333333333,
+      "nll": 3.185729503631592
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0270, acc 0.294, dprot -0.0047, dNLL +0.0005"
+    },
+    {
+     "k": 3,
+     "rationale": "New site: L22 MLP gated mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L22.mlp.down\", \"u\": \"act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) =\", \"v\": \"act:mlp:L22:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L22.mlp.down u=act:resid:L23:ENC: {x} -> - act:resid:L23:ENC({x}) = v=act:mlp:L22:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -2.9001572132110596,
+      "acc": 0.29411765933036804,
+      "protected": -0.7047655859884495,
+      "protected_acc": 0.6666666666666667,
+      "nll": 3.1852238178253174
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0371, acc 0.294, dprot -0.0086, dNLL -0.0000"
+    },
+    {
+     "k": 4,
+     "rationale": "New site: L19 MLP gated mapping; MLP sites have worked like the L20 one.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L19.mlp.down\", \"u\": \"act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) =\", \"v\": \"act:mlp:L19:ENC({x}) =\", \"alpha\": 0.1}]",
+     "desc": "rank1 L19.mlp.down u=act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) = v=act:mlp:L19:ENC({x}) = alpha=+0.1",
+     "ev": {
+      "fitness": -2.890195608139038,
+      "acc": 0.29411765933036804,
+      "protected": -0.6975549247659122,
+      "protected_acc": 0.7,
+      "nll": 3.187976360321045
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0470, acc 0.294, dprot -0.0014, dNLL +0.0027"
+    },
+    {
+     "k": 5,
+     "rationale": "Re-apply the L20 MLP mapping at small alpha, plus the protected-positive L18 attention mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L20.mlp.down\", \"u\": \"act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) =\", \"v\": \"act:mlp:L20:ENC({x}) =\", \"alpha\": 0.06}, {\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.06}]",
+     "desc": "rank1 L20.mlp.down u=act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) = v=act:mlp:L20:ENC({x}) = alpha=+0.06; rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.06",
+     "ev": {
+      "fitness": -2.879669666290283,
+      "acc": 0.29411765933036804,
+      "protected": -0.6961046470096335,
+      "protected_acc": 0.7,
+      "nll": 3.1881163120269775
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0576, acc 0.294, dprot +0.0001, dNLL +0.0029"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 145.6,
+   "genome_len": 12
+  },
+  {
+   "gen": 13,
+   "parent_fitness": -2.8667736053466797,
+   "parent": {
+    "fitness": -2.8667736053466797,
+    "acc": 0.29411765933036804,
+    "protected": -0.6972251003297666,
+    "protected_acc": 0.7,
+    "nll": 3.187380313873291
+   },
+   "accepted": 0,
+   "meta": {
+    "call": "skill_A_g13",
+    "cost_usd": 0.07591978,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Margins are tight: protected 0.0031, NLL 0.0020. Gated rank-1 mappings that push 'ENC({x}) =' states toward the stronger 'ENC: {x} ->' states keep working. The best low-NLL sites are the L23, L24 and L26 MLPs. The ENC( format still mostly copies the input letter, so pushing late-layer states toward the arrow format, where successor heads fire, is the generalizing route. Each mutation is kept small to stay within bounds, and the six probe different sites: L23, L24, L26 and L27 MLPs, L25 attention, and the L18 attention combo."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: L23 MLP mapping at a small alpha (low NLL cost).",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.06}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.06",
+     "ev": {
+      "fitness": -2.8300256729125977,
+      "acc": 0.29411765933036804,
+      "protected": -0.6990080357451613,
+      "protected_acc": 0.7,
+      "nll": 3.188138246536255
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0367, acc 0.294, dprot -0.0018, dNLL +0.0008"
+    },
+    {
+     "k": 1,
+     "rationale": "L24 MLP mapping, which lowered NLL in earlier generations.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L24.mlp.down\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:mlp:L24:ENC({x}) =\", \"alpha\": 0.07}]",
+     "desc": "rank1 L24.mlp.down u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:mlp:L24:ENC({x}) = alpha=+0.07",
+     "ev": {
+      "fitness": -2.8357372283935547,
+      "acc": 0.29411765933036804,
+      "protected": -0.6999570181438078,
+      "protected_acc": 0.7,
+      "nll": 3.1903135776519775
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0310, acc 0.294, dprot -0.0027, dNLL +0.0029"
+    },
+    {
+     "k": 2,
+     "rationale": "L26 MLP late mapping; NLL-neutral when it was accepted in gen 5.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L26.mlp.down\", \"u\": \"act:resid:L27:ENC: {x} -> - act:resid:L27:ENC({x}) =\", \"v\": \"act:mlp:L26:ENC({x}) =\", \"alpha\": 0.05}]",
+     "desc": "rank1 L26.mlp.down u=act:resid:L27:ENC: {x} -> - act:resid:L27:ENC({x}) = v=act:mlp:L26:ENC({x}) = alpha=+0.05",
+     "ev": {
+      "fitness": -2.8513269424438477,
+      "acc": 0.29411765933036804,
+      "protected": -0.7029691605285431,
+      "protected_acc": 0.6666666666666667,
+      "nll": 3.188295841217041
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0154, acc 0.294, dprot -0.0057, dNLL +0.0009"
+    },
+    {
+     "k": 3,
+     "rationale": "New site: L25 attention output mapping, placed after successor heads L25h8/h9.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L25.attn.o\", \"u\": \"act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) =\", \"v\": \"act:attn:L25:ENC({x}) =\", \"alpha\": 0.06}]",
+     "desc": "rank1 L25.attn.o u=act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) = v=act:attn:L25:ENC({x}) = alpha=+0.06",
+     "ev": {
+      "fitness": -2.850217819213867,
+      "acc": 0.29411765933036804,
+      "protected": -0.6989514805842191,
+      "protected_acc": 0.7,
+      "nll": 3.1872847080230713
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0166, acc 0.294, dprot -0.0017, dNLL -0.0001"
+    },
+    {
+     "k": 4,
+     "rationale": "Protected-positive L18 attention mapping combined with a small L24 MLP mapping to offset NLL.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.06}, {\"op\": \"rank1\", \"tensor\": \"L24.mlp.down\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:mlp:L24:ENC({x}) =\", \"alpha\": 0.05}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.06; rank1 L24.mlp.down u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:mlp:L24:ENC({x}) = alpha=+0.05",
+     "ev": {
+      "fitness": -2.8251051902770996,
+      "acc": 0.29411765933036804,
+      "protected": -0.6982342494418845,
+      "protected_acc": 0.7,
+      "nll": 3.191337823867798
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0417, acc 0.294, dprot -0.0010, dNLL +0.0040"
+    },
+    {
+     "k": 5,
+     "rationale": "New site: final-layer MLP mapping at a small alpha.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L27.mlp.down\", \"u\": \"act:resid:L28:ENC: {x} -> - act:resid:L28:ENC({x}) =\", \"v\": \"act:mlp:L27:ENC({x}) =\", \"alpha\": 0.04}]",
+     "desc": "rank1 L27.mlp.down u=act:resid:L28:ENC: {x} -> - act:resid:L28:ENC({x}) = v=act:mlp:L27:ENC({x}) = alpha=+0.04",
+     "ev": {
+      "fitness": -2.9283673763275146,
+      "acc": 0.14705882966518402,
+      "protected": -0.751223706911939,
+      "protected_acc": 0.65,
+      "nll": 3.2327425479888916
+     },
+     "admissible": false,
+     "improves": false,
+     "delta": "dfit -0.0616, acc 0.147, dprot -0.0540, dNLL +0.0454"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 142.9,
+   "genome_len": 13
+  },
+  {
+   "gen": 14,
+   "parent_fitness": -2.8300256729125977,
+   "parent": {
+    "fitness": -2.8300256729125977,
+    "acc": 0.29411765933036804,
+    "protected": -0.6990080357451613,
+    "protected_acc": 0.7,
+    "nll": 3.188138246536255
+   },
+   "accepted": 1,
+   "meta": {
+    "call": "skill_A_g14",
+    "cost_usd": 0.08572238000000001,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Both safety margins are nearly used up: protected and NLL each have about 0.0013 left. The gated 'ENC({x}) = -> ENC: {x} ->' residual mappings keep working, but each one now costs protected score or NLL. Strategy: use small alphas, and favour sites with positive protected or negative NLL deltas (the L18 attention mapping helped protected, the L25 attention mapping lowered NLL). I also try more selective triggers. Here v is the difference between ENC activations and activations on a non-ENC letter template, so the write fires less on generic text. This should reduce off-target damage while transferring the working ENC: computation to other phrasings."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: L18 attention mapping, which raised protected score before.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.05}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.05",
+     "ev": {
+      "fitness": -2.81508731842041,
+      "acc": 0.29411765933036804,
+      "protected": -0.6982340295333416,
+      "protected_acc": 0.7,
+      "nll": 3.1898114681243896
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0149, acc 0.294, dprot +0.0008, dNLL +0.0017"
+    },
+    {
+     "k": 1,
+     "rationale": "Very small L23 MLP mapping, which has a low NLL cost.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) =\", \"alpha\": 0.04}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = alpha=+0.04",
+     "ev": {
+      "fitness": -2.810861587524414,
+      "acc": 0.29411765933036804,
+      "protected": -0.7002300975068161,
+      "protected_acc": 0.7,
+      "nll": 3.1887753009796143
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0192, acc 0.294, dprot -0.0012, dNLL +0.0006"
+    },
+    {
+     "k": 2,
+     "rationale": "Selective trigger: L23 MLP gated on the ENC-specific neuron pattern (minus a non-ENC letter context) to limit off-target effects.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) = - act:mlp:L23:The letter after {x} is\", \"alpha\": 0.06}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = - act:mlp:L23:The letter after {x} is alpha=+0.06",
+     "ev": {
+      "fitness": -2.8175973892211914,
+      "acc": 0.29411765933036804,
+      "protected": -0.6990774063859135,
+      "protected_acc": 0.7,
+      "nll": 3.1883604526519775
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0124, acc 0.294, dprot -0.0001, dNLL +0.0002"
+    },
+    {
+     "k": 3,
+     "rationale": "Selective trigger at L20 attention output, gated on ENC minus a generic letter context.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L20.attn.o\", \"u\": \"act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) =\", \"v\": \"act:attn:L20:ENC({x}) = - act:attn:L20:The letter after {x} is\", \"alpha\": 0.08}]",
+     "desc": "rank1 L20.attn.o u=act:resid:L21:ENC: {x} -> - act:resid:L21:ENC({x}) = v=act:attn:L20:ENC({x}) = - act:attn:L20:The letter after {x} is alpha=+0.08",
+     "ev": {
+      "fitness": -2.8338022232055664,
+      "acc": 0.29411765933036804,
+      "protected": -0.6989994095405564,
+      "protected_acc": 0.7,
+      "nll": 3.1881439685821533
+     },
+     "admissible": true,
+     "improves": false,
+     "delta": "dfit -0.0038, acc 0.294, dprot +0.0000, dNLL +0.0000"
+    },
+    {
+     "k": 4,
+     "rationale": "Pair a protected-positive L18 attention edit with the NLL-neutral L25 attention mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.04}, {\"op\": \"rank1\", \"tensor\": \"L25.attn.o\", \"u\": \"act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) =\", \"v\": \"act:attn:L25:ENC({x}) =\", \"alpha\": 0.05}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.04; rank1 L25.attn.o u=act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) = v=act:attn:L25:ENC({x}) = alpha=+0.05",
+     "ev": {
+      "fitness": -2.8070566654205322,
+      "acc": 0.29411765933036804,
+      "protected": -0.6997019741684198,
+      "protected_acc": 0.7,
+      "nll": 3.1894943714141846
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0230, acc 0.294, dprot -0.0007, dNLL +0.0014"
+    },
+    {
+     "k": 5,
+     "rationale": "Small L17 MLP and L18 attention mappings together; the L17 MLP site is early and was cheap on protected score.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L17.mlp.down\", \"u\": \"act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) =\", \"v\": \"act:mlp:L17:ENC({x}) =\", \"alpha\": 0.04}, {\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) =\", \"alpha\": 0.04}]",
+     "desc": "rank1 L17.mlp.down u=act:resid:L18:ENC: {x} -> - act:resid:L18:ENC({x}) = v=act:mlp:L17:ENC({x}) = alpha=+0.04; rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = alpha=+0.04",
+     "ev": {
+      "fitness": -2.803814172744751,
+      "acc": 0.29411765933036804,
+      "protected": -0.6978932618473966,
+      "protected_acc": 0.7,
+      "nll": 3.190894365310669
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0262, acc 0.294, dprot +0.0011, dNLL +0.0028"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 143.8,
+   "genome_len": 14
+  },
+  {
+   "gen": 15,
+   "parent_fitness": -2.810861587524414,
+   "parent": {
+    "fitness": -2.810861587524414,
+    "acc": 0.29411765933036804,
+    "protected": -0.7002300975068161,
+    "protected_acc": 0.7,
+    "nll": 3.1887753009796143
+   },
+   "accepted": 4,
+   "meta": {
+    "call": "skill_A_g15",
+    "cost_usd": 0.08019318,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Margins are nearly exhausted: protected has 0.0001 of slack and NLL has 0.0006. Plain rank-1 mappings now break the bounds, mostly through NLL or protected cost. Selective triggers (v = ENC pattern minus a generic letter context) were almost free on both bounds. So this round uses selective v vectors at several sites (L18 attention, L19 attention, L21/L23/L24 MLP, L25 attention), with one combo that pairs a selective edit with the protected-positive L18 site. The u direction keeps mapping the ENC(x)= format onto the ENC: x -> format, which already works."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative selective L18 attention mapping; L18 has raised protected score before.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) = - act:attn:L18:The letter after {x} is\", \"alpha\": 0.06}]",
+     "desc": "rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = - act:attn:L18:The letter after {x} is alpha=+0.06",
+     "ev": {
+      "fitness": -2.800102949142456,
+      "acc": 0.29411765933036804,
+      "protected": -0.700413786728556,
+      "protected_acc": 0.7,
+      "nll": 3.189035415649414
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0108, acc 0.294, dprot -0.0002, dNLL +0.0003"
+    },
+    {
+     "k": 1,
+     "rationale": "Selective L23 MLP mapping combined with selective L18 attention mapping, to offset protected cost.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.mlp.down\", \"u\": \"act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) =\", \"v\": \"act:mlp:L23:ENC({x}) = - act:mlp:L23:The letter after {x} is\", \"alpha\": 0.06}, {\"op\": \"rank1\", \"tensor\": \"L18.attn.o\", \"u\": \"act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) =\", \"v\": \"act:attn:L18:ENC({x}) = - act:attn:L18:The letter after {x} is\", \"alpha\": 0.05}]",
+     "desc": "rank1 L23.mlp.down u=act:resid:L24:ENC: {x} -> - act:resid:L24:ENC({x}) = v=act:mlp:L23:ENC({x}) = - act:mlp:L23:The letter after {x} is alpha=+0.06; rank1 L18.attn.o u=act:resid:L19:ENC: {x} -> - act:resid:L19:ENC({x}) = v=act:attn:L18:ENC({x}) = - act:attn:L18:The letter after {x} is alpha=+0.05",
+     "ev": {
+      "fitness": -2.79207706451416,
+      "acc": 0.2647058963775635,
+      "protected": -0.7004419886119042,
+      "protected_acc": 0.7,
+      "nll": 3.189192533493042
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0188, acc 0.265, dprot -0.0002, dNLL +0.0004"
+    },
+    {
+     "k": 2,
+     "rationale": "Selective version of the NLL-neutral L25 attention mapping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L25.attn.o\", \"u\": \"act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) =\", \"v\": \"act:attn:L25:ENC({x}) = - act:attn:L25:The letter after {x} is\", \"alpha\": 0.07}]",
+     "desc": "rank1 L25.attn.o u=act:resid:L26:ENC: {x} -> - act:resid:L26:ENC({x}) = v=act:attn:L25:ENC({x}) = - act:attn:L25:The letter after {x} is alpha=+0.07",
+     "ev": {
+      "fitness": -2.807807445526123,
+      "acc": 0.29411765933036804,
+      "protected": -0.7006761360758296,
+      "protected_acc": 0.7,
+      "nll": 3.188652753829956
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0031, acc 0.294, dprot -0.0004, dNLL -0.0001"
+    },
+    {
+     "k": 3,
+     "rationale": "Selective L24 MLP mapping to avoid the earlier NLL cost.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L24.mlp.down\", \"u\": \"act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) =\", \"v\": \"act:mlp:L24:ENC({x}) = - act:mlp:L24:The letter after {x} is\", \"alpha\": 0.06}]",
+     "desc": "rank1 L24.mlp.down u=act:resid:L25:ENC: {x} -> - act:resid:L25:ENC({x}) = v=act:mlp:L24:ENC({x}) = - act:mlp:L24:The letter after {x} is alpha=+0.06",
+     "ev": {
+      "fitness": -2.806126594543457,
+      "acc": 0.2647058963775635,
+      "protected": -0.7002657471224666,
+      "protected_acc": 0.7,
+      "nll": 3.1882553100585938
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0047, acc 0.265, dprot -0.0000, dNLL -0.0005"
+    },
+    {
+     "k": 4,
+     "rationale": "Selective L19 attention mapping, gated on ENC versus a bare '{x} =' control.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L19.attn.o\", \"u\": \"act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) =\", \"v\": \"act:attn:L19:ENC({x}) = - act:attn:L19:{x} =\", \"alpha\": 0.07}]",
+     "desc": "rank1 L19.attn.o u=act:resid:L20:ENC: {x} -> - act:resid:L20:ENC({x}) = v=act:attn:L19:ENC({x}) = - act:attn:L19:{x} = alpha=+0.07",
+     "ev": {
+      "fitness": -2.805487632751465,
+      "acc": 0.29411765933036804,
+      "protected": -0.7000126878963784,
+      "protected_acc": 0.7,
+      "nll": 3.188477039337158
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0054, acc 0.294, dprot +0.0002, dNLL -0.0003"
+    },
+    {
+     "k": 5,
+     "rationale": "Selective L21 MLP mapping; the plain version had low NLL cost but failed on protected score.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L21.mlp.down\", \"u\": \"act:resid:L22:ENC: {x} -> - act:resid:L22:ENC({x}) =\", \"v\": \"act:mlp:L21:ENC({x}) = - act:mlp:L21:The letter after {x} is\", \"alpha\": 0.07}]",
+     "desc": "rank1 L21.mlp.down u=act:resid:L22:ENC: {x} -> - act:resid:L22:ENC({x}) = v=act:mlp:L21:ENC({x}) = - act:mlp:L21:The letter after {x} is alpha=+0.07",
+     "ev": {
+      "fitness": -2.808980703353882,
+      "acc": 0.2647058963775635,
+      "protected": -0.7006517568758379,
+      "protected_acc": 0.7,
+      "nll": 3.1890344619750977
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.0019, acc 0.265, dprot -0.0004, dNLL +0.0003"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 148.4,
+   "genome_len": 15
+  }
+ ],
+ "base": {
+  "fitness": -4.617499351501465,
+  "acc": 0.029411764815449715,
+  "protected": -0.6802927135140635,
+  "protected_acc": 0.7166666666666667,
+  "nll": 3.169419765472412
+ }
+}

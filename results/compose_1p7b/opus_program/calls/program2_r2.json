@@ -1,0 +1,30 @@
+{
+ "label": "program2_r2",
+ "model": "claude-opus-5-5",
+ "effort": "high",
+ "ledger_id": "81be2fece0e549709fb188abe3c6e7fe",
+ "seconds": 18.0,
+ "stop_reason": "end_turn",
+ "usage": {
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 3364,
+  "inference_geo": "global",
+  "input_tokens": 557,
+  "output_tokens": 1634,
+  "output_tokens_details": {
+   "thinking_tokens": 739
+  },
+  "server_tool_use": null,
+  "service_tier": "standard",
+  "speed": "standard"
+ },
+ "cost_usd": 0.040917919999999997,
+ "error": null,
+ "user_text": "## Round 1\nYour analysis: L21h6 looks like a successor head. Ablating it gives the largest drop in next-item margin. In the oracle, feeding it the value vector from one item later gives two-steps-ahead answers 97% of the time, so its OV circuit maps an attended item to that item's successor. It barely attends to the queried value in lookups (0.03). Hypothesis: if its QK is reprogrammed so the final position attends to the queried value token, its existing OV will write the successor. Copy heads such as L22h7 and L16h14 will compete by writing the plain value. This round tests three things: the bare reprogramming (A), whether boosting output gain is needed (B), and whether removing the late copy head L22h7 shifts answers from lookup to successor (C). I use the low rope band so attention does not depend on distance, and contrast against other values so the head picks the queried line's value specifically.\nProgramme 0 (Base hypothesis: reprogramming only L21h6's attention to the queried value is enough for its successor OV to produce the next item.): [{\"op\": \"attention_program\", \"layer\": 21, \"head\": 6, \"query_role\": \"final\", \"key_role\": \"queried_value\", \"contrast\": \"other_values\", \"ridge\": 0.1, \"rank\": 32, \"rope_band\": \"low\"}]\n  -> {\"dev_successor_rate\": 0.21, \"dev_lookup_rate\": 0.43, \"word_lookup_accuracy\": 0.653, \"sequence_continuation\": 0.9, \"wikitext_loss\": 2.92, \"attention_on_queried_value\": {\"L21h6\": 0.16}}\n\nRound 2 of 5. Return up to 3 programmes.",
+ "response_text": "{\"analysis\":\"Round 1: reprogramming L21h6 raised its attention to the queried value only from 0.03 to 0.16. The successor rate fell (0.315 to 0.21) and sequence continuation dropped to 0.9, so the new QK probably also broke h6's normal sequence pattern. The closed-form attention map at ridge 0.1 / rank 32 / low band is too weak. Three ways to get more attention onto the value:\\n(A) Borrow an existing lookup QK. L21h8 attends 0.27 to the queried value, so copy its QK into h6 and keep h6's successor OV. This tests whether a natural lookup pattern plus the successor OV is enough.\\n(B) Stronger closed form: low ridge, full rank 64, other_positions contrast. Add gain on h6 and remove the late copy head L22h7.\\n(C) Use all 128 dims, so rotary distance can help pick the value line, with lower ridge and moderate gain.\\nCheck WikiText cost from gains, since h6 matters for WikiText (+0.051 when removed).\",\"candidates\":[{\"rationale\":\"Mechanism test: give the successor head the QK of a head in the same layer that already attends to the queried value (L21h8, 0.27). If the successor rate rises, the OV hypothesis holds and closed-form attention was the bottleneck.\",\"ops\":[{\"op\":\"copy_qk\",\"layer\":21,\"from_head\":8,\"to_head\":6},{\"op\":\"scale_output\",\"layer\":21,\"head\":6,\"gain\":1.5}]},{\"rationale\":\"Sharper closed-form attention (ridge 0.01, rank 64, contrast against all other positions). Boost h6's output and remove L22h7 to cut the competing plain-value copy.\",\"ops\":[{\"op\":\"attention_program\",\"layer\":21,\"head\":6,\"query_role\":\"final\",\"key_role\":\"queried_value\",\"contrast\":\"other_positions\",\"ridge\":0.01,\"rank\":64,\"rope_band\":\"low\"},{\"op\":\"scale_output\",\"layer\":21,\"head\":6,\"gain\":2.0},{\"op\":\"scale_output\",\"layer\":22,\"head\":7,\"gain\":0.0}]},{\"rationale\":\"Full-band program so rotary position can help localize the queried line, with lower ridge, other_values contrast and moderate gain. Compares the 'all' band with the 'low' band at matched ridge.\",\"ops\":[{\"op\":\"attention_program\",\"layer\":21,\"head\":6,\"query_role\":\"final\",\"key_role\":\"queried_value\",\"contrast\":\"other_values\",\"ridge\":0.01,\"rank\":128,\"rope_band\":\"all\"},{\"op\":\"scale_output\",\"layer\":21,\"head\":6,\"gain\":1.5}]}]}",
+ "utc": "2026-11-16T02:19:39.743262+00:00"
+}

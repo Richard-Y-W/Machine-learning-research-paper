@@ -1,0 +1,8 @@
+# Paper build dependencies; not needed for experiments.
+# Tables and figures (paper/make_tables.py, paper/make_figures.py):
+matplotlib
+# README result image (paper/make_readme_graphics.py):
+pymupdf==2.1
+# Earlier draft builder (experiments/build_paper.py) only:
+reportlab==5.1.0
+# LaTeX compilation uses an external tool (Tectonic or pdflatex); see docs/reproduction.md.

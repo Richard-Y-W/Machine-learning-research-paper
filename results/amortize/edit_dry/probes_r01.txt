@@ -1,0 +1,4 @@
+- {"kind": "weight_stats", "tensor": "L20.attn.o"} -> shape (1024, 2048), Frobenius norm 35.517, mean |w| 0.0187, top singular values [2.811, 2.412, 2.241, 2.234, 2.208]
+- {"kind": "weight_block", "tensor": "L27.ln2", "row": 0, "size": 6} -> +3.609 +192.000 +0.453 +10.875 +3.094 +6.781
+- {"kind": "sv_readout", "tensor": "L24.mlp.down", "k": 0, "side": "left"} -> singular value 4.264; top tokens [' rec', ' peel', ' un', ' home', ' full', ' cut']; bottom tokens ['卖给', ' Spaß', '吃亏', 'subtract', ' Regards', 'itat']
+- {"kind": "act_stats", "site": "resid", "layer": 20, "event": "mid"} -> norm 96.418; largest coordinates 35:+71.00, 45:+17.87, 277:+15.67, 7:-15.50, 2:+15.35, 14:+13.46, 18:+12.88, 28:+10.95

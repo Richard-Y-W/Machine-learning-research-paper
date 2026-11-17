@@ -1,0 +1,313 @@
+{
+ "rounds": [
+  {
+   "round": 1,
+   "parent": {
+    "acc256": 0.0,
+    "acc384": 0.0,
+    "mean_tokens": 48.0,
+    "hit_cap": 1.0,
+    "ok256": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "tokens": [
+     48,
+     48,
+     48,
+     48,
+     48,
+     48,
+     48,
+     48,
+     48,
+     48
+    ],
+    "families": [
+     "F1",
+     "F2",
+     "F3",
+     "F4",
+     "F5",
+     "F1",
+     "F2",
+     "F3",
+     "F4",
+     "F5"
+    ]
+   },
+   "meta": {
+    "cost_usd": 0.0,
+    "error": null
+   },
+   "accepted": 0,
+   "n_valid": 4,
+   "reject_reason": null,
+   "confirm": {
+    "parent": {
+     "acc256": 0.0,
+     "acc384": 0.0,
+     "mean_tokens": 48.0,
+     "hit_cap": 1.0
+    },
+    "child": {
+     "acc256": 0.0,
+     "acc384": 0.0,
+     "mean_tokens": 48.0,
+     "hit_cap": 1.0
+    },
+    "protected": {
+     "protected": -0.6830855208449066,
+     "nll": 3.6982381343841553
+    },
+    "wins": 0,
+    "losses": 0,
+    "retention": 0.0
+   },
+   "candidates": [
+    {
+     "k": 0,
+     "rationale": "random",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L24.mlp.down\", \"factor\": 0.6, \"axis\": \"col\", \"index\": [791]}]",
+     "desc": "scale L24.mlp.down col[791] x0.6",
+     "n": 10,
+     "acc256": 0.0,
+     "acc384": 0.0,
+     "mean_tokens": 48.0,
+     "hit_cap": 1.0,
+     "ok256": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "tokens": [
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48
+     ],
+     "wins": 0,
+     "losses": 0
+    },
+    {
+     "k": 1,
+     "rationale": "random",
+     "raw_ops": "[{\"op\": \"ablate\", \"tensor\": \"L23.mlp.down\", \"axis\": \"col\", \"index\": [974, 2285, 2504]}, {\"op\": \"scale\", \"tensor\": \"L24.mlp.down\", \"factor\": 1.1, \"axis\": \"col\", \"index\": [2707]}]",
+     "desc": "scale L23.mlp.down col[974,2285,2504] x0; scale L24.mlp.down col[2707] x1.1",
+     "n": 10,
+     "acc256": 0.0,
+     "acc384": 0.0,
+     "mean_tokens": 48.0,
+     "hit_cap": 1.0,
+     "ok256": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "tokens": [
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48
+     ],
+     "wins": 0,
+     "losses": 0
+    },
+    {
+     "k": 2,
+     "rationale": "random",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"factor\": 1.12, \"head\": 10}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"factor\": 1.2, \"head\": 8}, {\"op\": \"scale\", \"tensor\": \"L25.mlp.down\", \"factor\": 1.1, \"axis\": \"col\", \"index\": [294, 331, 785, 819, 924, 2855]}, {\"op\": \"scale\", \"tensor\": \"L27.attn.o\", \"factor\": 1.4, \"head\": 2}]",
+     "desc": "scale L22.attn.o col[1280:1408] x1.12; scale L25.attn.o col[1024:1152] x1.2; scale L25.mlp.down col[294,331,785,819,924,2855] x1.1; scale L27.attn.o col[256:384] x1.4",
+     "n": 5,
+     "acc256": 0.0,
+     "acc384": 0.0,
+     "mean_tokens": 48.0,
+     "hit_cap": 1.0
+    },
+    {
+     "k": 3,
+     "rationale": "random",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"factor\": 1.15, \"head\": 3}]",
+     "desc": "scale L25.attn.o col[384:512] x1.15",
+     "n": 5,
+     "acc256": 0.0,
+     "acc384": 0.0,
+     "mean_tokens": 48.0,
+     "hit_cap": 1.0
+    }
+   ],
+   "seconds": 79,
+   "genome_len": 1
+  }
+ ],
+ "accepted": [
+  {
+   "round": 1,
+   "genome_len": 1,
+   "val": {
+    "acc_at": {},
+    "median_tokens": 48,
+    "mean_tokens": 48.0,
+    "hit_cap": 1.0,
+    "acc256_by_family": {
+     "F1": 0.0,
+     "F2": 0.0,
+     "F3": 0.0,
+     "F4": 0.0,
+     "F5": 0.0
+    },
+    "direct": 0.4,
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "tokens": [
+     48,
+     48,
+     48,
+     48,
+     48
+    ],
+    "finished": [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   "protected": {
+    "protected": -0.6830855208449066,
+    "nll": 3.6982381343841553
+   },
+   "dev_gain": 0.0,
+   "val_gain": 0,
+   "retention": 0.0
+  }
+ ],
+ "stop": null,
+ "base": {
+  "protected": {
+   "protected": -0.6825788683257997,
+   "nll": 3.6978096961975098
+  },
+  "val": {
+   "acc_at": {},
+   "median_tokens": 48,
+   "mean_tokens": 48.0,
+   "hit_cap": 1.0,
+   "acc256_by_family": {
+    "F1": 0.0,
+    "F2": 0.0,
+    "F3": 0.0,
+    "F4": 0.0,
+    "F5": 0.0
+   },
+   "direct": 0.4,
+   "correct": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "tokens": [
+    48,
+    48,
+    48,
+    48,
+    48
+   ],
+   "finished": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ]
+  },
+  "val_plain": {
+   "acc_at": {},
+   "median_tokens": 48,
+   "mean_tokens": 48.0,
+   "hit_cap": 1.0,
+   "acc256_by_family": {
+    "F1": 0.0,
+    "F2": 0.0,
+    "F3": 0.0,
+    "F4": 0.0,
+    "F5": 0.0
+   },
+   "direct": null,
+   "correct": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "tokens": [
+    48,
+    48,
+    48,
+    48,
+    48
+   ],
+   "finished": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ]
+  },
+  "retention": 0.0,
+  "seconds": 21
+ },
+ "config": {
+  "suffix": " Keep your thinking under 100 words.",
+  "batch": "20",
+  "n_cand": 4,
+  "n_final": 2,
+  "cap": 48,
+  "tol384": 0.05
+ },
+ "dev_base256": 0.0
+}

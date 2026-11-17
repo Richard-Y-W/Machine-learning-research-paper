@@ -1,0 +1,187 @@
+{
+  "rows": 96,
+  "seeds": 12,
+  "strata": [
+    {
+      "steps": 600,
+      "method": "cold_dense",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.03718225222872405,
+          "low": 0.034273203722397075,
+          "high": 0.039973694099322624,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.27475010473610456,
+          "low": 0.2523325880508899,
+          "high": 0.29677978157550755,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.03686373482439261,
+          "low": 0.03409830315741131,
+          "high": 0.03961291459940823,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.015698490097417642,
+          "low": 0.014208927817913516,
+          "high": 0.01722455472838858,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "edit_seconds": {
+          "mean": 0.8827860041589398,
+          "low": 0.7236134659260036,
+          "high": 1.047047010191212,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "steps": 600,
+      "method": "warm_dense",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.01586039924181382,
+          "low": 0.01497371080404869,
+          "high": 0.016871682871198227,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.1905731084614538,
+          "low": 0.17086310611930514,
+          "high": 0.2118898482022236,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.015026591039356552,
+          "low": 0.014109868732734633,
+          "high": 0.016009086004577844,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.005714939443391691,
+          "low": 0.005211052153124418,
+          "high": 0.0062818895009422405,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "edit_seconds": {
+          "mean": 0.7631208999955561,
+          "low": 0.6624376504089013,
+          "high": 0.8688659444881826,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "steps": 2400,
+      "method": "cold_dense",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.017517817936844145,
+          "low": 0.01620482009457568,
+          "high": 0.018865517257129878,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.19575115972512677,
+          "low": 0.1768104863937602,
+          "high": 0.2169364076598263,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.016718289945185493,
+          "low": 0.015434682106440908,
+          "high": 0.01803033110796063,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.006113165002165577,
+          "low": 0.005628185702700307,
+          "high": 0.006604120088800197,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "edit_seconds": {
+          "mean": 3.1218454083282268,
+          "low": 2.8150899238458806,
+          "high": 3.4608582050933667,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    },
+    {
+      "steps": 2400,
+      "method": "warm_dense",
+      "metrics": {
+        "id_rmse": {
+          "mean": 0.01189109992812023,
+          "low": 0.011036264687660067,
+          "high": 0.012840747145829612,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "ood_rmse": {
+          "mean": 0.1692197954166382,
+          "low": 0.15018610042962016,
+          "high": 0.19029108647140866,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "teacher_fit_rmse": {
+          "mean": 0.010773545530244942,
+          "low": 0.009790897953877945,
+          "high": 0.011832754220131787,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "rollout_rmse": {
+          "mean": 0.004006464192202885,
+          "low": 0.0036611183766958044,
+          "high": 0.004383368793156485,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        },
+        "edit_seconds": {
+          "mean": 2.947673620811353,
+          "low": 2.5600863667446294,
+          "high": 3.377264612797686,
+          "n_seeds": 12,
+          "nonfinite_seed_values": 0
+        }
+      }
+    }
+  ],
+  "contrasts": {
+    "600": {
+      "mean": -0.021321852986910236,
+      "low": -0.02410161681453364,
+      "high": -0.01869052964709093,
+      "n_seeds": 12,
+      "nonfinite_seed_values": 0
+    },
+    "2400": {
+      "mean": -0.005626718008723913,
+      "low": -0.006614000000852453,
+      "high": -0.004549638036199127,
+      "n_seeds": 12,
+      "nonfinite_seed_values": 0
+    }
+  },
+  "nonfinite_rollout_rows": 0
+}

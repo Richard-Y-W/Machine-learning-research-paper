@@ -1,0 +1,65 @@
+{
+  "config": {
+    "output": "results/deployment-dev",
+    "seed_start": 0,
+    "seeds": 2,
+    "width": 32,
+    "train_steps": 2400,
+    "threads": 2,
+    "budgets": [
+      32,
+      128
+    ],
+    "families": [
+      "duffing",
+      "pendulum"
+    ],
+    "teachers": [
+      "residual",
+      "symbolic"
+    ],
+    "schedules": [
+      "short",
+      "long"
+    ],
+    "gauges": [
+      "original",
+      "rescaled"
+    ],
+    "methods": [
+      "warm_adam",
+      "cold_adam",
+      "warm_lbfgs",
+      "cold_lbfgs",
+      "euclidean_jacobian",
+      "column_jacobian",
+      "relative_jacobian"
+    ],
+    "test_points": 1024,
+    "ridge": 0.0001
+  },
+  "status": "complete",
+  "started_utc": "2026-11-11T00:52:06.095482+00:00",
+  "python": "3.13.7",
+  "torch": "2.9.0+cpu",
+  "numpy": "2.3.4",
+  "device": "cpu",
+  "source_sha256": "f97e092604d55cdae8c380a2fc6646d506a940e6b491d7addc3bfb803e0e1806",
+  "schedules": {
+    "short": {
+      "adam": 150,
+      "lbfgs": 30,
+      "jacobian": 3
+    },
+    "long": {
+      "adam": 600,
+      "lbfgs": 120,
+      "jacobian": 12
+    }
+  },
+  "semantic_prior": "shared known four-term mechanism library",
+  "primary_contrast": "warm_lbfgs minus cold_lbfgs; symbolic; 128 queries; long; original",
+  "rows": 448,
+  "elapsed_seconds": 91.1348073000554,
+  "completed_utc": "2026-11-11T00:53:37.232839+00:00"
+}

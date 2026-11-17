@@ -1,0 +1,221 @@
+## Current model
+Accepted edits so far: 0.
+This round's sample (40 problems): acc@256 0.50, acc@384 0.95, mean generated tokens 251, unfinished at 384 tokens 0.03.
+Validation (held-out problems, aggregate only): acc@256 0.40 (original 0.40), acc@512 0.87 (original 0.87), median tokens 288 (original 288).
+Protected bounds: multiple-choice fitness must stay >= -1.0081; WikiText loss must stay <= 3.7179.
+Approximate share of thinking text by type (rule-based): re-checking 9%, state updates 29%, final answer 23%, restating / setup 11%, other 28%.
+
+## Example traces (short successes, correct but over budget, wrong or unfinished)
+### Example (family F4, 132 tokens, correct within 256; target 48)
+```python
+e = 43
+g = 70
+if e < g:
+    s = e
+else:
+    s = g
+s = s + 5
+print(s)
+```
+Model output:
+<think>
+Okay, let's see. The program starts with e set to 43 and g to 70. Then it checks if e is less than g. Since 43 is less than 70, it assigns s to e. Then it adds 5 to s, which is 48. Finally, it prints s, which is 48. So the answer should be 48. Let me check again. Oh right, the code is straightforward. The variables are correctly compared and updated. Yep, 48 is the correct answer.
+</think>
+
+Answer: 48
+
+Answer: 48<|im_end|>
+
+### Example (family F4, 165 tokens, correct within 256; target 61)
+```python
+t = 38
+tmp = 47
+if t > tmp:
+    u = t
+else:
+    u = tmp
+u = u + 14
+print(u)
+```
+Model output:
+<think>
+Okay, let's see. The code starts with t being 38 and tmp being 47. Then it checks if t is greater than tmp. Since 38 is less than 47, the 'else' block runs, so u is set to tmp, which is 47. Then u is set to u +14, so 47 +14 is 61. Finally, print u, which is 61. So the answer should be 61. Let me make sure I didn't make a mistake. Yes, the logic seems right. Answer: 61.
+</think>
+
+Answer: 61
+
+The Python program calculates $ u = 47 + 14 = 61 $. 
+
+Answer: 61<|im_end|>
+
+### Example (family F3, 369 tokens, correct but over 256 tokens; target 71)
+```python
+v = 86
+s = 69
+v += 3
+s -= 2
+v -= 18
+s += 16
+print(v)
+```
+Model output:
+<think>
+Okay, let's see. The Python code given is:
+
+v = 86
+s = 69
+v += 3
+s -= 2
+v -= 18
+s += 16
+print(v)
+
+So I need to figure out what the final value of v is. Let's go step by step.
+
+First, initializing v and s. Both start at 86 and 69 respectively.
+
+Then, the code does v += 3. That means adding 3 to v. So initially, v was 86. After adding 3, v becomes 89.
+
+Next, s -= 2. So s was 69. Subtracting 2 gives 67.
+
+Then, v -= 18. So v was 89. Subtracting 18 gives 71.
+
+Finally, s += 16. So s was 67. Adding 16 makes it 83.
+
+Then, print(v). So the final value of v is 71.
+
+Wait, let me check again. Let's recalculate each step:
+
+v starts at 86. Add 3: 86 + 3 = 89. Correct.
+
+s starts at 69. Subtract 2: 69 - 2 = 67. Correct.
+
+v is 89, then subtract 18: 89 - 18 = 71. Then s becomes 67 +16=83. So yes, v ends up at 71. So the answer should be 71. And the answer should end with the number. So the final answer is 71.
+</think>
+
+Answer: 71
+
+Answer: 71<|im_end|>
+
+### Example (family F2, 384 tokens, correct but over 256 tokens; target 89)
+```python
+total = 56
+e = 89
+x = 96
+res = total
+total = e
+e = res
+x = total
+print(total)
+```
+Model output:
+<think>
+Okay, let's see. The Python code is given, and I need to figure out what it prints. Let me go through the steps carefully.
+
+First, there's a variable called total initialized as 56. Then e is set to 89, and x is 96. The res is assigned the value of total. Then total is updated to e, which is 89. Then e is set to res, which was originally 56. Then x is set to total, which is now 89. Finally, the print statement is executed, which outputs the value of total.
+
+So let's trace the assignments:
+
+Initially, total = 56, e = 89, x = 96, res = 56.
+
+Then total = e (so total becomes 89), e = res (so e becomes 56), and x = total (so x becomes 89).
+
+At the end, print(total) would print 89.
+
+Wait, but let me double-check. Let me write down each step:
+
+Original variables:
+
+total = 56
+
+e = 89
+
+x = 96
+
+res = total → res = 56
+
+total = e → total becomes 89
+
+e = res → e becomes 56
+
+x = total → x becomes 89
+
+print(total) → print 89.
+
+Yes, so the final output is 89. And the answer should end with the number. So the answer is 89. But I need to make sure there's no other steps I missed. No, looks like that's all. Answer: 89.
+</think>
+
+Answer: 89
+
+The Python program prints the value of `total` after the assignments. Initially, `total` is 56, then updated to
+
+### Example (family F1, 175 tokens, wrong or unfinished at 384; target 45)
+```python
+a = 45
+f = a
+a = 90
+z = 85
+d = z
+z = f
+print(z)
+```
+Model output:
+<think>
+Okay, let's see. The code starts with a = 45, then f is set to a, so f becomes 45. Then a is set to 90. Then z is assigned 85, which is the same as d. Then z is set to f, which is now 90. So after that, when we print z, it should be 90. Let me check again. The steps are: a becomes 90, so f is 90. Then z is 85, then z is set to f (which is 90), so z becomes 90. So the final print statement is z, which is 90. So the answer should be 90.
+</think>
+
+Answer: 90
+
+The Python program prints 90.<|im_end|>
+
+### Example (family F1, 170 tokens, correct within 256; target 83)
+```python
+v = 83
+z = v
+v = 92
+m = 57
+right = m
+m = z
+print(m)
+```
+Model output:
+<think>
+Okay, let's see. The Python code starts with v set to 83, then z is assigned to v. Then v is changed to 92. Then m is set to 57, right is assigned to m. Then m is set back to z. Finally, the print statement asks for m. 
+
+So let's trace the steps. Initially, v is 83. Then z is 83. Then v becomes 92. Then m is 57, right is m, so right becomes 57. Then m is changed back to z, which was 83. So m is 83. Then print(m) would output 83. So the answer is 83. Answer: 83.
+</think>
+
+Answer: 83.<|im_end|>
+
+## Diagnostics
+positions available: start 40, mid 120, recheck 15, end 40
+
+Direct logit attribution toward the end-of-thinking token </think>: value at 'end' positions minus value at 'mid' positions
+heads: L27h14:-1.00, L23h6:+0.88, L24h6:+0.86, L25h7:+0.80, L26h0:+0.73, L24h2:+0.68, L23h7:-0.55, L21h8:+0.47, L23h5:+0.45, L23h0:+0.40, L24h5:+0.38, L27h1:-0.33
+MLP neurons: L27n1574:+10.26, L27n1371:+6.86, L27n0:-0.76, L27n222:+0.73, L27n19:+0.56, L27n8:+0.56, L27n39:-0.55, L27n50:-0.49, L27n98:-0.48, L26n732:+0.46, L27n26:+0.45, L27n49:+0.42
+logit lens p(token) at 'end' / 'mid': L8: 0.000/0.000  L12: 0.000/0.000  L16: 0.000/0.000  L20: 0.000/0.000  L24: 0.000/0.000  L28: 0.999/0.000
+
+Direct logit attribution toward the re-check token ' Wait': value at 'recheck' positions minus value at 'mid' positions
+heads: L24h0:+1.08, L25h0:+0.81, L25h6:+0.52, L27h15:+0.46, L27h5:+0.37, L25h8:+0.33, L23h3:+0.33, L23h7:-0.28, L25h9:+0.25, L23h6:+0.24, L26h9:-0.23, L25h4:-0.19
+MLP neurons: L25n162:-2.20, L24n1610:+0.99, L22n67:+0.51, L23n179:+0.47, L26n20:+0.43, L24n400:+0.40, L27n386:-0.39, L27n39:+0.36, L24n43:+0.34, L25n2927:-0.33, L19n1969:+0.32, L27n59:+0.29
+logit lens p(token) at 'recheck' / 'mid': L8: 0.000/0.000  L12: 0.000/0.000  L16: 0.000/0.000  L20: 0.001/0.000  L24: 0.008/0.000  L28: 0.142/0.005
+
+## Results of your probes from the previous round
+- {"kind": "act_stats", "site": "resid", "layer": 24, "event": "recheck"} -> norm 318.762; largest coordinates 35:+174.82, 13:+128.76, 2:+79.60, 131:+67.25, 41:+60.33, 45:+53.24, 16:-35.67, 18:+35.11
+- {"kind": "act_stats", "site": "mlp", "layer": 27, "event": "end"} -> norm 628.482; largest coordinates 1574:+376.72, 84:+266.01, 222:+183.86, 1371:-162.67, 81:-146.15, 47:-111.49, 386:-103.98, 49:+82.31
+- {"kind": "weight_stats", "tensor": "L24.attn.o"} -> shape (1024, 2048), Frobenius norm 38.271, mean |w| 0.0205, top singular values [3.37, 2.42, 2.304, 2.27, 2.253]
+- {"kind": "sv_readout", "tensor": "L27.mlp.down", "k": 0, "side": "left"} -> singular value 3.834; top tokens ['<|endoftext|>', 'an', 't', 'on', 'S', 'u']; bottom tokens ['</think>', '<|im_end|>', '九大精神', '<tool_response>', '或多或', '))==']
+- {"kind": "act_stats", "site": "attn", "layer": 24, "event": "recheck"} -> norm 81.479; largest coordinates 107:-24.45, 36:+11.70, 286:-11.54, 533:+11.40, 20:+11.27, 98:+11.08, 45:-10.28, 414:-9.98
+
+## History (oldest first). Each candidate was scored on that round's fresh sample.
+Round 1: current model acc@256 0.55, acc@384 0.95, mean tokens 255; nothing kept (not confirmed on the second sample)
+  [0] scale L24.attn.o col[0:128] x0.6; scale L25.attn.o col[0:128] x0.7 -> acc@256 0.55, acc@384 0.95, mean tokens 252 (n=40)
+      rationale: Damp the main heads writing ' Wait' at recheck positions.
+  [1] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.15 -> acc@256 0.75, acc@384 0.97, mean tokens 232 (n=40)
+      rationale: Subtract the recheck-minus-mid residual direction from L24 attention output when the head pattern matches recheck positions.
+  [2] rank1 L27.mlp.down u=tok: Wait v=act:mlp:L27:recheck alpha=-0.1 -> acc@256 0.50, acc@384 0.85, mean tokens 244 (n=20)
+      rationale: Make the L27 MLP write against the ' Wait' unembedding when the recheck neuron pattern fires.
+  [3] scale L24.attn.o col[0:128] x0.85; scale L27.mlp.down col[1574] x1.12 -> acc@256 0.55, acc@384 0.95, mean tokens 247 (n=20)
+      rationale: Conservative: mild Wait damping plus a slight strengthening of the natural end-of-thinking neuron.
+
+Propose exactly 4 diverse mutations of the current model, and up to 6 probes.

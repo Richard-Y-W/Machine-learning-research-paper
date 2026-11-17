@@ -1,0 +1,41 @@
+{
+ "cache_build_s": 23.4,
+ "L24 rank1": {
+  "min_layer": 24,
+  "full_s": 23.5,
+  "fast_s": 3.6,
+  "max_abs_diff": 0.0,
+  "full_fit": -1.2229321359220193,
+  "fast_fit": -1.2229321359220193
+ },
+ "L27 head": {
+  "min_layer": 27,
+  "full_s": 22.8,
+  "fast_s": 1.3,
+  "max_abs_diff": 0.0,
+  "full_fit": -1.2316196580970427,
+  "fast_fit": -1.2316196580970427
+ },
+ "final_norm": {
+  "min_layer": 28,
+  "full_s": 23.2,
+  "fast_s": 0.3,
+  "max_abs_diff": 0.0,
+  "full_fit": -1.2626849262887845,
+  "fast_fit": -1.2626849262887845
+ },
+ "L3 + L26": {
+  "min_layer": 3,
+  "full_s": 22.8,
+  "fast_s": 23.1,
+  "max_abs_diff": 0.0,
+  "full_fit": -1.247267405022285,
+  "fast_fit": -1.247267405022285
+ },
+ "test L24": {
+  "full_s": 129.0,
+  "fast_s": 29.7,
+  "max_abs_diff": 0.0
+ },
+ "rss_gb": 12.04
+}

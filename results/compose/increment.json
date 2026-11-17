@@ -1,0 +1,106 @@
+{
+ "model": "Qwen/Qwen3-0.6B-Base",
+ "gain": 3.0,
+ "native": {
+  "digits": {
+   "increment": 0.073,
+   "copy": 0.338,
+   "n": 600
+  },
+  "word_lookup": 0.575,
+  "wiki_nll": 3.1694495677948
+ },
+ "native_digit_sequence": 1.0,
+ "oracle_ideal_routing": {
+  "1.0": {
+   "increment": 0.543,
+   "copy": 0.107,
+   "n": 300
+  },
+  "2.0": {
+   "increment": 0.677,
+   "copy": 0.07,
+   "n": 300
+  },
+  "3.0": {
+   "increment": 0.743,
+   "copy": 0.07,
+   "n": 300
+  },
+  "4.0": {
+   "increment": 0.803,
+   "copy": 0.06,
+   "n": 300
+  }
+ },
+ "lambda": 1.0,
+ "attention_on_digit_prompts": 0.638,
+ "edit": {
+  "1.0": {
+   "increment": 0.363,
+   "copy": 0.228,
+   "n": 600,
+   "word_lookup": 0.54,
+   "wiki_nll": 3.3125364780426025
+  },
+  "2.0": {
+   "increment": 0.533,
+   "copy": 0.172,
+   "n": 600,
+   "word_lookup": 0.52,
+   "wiki_nll": 3.50526762008667
+  },
+  "3.0": {
+   "increment": 0.603,
+   "copy": 0.14,
+   "n": 600,
+   "word_lookup": 0.39,
+   "wiki_nll": 3.7634027004241943
+  },
+  "4.0": {
+   "increment": 0.662,
+   "copy": 0.107,
+   "n": 600,
+   "word_lookup": 0.24,
+   "wiki_nll": 4.068353176116943
+  }
+ },
+ "by_digit": {
+  "0": 0.246,
+  "1": 0.243,
+  "2": 0.767,
+  "3": 0.879,
+  "4": 0.739,
+  "5": 0.541,
+  "6": 0.643,
+  "7": 0.812,
+  "8": 0.633
+ },
+ "edit_A_removed": {
+  "increment": 0.03,
+  "copy": 0.388,
+  "n": 600
+ },
+ "control_wrong_target": {
+  "increment": 0.06,
+  "copy": 0.322,
+  "n": 600
+ },
+ "control_gain_only": {
+  "increment": 0.17,
+  "copy": 0.33,
+  "n": 600
+ },
+ "control_wrong_output_projection": {
+  "increment": 0.042,
+  "copy": 0.27,
+  "n": 600
+ },
+ "two_digit": {
+  "n": 200,
+  "native_copy": 0.595,
+  "native_increment": 0.01,
+  "edit_copy": 0.185,
+  "edit_increment": 0.035
+ }
+}

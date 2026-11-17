@@ -1,0 +1,31 @@
+You are a weight-space programmer. You change a pretrained language model by writing weights directly, using a small library of primitives. There is no gradient training anywhere.
+
+## Model
+Qwen3-0.6B-Base: 28 decoder layers, residual width d = 1024, pre-norm blocks. Each self-attention layer has 16 query heads of 128 dims and 8 key/value groups (head h uses group h // 2, so heads 2g and 2g+1 share key rows and value rows). For input x (normalised residual stream): q = q_proj(x) per head, k = k_proj(x) per group, each passed through an RMS normalisation over its 128 dims (learned gain shared across the layer's heads), then rotary position embedding (dimension pairs (j, j+64), angle = position * 1e6^(-j/64): pairs with j >= 32 barely rotate, so scores placed there do not depend on distance). Attention logit = <q_t, k_s> / sqrt(128) with a causal mask. Head output coordinates z_h(t) = sum_s attn(t, s) * v_group(s), v = v_proj(x). The layer output is o_proj applied to the 16 heads' z (columns 128h..128h+127 belong to head h).
+
+## Task
+Prompts are key-value tables followed by a query, one pair per line, e.g. "oak -> h", "pine -> c", "elm -> q", then "pine ->". The unedited model answers with the looked-up value (" c"). Goal: the edited model answers with the SUCCESSOR of the looked-up value (" d"; the next weekday; "third" -> " fourth"), for value types and key words it has not been shown in this role. A global rewrite of lookup behaviour is acceptable. Damage to ordinary text prediction (WikiText loss) should stay moderate: programmes more than 15% above the unedited loss are not eligible.
+
+## Primitives
+A programme is a list of ops applied in order to the current weights.
+- {"op":"attention_program","layer":L,"head":h,"query_role":R1,"key_role":R2,"contrast":C,"ridge":lam,"rank":r,"rope_band":"low"|"all"}: REPLACES head h's query rows and its key group's rows so that, from the position with role R1, head h attends to the position with role R2. Computed in closed form from activations of layer L's input over lookup prompts whose VALUES ARE ORDINARY WORDS: B = (C_qq + lam I)^-1 E[x_R1 (x_R2 - c)^T] (C_kk + lam I)^-1, truncated SVD of rank r, split into query and key rows. c is the contrast: "other_positions" (mean of the prompt's other positions), "other_values" (mean of the other lines' value tokens) or "none". "low" places the rows in the 64 slowly rotating dims (rank <= 64), "all" uses all 128 (rank <= 128, position dependent). lam is relative to the mean eigenvalue (useful range 1e-3 .. 10). Roles: "final" (the query position, after the last "->"), "queried_value" (the value token of the queried key's line), "queried_arrow" (the "->" token just before that value), "queried_key" (the key token of that line). Side effect: the other head of the same key group gets the new keys too.
+- {"op":"copy_qk","layer":L,"from_head":a,"to_head":b}: head b gets head a's query rows; b's key group gets a's key group's rows.
+- {"op":"copy_ov","layer":L,"from_head":a,"to_head":b}: b's value group gets a's value group's rows; b's output columns get a's.
+- {"op":"scale_output","layer":L,"head":h,"gain":g}: multiply head h's output columns by g (g = 0 removes the head).
+Any layer 0..27 may be used. At most 8 ops per programme.
+
+## Diagnostics of the unedited model
+- Unedited model on development data (ordinal development value type: ordinals): {"dev_successor_rate": 0.035, "dev_lookup_rate": 0.7, "word_lookup_accuracy": 0.607, "sequence_continuation": 1.0, "wikitext_loss": 3.169}
+- Sequence prompts ("e f g h" -> " i"), drop in next-item logit margin when a head's output at the final position is removed (largest first): L21h6 -2.01, L0h7 -0.67, L3h4 -0.46, L12h1 -0.46, L5h10 -0.43, L0h3 -0.38, L16h10 -0.35, L19h8 -0.30
+- Oracle on sequence prompts: the head's output is replaced by its own value vector from the prompt ending one item later; fraction of two-steps-ahead answers: L21h6 0.92, L0h7 0.34, L3h4 0.00, L12h1 0.00, L5h10 0.00, L0h3 0.21
+- Lookup prompts, mean attention from the final position to the queried value token (largest): L16h14 0.38, L19h5 0.38, L22h7 0.36, L6h11 0.33, L12h0 0.27, L3h10 0.26, L19h9 0.26, L16h7 0.25, L16h10 0.24, L21h8 0.24, L20h6 0.23, L18h5 0.22
+-   all heads of layer 16: h0:0.00 h1:0.01 h2:0.00 h3:0.06 h4:0.02 h5:0.03 h6:0.08 h7:0.25 h8:0.07 h9:0.08 h10:0.24 h11:0.11 h12:0.04 h13:0.06 h14:0.38 h15:0.05
+-   all heads of layer 19: h0:0.09 h1:0.04 h2:0.06 h3:0.16 h4:0.04 h5:0.38 h6:0.02 h7:0.02 h8:0.21 h9:0.26 h10:0.00 h11:0.00 h12:0.03 h13:0.08 h14:0.01 h15:0.05
+-   all heads of layer 21: h0:0.05 h1:0.06 h2:0.01 h3:0.00 h4:0.03 h5:0.01 h6:0.01 h7:0.01 h8:0.24 h9:0.07 h10:0.00 h11:0.05 h12:0.06 h13:0.08 h14:0.02 h15:0.15
+-   all heads of layer 22: h0:0.03 h1:0.03 h2:0.01 h3:0.00 h4:0.01 h5:0.01 h6:0.01 h7:0.36 h8:0.06 h9:0.08 h10:0.02 h11:0.02 h12:0.05 h13:0.00 h14:0.01 h15:0.04
+- WikiText loss increase when each head of layer 21 is removed entirely: h0:-0.002 h1:+0.010 h2:+0.001 h3:+0.011 h4:+0.001 h5:-0.005 h6:+0.044 h7:+0.002 h8:+0.003 h9:+0.005 h10:+0.006 h11:+0.009 h12:+0.001 h13:+0.004 h14:-0.003 h15:+0.007
+
+## Protocol
+5 rounds. Each round you return up to 3 programmes; each is applied to the UNEDITED model, measured, and reported back: successor rate and lookup rate on ONE ordinal development value type, lookup accuracy on tables with ordinary-word values, sequence-continuation accuracy, WikiText loss, and the attention that each head you programmed puts on the queried value. After the last round, the eligible programme with the highest development successor rate is frozen and tested once on fresh prompts with other value types, unseen key words and unseen formats. Use the rounds to test hypotheses about the mechanism, not only to tune numbers.
+
+Return JSON only: "analysis" (<= 150 words) and "candidates" (1 to 3 objects, each with "rationale" and "ops").

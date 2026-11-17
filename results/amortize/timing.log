@@ -1,0 +1,20 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+W1114 16:33:04.752000 14112 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 38/311 [00:00<00:00, 375.82it/s]Loading weights:  24%|██▍       | 76/311 [00:00<00:00, 283.08it/s]Loading weights:  34%|███▍      | 106/311 [00:00<00:00, 250.05it/s]Loading weights:  42%|████▏     | 132/311 [00:00<00:00, 238.43it/s]Loading weights:  50%|█████     | 157/311 [00:00<00:00, 240.77it/s]Loading weights:  59%|█████▊    | 182/311 [00:00<00:00, 223.85it/s]Loading weights:  67%|██████▋   | 208/311 [00:00<00:00, 229.47it/s]Loading weights:  75%|███████▍  | 232/311 [00:00<00:00, 231.39it/s]Loading weights:  82%|████████▏ | 256/311 [00:01<00:00, 225.15it/s]Loading weights:  90%|████████▉ | 279/311 [00:01<00:00, 221.86it/s]Loading weights:  97%|█████████▋| 302/311 [00:01<00:00, 218.31it/s]Loading weights: 100%|██████████| 311/311 [00:01<00:00, 240.13it/s]
+[timing] lookup_2hop   think_long      acc 0.10  tokens   965.1  unfinished 0.80  248.1s
+[timing] lookup_2hop   think_short     acc 0.00  tokens   128.0  unfinished 1.00  18.8s
+[timing] lookup_2hop   direct          acc 0.00  tokens    16.0  unfinished 0.00  3.2s
+[timing] lookup_2hop   direct_fewshot  acc 0.00  tokens     3.0  unfinished 0.00  5.1s
+[timing] lookup_4hop   think_long      acc 0.60  tokens   607.1  unfinished 0.10  219.0s
+[timing] lookup_4hop   think_short     acc 0.00  tokens   128.0  unfinished 1.00  18.8s
+[timing] lookup_4hop   direct          acc 0.00  tokens    15.4  unfinished 0.00  3.1s
+[timing] lookup_4hop   direct_fewshot  acc 0.00  tokens     3.0  unfinished 0.00  5.0s
+[timing] code_noarith  think_long      acc 1.00  tokens   323.0  unfinished 0.00  75.3s
+[timing] code_noarith  think_short     acc 0.00  tokens   128.0  unfinished 1.00  17.9s
+[timing] code_noarith  direct          acc 0.10  tokens    12.5  unfinished 0.10  2.7s
+[timing] code_noarith  direct_fewshot  acc 0.20  tokens     3.0  unfinished 0.00  3.3s
+[timing] code_arith    think_long      acc 1.00  tokens   334.5  unfinished 0.00  64.2s
+[timing] code_arith    think_short     acc 0.00  tokens   128.0  unfinished 1.00  18.3s
+[timing] code_arith    direct          acc 0.00  tokens    11.2  unfinished 0.10  2.8s
+[timing] code_arith    direct_fewshot  acc 0.00  tokens     4.0  unfinished 0.00  3.9s
+[timing] TOTAL seconds 710

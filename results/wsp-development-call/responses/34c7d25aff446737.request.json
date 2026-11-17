@@ -1,0 +1,76 @@
+{
+  "model": "claude-opus-5-5",
+  "system": "You are editing a neural network directly from numerical weights. No tools are available. Return the requested final JSON patch with a brief public explanation.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are performing direct weight-space programming. Reason from the raw numerical weights below; you have no tools, execution, examples, probes, or feedback. Produce explicit numerical parameter replacements, not code or a training recipe. You may change existing tensor entries but cannot change architecture. Unlisted entries remain identical.\nInputs x=[q,v,u] are physical position, velocity, applied force. Output is acceleration. This network was trained to approximate the family -k*sin(q)-c*v-a*v*abs(v)+g*u, with positive unknown coefficients. Coefficient values are NOT supplied. The intended domain is [-1,1]^3.\nArchitecture: z=ReLU(W1*x+b1); f(x)=sum_i W2[i]*z[i]+b2[0]. W1 shape [12,3]; b1 and W2 length 12; b2 length 1. All indices are zero-based. Some representations may contain unused hidden capacity.\nRequest: Implement f_new(q,v,u)=f_old(q,v,1.5*u), preserving the entire original function apart from this input transformation.\nWeights:\n{\"W1\":[[0.00550003,-1.110383,-0.01270743],[-0.14819582,-0.65743684,1.39807078],[0.43024354,-0.32522883,-0.17378058],[-0.31585879,-0.01104545,-0.36521934],[0.05159524,0.23227852,-0.49529447],[-0.2979188,-0.42746719,0.4544041],[0.53229529,-0.00066097,-0.06977108],[-0.00362356,0.93947852,0.00277311],[0.72472602,0.00698884,0.12696207],[0.06041979,0.27496256,-0.58366653],[-0.99478878,-0.00313275,-0.0047402],[0.08829738,0.40055801,-0.85038825]],\"b1\":[-0.75014114,0.26976098,0.14341544,0.99904212,-0.09860589,-0.62770496,0.42695084,-0.63999544,0.59541635,-0.11294734,0.79059777,-0.1646447],\"W2\":[0.38911468,0.55790215,0.00718374,-0.66216978,-0.47263875,0.01813767,-0.55866537,-0.46796851,-0.2879767,-0.13351749,0.48319788,-0.54917934],\"b2\":[0.53655074]}\nReturn JSON with summary (brief public explanation, not detailed chain of thought), estimated_c (number for semantic damping, otherwise null), and patches. Each patch is {tensor: W1/b1/W2/b2, index: [row,column] for W1 or [i] for vectors, value: a numerical replacement}. Do not return an executable expression. Use enough decimal precision. If you cannot find an edit, return an empty patches list."
+    }
+  ],
+  "max_tokens": 4096,
+  "thinking": {
+    "type": "adaptive"
+  },
+  "output_config": {
+    "effort": "medium",
+    "format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "summary": {
+            "type": "string"
+          },
+          "estimated_c": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "patches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tensor": {
+                  "type": "string",
+                  "enum": [
+                    "W1",
+                    "b1",
+                    "W2",
+                    "b2"
+                  ]
+                },
+                "index": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "tensor",
+                "index",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "summary",
+          "estimated_c",
+          "patches"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

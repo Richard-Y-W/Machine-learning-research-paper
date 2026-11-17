@@ -1,0 +1,64 @@
+W1114 00:36:51.398000 29252 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  14%|#3        | 42/310 [00:00<00:00, 403.15it/s]Loading weights:  29%|##9       | 91/310 [00:00<00:00, 439.85it/s]Loading weights:  44%|####3     | 135/310 [00:00<00:00, 404.89it/s]Loading weights:  57%|#####6    | 176/310 [00:00<00:00, 350.35it/s]Loading weights:  68%|######8   | 212/310 [00:00<00:00, 344.20it/s]Loading weights:  83%|########2 | 256/310 [00:00<00:00, 372.41it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 406.04it/s]
+[cross] union E-LLM_1+E-LLM_2 0.52
+[cross] union E-LLM_2+E-LLM_1 0.52
+[cross] union E-LLM_1+E-LLM_3 0.517
+[cross] union E-LLM_3+E-LLM_1 0.518
+[cross] union E-LLM_1+E-LLM_4 0.485
+[cross] union E-LLM_4+E-LLM_1 0.484
+[cross] union E-LLM_1+E-LLM_5 0.518
+[cross] union E-LLM_5+E-LLM_1 0.518
+[cross] union E-LLM_1+E-LLM_6 0.519
+[cross] union E-LLM_6+E-LLM_1 0.52
+[cross] union E-LLM_1+E-LLM_7 0.519
+[cross] union E-LLM_7+E-LLM_1 0.518
+[cross] union E-LLM_1+E-LLM_8 0.511
+[cross] union E-LLM_8+E-LLM_1 0.511
+[cross] union E-LLM_2+E-LLM_3 0.523
+[cross] union E-LLM_3+E-LLM_2 0.525
+[cross] union E-LLM_2+E-LLM_4 0.484
+[cross] union E-LLM_4+E-LLM_2 0.483
+[cross] union E-LLM_2+E-LLM_5 0.52
+[cross] union E-LLM_5+E-LLM_2 0.518
+[cross] union E-LLM_2+E-LLM_6 0.525
+[cross] union E-LLM_6+E-LLM_2 0.526
+[cross] union E-LLM_2+E-LLM_7 0.495
+[cross] union E-LLM_7+E-LLM_2 0.496
+[cross] union E-LLM_2+E-LLM_8 0.523
+[cross] union E-LLM_8+E-LLM_2 0.524
+[cross] union E-LLM_3+E-LLM_4 0.505
+[cross] union E-LLM_4+E-LLM_3 0.504
+[cross] union E-LLM_3+E-LLM_5 0.519
+[cross] union E-LLM_5+E-LLM_3 0.521
+[cross] union E-LLM_3+E-LLM_6 0.525
+[cross] union E-LLM_6+E-LLM_3 0.524
+[cross] union E-LLM_3+E-LLM_7 0.514
+[cross] union E-LLM_7+E-LLM_3 0.511
+[cross] union E-LLM_3+E-LLM_8 0.525
+[cross] union E-LLM_8+E-LLM_3 0.522
+[cross] union E-LLM_4+E-LLM_5 0.496
+[cross] union E-LLM_5+E-LLM_4 0.497
+[cross] union E-LLM_4+E-LLM_6 0.489
+[cross] union E-LLM_6+E-LLM_4 0.488
+[cross] union E-LLM_4+E-LLM_7 0.478
+[cross] union E-LLM_7+E-LLM_4 0.478
+[cross] union E-LLM_4+E-LLM_8 0.469
+[cross] union E-LLM_8+E-LLM_4 0.46699999999999997
+[cross] union E-LLM_5+E-LLM_6 0.515
+[cross] union E-LLM_6+E-LLM_5 0.513
+[cross] union E-LLM_5+E-LLM_7 0.513
+[cross] union E-LLM_7+E-LLM_5 0.513
+[cross] union E-LLM_5+E-LLM_8 0.517
+[cross] union E-LLM_8+E-LLM_5 0.515
+[cross] union E-LLM_6+E-LLM_7 0.521
+[cross] union E-LLM_7+E-LLM_6 0.524
+[cross] union E-LLM_6+E-LLM_8 0.531
+[cross] union E-LLM_8+E-LLM_6 0.532
+[cross] union E-LLM_7+E-LLM_8 0.479
+[cross] union E-LLM_8+E-LLM_7 0.479
+[cross] llm E-LLM_1|E-LLM_2: best test acc 0.54
+[cross] random E-LLM_1|E-LLM_2: best test acc 0.534
+[cross] llm E-LLM_3|E-LLM_4: best test acc None
+[cross] random E-LLM_3|E-LLM_4: best test acc 0.536
+[cross] llm E-LLM_5|E-LLM_6: best test acc 0.5429999999999999
+[cross] random E-LLM_5|E-LLM_6: best test acc 0.536

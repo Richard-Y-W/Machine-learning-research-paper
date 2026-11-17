@@ -1,0 +1,61 @@
+{
+  "planned": 24,
+  "attempted": 24,
+  "valid": 24,
+  "successes": 16,
+  "estimated_cost_usd": 0.821988,
+  "source_seeds": [
+    90,
+    91
+  ],
+  "strata": [
+    {
+      "task": "action_gain",
+      "capacity": "dense",
+      "attempted": 4,
+      "valid": 4,
+      "successful": 4,
+      "mean_edit_nrmse": 3.7597191188403214e-16
+    },
+    {
+      "task": "action_gain",
+      "capacity": "spare",
+      "attempted": 4,
+      "valid": 4,
+      "successful": 4,
+      "mean_edit_nrmse": 3.8308001062360594e-16
+    },
+    {
+      "task": "add_drag",
+      "capacity": "dense",
+      "attempted": 4,
+      "valid": 4,
+      "successful": 4,
+      "mean_edit_nrmse": 9.01306105412566e-16
+    },
+    {
+      "task": "add_drag",
+      "capacity": "spare",
+      "attempted": 4,
+      "valid": 4,
+      "successful": 4,
+      "mean_edit_nrmse": 5.638236005438037e-16
+    },
+    {
+      "task": "semantic_damping",
+      "capacity": "dense",
+      "attempted": 4,
+      "valid": 4,
+      "successful": 0,
+      "mean_edit_nrmse": 0.33794393690929314
+    },
+    {
+      "task": "semantic_damping",
+      "capacity": "spare",
+      "attempted": 4,
+      "valid": 4,
+      "successful": 0,
+      "mean_edit_nrmse": 0.34079002057893254
+    }
+  ]
+}

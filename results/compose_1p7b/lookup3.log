@@ -1,0 +1,17 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<01:01,  5.05it/s]Loading weights:  55%|█████▍    | 169/310 [00:00<00:00, 706.85it/s]Loading weights:  87%|████████▋ | 269/310 [00:00<00:00, 750.34it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 630.50it/s]
+[lookup3] native: letters succ 0.08/look 0.77 numwords succ 0.07/look 0.78 days succ 0.27/look 0.39 months succ 0.20/look 0.58 ordinals succ 0.23/look 0.49 | word lookup 0.56 | A's attention on the queried value 0.04
+[lookup3] attention programme, lambda 0.001: on held-out word lookups A's attention on the queried value 0.10, top position is the value in 0.12
+[lookup3] attention programme, lambda 0.01: on held-out word lookups A's attention on the queried value 0.20, top position is the value in 0.22
+[lookup3] attention programme, lambda 0.1: on held-out word lookups A's attention on the queried value 0.44, top position is the value in 0.42
+[lookup3] attention programme, lambda 1.0: on held-out word lookups A's attention on the queried value 0.73, top position is the value in 0.74
+[lookup3] programmed attention on ordinal-value prompts (never used in fitting): letters 0.73 numwords 0.82 days 0.51 months 0.62 ordinals 0.74
+[lookup3] EDIT gain 1.0: letters succ 0.15/look 0.68 numwords succ 0.21/look 0.61 days succ 0.38/look 0.30 months succ 0.37/look 0.38 ordinals succ 0.48/look 0.32 | word lookup 0.60 | sequences 0.71 | WikiText loss 2.932 (base 2.833)
+[lookup3] EDIT gain 2.0: letters succ 0.29/look 0.51 numwords succ 0.28/look 0.47 days succ 0.43/look 0.20 months succ 0.49/look 0.19 ordinals succ 0.52/look 0.23 | word lookup 0.58 | sequences 0.57 | WikiText loss 3.046 (base 2.833)
+[lookup3] EDIT gain 3.0: letters succ 0.43/look 0.35 numwords succ 0.35/look 0.30 days succ 0.43/look 0.18 months succ 0.52/look 0.12 ordinals succ 0.49/look 0.15 | word lookup 0.56 | sequences 0.43 | WikiText loss 3.221 (base 2.833)
+[lookup3] EDIT gain 4.0: letters succ 0.51/look 0.26 numwords succ 0.37/look 0.23 days succ 0.46/look 0.15 months succ 0.53/look 0.09 ordinals succ 0.49/look 0.13 | word lookup 0.51 | sequences 0.43 | WikiText loss 3.413 (base 2.833)
+[lookup3] CONTROL attention fitted to a random other position, gain 1.0: letters succ 0.04/look 0.76 numwords succ 0.04/look 0.79 days succ 0.15/look 0.42 months succ 0.10/look 0.56 ordinals succ 0.16/look 0.49
+[lookup3] CONTROL attention fitted to a random other position, gain 3.0: letters succ 0.07/look 0.62 numwords succ 0.04/look 0.74 days succ 0.16/look 0.38 months succ 0.11/look 0.48 ordinals succ 0.16/look 0.40
+[lookup3] CONTROL gain only (native attention), gain 1.0: letters succ 0.08/look 0.77 numwords succ 0.07/look 0.78 days succ 0.27/look 0.39 months succ 0.20/look 0.58 ordinals succ 0.23/look 0.49
+[lookup3] CONTROL gain only (native attention), gain 3.0: letters succ 0.17/look 0.67 numwords succ 0.11/look 0.70 days succ 0.33/look 0.35 months succ 0.29/look 0.50 ordinals succ 0.30/look 0.45
+[lookup3] CONTROL programmed attention, another head's output projection: letters succ 0.01/look 0.58 numwords succ 0.08/look 0.54 days succ 0.16/look 0.31 months succ 0.08/look 0.50 ordinals succ 0.12/look 0.40
+[lookup3] DONE (175s)

@@ -1,0 +1,190 @@
+valid LLM mutations in calibration: 1410
+W1113 19:28:40.050000 37356 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  15%|#4        | 46/310 [00:00<00:00, 437.31it/s]Loading weights:  32%|###1      | 99/310 [00:00<00:00, 490.17it/s]Loading weights:  48%|####8     | 149/310 [00:00<00:00, 412.99it/s]Loading weights:  62%|######1   | 192/310 [00:00<00:00, 363.54it/s]Loading weights:  74%|#######4  | 230/310 [00:00<00:00, 349.98it/s]Loading weights:  95%|#########4| 293/310 [00:00<00:00, 431.18it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 423.36it/s]
+[E-RAND_1] gen 1: parent -1.2460 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.2459 (77.8s, $0.0000)
+[E-RAND_1] gen 2: parent -1.2459 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.2447 (66.7s, $0.0000)
+[E-RAND_1] gen 3: parent -1.2447 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.2420 (74.3s, $0.0000)
+[E-RAND_1] gen 4: parent -1.2420 valid 6/6 improving 4 admissible+ 4 accepted 2 -> -1.2279 (64.6s, $0.0000)
+[E-RAND_1] gen 5: parent -1.2279 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.2270 (77.0s, $0.0000)
+[E-RAND_1] gen 6: parent -1.2270 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.2254 (66.3s, $0.0000)
+[E-RAND_1] gen 7: parent -1.2254 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.2116 (65.6s, $0.0000)
+[E-RAND_1] gen 8: parent -1.2116 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.2092 (73.1s, $0.0000)
+[E-RAND_1] gen 9: parent -1.2092 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.1883 (73.8s, $0.0000)
+[E-RAND_1] gen 10: parent -1.1883 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.1875 (71.9s, $0.0000)
+[E-RAND_2] gen 1: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.2447 (65.2s, $0.0000)
+[E-RAND_2] gen 2: parent -1.2447 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.2423 (69.5s, $0.0000)
+[E-RAND_2] gen 3: parent -1.2423 valid 6/6 improving 4 admissible+ 4 accepted 1 -> -1.2312 (68.1s, $0.0000)
+[E-RAND_2] gen 4: parent -1.2312 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.2229 (67.3s, $0.0000)
+[E-RAND_2] gen 5: parent -1.2229 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.2009 (74.0s, $0.0000)
+[E-RAND_2] gen 6: parent -1.2009 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1926 (72.0s, $0.0000)
+[E-RAND_2] gen 7: parent -1.1926 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.1842 (71.3s, $0.0000)
+[E-RAND_2] gen 8: parent -1.1842 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.1826 (73.0s, $0.0000)
+[E-RAND_2] gen 9: parent -1.1826 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.1817 (65.9s, $0.0000)
+[E-RAND_2] gen 10: parent -1.1817 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1769 (67.1s, $0.0000)
+[E-RAND_3] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.2433 (70.8s, $0.0000)
+[E-RAND_3] gen 2: parent -1.2433 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.2124 (73.8s, $0.0000)
+[E-RAND_3] gen 3: parent -1.2124 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.2117 (68.2s, $0.0000)
+[E-RAND_3] gen 4: parent -1.2117 valid 6/6 improving 1 admissible+ 1 accepted 0 -> -1.2111 (70.9s, $0.0000)
+[E-RAND_3] gen 5: parent -1.2111 valid 6/6 improving 1 admissible+ 1 accepted 0 -> -1.1888 (71.6s, $0.0000)
+[E-RAND_3] gen 6: parent -1.1888 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.1812 (72.5s, $0.0000)
+[E-RAND_3] gen 7: parent -1.1812 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.1798 (66.3s, $0.0000)
+[E-RAND_3] gen 8: parent -1.1798 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.1628 (70.2s, $0.0000)
+[E-RAND_3] gen 9: parent -1.1628 valid 6/6 improving 4 admissible+ 4 accepted 0 -> -1.1619 (65.8s, $0.0000)
+[E-RAND_3] gen 10: parent -1.1619 valid 6/6 improving 3 admissible+ 3 accepted 1 -> -1.1615 (71.8s, $0.0000)
+[E-RAND_4] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted 1 -> -1.2323 (71.0s, $0.0000)
+[E-RAND_4] gen 2: parent -1.2323 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.2264 (64.8s, $0.0000)
+[E-RAND_4] gen 3: parent -1.2264 valid 6/6 improving 4 admissible+ 4 accepted 2 -> -1.2218 (70.8s, $0.0000)
+[E-RAND_4] gen 4: parent -1.2218 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.2174 (71.5s, $0.0000)
+[E-RAND_4] gen 5: parent -1.2174 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.2137 (68.4s, $0.0000)
+[E-RAND_4] gen 6: parent -1.2137 valid 6/6 improving 4 admissible+ 4 accepted 0 -> -1.2057 (74.1s, $0.0000)
+[E-RAND_4] gen 7: parent -1.2057 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1964 (78.5s, $0.0000)
+[E-RAND_4] gen 8: parent -1.1964 valid 6/6 improving 4 admissible+ 4 accepted 2 -> -1.1944 (68.7s, $0.0000)
+[E-RAND_4] gen 9: parent -1.1944 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.1938 (62.0s, $0.0000)
+[E-RAND_4] gen 10: parent -1.1938 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1873 (65.5s, $0.0000)
+[E-RAND_5] gen 1: parent -1.2460 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.2446 (72.0s, $0.0000)
+[E-RAND_5] gen 2: parent -1.2446 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.2438 (73.7s, $0.0000)
+[E-RAND_5] gen 3: parent -1.2438 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.2398 (70.0s, $0.0000)
+[E-RAND_5] gen 4: parent -1.2398 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.2366 (73.6s, $0.0000)
+[E-RAND_5] gen 5: parent -1.2366 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.2184 (70.7s, $0.0000)
+[E-RAND_5] gen 6: parent -1.2184 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.2065 (69.7s, $0.0000)
+[E-RAND_5] gen 7: parent -1.2065 valid 6/6 improving 5 admissible+ 4 accepted 2 -> -1.1723 (73.8s, $0.0000)
+[E-RAND_5] gen 8: parent -1.1723 valid 6/6 improving 5 admissible+ 4 accepted 0 -> -1.1715 (71.4s, $0.0000)
+[E-RAND_5] gen 9: parent -1.1715 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.1683 (75.0s, $0.0000)
+[E-RAND_5] gen 10: parent -1.1683 valid 6/6 improving 4 admissible+ 3 accepted 4 -> -1.1673 (77.4s, $0.0000)
+[E-RAND_6] gen 1: parent -1.2460 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.2338 (67.7s, $0.0000)
+[E-RAND_6] gen 2: parent -1.2338 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.2248 (65.6s, $0.0000)
+[E-RAND_6] gen 3: parent -1.2248 valid 6/6 improving 6 admissible+ 6 accepted 3 -> -1.2191 (67.3s, $0.0000)
+[E-RAND_6] gen 4: parent -1.2191 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.2146 (69.4s, $0.0000)
+[E-RAND_6] gen 5: parent -1.2146 valid 6/6 improving 5 admissible+ 5 accepted 5 -> -1.2090 (69.6s, $0.0000)
+[E-RAND_6] gen 6: parent -1.2090 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.1864 (72.4s, $0.0000)
+[E-RAND_6] gen 7: parent -1.1864 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.1843 (68.5s, $0.0000)
+[E-RAND_6] gen 8: parent -1.1843 valid 6/6 improving 4 admissible+ 4 accepted 2 -> -1.1739 (74.0s, $0.0000)
+[E-RAND_6] gen 9: parent -1.1739 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.1661 (75.5s, $0.0000)
+[E-RAND_6] gen 10: parent -1.1661 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.1657 (75.2s, $0.0000)
+[E-RAND_7] gen 1: parent -1.2460 valid 6/6 improving 5 admissible+ 5 accepted 0 -> -1.2421 (67.7s, $0.0000)
+[E-RAND_7] gen 2: parent -1.2421 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.2351 (61.9s, $0.0000)
+[E-RAND_7] gen 3: parent -1.2351 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.2307 (73.2s, $0.0000)
+[E-RAND_7] gen 4: parent -1.2307 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.2274 (63.2s, $0.0000)
+[E-RAND_7] gen 5: parent -1.2274 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.2268 (66.7s, $0.0000)
+[E-RAND_7] gen 6: parent -1.2268 valid 6/6 improving 2 admissible+ 2 accepted 0 -> -1.2207 (70.1s, $0.0000)
+[E-RAND_7] gen 7: parent -1.2207 valid 6/6 improving 6 admissible+ 6 accepted 4 -> -1.1992 (65.9s, $0.0000)
+[E-RAND_7] gen 8: parent -1.1992 valid 6/6 improving 2 admissible+ 2 accepted 0 -> -1.1929 (66.9s, $0.0000)
+[E-RAND_7] gen 9: parent -1.1929 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1795 (68.1s, $0.0000)
+[E-RAND_7] gen 10: parent -1.1795 valid 6/6 improving 4 admissible+ 4 accepted 1 -> -1.1785 (71.3s, $0.0000)
+[E-RAND_8] gen 1: parent -1.2460 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.2416 (66.9s, $0.0000)
+[E-RAND_8] gen 2: parent -1.2416 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.2388 (69.2s, $0.0000)
+[E-RAND_8] gen 3: parent -1.2388 valid 6/6 improving 4 admissible+ 4 accepted 2 -> -1.2251 (68.3s, $0.0000)
+[E-RAND_8] gen 4: parent -1.2251 valid 6/6 improving 5 admissible+ 5 accepted 5 -> -1.2068 (72.9s, $0.0000)
+[E-RAND_8] gen 5: parent -1.2068 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.2037 (73.9s, $0.0000)
+[E-RAND_8] gen 6: parent -1.2037 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1960 (64.2s, $0.0000)
+[E-RAND_8] gen 7: parent -1.1960 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.1945 (76.1s, $0.0000)
+[E-RAND_8] gen 8: parent -1.1945 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1899 (65.5s, $0.0000)
+[E-RAND_8] gen 9: parent -1.1899 valid 6/6 improving 2 admissible+ 2 accepted 0 -> -1.1858 (69.0s, $0.0000)
+[E-RAND_8] gen 10: parent -1.1858 valid 6/6 improving 0 admissible+ 0 accepted None -> -1.1858 (70.7s, $0.0000)
+[E-RAND_9] gen 1: parent -1.2460 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.2447 (67.5s, $0.0000)
+[E-RAND_9] gen 2: parent -1.2447 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.2428 (65.0s, $0.0000)
+[E-RAND_9] gen 3: parent -1.2428 valid 6/6 improving 5 admissible+ 5 accepted 5 -> -1.2420 (66.8s, $0.0000)
+[E-RAND_9] gen 4: parent -1.2420 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.2415 (75.3s, $0.0000)
+[E-RAND_9] gen 5: parent -1.2415 valid 6/6 improving 1 admissible+ 1 accepted 2 -> -1.2322 (65.4s, $0.0000)
+[E-RAND_9] gen 6: parent -1.2322 valid 6/6 improving 5 admissible+ 5 accepted 1 -> -1.2225 (71.7s, $0.0000)
+[E-RAND_9] gen 7: parent -1.2225 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.2083 (69.9s, $0.0000)
+[E-RAND_9] gen 8: parent -1.2083 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.2073 (68.8s, $0.0000)
+[E-RAND_9] gen 9: parent -1.2073 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.2009 (62.6s, $0.0000)
+[E-RAND_9] gen 10: parent -1.2009 valid 6/6 improving 4 admissible+ 4 accepted 2 -> -1.1972 (68.1s, $0.0000)
+[E-RAND_10] gen 1: parent -1.2460 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.2440 (64.8s, $0.0000)
+[E-RAND_10] gen 2: parent -1.2440 valid 6/6 improving 1 admissible+ 1 accepted 4 -> -1.2397 (65.2s, $0.0000)
+[E-RAND_10] gen 3: parent -1.2397 valid 6/6 improving 4 admissible+ 4 accepted 1 -> -1.2324 (63.5s, $0.0000)
+[E-RAND_10] gen 4: parent -1.2324 valid 6/6 improving 1 admissible+ 1 accepted 5 -> -1.2319 (71.5s, $0.0000)
+[E-RAND_10] gen 5: parent -1.2319 valid 6/6 improving 5 admissible+ 5 accepted 2 -> -1.2235 (70.9s, $0.0000)
+[E-RAND_10] gen 6: parent -1.2235 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.2208 (76.2s, $0.0000)
+[E-RAND_10] gen 7: parent -1.2208 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.2179 (68.9s, $0.0000)
+[E-RAND_10] gen 8: parent -1.2179 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.1904 (74.6s, $0.0000)
+[E-RAND_10] gen 9: parent -1.1904 valid 6/6 improving 1 admissible+ 1 accepted 3 -> -1.1898 (62.4s, $0.0000)
+[E-RAND_10] gen 10: parent -1.1898 valid 6/6 improving 2 admissible+ 2 accepted 0 -> -1.1873 (75.4s, $0.0000)
+[E-RAND_11] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.2405 (66.6s, $0.0000)
+[E-RAND_11] gen 2: parent -1.2405 valid 6/6 improving 2 admissible+ 2 accepted 0 -> -1.2396 (71.3s, $0.0000)
+[E-RAND_11] gen 3: parent -1.2396 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.2231 (63.5s, $0.0000)
+[E-RAND_11] gen 4: parent -1.2231 valid 6/6 improving 5 admissible+ 5 accepted 3 -> -1.2102 (69.0s, $0.0000)
+[E-RAND_11] gen 5: parent -1.2102 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.2041 (69.7s, $0.0000)
+[E-RAND_11] gen 6: parent -1.2041 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.1793 (64.5s, $0.0000)
+[E-RAND_11] gen 7: parent -1.1793 valid 6/6 improving 1 admissible+ 1 accepted 0 -> -1.1793 (71.1s, $0.0000)
+[E-RAND_11] gen 8: parent -1.1793 valid 6/6 improving 3 admissible+ 3 accepted 1 -> -1.1711 (69.0s, $0.0000)
+[E-RAND_11] gen 9: parent -1.1711 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.1699 (85.7s, $0.0000)
+[E-RAND_11] gen 10: parent -1.1699 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1663 (75.3s, $0.0000)
+[E-RAND_12] gen 1: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.2230 (72.6s, $0.0000)
+[E-RAND_12] gen 2: parent -1.2230 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.2208 (69.3s, $0.0000)
+[E-RAND_12] gen 3: parent -1.2208 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.2136 (70.7s, $0.0000)
+[E-RAND_12] gen 4: parent -1.2136 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.2104 (66.0s, $0.0000)
+[E-RAND_12] gen 5: parent -1.2104 valid 6/6 improving 1 admissible+ 1 accepted 0 -> -1.2074 (64.9s, $0.0000)
+[E-RAND_12] gen 6: parent -1.2074 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.2058 (74.2s, $0.0000)
+[E-RAND_12] gen 7: parent -1.2058 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1917 (63.4s, $0.0000)
+[E-RAND_12] gen 8: parent -1.1917 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.1898 (78.8s, $0.0000)
+[E-RAND_12] gen 9: parent -1.1898 valid 6/6 improving 2 admissible+ 2 accepted 0 -> -1.1872 (70.3s, $0.0000)
+[E-RAND_12] gen 10: parent -1.1872 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.1797 (72.4s, $0.0000)
+[E-RAND_13] gen 1: parent -1.2460 valid 6/6 improving 1 admissible+ 1 accepted 4 -> -1.2444 (69.3s, $0.0000)
+[E-RAND_13] gen 2: parent -1.2444 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.2170 (64.1s, $0.0000)
+[E-RAND_13] gen 3: parent -1.2170 valid 6/6 improving 3 admissible+ 3 accepted 1 -> -1.2120 (68.1s, $0.0000)
+[E-RAND_13] gen 4: parent -1.2120 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.2106 (71.0s, $0.0000)
+[E-RAND_13] gen 5: parent -1.2106 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.2081 (67.6s, $0.0000)
+[E-RAND_13] gen 6: parent -1.2081 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1931 (72.1s, $0.0000)
+[E-RAND_13] gen 7: parent -1.1931 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.1929 (66.1s, $0.0000)
+[E-RAND_13] gen 8: parent -1.1929 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.1924 (73.3s, $0.0000)
+[E-RAND_13] gen 9: parent -1.1924 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1891 (67.5s, $0.0000)
+[E-RAND_13] gen 10: parent -1.1891 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.1875 (70.8s, $0.0000)
+[E-RAND_14] gen 1: parent -1.2460 valid 6/6 improving 5 admissible+ 5 accepted 2 -> -1.2390 (68.7s, $0.0000)
+[E-RAND_14] gen 2: parent -1.2390 valid 6/6 improving 4 admissible+ 4 accepted 1 -> -1.2319 (66.0s, $0.0000)
+[E-RAND_14] gen 3: parent -1.2319 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.2251 (69.0s, $0.0000)
+[E-RAND_14] gen 4: parent -1.2251 valid 6/6 improving 2 admissible+ 2 accepted 0 -> -1.2048 (67.8s, $0.0000)
+[E-RAND_14] gen 5: parent -1.2048 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.2024 (69.6s, $0.0000)
+[E-RAND_14] gen 6: parent -1.2024 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.2017 (74.5s, $0.0000)
+[E-RAND_14] gen 7: parent -1.2017 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.1994 (73.9s, $0.0000)
+[E-RAND_14] gen 8: parent -1.1994 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.1967 (73.4s, $0.0000)
+[E-RAND_14] gen 9: parent -1.1967 valid 6/6 improving 3 admissible+ 3 accepted 1 -> -1.1848 (68.2s, $0.0000)
+[E-RAND_14] gen 10: parent -1.1848 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.1837 (67.4s, $0.0000)
+[E-RAND_15] gen 1: parent -1.2460 valid 6/6 improving 6 admissible+ 6 accepted 3 -> -1.2205 (74.7s, $0.0000)
+[E-RAND_15] gen 2: parent -1.2205 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.2050 (67.7s, $0.0000)
+[E-RAND_15] gen 3: parent -1.2050 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1938 (69.9s, $0.0000)
+[E-RAND_15] gen 4: parent -1.1938 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1883 (71.8s, $0.0000)
+[E-RAND_15] gen 5: parent -1.1883 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.1853 (67.4s, $0.0000)
+[E-RAND_15] gen 6: parent -1.1853 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.1771 (63.5s, $0.0000)
+[E-RAND_15] gen 7: parent -1.1771 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.1462 (72.1s, $0.0000)
+[E-RAND_15] gen 8: parent -1.1462 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.1459 (72.6s, $0.0000)
+[E-RAND_15] gen 9: parent -1.1459 valid 6/6 improving 0 admissible+ 0 accepted None -> -1.1459 (67.7s, $0.0000)
+[E-RAND_15] gen 10: parent -1.1459 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.1459 (47.0s, $0.0000)
+[E-RAND_16] gen 1: parent -1.2460 valid 6/6 improving 1 admissible+ 1 accepted 5 -> -1.2430 (66.9s, $0.0000)
+[E-RAND_16] gen 2: parent -1.2430 valid 6/6 improving 2 admissible+ 2 accepted 0 -> -1.2423 (69.9s, $0.0000)
+[E-RAND_16] gen 3: parent -1.2423 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.2369 (68.2s, $0.0000)
+[E-RAND_16] gen 4: parent -1.2369 valid 6/6 improving 5 admissible+ 4 accepted 1 -> -1.2225 (68.0s, $0.0000)
+[E-RAND_16] gen 5: parent -1.2225 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.2128 (69.8s, $0.0000)
+[E-RAND_16] gen 6: parent -1.2128 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.2076 (74.7s, $0.0000)
+[E-RAND_16] gen 7: parent -1.2076 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.2046 (70.8s, $0.0000)
+[E-RAND_16] gen 8: parent -1.2046 valid 6/6 improving 3 admissible+ 3 accepted 1 -> -1.2031 (66.9s, $0.0000)
+[E-RAND_16] gen 9: parent -1.2031 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.1929 (69.4s, $0.0000)
+[E-RAND_16] gen 10: parent -1.1929 valid 6/6 improving 4 admissible+ 4 accepted 2 -> -1.1780 (67.5s, $0.0000)
+W1113 23:10:19.731000 33584 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  15%|#4        | 45/310 [00:00<00:00, 447.11it/s]Loading weights:  31%|###1      | 97/310 [00:00<00:00, 462.50it/s]Loading weights:  46%|####6     | 144/310 [00:00<00:00, 404.20it/s]Loading weights:  60%|######    | 186/310 [00:00<00:00, 359.91it/s]Loading weights:  72%|#######1  | 223/310 [00:00<00:00, 356.12it/s]Loading weights:  89%|########9 | 276/310 [00:00<00:00, 406.87it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 417.82it/s]
+[dfe] E-LLM/E-LLM_1/g0: beneficial 15/30 adm-beneficial 15
+[dfe] E-LLM/E-LLM_1/g5: beneficial 16/30 adm-beneficial 16
+[dfe] E-LLM/E-LLM_1/g10: beneficial 18/30 adm-beneficial 17
+[dfe] E-LLM/E-LLM_2/g5: beneficial 14/30 adm-beneficial 14
+[dfe] E-LLM/E-LLM_2/g10: beneficial 16/30 adm-beneficial 16
+[dfe] E-LLM/E-LLM_3/g5: beneficial 18/30 adm-beneficial 18
+[dfe] E-LLM/E-LLM_3/g10: beneficial 10/30 adm-beneficial 10
+[dfe] E-LLM/E-LLM_4/g5: beneficial 16/30 adm-beneficial 16
+[dfe] E-LLM/E-LLM_4/g10: beneficial 14/30 adm-beneficial 13
+[dfe] E-LLM/E-LLM_5/g5: beneficial 15/30 adm-beneficial 15
+[dfe] E-LLM/E-LLM_5/g10: beneficial 11/30 adm-beneficial 11
+[dfe] E-LLM/E-LLM_6/g5: beneficial 14/30 adm-beneficial 14
+[dfe] E-LLM/E-LLM_6/g10: beneficial 15/30 adm-beneficial 15
+[dfe] E-LLM/E-LLM_7/g5: beneficial 15/30 adm-beneficial 15
+[dfe] E-LLM/E-LLM_7/g10: beneficial 12/30 adm-beneficial 12
+[dfe] E-LLM/E-LLM_8/g5: beneficial 13/30 adm-beneficial 13
+[dfe] E-LLM/E-LLM_8/g10: beneficial 15/30 adm-beneficial 14
+[dfe] E-LLM-free/E-LLM-free_1/g5: beneficial 13/30 adm-beneficial 13
+[dfe] E-LLM-free/E-LLM-free_1/g10: beneficial 11/30 adm-beneficial 11
+[dfe] E-LLM-free/E-LLM-free_2/g5: beneficial 14/30 adm-beneficial 13
+[dfe] E-LLM-free/E-LLM-free_2/g10: beneficial 12/30 adm-beneficial 12
+[dfe] E-LLM-free/E-LLM-free_3/g5: beneficial 10/30 adm-beneficial 10
+[dfe] E-LLM-free/E-LLM-free_3/g10: beneficial 15/30 adm-beneficial 15
+[dfe] E-LLM-free/E-LLM-free_4/g5: beneficial 11/30 adm-beneficial 11
+[dfe] E-LLM-free/E-LLM-free_4/g10: beneficial 7/30 adm-beneficial 6

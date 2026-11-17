@@ -1,0 +1,9 @@
+W1115 01:50:00.974000 17040 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 45/311 [00:00<00:00, 432.99it/s]Loading weights:  30%|██▉       | 93/311 [00:00<00:00, 445.25it/s]Loading weights:  44%|████▍     | 138/311 [00:00<00:00, 383.41it/s]Loading weights:  57%|█████▋    | 178/311 [00:00<00:00, 372.68it/s]Loading weights:  69%|██████▉   | 216/311 [00:00<00:00, 354.60it/s]Loading weights:  84%|████████▍ | 262/311 [00:00<00:00, 385.96it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 407.36it/s]
+[trivial2] endthink_bias:20         @256 0.20 @384 0.20 @512 0.20 median tok   46 (120s)
+[trivial2] endthink_bias:30         @256 0.20 @384 0.20 @512 0.20 median tok   46 (127s)
+[trivial2] force_end:128            @256 0.07 @384 0.13 @512 0.22 median tok  368 (521s)
+[trivial2] force_end:192            @256 0.17 @384 0.20 @512 0.23 median tok  259 (444s)
+[trivial2] under100+force_end:192   @256 0.52 @384 0.57 @512 0.57 median tok  209 (311s)
+[trivial2] under100:seed2           @256 0.48 @384 0.78 @512 0.87 median tok  253 (638s)
+[trivial2] DONE

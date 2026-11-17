@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "source_snapshots": 2,
+  "rows": 10,
+  "numeric_cells": 140,
+  "max_absolute_difference": 0.0,
+  "timings_excluded": true
+}

@@ -1,0 +1,21 @@
+{
+  "replayed_calls": 36,
+  "replayed_cells": 3120,
+  "replay": "exact",
+  "fixture_and_prompt_hash_checks": "passed during replay",
+  "request_access": "single stateless tool-free prompt",
+  "api_key_available_for_literal_scan": true,
+  "release_json_files_scanned": 184,
+  "credential_literal_matches": 0,
+  "thinking_blocks_in_release": 0,
+  "total_cost_including_development_usd": 1.275608,
+  "budget_cap_usd": 3.0,
+  "canonical_lf_source_sha256": {
+    "wsp_api.py": "7e5a6fe5a5eece78e9795bc229fc413d6c7d1e193b97a237a242efe6a4f46044",
+    "wsp_common.py": "6e3afad2219d5256bf5c17e15aaf736792f0ff44613d6f61dfa38bfa19f31565",
+    "wsp_evaluate.py": "805432d1d7c41d228dd673837add921beac224c838e5e9b06f497cf6f17421b0",
+    "wsp_prepare.py": "0918478f7e79235a03d41d73132e79e0a2a2c6fa50ad20f7254543ce4de13495",
+    "wsp_report.py": "c4e8a0c8e343da05d2b13beefbb39047d29f2577c37f398bb1eee1491c547df9",
+    "wsp_verify.py": "f76b60bfadfbb3d7675025dff81a4072bf2f54c64800098a5580d1039cdf557f"
+  }
+}

@@ -1,0 +1,20 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<00:32,  9.40it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2008.09it/s]
+[controls] native: letters succ 0.02/look 0.90 numwords succ 0.02/look 0.91 days succ 0.14/look 0.36 months succ 0.04/look 0.74 ordinals succ 0.09/look 0.63
+[controls] 1 programme hosted by L21h6 (successor head): attention on value 0.78 | letters succ 0.60/look 0.20 numwords succ 0.53/look 0.25 days succ 0.66/look 0.01 months succ 0.64/look 0.03 ordinals succ 0.69/look 0.05
+[controls] 1 programme hosted by L21h0 (own OV): attention on value 0.78 | letters succ 0.00/look 0.03 numwords succ 0.00/look 0.01 days succ 0.01/look 0.02 months succ 0.01/look 0.01 ordinals succ 0.00/look 0.01
+[controls] 1 programme hosted by L21h3 (own OV): attention on value 0.78 | letters succ 0.01/look 0.93 numwords succ 0.03/look 0.91 days succ 0.03/look 0.49 months succ 0.03/look 0.68 ordinals succ 0.05/look 0.73
+[controls] 1 programme hosted by L21h8 (own OV): attention on value 0.78 | letters succ 0.01/look 0.84 numwords succ 0.00/look 0.90 days succ 0.00/look 0.74 months succ 0.00/look 0.81 ordinals succ 0.02/look 0.90
+[controls] 1 programme hosted by L21h10 (own OV): attention on value 0.78 | letters succ 0.00/look 0.81 numwords succ 0.01/look 0.42 days succ 0.05/look 0.23 months succ 0.02/look 0.21 ordinals succ 0.03/look 0.17
+[controls] 1 programme hosted by L21h13 (own OV): attention on value 0.78 | letters succ 0.00/look 0.87 numwords succ 0.01/look 0.87 days succ 0.00/look 0.68 months succ 0.00/look 0.80 ordinals succ 0.02/look 0.88
+[controls] 1 programme hosted by L21h15 (own OV): attention on value 0.78 | letters succ 0.02/look 0.89 numwords succ 0.01/look 0.88 days succ 0.19/look 0.35 months succ 0.04/look 0.66 ordinals succ 0.09/look 0.62
+[controls] 2 edit: letters succ 0.60/look 0.20 numwords succ 0.53/look 0.25 days succ 0.66/look 0.01 months succ 0.64/look 0.03 ordinals succ 0.69/look 0.05
+[controls] 2 edit with neighbour h7 removed: letters succ 0.61/look 0.19 numwords succ 0.52/look 0.26 days succ 0.67/look 0.01 months succ 0.66/look 0.03 ordinals succ 0.69/look 0.05
+[controls] 2 native with neighbour h7 removed: letters succ 0.02/look 0.90 numwords succ 0.02/look 0.91 days succ 0.14/look 0.36 months succ 0.04/look 0.74 ordinals succ 0.09/look 0.63
+[controls] 3 adjacent_allowed: letters succ 0.02->0.65 (look 0.91->0.20) numwords succ 0.02->0.56 (look 0.94->0.26) days succ 0.10->0.74 (look 0.59->0.05) months succ 0.02->0.72 (look 0.78->0.06) ordinals succ 0.10->0.80 (look 0.71->0.07)
+[controls] 3 successor_present: letters succ 0.06->0.66 (look 0.84->0.14) numwords succ 0.05->0.65 (look 0.88->0.17) days succ 0.14->0.71 (look 0.56->0.03) months succ 0.16->0.69 (look 0.72->0.03) ordinals succ 0.10->0.78 (look 0.67->0.02)
+[controls] 3 long_table: letters succ 0.01->0.62 (look 0.99->0.28) numwords succ 0.00->0.56 (look 0.95->0.26) months succ 0.02->0.76 (look 0.87->0.06) ordinals succ 0.07->0.78 (look 0.85->0.08)
+[controls] 3 swaps with a different donor value only: letters donor-succ 0.67/own-succ 0.01 (n 286) numwords donor-succ 0.41/own-succ 0.03 (n 278) days donor-succ 0.66/own-succ 0.05 (n 251) months donor-succ 0.61/own-succ 0.00 (n 279) ordinals donor-succ 0.56/own-succ 0.01 (n 277)
+[controls] 4 structural null seed 0: attention on value 0.01 | letters succ 0.00/look 0.92 numwords succ 0.01/look 0.91 days succ 0.17/look 0.35 months succ 0.02/look 0.75 ordinals succ 0.04/look 0.68
+[controls] 4 structural null seed 1: attention on value 0.01 | letters succ 0.00/look 0.92 numwords succ 0.01/look 0.92 days succ 0.11/look 0.37 months succ 0.02/look 0.72 ordinals succ 0.13/look 0.50
+[controls] 4 structural null seed 2: attention on value 0.07 | letters succ 0.08/look 0.64 numwords succ 0.01/look 0.88 days succ 0.10/look 0.31 months succ 0.03/look 0.70 ordinals succ 0.05/look 0.52
+[controls] DONE (94s)

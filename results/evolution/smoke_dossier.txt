@@ -1,0 +1,70 @@
+## Current fitness (DEV data; the hidden TEST set is different)
+target fitness (mean logp of correct letter, avg over tasks) = -1.2460 (original -1.2460); target acc = 0.525 (original 0.525)
+  arc_challenge: acc 0.650 (orig 0.650), logp -0.884 (orig -0.884), n=40
+  commonsense_qa: acc 0.525 (orig 0.525), logp -1.474 (orig -1.474), n=40
+  hellaswag: acc 0.550 (orig 0.550), logp -1.153 (orig -1.153), n=40
+  mmlu: acc 0.375 (orig 0.375), logp -1.472 (orig -1.472), n=40
+protected fitness = -0.6803 (original -0.6803; must stay >= -0.7003); WikiText NLL = 3.1694 (original 3.1694; must stay <= 3.1894)
+
+## Weight summary: top singular value sigma1 per matrix (rank1 alpha is relative to this)
+layer | q k v o | gate up down | max|ln1| max|ln2|
+L0 | 10.0 8.2 2.0 3.4 | 8.0 2.8 4.2 | 1.05 1.49
+L1 | 7.2 4.2 2.5 3.7 | 9.2 2.8 3.8 | 0.57 4.72
+L2 | 7.4 4.7 2.5 3.8 | 7.8 4.7 4.0 | 1.16 6.22
+L3 | 5.9 3.3 2.5 3.5 | 8.3 2.9 3.5 | 1.57 2.58
+L4 | 5.3 4.1 2.2 3.1 | 9.4 3.8 3.7 | 1.26 2.23
+L5 | 6.2 3.5 2.7 3.1 | 7.0 3.0 4.0 | 1.55 1.62
+L6 | 7.3 3.2 2.2 3.3 | 7.4 2.8 3.9 | 1.66 1.77
+L7 | 5.5 3.6 2.2 3.1 | 7.5 3.1 4.6 | 2.12 1.94
+L8 | 6.0 6.6 3.8 3.8 | 6.8 3.3 4.5 | 2.06 1.81
+L9 | 5.9 3.1 2.2 3.5 | 7.0 3.1 4.3 | 4.41 2.22
+L10 | 5.4 3.9 2.3 3.2 | 6.5 3.2 4.0 | 4.09 2.20
+L11 | 8.6 3.7 2.3 3.2 | 5.8 3.1 4.9 | 6.88 3.05
+L12 | 6.1 6.2 4.2 3.2 | 5.3 3.1 5.1 | 6.03 2.66
+L13 | 6.7 5.2 4.0 3.2 | 5.0 2.9 4.8 | 6.75 2.50
+L14 | 5.8 5.2 3.5 3.0 | 4.8 2.9 4.6 | 7.75 2.94
+L15 | 5.7 3.0 2.1 2.9 | 5.0 3.0 4.1 | 10.75 2.50
+L16 | 7.2 2.9 2.2 2.8 | 5.5 3.2 4.2 | 11.06 2.66
+L17 | 6.8 2.8 2.0 2.6 | 5.2 3.5 3.6 | 21.62 3.81
+L18 | 6.4 2.4 2.2 2.6 | 5.5 4.1 4.2 | 19.62 3.81
+L19 | 6.4 2.6 2.3 2.5 | 5.6 4.7 4.2 | 22.12 4.09
+L20 | 7.1 3.0 2.2 2.8 | 5.8 4.9 4.2 | 25.12 4.94
+L21 | 6.3 2.7 2.7 3.3 | 6.0 4.6 4.3 | 26.88 5.16
+L22 | 5.4 2.7 2.4 3.2 | 6.2 4.2 4.5 | 33.75 5.06
+L23 | 5.9 2.8 2.3 3.1 | 6.4 4.4 4.5 | 46.50 5.44
+L24 | 7.3 3.3 2.3 3.4 | 5.9 4.2 4.3 | 69.00 5.62
+L25 | 7.3 3.2 3.0 3.2 | 5.3 4.6 4.0 | 89.50 8.38
+L26 | 6.5 3.3 2.9 3.6 | 6.3 6.6 3.7 | 106.50 33.25
+L27 | 7.1 5.2 2.6 3.4 | 13.0 10.7 3.8 | 69.50 192.00
+
+## Direct logit attribution (DLA) on DEV target items, forward-only
+Mean contribution to (correct-letter logit minus mean other-letter logit), through the final norm.
+most helpful attention heads: L25h9(+0.456), L21h1(+0.306), L22h12(+0.214), L27h15(+0.176), L21h13(+0.166), L25h8(+0.130), L23h6(+0.118), L24h15(+0.098), L23h15(+0.086), L24h7(+0.075)
+most harmful attention heads: L23h7(-0.155), L27h14(-0.042), L23h14(-0.042), L22h7(-0.031), L27h3(-0.026), L22h6(-0.016), L24h6(-0.015), L25h4(-0.015), L24h4(-0.014), L27h5(-0.011)
+most harmful MLP neurons (down_proj columns): L25n1154(-0.147), L27n343(-0.146), L26n297(-0.129), L25n279(-0.123), L25n313(-0.105), L25n482(-0.101), L25n568(-0.097), L25n307(-0.090), L27n652(-0.077), L27n629(-0.077), L25n935(-0.073), L26n1324(-0.061), L27n383(-0.057), L27n368(-0.056), L26n2168(-0.035), L27n552(-0.027), L25n2007(-0.023), L23n1042(-0.021), L22n2105(-0.019), L25n315(-0.018)
+most helpful MLP neurons: L24n561(+0.127), L24n912(+0.103), L22n1182(+0.101), L24n658(+0.089), L24n470(+0.084), L24n505(+0.076), L24n485(+0.070), L23n1358(+0.041), L24n836(+0.034), L26n901(+0.023), L22n64(+0.021), L22n279(+0.020), L26n519(+0.017), L21n136(+0.017), L21n350(+0.015), L24n224(+0.013), L22n441(+0.013), L24n779(+0.012), L24n439(+0.011), L25n1361(+0.010)
+
+## Error directions (mean activation on WRONG minus RIGHT dev items, last token)
+Available refs: err:L<i> and mean:L<i> (residual stream entering layer i, dim 1024), attnerr:L<i> (attention heads' concatenated output before o_proj, dim 2048), mlperr:L<i> (MLP activation entering down_proj, dim 3072), err:final (residual before final norm, dim 1024).
+err:L8: |v|=1.71; logit lens promotes ['不清', 'urrent', ' zero', 'anni', 'ior', 'евой'] suppresses ['ért', 'leta', 'FUN', ' leben', 'クリック', '小狗']
+err:L14: |v|=4.67; logit lens promotes [' nip', '.timeScale', '航空公司', 'ripper', ')localObject', 'ensor'] suppresses ['onom', '蔽', 'buat', '有一位', ' debated', 'htar']
+err:L18: |v|=8.25; logit lens promotes ['SError', 'OutOfBoundsException', '漂流', '...</', 'oldem', 'LoginForm'] suppresses ['ща', '♦', 'за', ' bene', ' motive', ' want']
+err:L21: |v|=13.80; logit lens promotes [' unspecified', 'omitempty', '.offsetHeight', '.offsetTop', ' IonicModule', 'lığa'] suppresses ['ща', '当我们', ' Because', ' chim', 'Knowing', ' Knowing']
+err:L24: |v|=24.61; logit lens promotes ['(cd', ' CD', 'CD', 'abcd', 'ABC', 'AB'] suppresses ['ТЕ', 'fills', 'imens', ');\\', 'тем', ' experienced']
+err:L26: |v|=32.37; logit lens promotes [' AD', 'AB', ' AB', ' ABC', '.AD', 'AD'] suppresses ['苎', 'sez', '::$', 'rending', ' restarting', ' directing']
+err:L27: |v|=35.55; logit lens promotes [' ABC', ' AD', ' AC', ' AB', 'AB', '.AD'] suppresses [');\\', '->$', '苎', '$\\', 'sez', ' $\\']
+err:final: |v|=44.16; logit lens promotes [' ABC', '.AD', ' CD', ' AD', ' AB', ' BC'] suppresses ['sez', ' restoring', ');\\', 'olle', ' reviewing', 'leans']
+
+## Confidently wrong DEV items (excerpt)
+- [commonsense_qa] correct=E model=D p(correct)=0.00
+  What animal has quills all over it? | A. feather | B. chicken | C. calligraphy | D. porcupine | E. hedgehog | Answer:
+- [arc_challenge] correct=C model=A p(correct)=0.00
+  In what way can soil nutrients in agricultural ground be depleted? | A. overgrazing | B. wind erosion | C. increased irrigating | D. increased fertilization | Answer:
+- [commonsense_qa] correct=E model=A p(correct)=0.01
+  Where can children play with animals? | A. meadow | B. play room | C. surface of earth | D. zoos | E. fairgrounds | Answer:
+- [commonsense_qa] correct=E model=A p(correct)=0.01
+  Where is a grape likely to be being fed to someone else? | A. field | B. bathroom | C. michigan | D. minnesota | E. painting | Answer:
+- [mmlu] correct=C model=A p(correct)=0.02
+  When the corpus callosum is cut in a right-handed patient, often the patient | A. cannot carry out well-learned motor tasks with the left hand | B. Cannot name objects placed in the right hand if the patient can see them | C. cannot name objects placed in the left hand if the patient cannot see them | D. shows a decline in verbal intelligence | Answer:
+- [commonsense_qa] correct=E model=A p(correct)=0.04
+  Where would you have a stove if you don't live in a detached dwelling? | A. tent | B. car | C. living room | D. friend's house | E. apartment | Answer:

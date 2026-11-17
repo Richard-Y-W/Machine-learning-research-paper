@@ -1,0 +1,20 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<01:09,  4.46it/s]Loading weights:  58%|█████▊    | 180/310 [00:00<00:00, 699.10it/s]Loading weights:  92%|█████████▏| 286/310 [00:00<00:00, 648.42it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 596.96it/s]
+[inc] native: digit assignments copy 0.40, increment 0.03; word-value lookup 0.55
+[inc] native digit sequence continuation (1,2,3,4, -> 5): 1.00
+[inc] oracle, A attends only to the queried value (increment/copy by gain): x1.0: 0.35/0.21 x2.0: 0.49/0.15 x3.0: 0.54/0.14 x4.0: 0.61/0.15
+[inc] attention programme lambda 0.001: attention on the queried value, held-out WORD assignments 0.15
+[inc] attention programme lambda 0.01: attention on the queried value, held-out WORD assignments 0.18
+[inc] attention programme lambda 0.1: attention on the queried value, held-out WORD assignments 0.44
+[inc] attention programme lambda 1.0: attention on the queried value, held-out WORD assignments 0.77
+[inc] programmed attention on digit assignments (never used in fitting): 0.71
+[inc] EDIT gain 1.0: increment 0.26, copy 0.28 (n 600) | word-value lookup 0.53 | WikiText 2.904 (base 2.833)
+[inc] EDIT gain 2.0: increment 0.39, copy 0.21 (n 600) | word-value lookup 0.49 | WikiText 2.991 (base 2.833)
+[inc] EDIT gain 3.0: increment 0.42, copy 0.20 (n 600) | word-value lookup 0.42 | WikiText 3.135 (base 2.833)
+[inc] EDIT gain 4.0: increment 0.47, copy 0.18 (n 600) | word-value lookup 0.34 | WikiText 3.281 (base 2.833)
+[inc] gain 3.0: increment rate by value 0->1: 0.54 1->2: 0.26 2->3: 0.30 3->4: 0.48 4->5: 0.62 5->6: 0.23 6->7: 0.43 7->8: 0.73 8->9: 0.24
+[inc] edit_A_removed: increment 0.02, copy 0.43
+[inc] control_wrong_target: increment 0.05, copy 0.33
+[inc] control_gain_only: increment 0.05, copy 0.40
+[inc] control_wrong_output_projection: increment 0.09, copy 0.28
+[inc] two-digit values (greedy generation, exact match): native copy 0.58 increment 0.01; edited copy 0.46 increment 0.01
+[inc] DONE (247s)

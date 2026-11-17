@@ -1,0 +1,20 @@
+{
+  "paper\\main.tex": "d23d5f7893526f0f24825d61a188f9bcc0ef255b03870f3e5cf93cb033585b85",
+  "paper\\figures\\controls.pdf": "4f5b692191975263d3101c0a72472afaf5f9523f24780499c620ef84c0ac5b52",
+  "paper\\figures\\design.pdf": "571aa9fbdff4642fd4eb2c0af0b74d10315f999189eb2aa40998d6855ff0259a",
+  "paper\\figures\\gain.pdf": "9abdbff9b128b6cb24b065c0b84103141706ce29fa61f937ae9d3eb9d8dc4d1f",
+  "paper\\figures\\learning.pdf": "127a487c58fa69707a06ae62bff3ac722b1961ab44caf9195438a54b4aae38e3",
+  "paper\\figures\\locate.pdf": "ba0339acdccb3bf12f04fd56439160f0f02e857dd4ddd0eadff9b93292418de2",
+  "paper\\figures\\main_result.pdf": "cd64a1f795f197a4cfeb5a50ca816feb81f9c8727a3be21d1a7a4327f9352c62",
+  "paper\\tables\\causal.tex": "ff6767242b2a71b4f3d99185463149dfe5b6ceeba99c0cea3578e37584f9ef71",
+  "paper\\tables\\controls.tex": "e4db084b774294ba8587172e9aae6b72a5338ac4b108ac2de4812bce30962f8a",
+  "paper\\tables\\counterfactual.tex": "a396cd4e08723b16d4f879ea96a69f605492ee9d3d04c56ccc8186106e3485a3",
+  "paper\\tables\\increment.tex": "eb2aa9bccd3f2e06e70a0fc57c0590578982c7fc0a761bb417c23eb66225db9b",
+  "paper\\tables\\learning.tex": "3ae634991183e8ef032345421c9a93c9a2300a84c1910f5d4bb703ab2beade55",
+  "paper\\tables\\main.tex": "e98ee9f17c76c3b0713b646a95e62f0fce40087e5d1e2b5b9074c085ec5a3d17",
+  "paper\\tables\\opus.tex": "e151b2bc81f4abe545faf9a8c12af38a7e90748156a1b767e629d568a6405081",
+  "paper\\tables\\opus_controls.tex": "a99402cb5d48d5bceafa22626eb1f65d917e5f0340a96ea057d8d1d74b0160d7",
+  "paper\\tables\\programmes.tex": "c3fc034d6cd1a907c35979b3e85d07f483bc2f309becda551f99ba748dd3b9ab",
+  "output\\pdf\\routing-edits-preprint.pdf": "1155962c3ec374b3590633994c90828e4d7a7a917220397427164c7a325a9f18",
+  "output\\preprint\\routing-edits-source.tar.gz": "3855799645dd19e3e80c5afbc4f1c2b9c2b8dfb13d6b0a44cae91208c9b82ae8"
+}

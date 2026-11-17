@@ -1,0 +1,349 @@
+{
+ "native": {
+  "letters": {
+   "lookup": 0.77,
+   "successor": 0.08,
+   "n": 300
+  },
+  "numwords": {
+   "lookup": 0.78,
+   "successor": 0.067,
+   "n": 300
+  },
+  "days": {
+   "lookup": 0.39,
+   "successor": 0.267,
+   "n": 300
+  },
+  "months": {
+   "lookup": 0.58,
+   "successor": 0.203,
+   "n": 300
+  },
+  "ordinals": {
+   "lookup": 0.487,
+   "successor": 0.233,
+   "n": 300
+  },
+  "word_lookup": 0.56,
+  "wiki_nll": 2.8332409858703613,
+  "sequence_next": 1.0
+ },
+ "native_attention": {
+  "mean_attention_on_value": 0.037,
+  "argmax_is_value": 0.0
+ },
+ "attention_fit": {
+  "0.001": {
+   "mean_attention_on_value": 0.105,
+   "argmax_is_value": 0.12
+  },
+  "0.01": {
+   "mean_attention_on_value": 0.202,
+   "argmax_is_value": 0.22
+  },
+  "0.1": {
+   "mean_attention_on_value": 0.441,
+   "argmax_is_value": 0.42
+  },
+  "1.0": {
+   "mean_attention_on_value": 0.726,
+   "argmax_is_value": 0.74
+  }
+ },
+ "lambda": 1.0,
+ "attention_on_ordinal": {
+  "letters": {
+   "mean_attention_on_value": 0.726,
+   "argmax_is_value": 0.767
+  },
+  "numwords": {
+   "mean_attention_on_value": 0.819,
+   "argmax_is_value": 0.85
+  },
+  "days": {
+   "mean_attention_on_value": 0.508,
+   "argmax_is_value": 0.517
+  },
+  "months": {
+   "mean_attention_on_value": 0.62,
+   "argmax_is_value": 0.65
+  },
+  "ordinals": {
+   "mean_attention_on_value": 0.74,
+   "argmax_is_value": 0.75
+  }
+ },
+ "edit": {
+  "gain1.0": {
+   "letters": {
+    "lookup": 0.683,
+    "successor": 0.147,
+    "n": 300
+   },
+   "numwords": {
+    "lookup": 0.61,
+    "successor": 0.213,
+    "n": 300
+   },
+   "days": {
+    "lookup": 0.303,
+    "successor": 0.38,
+    "n": 300
+   },
+   "months": {
+    "lookup": 0.377,
+    "successor": 0.367,
+    "n": 300
+   },
+   "ordinals": {
+    "lookup": 0.32,
+    "successor": 0.483,
+    "n": 300
+   },
+   "word_lookup": 0.6,
+   "wiki_nll": 2.9319071769714355,
+   "sequence_next": 0.7142857142857143
+  },
+  "gain2.0": {
+   "letters": {
+    "lookup": 0.513,
+    "successor": 0.293,
+    "n": 300
+   },
+   "numwords": {
+    "lookup": 0.467,
+    "successor": 0.28,
+    "n": 300
+   },
+   "days": {
+    "lookup": 0.2,
+    "successor": 0.43,
+    "n": 300
+   },
+   "months": {
+    "lookup": 0.187,
+    "successor": 0.487,
+    "n": 300
+   },
+   "ordinals": {
+    "lookup": 0.23,
+    "successor": 0.523,
+    "n": 300
+   },
+   "word_lookup": 0.58,
+   "wiki_nll": 3.0462088584899902,
+   "sequence_next": 0.5714285714285714
+  },
+  "gain3.0": {
+   "letters": {
+    "lookup": 0.35,
+    "successor": 0.433,
+    "n": 300
+   },
+   "numwords": {
+    "lookup": 0.3,
+    "successor": 0.347,
+    "n": 300
+   },
+   "days": {
+    "lookup": 0.183,
+    "successor": 0.43,
+    "n": 300
+   },
+   "months": {
+    "lookup": 0.117,
+    "successor": 0.523,
+    "n": 300
+   },
+   "ordinals": {
+    "lookup": 0.15,
+    "successor": 0.493,
+    "n": 300
+   },
+   "word_lookup": 0.555,
+   "wiki_nll": 3.2207207679748535,
+   "sequence_next": 0.42857142857142855
+  },
+  "gain4.0": {
+   "letters": {
+    "lookup": 0.257,
+    "successor": 0.51,
+    "n": 300
+   },
+   "numwords": {
+    "lookup": 0.23,
+    "successor": 0.37,
+    "n": 300
+   },
+   "days": {
+    "lookup": 0.153,
+    "successor": 0.457,
+    "n": 300
+   },
+   "months": {
+    "lookup": 0.093,
+    "successor": 0.533,
+    "n": 300
+   },
+   "ordinals": {
+    "lookup": 0.127,
+    "successor": 0.487,
+    "n": 300
+   },
+   "word_lookup": 0.505,
+   "wiki_nll": 3.4132864475250244,
+   "sequence_next": 0.42857142857142855
+  }
+ },
+ "control_wrong_target_gain1.0": {
+  "letters": {
+   "lookup": 0.76,
+   "successor": 0.043,
+   "n": 300
+  },
+  "numwords": {
+   "lookup": 0.793,
+   "successor": 0.04,
+   "n": 300
+  },
+  "days": {
+   "lookup": 0.423,
+   "successor": 0.153,
+   "n": 300
+  },
+  "months": {
+   "lookup": 0.557,
+   "successor": 0.103,
+   "n": 300
+  },
+  "ordinals": {
+   "lookup": 0.493,
+   "successor": 0.16,
+   "n": 300
+  },
+  "word_lookup": 0.575,
+  "wiki_nll": 2.9380016326904297,
+  "sequence_next": 0.8571428571428571
+ },
+ "control_wrong_target_gain3.0": {
+  "letters": {
+   "lookup": 0.623,
+   "successor": 0.073,
+   "n": 300
+  },
+  "numwords": {
+   "lookup": 0.743,
+   "successor": 0.043,
+   "n": 300
+  },
+  "days": {
+   "lookup": 0.38,
+   "successor": 0.16,
+   "n": 300
+  },
+  "months": {
+   "lookup": 0.477,
+   "successor": 0.11,
+   "n": 300
+  },
+  "ordinals": {
+   "lookup": 0.397,
+   "successor": 0.163,
+   "n": 300
+  },
+  "word_lookup": 0.61,
+  "wiki_nll": 3.2260823249816895,
+  "sequence_next": 0.5714285714285714
+ },
+ "control_gain_only_gain1.0": {
+  "letters": {
+   "lookup": 0.77,
+   "successor": 0.08,
+   "n": 300
+  },
+  "numwords": {
+   "lookup": 0.78,
+   "successor": 0.067,
+   "n": 300
+  },
+  "days": {
+   "lookup": 0.39,
+   "successor": 0.267,
+   "n": 300
+  },
+  "months": {
+   "lookup": 0.58,
+   "successor": 0.203,
+   "n": 300
+  },
+  "ordinals": {
+   "lookup": 0.487,
+   "successor": 0.233,
+   "n": 300
+  },
+  "word_lookup": 0.56,
+  "wiki_nll": 2.8332409858703613,
+  "sequence_next": 1.0
+ },
+ "control_gain_only_gain3.0": {
+  "letters": {
+   "lookup": 0.67,
+   "successor": 0.17,
+   "n": 300
+  },
+  "numwords": {
+   "lookup": 0.697,
+   "successor": 0.11,
+   "n": 300
+  },
+  "days": {
+   "lookup": 0.35,
+   "successor": 0.327,
+   "n": 300
+  },
+  "months": {
+   "lookup": 0.5,
+   "successor": 0.293,
+   "n": 300
+  },
+  "ordinals": {
+   "lookup": 0.45,
+   "successor": 0.297,
+   "n": 300
+  },
+  "word_lookup": 0.555,
+  "wiki_nll": 2.955247640609741,
+  "sequence_next": 1.0
+ },
+ "control_wrong_output_projection": {
+  "letters": {
+   "lookup": 0.583,
+   "successor": 0.013,
+   "n": 300
+  },
+  "numwords": {
+   "lookup": 0.54,
+   "successor": 0.077,
+   "n": 300
+  },
+  "days": {
+   "lookup": 0.31,
+   "successor": 0.163,
+   "n": 300
+  },
+  "months": {
+   "lookup": 0.497,
+   "successor": 0.083,
+   "n": 300
+  },
+  "ordinals": {
+   "lookup": 0.403,
+   "successor": 0.12,
+   "n": 300
+  },
+  "word_lookup": 0.51,
+  "wiki_nll": 3.0702016353607178,
+  "sequence_next": 0.7142857142857143
+ }
+}

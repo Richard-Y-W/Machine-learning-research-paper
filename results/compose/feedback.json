@@ -1,0 +1,415 @@
+{
+ "n_pairs": 30221,
+ "n_distinct_tokens": 3963,
+ "native_letters": {
+  "next": 0.9,
+  "plus2": 0.013,
+  "n": 80
+ },
+ "native_other_ordinal": {
+  "next": 0.968,
+  "plus2": 0.0,
+  "n": 156
+ },
+ "center0_lam0.001": {
+  "heldout_r2": 0.4338785539080493,
+  "letters_replace_g1.0": {
+   "next": 0.8,
+   "plus2": 0.037,
+   "n": 80
+  },
+  "letters_add_g1.0": {
+   "next": 0.9,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "letters_replace_g2.0": {
+   "next": 0.613,
+   "plus2": 0.15,
+   "n": 80
+  },
+  "letters_add_g2.0": {
+   "next": 0.863,
+   "plus2": 0.025,
+   "n": 80
+  },
+  "letters_replace_g4.0": {
+   "next": 0.338,
+   "plus2": 0.138,
+   "n": 80
+  },
+  "letters_add_g4.0": {
+   "next": 0.512,
+   "plus2": 0.138,
+   "n": 80
+  },
+  "other_ordinal_replace_g1.0": {
+   "next": 0.583,
+   "plus2": 0.083,
+   "n": 156
+  },
+  "other_ordinal_add_g1.0": {
+   "next": 0.942,
+   "plus2": 0.013,
+   "n": 156
+  },
+  "other_ordinal_replace_g2.0": {
+   "next": 0.462,
+   "plus2": 0.071,
+   "n": 156
+  },
+  "other_ordinal_add_g2.0": {
+   "next": 0.737,
+   "plus2": 0.051,
+   "n": 156
+  },
+  "other_ordinal_replace_g4.0": {
+   "next": 0.154,
+   "plus2": 0.019,
+   "n": 156
+  },
+  "other_ordinal_add_g4.0": {
+   "next": 0.256,
+   "plus2": 0.026,
+   "n": 156
+  }
+ },
+ "center0_lam0.01": {
+  "heldout_r2": 0.4424718613952401,
+  "letters_replace_g1.0": {
+   "next": 0.838,
+   "plus2": 0.013,
+   "n": 80
+  },
+  "letters_add_g1.0": {
+   "next": 0.9,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "letters_replace_g2.0": {
+   "next": 0.675,
+   "plus2": 0.125,
+   "n": 80
+  },
+  "letters_add_g2.0": {
+   "next": 0.887,
+   "plus2": 0.013,
+   "n": 80
+  },
+  "letters_replace_g4.0": {
+   "next": 0.512,
+   "plus2": 0.175,
+   "n": 80
+  },
+  "letters_add_g4.0": {
+   "next": 0.613,
+   "plus2": 0.15,
+   "n": 80
+  },
+  "other_ordinal_replace_g1.0": {
+   "next": 0.647,
+   "plus2": 0.064,
+   "n": 156
+  },
+  "other_ordinal_add_g1.0": {
+   "next": 0.968,
+   "plus2": 0.006,
+   "n": 156
+  },
+  "other_ordinal_replace_g2.0": {
+   "next": 0.519,
+   "plus2": 0.071,
+   "n": 156
+  },
+  "other_ordinal_add_g2.0": {
+   "next": 0.814,
+   "plus2": 0.038,
+   "n": 156
+  },
+  "other_ordinal_replace_g4.0": {
+   "next": 0.244,
+   "plus2": 0.032,
+   "n": 156
+  },
+  "other_ordinal_add_g4.0": {
+   "next": 0.353,
+   "plus2": 0.026,
+   "n": 156
+  }
+ },
+ "center0_lam0.1": {
+  "heldout_r2": 0.41958539965019015,
+  "letters_replace_g1.0": {
+   "next": 0.812,
+   "plus2": 0.025,
+   "n": 80
+  },
+  "letters_add_g1.0": {
+   "next": 0.9,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "letters_replace_g2.0": {
+   "next": 0.85,
+   "plus2": 0.025,
+   "n": 80
+  },
+  "letters_add_g2.0": {
+   "next": 0.912,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "letters_replace_g4.0": {
+   "next": 0.775,
+   "plus2": 0.037,
+   "n": 80
+  },
+  "letters_add_g4.0": {
+   "next": 0.9,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "other_ordinal_replace_g1.0": {
+   "next": 0.724,
+   "plus2": 0.019,
+   "n": 156
+  },
+  "other_ordinal_add_g1.0": {
+   "next": 0.981,
+   "plus2": 0.0,
+   "n": 156
+  },
+  "other_ordinal_replace_g2.0": {
+   "next": 0.724,
+   "plus2": 0.038,
+   "n": 156
+  },
+  "other_ordinal_add_g2.0": {
+   "next": 0.962,
+   "plus2": 0.006,
+   "n": 156
+  },
+  "other_ordinal_replace_g4.0": {
+   "next": 0.59,
+   "plus2": 0.045,
+   "n": 156
+  },
+  "other_ordinal_add_g4.0": {
+   "next": 0.853,
+   "plus2": 0.032,
+   "n": 156
+  }
+ },
+ "center1_lam0.001": {
+  "heldout_r2": 0.43492616994893873,
+  "letters_replace_g1.0": {
+   "next": 0.8,
+   "plus2": 0.025,
+   "n": 80
+  },
+  "letters_add_g1.0": {
+   "next": 0.9,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "letters_replace_g2.0": {
+   "next": 0.588,
+   "plus2": 0.15,
+   "n": 80
+  },
+  "letters_add_g2.0": {
+   "next": 0.875,
+   "plus2": 0.013,
+   "n": 80
+  },
+  "letters_replace_g4.0": {
+   "next": 0.362,
+   "plus2": 0.125,
+   "n": 80
+  },
+  "letters_add_g4.0": {
+   "next": 0.5,
+   "plus2": 0.113,
+   "n": 80
+  },
+  "other_ordinal_replace_g1.0": {
+   "next": 0.583,
+   "plus2": 0.09,
+   "n": 156
+  },
+  "other_ordinal_add_g1.0": {
+   "next": 0.942,
+   "plus2": 0.013,
+   "n": 156
+  },
+  "other_ordinal_replace_g2.0": {
+   "next": 0.455,
+   "plus2": 0.058,
+   "n": 156
+  },
+  "other_ordinal_add_g2.0": {
+   "next": 0.731,
+   "plus2": 0.032,
+   "n": 156
+  },
+  "other_ordinal_replace_g4.0": {
+   "next": 0.141,
+   "plus2": 0.013,
+   "n": 156
+  },
+  "other_ordinal_add_g4.0": {
+   "next": 0.224,
+   "plus2": 0.013,
+   "n": 156
+  }
+ },
+ "center1_lam0.01": {
+  "heldout_r2": 0.4404282536899,
+  "letters_replace_g1.0": {
+   "next": 0.85,
+   "plus2": 0.013,
+   "n": 80
+  },
+  "letters_add_g1.0": {
+   "next": 0.9,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "letters_replace_g2.0": {
+   "next": 0.625,
+   "plus2": 0.125,
+   "n": 80
+  },
+  "letters_add_g2.0": {
+   "next": 0.887,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "letters_replace_g4.0": {
+   "next": 0.463,
+   "plus2": 0.125,
+   "n": 80
+  },
+  "letters_add_g4.0": {
+   "next": 0.625,
+   "plus2": 0.1,
+   "n": 80
+  },
+  "other_ordinal_replace_g1.0": {
+   "next": 0.609,
+   "plus2": 0.083,
+   "n": 156
+  },
+  "other_ordinal_add_g1.0": {
+   "next": 0.955,
+   "plus2": 0.006,
+   "n": 156
+  },
+  "other_ordinal_replace_g2.0": {
+   "next": 0.474,
+   "plus2": 0.077,
+   "n": 156
+  },
+  "other_ordinal_add_g2.0": {
+   "next": 0.763,
+   "plus2": 0.026,
+   "n": 156
+  },
+  "other_ordinal_replace_g4.0": {
+   "next": 0.186,
+   "plus2": 0.019,
+   "n": 156
+  },
+  "other_ordinal_add_g4.0": {
+   "next": 0.276,
+   "plus2": 0.013,
+   "n": 156
+  }
+ },
+ "center1_lam0.1": {
+  "heldout_r2": 0.4418991934168013,
+  "letters_replace_g1.0": {
+   "next": 0.838,
+   "plus2": 0.013,
+   "n": 80
+  },
+  "letters_add_g1.0": {
+   "next": 0.912,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "letters_replace_g2.0": {
+   "next": 0.787,
+   "plus2": 0.05,
+   "n": 80
+  },
+  "letters_add_g2.0": {
+   "next": 0.9,
+   "plus2": 0.0,
+   "n": 80
+  },
+  "letters_replace_g4.0": {
+   "next": 0.7,
+   "plus2": 0.087,
+   "n": 80
+  },
+  "letters_add_g4.0": {
+   "next": 0.825,
+   "plus2": 0.025,
+   "n": 80
+  },
+  "other_ordinal_replace_g1.0": {
+   "next": 0.731,
+   "plus2": 0.045,
+   "n": 156
+  },
+  "other_ordinal_add_g1.0": {
+   "next": 0.974,
+   "plus2": 0.006,
+   "n": 156
+  },
+  "other_ordinal_replace_g2.0": {
+   "next": 0.622,
+   "plus2": 0.058,
+   "n": 156
+  },
+  "other_ordinal_add_g2.0": {
+   "next": 0.91,
+   "plus2": 0.013,
+   "n": 156
+  },
+  "other_ordinal_replace_g4.0": {
+   "next": 0.423,
+   "plus2": 0.019,
+   "n": 156
+  },
+  "other_ordinal_add_g4.0": {
+   "next": 0.647,
+   "plus2": 0.032,
+   "n": 156
+  }
+ },
+ "selected_on_other_ordinal": {
+  "center": true,
+  "lam": 0.001,
+  "gamma": 1.0,
+  "letters": {
+   "next": 0.8,
+   "plus2": 0.025,
+   "n": 80
+  },
+  "other_ordinal": {
+   "next": 0.583,
+   "plus2": 0.09,
+   "n": 156
+  }
+ },
+ "hard_decode_letters": {
+  "a_direct_top1_is_next": 0.0,
+  "plus2": 0.075
+ },
+ "hard_decode_other_ordinal": {
+  "a_direct_top1_is_next": 0.135,
+  "plus2": 0.218
+ }
+}

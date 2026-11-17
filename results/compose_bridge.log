@@ -1,0 +1,21 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  72%|███████▏  | 223/310 [00:00<00:00, 2215.20it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2516.95it/s]
+[bridge] native: calibration domains next 0.97 +2 0.00 (n=156); letters next 0.90 +2 0.01
+[bridge] native by domain: digits 0.00, numwords 0.97, days 1.00, months 0.97, ordinals 0.94
+[bridge] calibration uses domains with native next-item accuracy >= .80: ['numwords', 'days', 'months', 'ordinals'] (156 contexts, no letters)
+[bridge] D: best on calibration domains: lambda 0.001 heads ['L22h8'] gamma 1.0 -> +2 0.29 next 0.00
+[bridge] D: LETTERS (never used in fitting or selection): +2 0.04 next 0.39 margin -1.47 (native +2 0.01, margin -2.78)
+[bridge] D: letters by gamma (+2 / next): 0.5:0.00/0.76 1.0:0.04/0.39 2.0:0.00/0.12 4.0:0.01/0.00 8.0:0.01/0.00 16.0:0.00/0.00
+[bridge] D: control_shuffled_targets: +2 0.03 next 0.09 margin -0.43
+[bridge] D: control_mean_vector: +2 0.01 next 0.89 margin -2.83
+[bridge] D: bridge_with_A_direct_write_removed: +2 0.04 next 0.12 margin -0.53
+[bridge] D: A_removed_no_bridge: +2 0.05 next 0.49 margin -1.36
+[bridge] D: interchange (bridge fed A's output from an unrelated letter y): answer y+2 0.00, own +2 0.06, own next 0.41
+[bridge] W: lambda 0.01 gamma 1.0: calibration +2 0.04; LETTERS +2 0.00 next 0.90 margin -2.61; WikiText loss 3.1649 (base 3.1694)
+[bridge] W: lambda 0.01 gamma 2.0: calibration +2 0.08; LETTERS +2 0.04 next 0.76 margin -2.39; WikiText loss 3.1684 (base 3.1694)
+[bridge] W: lambda 0.01 gamma 4.0: calibration +2 0.13; LETTERS +2 0.07 next 0.39 margin -1.84; WikiText loss 3.2003 (base 3.1694)
+[bridge] W: lambda 0.01 gamma 8.0: calibration +2 0.06; LETTERS +2 0.01 next 0.03 margin -0.98; WikiText loss 3.3661 (base 3.1694)
+[bridge] W: lambda 0.1 gamma 1.0: calibration +2 0.03; LETTERS +2 0.01 next 0.90 margin -2.71; WikiText loss 3.1672 (base 3.1694)
+[bridge] W: lambda 0.1 gamma 2.0: calibration +2 0.06; LETTERS +2 0.00 next 0.89 margin -2.57; WikiText loss 3.1681 (base 3.1694)
+[bridge] W: lambda 0.1 gamma 4.0: calibration +2 0.11; LETTERS +2 0.09 next 0.59 margin -2.20; WikiText loss 3.1791 (base 3.1694)
+[bridge] W: lambda 0.1 gamma 8.0: calibration +2 0.04; LETTERS +2 0.06 next 0.21 margin -1.48; WikiText loss 3.2395 (base 3.1694)
+[bridge] DONE (217s)

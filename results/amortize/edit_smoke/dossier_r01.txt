@@ -1,0 +1,111 @@
+## Current model
+Accepted edits so far: 0.
+This round's sample (10 problems): acc@256 0.00, acc@384 0.00, mean generated tokens 48, unfinished at 384 tokens 1.00.
+Validation (held-out problems, aggregate only): acc@256 0.00 (original 0.00), acc@512 0.00 (original 0.00), median tokens 48 (original 48).
+Protected bounds: multiple-choice fitness must stay >= -0.7026; WikiText loss must stay <= 3.7178.
+Approximate share of thinking text by type (rule-based): re-checking 0%, state updates 8%, final answer 9%, restating / setup 38%, other 45%.
+
+## Example traces (short successes, correct but over budget, wrong or unfinished)
+### Example (family F1, 48 tokens, wrong or unfinished at 384; target 27)
+```python
+total = 79
+m = total
+total = 18
+u = 27
+c = u
+u = m
+print(c)
+```
+Model output:
+<think>
+Okay, let's see. The code is given, and I need to figure out what it prints. Let me start by going step by step.
+
+First, there's total initialized to 79. Then m is set to
+
+### Example (family F5, 48 tokens, wrong or unfinished at 384; target 34)
+```python
+w = 16
+for n in range(2):
+    w += 9
+print(w)
+```
+Model output:
+<think>
+Okay, let's see. The code starts with w being 16. Then there's a loop for n in range(2), which means n will be 0 and 1. In each iteration, w is increased
+
+### Example (family F2, 48 tokens, wrong or unfinished at 384; target 84)
+```python
+v = 10
+k = 84
+c = 18
+q = v
+v = k
+k = q
+c = v
+print(c)
+```
+Model output:
+<think>
+Okay, let's see. The Python code has variables v, k, c, and q. Let me go through each step.
+
+First, v is initialized to 10. Then k is set to 84.
+
+### Example (family F3, 48 tokens, wrong or unfinished at 384; target 82)
+```python
+q = 69
+m = 86
+q += 9
+m -= 15
+q -= 10
+m += 11
+print(m)
+```
+Model output:
+<think>
+Okay, let's see. The program has variables q and m initialized to 69 and 86. Then they do some arithmetic operations. Let me go step by step.
+
+First, q is 69. Then
+
+### Example (family F3, 48 tokens, wrong or unfinished at 384; target 66)
+```python
+p = 66
+total = 15
+p += 9
+total -= 17
+p -= 9
+total += 14
+print(p)
+```
+Model output:
+<think>
+Okay, let's see. The Python code has variables p and total. Let me go step by step.
+
+First, p is initialized as 66. Then total is 15. Then p is incremented by 9
+
+### Example (family F4, 48 tokens, wrong or unfinished at 384; target 80)
+```python
+t = 48
+num = 77
+if t > num:
+    y = t
+else:
+    y = num
+y = y + 3
+print(y)
+```
+Model output:
+<think>
+Okay, let's see. The Python code is given, and I need to figure out what it prints. Let me go step by step.
+
+First, there's a variable t set to 48 and num set to 
+
+## Diagnostics
+positions available: start 10, mid 30, recheck 0, end 0
+
+## Results of your probes from the previous round
+None requested.
+
+## History
+None yet: this is the first round.
+
+Propose exactly 4 diverse mutations of the current model, and up to 6 probes.

@@ -1,0 +1,20 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  68%|██████▊   | 212/310 [00:00<00:00, 1886.34it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2269.69it/s]
+[inc] native: digit assignments copy 0.34, increment 0.07; word-value lookup 0.57
+[inc] native digit sequence continuation (1,2,3,4, -> 5): 1.00
+[inc] oracle, A attends only to the queried value (increment/copy by gain): x1.0: 0.54/0.11 x2.0: 0.68/0.07 x3.0: 0.74/0.07 x4.0: 0.80/0.06
+[inc] attention programme lambda 0.001: attention on the queried value, held-out WORD assignments 0.21
+[inc] attention programme lambda 0.01: attention on the queried value, held-out WORD assignments 0.38
+[inc] attention programme lambda 0.1: attention on the queried value, held-out WORD assignments 0.72
+[inc] attention programme lambda 1.0: attention on the queried value, held-out WORD assignments 0.74
+[inc] programmed attention on digit assignments (never used in fitting): 0.64
+[inc] EDIT gain 1.0: increment 0.36, copy 0.23 (n 600) | word-value lookup 0.54 | WikiText 3.313 (base 3.169)
+[inc] EDIT gain 2.0: increment 0.53, copy 0.17 (n 600) | word-value lookup 0.52 | WikiText 3.505 (base 3.169)
+[inc] EDIT gain 3.0: increment 0.60, copy 0.14 (n 600) | word-value lookup 0.39 | WikiText 3.763 (base 3.169)
+[inc] EDIT gain 4.0: increment 0.66, copy 0.11 (n 600) | word-value lookup 0.24 | WikiText 4.068 (base 3.169)
+[inc] gain 3.0: increment rate by value 0->1: 0.25 1->2: 0.24 2->3: 0.77 3->4: 0.88 4->5: 0.74 5->6: 0.54 6->7: 0.64 7->8: 0.81 8->9: 0.63
+[inc] edit_A_removed: increment 0.03, copy 0.39
+[inc] control_wrong_target: increment 0.06, copy 0.32
+[inc] control_gain_only: increment 0.17, copy 0.33
+[inc] control_wrong_output_projection: increment 0.04, copy 0.27
+[inc] two-digit values (greedy generation, exact match): native copy 0.59 increment 0.01; edited copy 0.18 increment 0.04
+[inc] DONE (108s)

@@ -1,0 +1,14 @@
+[
+  {
+    "seed": 43,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00010018333705374971,
+    "base_rmse": 0.010328795499462801
+  },
+  {
+    "seed": 43,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00011925600847462192,
+    "base_rmse": 0.01007806189444197
+  }
+]

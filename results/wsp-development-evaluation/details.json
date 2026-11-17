@@ -1,0 +1,123 @@
+{
+  "34c7d25aff446737": {
+    "private": {
+      "seed": 89,
+      "capacity": "dense",
+      "representation": "original",
+      "task": "action_gain",
+      "coefficients": [
+        0.9087890827411325,
+        0.2286913208919216,
+        0.2618804479760559,
+        1.0186422995872844
+      ],
+      "true_c": 0.2286913208919216,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Only the force input u enters through the third column of W1, so scaling that column by 1.5 gives f_old(q,v,1.5u) exactly. All other weights stay unchanged. The damping value is a rough estimate from the slope of the output with respect to v near the origin. It is not well determined.",
+      "estimated_c": 0.4,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": -0.019061145
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            2
+          ],
+          "value": 2.09710617
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            2,
+            2
+          ],
+          "value": -0.26067087
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": -0.54782901
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            2
+          ],
+          "value": -0.742941705
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            2
+          ],
+          "value": 0.68160615
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            6,
+            2
+          ],
+          "value": -0.10465662
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": 0.004159665
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            2
+          ],
+          "value": 0.190443105
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            9,
+            2
+          ],
+          "value": -0.875499795
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": -0.0071103
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            11,
+            2
+          ],
+          "value": -1.275582375
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.24655079876890795,
+    "provably_inactive_units": 0
+  }
+}

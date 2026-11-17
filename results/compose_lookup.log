@@ -1,0 +1,46 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  90%|████████▉ | 278/310 [00:00<00:00, 2072.53it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2207.57it/s]
+[lookup] 0 native lookup, ordinary-word values: 0.56
+[lookup] 0 native letters  : lookup 0.95 successor 0.01
+[lookup] 0 native numwords : lookup 0.56 successor 0.07
+[lookup] 0 native days     : lookup 0.11 successor 0.20
+[lookup] 0 native months   : lookup 0.40 successor 0.07
+[lookup] 0 native ordinals : lookup 0.20 successor 0.20
+[lookup] 1 oracle, A handed the retrieved item (letters): lookup 0.86 successor 0.12
+[lookup] 1 oracle, A handed the retrieved item (numwords): lookup 0.33 successor 0.39
+[lookup] 1 oracle, A handed the retrieved item (days): lookup 0.01 successor 0.67
+[lookup] 1 oracle, A handed the retrieved item (months): lookup 0.04 successor 0.67
+[lookup] 1 oracle, A handed the retrieved item (ordinals): lookup 0.06 successor 0.61
+[lookup] 2 heads whose removal hurts lookup most (change in correct-value logit, accuracy after removal):
+[lookup] 2   L0h3: -2.91  acc 0.03
+[lookup] 2   L21h8: -0.41  acc 0.49
+[lookup] 2   L13h7: -0.40  acc 0.52
+[lookup] 2   L18h7: -0.25  acc 0.47
+[lookup] 2   L27h15: -0.22  acc 0.56
+[lookup] 2   L15h11: -0.22  acc 0.56
+[lookup] 2   L11h2: -0.22  acc 0.55
+[lookup] 2   L16h4: -0.20  acc 0.53
+[lookup] 3 oracle, top-1 retrieval heads write A's code: letters succ 0.04/look 0.04 numwords succ 0.01/look 0.00 days succ 0.00/look 0.00 months succ 0.00/look 0.00 ordinals succ 0.00/look 0.01
+[lookup] 3 oracle, top-2 retrieval heads write A's code: letters succ 0.14/look 0.01 numwords succ 0.04/look 0.00 days succ 0.01/look 0.00 months succ 0.00/look 0.00 ordinals succ 0.02/look 0.01
+[lookup] 3 oracle, top-4 retrieval heads write A's code: letters succ 0.26/look 0.02 numwords succ 0.09/look 0.00 days succ 0.02/look 0.00 months succ 0.07/look 0.00 ordinals succ 0.07/look 0.00
+[lookup] 4 interface map for L0h3: held-out R^2 0.00 (lambda 1.0; selected on ordinary-word lookups)
+[lookup] 4 interface map for L21h8: held-out R^2 0.43 (lambda 0.1; selected on ordinary-word lookups)
+[lookup] 4 interface map for L13h7: held-out R^2 0.02 (lambda 0.1; selected on ordinary-word lookups)
+[lookup] 4 interface map for L18h7: held-out R^2 0.01 (lambda 0.1; selected on ordinary-word lookups)
+[lookup] 4 EDIT top1_gamma1.0_replace: letters succ 0.02/look 0.74 numwords succ 0.11/look 0.17 days succ 0.15/look 0.12 months succ 0.12/look 0.08 ordinals succ 0.21/look 0.24 | word lookup 0.41 | WikiText loss 5.294 (base 3.169)
+[lookup] 4 EDIT top1_gamma1.0_add: letters succ 0.01/look 0.89 numwords succ 0.06/look 0.43 days succ 0.27/look 0.20 months succ 0.04/look 0.53 ordinals succ 0.18/look 0.24 | word lookup 0.59 | WikiText loss 3.187 (base 3.169)
+[lookup] 4 EDIT top1_gamma2.0_replace: letters succ 0.00/look 0.18 numwords succ 0.00/look 0.03 days succ 0.01/look 0.01 months succ 0.00/look 0.04 ordinals succ 0.01/look 0.07 | word lookup 0.04 | WikiText loss 6.733 (base 3.169)
+[lookup] 4 EDIT top1_gamma2.0_add: letters succ 0.00/look 0.10 numwords succ 0.00/look 0.09 days succ 0.09/look 0.33 months succ 0.01/look 0.42 ordinals succ 0.02/look 0.20 | word lookup 0.10 | WikiText loss 3.644 (base 3.169)
+[lookup] 4 EDIT top2_gamma1.0_replace: letters succ 0.07/look 0.66 numwords succ 0.21/look 0.09 days succ 0.27/look 0.07 months succ 0.14/look 0.05 ordinals succ 0.29/look 0.14 | word lookup 0.30 | WikiText loss 5.319 (base 3.169)
+[lookup] 4 EDIT top2_gamma1.0_add: letters succ 0.04/look 0.83 numwords succ 0.15/look 0.38 days succ 0.45/look 0.11 months succ 0.07/look 0.48 ordinals succ 0.24/look 0.18 | word lookup 0.61 | WikiText loss 3.196 (base 3.169)
+[lookup] 4 EDIT top2_gamma2.0_replace: letters succ 0.04/look 0.09 numwords succ 0.00/look 0.01 days succ 0.01/look 0.01 months succ 0.00/look 0.01 ordinals succ 0.01/look 0.01 | word lookup 0.02 | WikiText loss 6.986 (base 3.169)
+[lookup] 4 EDIT top2_gamma2.0_add: letters succ 0.04/look 0.07 numwords succ 0.03/look 0.05 days succ 0.33/look 0.14 months succ 0.12/look 0.32 ordinals succ 0.06/look 0.10 | word lookup 0.10 | WikiText loss 3.740 (base 3.169)
+[lookup] 4 EDIT top4_gamma1.0_replace: letters succ 0.01/look 0.40 numwords succ 0.01/look 0.04 days succ 0.07/look 0.04 months succ 0.07/look 0.10 ordinals succ 0.01/look 0.12 | word lookup 0.13 | WikiText loss 5.893 (base 3.169)
+[lookup] 4 EDIT top4_gamma1.0_add: letters succ 0.01/look 0.75 numwords succ 0.07/look 0.27 days succ 0.18/look 0.32 months succ 0.03/look 0.52 ordinals succ 0.12/look 0.12 | word lookup 0.42 | WikiText loss 3.567 (base 3.169)
+[lookup] 4 EDIT top4_gamma2.0_replace: letters succ 0.00/look 0.01 numwords succ 0.00/look 0.00 days succ 0.00/look 0.00 months succ 0.00/look 0.00 ordinals succ 0.00/look 0.00 | word lookup 0.00 | WikiText loss 10.185 (base 3.169)
+[lookup] 4 EDIT top4_gamma2.0_add: letters succ 0.00/look 0.00 numwords succ 0.00/look 0.00 days succ 0.00/look 0.03 months succ 0.00/look 0.01 ordinals succ 0.00/look 0.01 | word lookup 0.00 | WikiText loss 7.627 (base 3.169)
+[lookup] 4 controls use top2_gamma1.0_replace (post hoc choice; all configurations are reported)
+[lookup] 4 control_shuffled_pairing: letters succ 0.03/look 0.71 numwords succ 0.10/look 0.17 days succ 0.21/look 0.09 months succ 0.14/look 0.04 ordinals succ 0.20/look 0.20
+[lookup] 4 control_wrong_output_projection: letters succ 0.00/look 0.20 numwords succ 0.04/look 0.07 days succ 0.04/look 0.07 months succ 0.00/look 0.00 ordinals succ 0.01/look 0.06
+[lookup] 4 control_permuted_A_columns: letters succ 0.06/look 0.72 numwords succ 0.10/look 0.35 days succ 0.27/look 0.27 months succ 0.12/look 0.42 ordinals succ 0.20/look 0.29
+[lookup] 4 swapped retrieval (H's coordinates from another prompt): letters donor-succ 0.10/own-succ 0.01 numwords donor-succ 0.06/own-succ 0.10 days donor-succ 0.16/own-succ 0.18 months donor-succ 0.05/own-succ 0.10 ordinals donor-succ 0.10/own-succ 0.16
+[lookup] DONE (100s)

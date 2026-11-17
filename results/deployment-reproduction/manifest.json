@@ -1,0 +1,58 @@
+{
+  "config": {
+    "output": "results/deployment-reproduction",
+    "seed_start": 22,
+    "seeds": 1,
+    "width": 32,
+    "train_steps": 2400,
+    "threads": 2,
+    "budgets": [
+      128
+    ],
+    "families": [
+      "duffing"
+    ],
+    "teachers": [
+      "symbolic"
+    ],
+    "schedules": [
+      "long"
+    ],
+    "gauges": [
+      "original",
+      "rescaled"
+    ],
+    "methods": [
+      "warm_lbfgs",
+      "cold_lbfgs",
+      "relative_jacobian"
+    ],
+    "test_points": 1024,
+    "ridge": 0.0001
+  },
+  "status": "complete",
+  "started_utc": "2026-11-11T01:04:39.567958+00:00",
+  "python": "3.13.7",
+  "torch": "2.9.0+cpu",
+  "numpy": "2.3.4",
+  "device": "cpu",
+  "source_sha256": "96e90bff112475ee7a6c20d01dc6ad42591675b09326ba0afee1f9e3d73a987f",
+  "schedules": {
+    "short": {
+      "adam": 150,
+      "lbfgs": 30,
+      "jacobian": 3
+    },
+    "long": {
+      "adam": 600,
+      "lbfgs": 120,
+      "jacobian": 12
+    }
+  },
+  "semantic_prior": "shared known four-term mechanism library",
+  "primary_contrast": "warm_lbfgs minus cold_lbfgs; symbolic; 128 queries; long; original",
+  "git_commit": "64bee215e9f5807a98ac35d6c0bc8b92d99bc394",
+  "rows": 6,
+  "elapsed_seconds": 4.65212970005814,
+  "completed_utc": "2026-11-11T01:04:44.251756+00:00"
+}

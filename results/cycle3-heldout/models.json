@@ -1,0 +1,146 @@
+[
+  {
+    "seed": 40,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00016553059685975313,
+    "base_rmse": 0.013901500689920387
+  },
+  {
+    "seed": 40,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00027642666827887297,
+    "base_rmse": 0.01664413916816478
+  },
+  {
+    "seed": 41,
+    "family": "duffing",
+    "train_loss_last_batch": 0.0004600530955940485,
+    "base_rmse": 0.021507525081109796
+  },
+  {
+    "seed": 41,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00030617255833931267,
+    "base_rmse": 0.01745245664889519
+  },
+  {
+    "seed": 42,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00027928719646297395,
+    "base_rmse": 0.017797609229433457
+  },
+  {
+    "seed": 42,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00022206292487680912,
+    "base_rmse": 0.016611328528573124
+  },
+  {
+    "seed": 43,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00010018333705374971,
+    "base_rmse": 0.010328795499462801
+  },
+  {
+    "seed": 43,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00011925600847462192,
+    "base_rmse": 0.01007806189444197
+  },
+  {
+    "seed": 44,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00020560016855597496,
+    "base_rmse": 0.013670476337060252
+  },
+  {
+    "seed": 44,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00012145873188273981,
+    "base_rmse": 0.011763806332466466
+  },
+  {
+    "seed": 45,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00016779643192421645,
+    "base_rmse": 0.011537214811122453
+  },
+  {
+    "seed": 45,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.0002452171465847641,
+    "base_rmse": 0.014888974149490338
+  },
+  {
+    "seed": 46,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00025513654691167176,
+    "base_rmse": 0.01645537760278984
+  },
+  {
+    "seed": 46,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.0001671831269050017,
+    "base_rmse": 0.012882756495551493
+  },
+  {
+    "seed": 47,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00024706628755666316,
+    "base_rmse": 0.014350637932340466
+  },
+  {
+    "seed": 47,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.0003148461109958589,
+    "base_rmse": 0.015421752400122985
+  },
+  {
+    "seed": 48,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00020409833814483136,
+    "base_rmse": 0.01381237590871104
+  },
+  {
+    "seed": 48,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00016293860971927643,
+    "base_rmse": 0.01247428946308033
+  },
+  {
+    "seed": 49,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00010305031173629686,
+    "base_rmse": 0.009900967492685988
+  },
+  {
+    "seed": 49,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00010426937660668045,
+    "base_rmse": 0.010072303818312303
+  },
+  {
+    "seed": 50,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00011815733159892261,
+    "base_rmse": 0.009603298334349733
+  },
+  {
+    "seed": 50,
+    "family": "pendulum",
+    "train_loss_last_batch": 8.46183393150568e-05,
+    "base_rmse": 0.010154253300076278
+  },
+  {
+    "seed": 51,
+    "family": "duffing",
+    "train_loss_last_batch": 0.0002008654410019517,
+    "base_rmse": 0.015526491833200973
+  },
+  {
+    "seed": 51,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00014785208622924984,
+    "base_rmse": 0.011751797937890539
+  }
+]

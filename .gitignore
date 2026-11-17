@@ -1,0 +1,33 @@
+.venv/
+.preprint-venv/
+.paper-deps/
+.uv-cache/
+tmp/
+results/pilot/
+results/smoke/
+results/cycle4-reproduction/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+.env.*
+!.env.example
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+results/evolution/smoke_lineage/
+
+# New local model runs; keep archived experiment outputs tracked.
+results/local-*/
+
+# Editor, operating-system and build scratch files.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+*.egg-info/
+.ruff_cache/

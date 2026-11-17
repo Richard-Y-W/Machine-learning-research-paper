@@ -1,0 +1,242 @@
+{
+ "model": "Qwen/Qwen3-0.6B-Base",
+ "frozen": [
+  {
+   "op": "attention_program",
+   "layer": 21,
+   "head": 0,
+   "query_role": "final",
+   "key_role": "queried_value",
+   "contrast": "other_positions",
+   "ridge": 1.0,
+   "rank": 32,
+   "rope_band": "low"
+  },
+  {
+   "op": "copy_ov",
+   "layer": 21,
+   "from_head": 6,
+   "to_head": 0
+  },
+  {
+   "op": "scale_output",
+   "layer": 21,
+   "head": 1,
+   "gain": 0.0
+  },
+  {
+   "op": "scale_output",
+   "layer": 21,
+   "head": 0,
+   "gain": 1.5
+  },
+  {
+   "op": "attention_program",
+   "layer": 21,
+   "head": 6,
+   "query_role": "final",
+   "key_role": "queried_value",
+   "contrast": "other_values",
+   "ridge": 1.0,
+   "rank": 32,
+   "rope_band": "low"
+  },
+  {
+   "op": "scale_output",
+   "layer": 21,
+   "head": 6,
+   "gain": 1.5
+  }
+ ],
+ "results": {
+  "unedited": {
+   "dev_successor_rate": 0.035,
+   "dev_lookup_rate": 0.7,
+   "word_lookup_accuracy": 0.607,
+   "sequence_continuation": 1.0,
+   "wikitext_loss": 3.169,
+   "successor": {
+    "letters": 0.022,
+    "numwords": 0.01,
+    "days": 0.115,
+    "months": 0.007,
+    "ordinals": 0.095
+   },
+   "lookup": {
+    "letters": 0.907,
+    "numwords": 0.948,
+    "days": 0.335,
+    "months": 0.792,
+    "ordinals": 0.657
+   }
+  },
+  "frozen programme": {
+   "dev_successor_rate": 0.575,
+   "dev_lookup_rate": 0.105,
+   "word_lookup_accuracy": 0.52,
+   "sequence_continuation": 0.9,
+   "wikitext_loss": 3.406,
+   "successor": {
+    "letters": 0.527,
+    "numwords": 0.46,
+    "days": 0.6,
+    "months": 0.62,
+    "ordinals": 0.58
+   },
+   "lookup": {
+    "letters": 0.268,
+    "numwords": 0.295,
+    "days": 0.013,
+    "months": 0.05,
+    "ordinals": 0.072
+   }
+  },
+  "frozen, head 0 removed": {
+   "dev_successor_rate": 0.49,
+   "dev_lookup_rate": 0.255,
+   "word_lookup_accuracy": 0.54,
+   "sequence_continuation": 0.7,
+   "wikitext_loss": 3.292,
+   "successor": {
+    "letters": 0.223,
+    "numwords": 0.24,
+    "days": 0.527,
+    "months": 0.422,
+    "ordinals": 0.51
+   },
+   "lookup": {
+    "letters": 0.66,
+    "numwords": 0.647,
+    "days": 0.062,
+    "months": 0.302,
+    "ordinals": 0.212
+   }
+  },
+  "frozen, head 6 removed": {
+   "dev_successor_rate": 0.47,
+   "dev_lookup_rate": 0.2,
+   "word_lookup_accuracy": 0.553,
+   "sequence_continuation": 0.7,
+   "wikitext_loss": 3.292,
+   "successor": {
+    "letters": 0.333,
+    "numwords": 0.26,
+    "days": 0.435,
+    "months": 0.453,
+    "ordinals": 0.48
+   },
+   "lookup": {
+    "letters": 0.497,
+    "numwords": 0.603,
+    "days": 0.083,
+    "months": 0.235,
+    "ordinals": 0.2
+   }
+  },
+  "frozen, all programmed heads removed": {
+   "dev_successor_rate": 0.035,
+   "dev_lookup_rate": 0.645,
+   "word_lookup_accuracy": 0.56,
+   "sequence_continuation": 0.4,
+   "wikitext_loss": 3.234,
+   "successor": {
+    "letters": 0.003,
+    "numwords": 0.007,
+    "days": 0.092,
+    "months": 0.005,
+    "ordinals": 0.052
+   },
+   "lookup": {
+    "letters": 0.86,
+    "numwords": 0.935,
+    "days": 0.388,
+    "months": 0.762,
+    "ordinals": 0.65
+   }
+  },
+  "spare head only: successor head's OV, aimed at the value": {
+   "dev_successor_rate": 0.445,
+   "dev_lookup_rate": 0.215,
+   "word_lookup_accuracy": 0.553,
+   "sequence_continuation": 1.0,
+   "wikitext_loss": 3.229,
+   "successor": {
+    "letters": 0.388,
+    "numwords": 0.24,
+    "days": 0.448,
+    "months": 0.458,
+    "ordinals": 0.465
+   },
+   "lookup": {
+    "letters": 0.427,
+    "numwords": 0.6,
+    "days": 0.075,
+    "months": 0.212,
+    "ordinals": 0.217
+   }
+  },
+  "spare head only: head 8's OV, aimed at the value": {
+   "dev_successor_rate": 0.015,
+   "dev_lookup_rate": 0.735,
+   "word_lookup_accuracy": 0.693,
+   "sequence_continuation": 1.0,
+   "wikitext_loss": 3.23,
+   "successor": {
+    "letters": 0.01,
+    "numwords": 0.003,
+    "days": 0.01,
+    "months": 0.003,
+    "ordinals": 0.02
+   },
+   "lookup": {
+    "letters": 0.83,
+    "numwords": 0.88,
+    "days": 0.615,
+    "months": 0.823,
+    "ordinals": 0.777
+   }
+  },
+  "spare head only: successor head's OV, aimed at the arrow": {
+   "dev_successor_rate": 0.075,
+   "dev_lookup_rate": 0.575,
+   "word_lookup_accuracy": 0.52,
+   "sequence_continuation": 1.0,
+   "wikitext_loss": 3.354,
+   "successor": {
+    "letters": 0.035,
+    "numwords": 0.02,
+    "days": 0.128,
+    "months": 0.015,
+    "ordinals": 0.09
+   },
+   "lookup": {
+    "letters": 0.83,
+    "numwords": 0.882,
+    "days": 0.295,
+    "months": 0.705,
+    "ordinals": 0.588
+   }
+  },
+  "only the side effect (head 1 removed)": {
+   "dev_successor_rate": 0.045,
+   "dev_lookup_rate": 0.675,
+   "word_lookup_accuracy": 0.587,
+   "sequence_continuation": 1.0,
+   "wikitext_loss": 3.179,
+   "successor": {
+    "letters": 0.02,
+    "numwords": 0.01,
+    "days": 0.125,
+    "months": 0.01,
+    "ordinals": 0.107
+   },
+   "lookup": {
+    "letters": 0.902,
+    "numwords": 0.958,
+    "days": 0.355,
+    "months": 0.815,
+    "ordinals": 0.632
+   }
+  }
+ }
+}

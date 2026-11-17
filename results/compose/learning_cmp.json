@@ -1,0 +1,575 @@
+{
+ "gain": 3.0,
+ "model": "Qwen/Qwen3-0.6B-Base",
+ "native": {
+  "letters": {
+   "successor": 0.017,
+   "lookup": 0.883,
+   "margin": -2.249
+  },
+  "numwords": {
+   "successor": 0.017,
+   "lookup": 0.91,
+   "margin": -1.574
+  },
+  "days": {
+   "successor": 0.103,
+   "lookup": 0.333,
+   "margin": -0.319
+  },
+  "months": {
+   "successor": 0.01,
+   "lookup": 0.77,
+   "margin": -1.009
+  },
+  "ordinals": {
+   "successor": 0.073,
+   "lookup": 0.653,
+   "margin": -1.026
+  },
+  "word_lookup": 0.64,
+  "wiki_nll": 3.1694
+ },
+ "closed_form": {
+  "0.0": {
+   "letters": {
+    "successor": 0.003,
+    "lookup": 0.913,
+    "margin": -2.503
+   },
+   "numwords": {
+    "successor": 0.007,
+    "lookup": 0.93,
+    "margin": -1.674
+   },
+   "days": {
+    "successor": 0.09,
+    "lookup": 0.37,
+    "margin": -0.388
+   },
+   "months": {
+    "successor": 0.003,
+    "lookup": 0.793,
+    "margin": -1.107
+   },
+   "ordinals": {
+    "successor": 0.04,
+    "lookup": 0.707,
+    "margin": -1.257
+   },
+   "word_lookup": 0.64,
+   "wiki_nll": 3.2525
+  },
+  "0.5": {
+   "letters": {
+    "successor": 0.027,
+    "lookup": 0.883,
+    "margin": -1.69
+   },
+   "numwords": {
+    "successor": 0.043,
+    "lookup": 0.87,
+    "margin": -1.085
+   },
+   "days": {
+    "successor": 0.23,
+    "lookup": 0.253,
+    "margin": -0.024
+   },
+   "months": {
+    "successor": 0.077,
+    "lookup": 0.697,
+    "margin": -0.645
+   },
+   "ordinals": {
+    "successor": 0.227,
+    "lookup": 0.503,
+    "margin": -0.598
+   },
+   "word_lookup": 0.63,
+   "wiki_nll": 3.2647
+  },
+  "1.0": {
+   "letters": {
+    "successor": 0.12,
+    "lookup": 0.773,
+    "margin": -0.988
+   },
+   "numwords": {
+    "successor": 0.133,
+    "lookup": 0.76,
+    "margin": -0.65
+   },
+   "days": {
+    "successor": 0.4,
+    "lookup": 0.137,
+    "margin": 0.297
+   },
+   "months": {
+    "successor": 0.307,
+    "lookup": 0.453,
+    "margin": -0.198
+   },
+   "ordinals": {
+    "successor": 0.447,
+    "lookup": 0.327,
+    "margin": -0.077
+   },
+   "word_lookup": 0.625,
+   "wiki_nll": 3.2971
+  },
+  "1.5": {
+   "letters": {
+    "successor": 0.343,
+    "lookup": 0.553,
+    "margin": -0.457
+   },
+   "numwords": {
+    "successor": 0.257,
+    "lookup": 0.593,
+    "margin": -0.349
+   },
+   "days": {
+    "successor": 0.5,
+    "lookup": 0.057,
+    "margin": 0.565
+   },
+   "months": {
+    "successor": 0.503,
+    "lookup": 0.26,
+    "margin": 0.202
+   },
+   "ordinals": {
+    "successor": 0.573,
+    "lookup": 0.22,
+    "margin": 0.329
+   },
+   "word_lookup": 0.64,
+   "wiki_nll": 3.3565
+  },
+  "2.0": {
+   "letters": {
+    "successor": 0.543,
+    "lookup": 0.33,
+    "margin": -0.068
+   },
+   "numwords": {
+    "successor": 0.333,
+    "lookup": 0.45,
+    "margin": -0.12
+   },
+   "days": {
+    "successor": 0.54,
+    "lookup": 0.027,
+    "margin": 0.791
+   },
+   "months": {
+    "successor": 0.62,
+    "lookup": 0.11,
+    "margin": 0.564
+   },
+   "ordinals": {
+    "successor": 0.627,
+    "lookup": 0.13,
+    "margin": 0.661
+   },
+   "word_lookup": 0.65,
+   "wiki_nll": 3.4506
+  },
+  "3.0": {
+   "letters": {
+    "successor": 0.67,
+    "lookup": 0.183,
+    "margin": 0.467
+   },
+   "numwords": {
+    "successor": 0.413,
+    "lookup": 0.263,
+    "margin": 0.285
+   },
+   "days": {
+    "successor": 0.61,
+    "lookup": 0.013,
+    "margin": 1.141
+   },
+   "months": {
+    "successor": 0.663,
+    "lookup": 0.027,
+    "margin": 1.173
+   },
+   "ordinals": {
+    "successor": 0.71,
+    "lookup": 0.047,
+    "margin": 1.199
+   },
+   "word_lookup": 0.54,
+   "wiki_nll": 3.7094
+  },
+  "4.0": {
+   "letters": {
+    "successor": 0.737,
+    "lookup": 0.103,
+    "margin": 0.854
+   },
+   "numwords": {
+    "successor": 0.517,
+    "lookup": 0.127,
+    "margin": 0.7
+   },
+   "days": {
+    "successor": 0.643,
+    "lookup": 0.007,
+    "margin": 1.359
+   },
+   "months": {
+    "successor": 0.657,
+    "lookup": 0.01,
+    "margin": 1.613
+   },
+   "ordinals": {
+    "successor": 0.767,
+    "lookup": 0.037,
+    "margin": 1.626
+   },
+   "word_lookup": 0.395,
+   "wiki_nll": 3.9918
+  },
+  "6.0": {
+   "letters": {
+    "successor": 0.73,
+    "lookup": 0.113,
+    "margin": 1.433
+   },
+   "numwords": {
+    "successor": 0.57,
+    "lookup": 0.01,
+    "margin": 1.494
+   },
+   "days": {
+    "successor": 0.653,
+    "lookup": 0.003,
+    "margin": 1.564
+   },
+   "months": {
+    "successor": 0.62,
+    "lookup": 0.007,
+    "margin": 2.183
+   },
+   "ordinals": {
+    "successor": 0.777,
+    "lookup": 0.017,
+    "margin": 2.311
+   },
+   "word_lookup": 0.13,
+   "wiki_nll": 4.5651
+  }
+ },
+ "gradient_qk": {
+  "native": {
+   "loss_history": [
+    [
+     0,
+     6.017
+    ],
+    [
+     50,
+     0.449
+    ],
+    [
+     100,
+     0.123
+    ],
+    [
+     150,
+     0.042
+    ],
+    [
+     200,
+     0.006
+    ],
+    [
+     250,
+     0.076
+    ],
+    [
+     299,
+     0.003
+    ]
+   ],
+   "heldout_word_attention": 0.935,
+   "gain1.0": {
+    "letters": {
+     "successor": 0.163,
+     "lookup": 0.777,
+     "margin": -0.788
+    },
+    "numwords": {
+     "successor": 0.093,
+     "lookup": 0.783,
+     "margin": -0.737
+    },
+    "days": {
+     "successor": 0.437,
+     "lookup": 0.123,
+     "margin": 0.358
+    },
+    "months": {
+     "successor": 0.297,
+     "lookup": 0.477,
+     "margin": -0.236
+    },
+    "ordinals": {
+     "successor": 0.413,
+     "lookup": 0.35,
+     "margin": -0.075
+    },
+    "word_lookup": 0.675,
+    "wiki_nll": 3.194
+   },
+   "gain3.0": {
+    "letters": {
+     "successor": 0.78,
+     "lookup": 0.127,
+     "margin": 0.813
+    },
+    "numwords": {
+     "successor": 0.403,
+     "lookup": 0.28,
+     "margin": 0.176
+    },
+    "days": {
+     "successor": 0.617,
+     "lookup": 0.01,
+     "margin": 1.265
+    },
+    "months": {
+     "successor": 0.64,
+     "lookup": 0.06,
+     "margin": 1.057
+    },
+    "ordinals": {
+     "successor": 0.743,
+     "lookup": 0.033,
+     "margin": 1.219
+    },
+    "word_lookup": 0.55,
+    "wiki_nll": 3.5967
+   }
+  },
+  "zero": {
+   "loss_history": [
+    [
+     0,
+     5.268
+    ],
+    [
+     50,
+     1.08
+    ],
+    [
+     100,
+     0.652
+    ],
+    [
+     150,
+     0.22
+    ],
+    [
+     200,
+     0.153
+    ],
+    [
+     250,
+     0.208
+    ],
+    [
+     299,
+     0.056
+    ]
+   ],
+   "heldout_word_attention": 0.87,
+   "gain1.0": {
+    "letters": {
+     "successor": 0.203,
+     "lookup": 0.737,
+     "margin": -0.801
+    },
+    "numwords": {
+     "successor": 0.123,
+     "lookup": 0.77,
+     "margin": -0.719
+    },
+    "days": {
+     "successor": 0.41,
+     "lookup": 0.113,
+     "margin": 0.364
+    },
+    "months": {
+     "successor": 0.3,
+     "lookup": 0.457,
+     "margin": -0.201
+    },
+    "ordinals": {
+     "successor": 0.45,
+     "lookup": 0.32,
+     "margin": -0.075
+    },
+    "word_lookup": 0.65,
+    "wiki_nll": 3.2745
+   },
+   "gain3.0": {
+    "letters": {
+     "successor": 0.77,
+     "lookup": 0.133,
+     "margin": 0.745
+    },
+    "numwords": {
+     "successor": 0.453,
+     "lookup": 0.267,
+     "margin": 0.179
+    },
+    "days": {
+     "successor": 0.63,
+     "lookup": 0.02,
+     "margin": 1.25
+    },
+    "months": {
+     "successor": 0.62,
+     "lookup": 0.047,
+     "margin": 1.096
+    },
+    "ordinals": {
+     "successor": 0.727,
+     "lookup": 0.04,
+     "margin": 1.209
+    },
+    "word_lookup": 0.575,
+    "wiki_nll": 3.7315
+   }
+  }
+ },
+ "finetune": {
+  "step50": {
+   "train_loss": 0.001,
+   "letters": {
+    "successor": 0.883,
+    "lookup": 0.09,
+    "margin": 4.973
+   },
+   "numwords": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 10.703
+   },
+   "days": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 9.923
+   },
+   "months": {
+    "successor": 0.977,
+    "lookup": 0.003,
+    "margin": 7.46
+   },
+   "ordinals": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 13.326
+   },
+   "word_lookup": 0.805,
+   "wiki_nll": 3.1808
+  },
+  "step100": {
+   "train_loss": 0.0,
+   "letters": {
+    "successor": 0.883,
+    "lookup": 0.103,
+    "margin": 4.453
+   },
+   "numwords": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 11.046
+   },
+   "days": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 10.393
+   },
+   "months": {
+    "successor": 0.987,
+    "lookup": 0.007,
+    "margin": 7.589
+   },
+   "ordinals": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 13.418
+   },
+   "word_lookup": 0.825,
+   "wiki_nll": 3.1823
+  },
+  "step200": {
+   "train_loss": 0.0,
+   "letters": {
+    "successor": 0.87,
+    "lookup": 0.113,
+    "margin": 4.524
+   },
+   "numwords": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 11.776
+   },
+   "days": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 11.229
+   },
+   "months": {
+    "successor": 0.987,
+    "lookup": 0.007,
+    "margin": 7.987
+   },
+   "ordinals": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 13.899
+   },
+   "word_lookup": 0.83,
+   "wiki_nll": 3.1827
+  },
+  "step300": {
+   "train_loss": 0.0,
+   "letters": {
+    "successor": 0.87,
+    "lookup": 0.113,
+    "margin": 4.602
+   },
+   "numwords": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 12.125
+   },
+   "days": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 11.646
+   },
+   "months": {
+    "successor": 0.987,
+    "lookup": 0.007,
+    "margin": 8.184
+   },
+   "ordinals": {
+    "successor": 1.0,
+    "lookup": 0.0,
+    "margin": 14.14
+   },
+   "word_lookup": 0.825,
+   "wiki_nll": 3.1831
+  }
+ },
+ "finetune_trainable_parameters": 44040192,
+ "closed_form_parameters_written": 262144
+}

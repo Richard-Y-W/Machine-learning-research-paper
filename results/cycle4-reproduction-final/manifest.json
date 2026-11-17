@@ -1,0 +1,32 @@
+{
+  "config": {
+    "output": "results/cycle4-reproduction-final",
+    "seed_start": 63,
+    "seeds": 1,
+    "families": [
+      "contact"
+    ],
+    "budgets": [
+      64
+    ],
+    "methods": [
+      "warm_full",
+      "learned_head",
+      "rbf_residual",
+      "ard_rbf_residual",
+      "neural_residual"
+    ]
+  },
+  "status": "complete",
+  "started_utc": "2026-11-11T04:51:53.457536+00:00",
+  "source_sha256": "01f1242f44ce96aa21289eb056dbedf109baaed2dc5e58e4a610e76b4aea8486",
+  "git_commit": "5edaad82501a7bd9e31419fbf76ef4052bb0585b",
+  "torch": "2.9.0+cpu",
+  "noise_std": 0.01,
+  "physics_library_supplied": false,
+  "task": "few-shot adaptation from actual changed-environment acceleration observations",
+  "primary": "nonlinear shift, 64 labels: RBF residual minus warm full; RBF residual minus learned head",
+  "rows": 10,
+  "elapsed_seconds": 11.263667399995029,
+  "completed_utc": "2026-11-11T04:52:04.785141+00:00"
+}

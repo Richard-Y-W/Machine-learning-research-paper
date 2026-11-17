@@ -1,0 +1,22 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<01:04,  4.76it/s]Loading weights:  54%|█████▍    | 168/310 [00:00<00:00, 675.58it/s]Loading weights:  86%|████████▌ | 266/310 [00:00<00:00, 725.88it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 606.07it/s]
+[confirm] arrow_new_keys   letters  : successor 0.06 -> 0.41 (wins 144, losses 5, n 400); lookup 0.69 -> 0.34; A removed 0.01; swap: donor's successor 0.36, own 0.03
+[confirm] arrow_new_keys   numwords : successor 0.06 -> 0.32 (wins 116, losses 11, n 400); lookup 0.76 -> 0.36; A removed 0.01; swap: donor's successor 0.25, own 0.02
+[confirm] arrow_new_keys   days     : successor 0.23 -> 0.37 (wins 96, losses 39, n 400); lookup 0.35 -> 0.17; A removed 0.08; swap: donor's successor 0.36, own 0.11
+[confirm] arrow_new_keys   months   : successor 0.15 -> 0.52 (wins 175, losses 29, n 400); lookup 0.64 -> 0.11; A removed 0.03; swap: donor's successor 0.47, own 0.07
+[confirm] arrow_new_keys   ordinals : successor 0.25 -> 0.48 (wins 145, losses 55, n 400); lookup 0.41 -> 0.12; A removed 0.12; swap: donor's successor 0.43, own 0.11
+[confirm] colon_new_keys   letters  : successor 0.04 -> 0.47 (wins 179, losses 8, n 400); lookup 0.77 -> 0.28; A removed 0.01; swap: donor's successor 0.40, own 0.04
+[confirm] colon_new_keys   numwords : successor 0.04 -> 0.41 (wins 154, losses 5, n 400); lookup 0.64 -> 0.21; A removed 0.03; swap: donor's successor 0.30, own 0.03
+[confirm] colon_new_keys   days     : successor 0.16 -> 0.49 (wins 162, losses 31, n 400); lookup 0.40 -> 0.13; A removed 0.10; swap: donor's successor 0.49, own 0.14
+[confirm] colon_new_keys   months   : successor 0.14 -> 0.51 (wins 177, losses 28, n 400); lookup 0.54 -> 0.11; A removed 0.03; swap: donor's successor 0.51, own 0.07
+[confirm] colon_new_keys   ordinals : successor 0.23 -> 0.51 (wins 171, losses 63, n 400); lookup 0.32 -> 0.07; A removed 0.15; swap: donor's successor 0.48, own 0.11
+[confirm] equals_new_keys  letters  : successor 0.02 -> 0.42 (wins 164, losses 3, n 400); lookup 0.74 -> 0.22; A removed 0.00; swap: donor's successor 0.38, own 0.03
+[confirm] equals_new_keys  numwords : successor 0.04 -> 0.29 (wins 107, losses 4, n 400); lookup 0.38 -> 0.15; A removed 0.02; swap: donor's successor 0.25, own 0.04
+[confirm] equals_new_keys  days     : successor 0.21 -> 0.48 (wins 133, losses 27, n 400); lookup 0.24 -> 0.03; A removed 0.07; swap: donor's successor 0.55, own 0.15
+[confirm] equals_new_keys  months   : successor 0.08 -> 0.55 (wins 199, losses 11, n 400); lookup 0.53 -> 0.05; A removed 0.03; swap: donor's successor 0.54, own 0.06
+[confirm] equals_new_keys  ordinals : successor 0.26 -> 0.41 (wins 118, losses 58, n 400); lookup 0.29 -> 0.06; A removed 0.17; swap: donor's successor 0.37, own 0.10
+[confirm] arrow_old_keys   letters  : successor 0.07 -> 0.52 (wins 190, losses 10, n 400); lookup 0.73 -> 0.29; A removed 0.01; swap: donor's successor 0.42, own 0.04
+[confirm] arrow_old_keys   numwords : successor 0.05 -> 0.37 (wins 137, losses 7, n 400); lookup 0.80 -> 0.36; A removed 0.01; swap: donor's successor 0.29, own 0.05
+[confirm] arrow_old_keys   days     : successor 0.25 -> 0.43 (wins 115, losses 41, n 400); lookup 0.35 -> 0.14; A removed 0.10; swap: donor's successor 0.45, own 0.15
+[confirm] arrow_old_keys   months   : successor 0.17 -> 0.56 (wins 183, losses 23, n 400); lookup 0.63 -> 0.10; A removed 0.03; swap: donor's successor 0.55, own 0.07
+[confirm] arrow_old_keys   ordinals : successor 0.25 -> 0.49 (wins 153, losses 57, n 400); lookup 0.47 -> 0.13; A removed 0.12; swap: donor's successor 0.47, own 0.06
+[confirm] DONE (141s)

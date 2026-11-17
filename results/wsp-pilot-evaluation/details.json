@@ -1,0 +1,2052 @@
+{
+  "e057dd3d72cd0ab1": {
+    "private": {
+      "seed": 90,
+      "capacity": "dense",
+      "representation": "original",
+      "task": "action_gain",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "To substitute 1.5*u for u, I multiplied the u-input column of W1 (column 2) by 1.5 in all 12 rows. Each hidden unit's pre-activation then sees exactly 1.5*u, so f_new(q,v,u)=f_old(q,v,1.5*u) holds exactly everywhere. No other weights change. The damping estimate is rough: it is the slope df/dv at the origin, about 0.72 from the units active there. It would be about 1.1 if unit 5, which sits right at its threshold, were counted, so I put it at roughly 0.75.",
+      "estimated_c": 0.75,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 0.003435255
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            2
+          ],
+          "value": 0.008201985
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            2,
+            2
+          ],
+          "value": 1.544635035
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": -0.223636395
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            2
+          ],
+          "value": 0.74401245
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            2
+          ],
+          "value": -0.70452201
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            6,
+            2
+          ],
+          "value": 0.00442521
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": 0.144760155
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            2
+          ],
+          "value": 0.00210735
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            9,
+            2
+          ],
+          "value": -0.07785546
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": 0.27541575
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            11,
+            2
+          ],
+          "value": -1.32471954
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913923796612,
+    "provably_inactive_units": 2
+  },
+  "b01a6486d320399a": {
+    "private": {
+      "seed": 90,
+      "capacity": "dense",
+      "representation": "original",
+      "task": "add_drag",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Hidden unit 7 is never active anywhere in [-1,1]^3: its largest possible pre-activation is about -0.30. I repurposed it as z7 = ReLU(v+1). On the domain v+1 \u2265 0, so this equals v+1 exactly. Setting its output weight to -0.2 adds -0.2*v - 0.2. Raising b2 by 0.2 cancels the constant, so the network gains exactly -0.2*v with no other change in behavior. The damping estimate is rough. The local slope of the original output with respect to v near the origin is about -0.7 to -0.8, suggesting an original c of roughly 0.8. After the edit that becomes about 1.0, which is the value reported.",
+      "estimated_c": 1.0,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            7
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            7
+          ],
+          "value": -0.2
+        },
+        {
+          "tensor": "b2",
+          "index": [
+            0
+          ],
+          "value": 0.00393424
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913923796612,
+    "provably_inactive_units": 2
+  },
+  "347e1e63258b6cd9": {
+    "private": {
+      "seed": 90,
+      "capacity": "dense",
+      "representation": "original",
+      "task": "semantic_damping",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "The model's linear velocity response comes mainly from two paired groups of hidden units: units 2 and 11, and units 4 and 5. Each pair behaves almost linearly in v, u and q. Together they give a slope df/dv of about -0.293 - 0.415, so about -0.707 near v = 0. The quadratic drag term contributes no slope at v = 0, and the units 0, 1 and 6 that model it only switch on when |v| exceeds about 0.66. That gives an estimate of c \u2248 0.707. Units 7 and 10 can never activate anywhere on [-1,1]^3. I repurposed them to compute ReLU(v) and ReLU(-v) and set their output weights to -c and +c. Their combined output is exactly -c*v, which doubles the viscous damping term and leaves every other unit unchanged. This edit was worked out by hand from the weights and has not been run or tested.",
+      "estimated_c": 0.707,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            7
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            7
+          ],
+          "value": -0.707
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            1
+          ],
+          "value": -1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            10
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            10
+          ],
+          "value": 0.707
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913923796612,
+    "provably_inactive_units": 2
+  },
+  "5c10bccc08e67ad0": {
+    "private": {
+      "seed": 90,
+      "capacity": "dense",
+      "representation": "transformed",
+      "task": "action_gain",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Scaled the force-input column of W1 (column 2) by 1.5 in every hidden row. Each unit's pre-activation then receives 1.5*u in place of u. Everything else is unchanged, so f_new(q,v,u)=f_old(q,v,1.5u) holds exactly. I did not attempt to estimate the damping coefficient.",
+      "estimated_c": null,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 1.0020087
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            2
+          ],
+          "value": -0.477515355
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            2,
+            2
+          ],
+          "value": 0.00152667
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": 0.18122037
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            2
+          ],
+          "value": 0.00540195
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            2
+          ],
+          "value": 0.148298265
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            6,
+            2
+          ],
+          "value": -0.026122935
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": 0.008040105
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            2
+          ],
+          "value": -0.10141704
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            9,
+            2
+          ],
+          "value": 0.008489655
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": -1.417813845
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            11,
+            2
+          ],
+          "value": 0.48554994
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913971307807,
+    "provably_inactive_units": 2
+  },
+  "728d723cad8b093a": {
+    "private": {
+      "seed": 90,
+      "capacity": "dense",
+      "representation": "transformed",
+      "task": "add_drag",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Hidden unit 3 never activates on the domain, so it was repurposed. Its weights become W1[3]=[0,1,0] and b1[3]=1, giving z3=v+1, which stays at or above 0 for v in [-1,1], so the ReLU acts linearly. Setting W2[3]=-0.2 adds -0.2*v-0.2, and raising b2 by 0.2 cancels the constant, so f_new=f_old-0.2*v on the domain with everything else unchanged. The original damping c was estimated at about 0.72, read off as the slope of the network with respect to v at the origin.",
+      "estimated_c": 0.72,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            3
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            3
+          ],
+          "value": -0.2
+        },
+        {
+          "tensor": "b2",
+          "index": [
+            0
+          ],
+          "value": 0.00393424
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913971307807,
+    "provably_inactive_units": 2
+  },
+  "03621362f9f819c7": {
+    "private": {
+      "seed": 90,
+      "capacity": "dense",
+      "representation": "transformed",
+      "task": "semantic_damping",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "I estimated c as roughly 0.72 by reading the network's slope with respect to velocity near the origin. This is an approximate read of the weights, not an exact value. The slope comes mainly from hidden units 1, 11 and 8, and units 0 and 10 add a u-dependent share of similar size. Hidden units 4, 7 and 9 only switch on when |v| is above about 0.66, so I read them as the quadratic-drag term rather than linear damping. To add -c*v, I repurposed hidden unit 3. Its pre-activation is negative everywhere on [-1,1]^3, so it was contributing nothing. I set its input weights to [0,1,0] and its bias to 2, so it outputs v+2 and stays active across the whole domain. Its output weight is set to -0.72, adding -0.72*(v+2). Raising b2 by 1.44 cancels the constant part, leaving exactly -0.72*v added. All other behavior is unchanged.",
+      "estimated_c": 0.72,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            3
+          ],
+          "value": 2.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            3
+          ],
+          "value": -0.72
+        },
+        {
+          "tensor": "b2",
+          "index": [
+            0
+          ],
+          "value": 1.24393424
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913971307807,
+    "provably_inactive_units": 2
+  },
+  "252579796001cbad": {
+    "private": {
+      "seed": 90,
+      "capacity": "spare",
+      "representation": "original",
+      "task": "action_gain",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "The force input u enters the network only through W1 column 2. Scaling every entry in that column by 1.5 gives f_new(q,v,u)=f_old(q,v,1.5u) exactly. Rows 12 and 13 have zero weights and are left unchanged. Damping c is not requested, so estimated_c is null.",
+      "estimated_c": null,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 0.003435255
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            2
+          ],
+          "value": 0.008201985
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            2,
+            2
+          ],
+          "value": 1.544635035
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": -0.223636395
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            2
+          ],
+          "value": 0.74401245
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            2
+          ],
+          "value": -0.70452201
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            6,
+            2
+          ],
+          "value": 0.00442521
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": 0.144760155
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            2
+          ],
+          "value": 0.00210735
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            9,
+            2
+          ],
+          "value": -0.07785546
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": 0.27541575
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            11,
+            2
+          ],
+          "value": -1.32471954
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913923796612,
+    "provably_inactive_units": 4
+  },
+  "293d780f515878af": {
+    "private": {
+      "seed": 90,
+      "capacity": "spare",
+      "representation": "original",
+      "task": "add_drag",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Hidden units 12 and 13 were unused, with all weights and biases at zero. I turned them into a ReLU pair: z12 = ReLU(v) and z13 = ReLU(-v). Their output weights are -0.2 and +0.2, so together they add exactly -0.2*v everywhere. No other weights change, so all other original behavior is preserved. The c estimate (about 0.8) is the original network's damping, not the new one. It is a rough hand-computed figure from the slope in v near the origin, not a measured value.",
+      "estimated_c": 0.8,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            12
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            12
+          ],
+          "value": -0.2
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            13,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            13,
+            1
+          ],
+          "value": -1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            13,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            13
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            13
+          ],
+          "value": 0.2
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913923796612,
+    "provably_inactive_units": 4
+  },
+  "0f268684f2d4afce": {
+    "private": {
+      "seed": 90,
+      "capacity": "spare",
+      "representation": "original",
+      "task": "semantic_damping",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Each matched pair of ReLU units 2/11 and 4/5 adds up to a linear term, contributing velocity slopes of about -0.29 and -0.415. Units 3 and 8 add small extra slopes. The velocity-only units 0, 1 and 6 only switch on for |v| above about 0.66, so they model the quadratic drag. The total linear damping is about c \u2248 0.72. The patch uses the unused units 12 and 13 as relu(v) and relu(-v) with output weights -c and +c. Together they add exactly -c*v everywhere, and all other behavior is unchanged.",
+      "estimated_c": 0.72,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            13,
+            1
+          ],
+          "value": -1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            12
+          ],
+          "value": -0.72
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            13
+          ],
+          "value": 0.72
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913923796612,
+    "provably_inactive_units": 4
+  },
+  "940d7e1ec37b9e09": {
+    "private": {
+      "seed": 90,
+      "capacity": "spare",
+      "representation": "transformed",
+      "task": "action_gain",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Scaled the force-input column (W1[:,2]) by 1.5 for every hidden unit with a nonzero force weight, so that W1\u00b7[q,v,u] = W1_old\u00b7[q,v,1.5u]. Units 1 and 3 have zero weights and need no change. All other parameters are untouched, so the rest of the function is preserved exactly. estimated_c is a rough guess: the hidden units active at the origin give a velocity slope of about -0.72.",
+      "estimated_c": 0.72,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 1.0020087
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            2,
+            2
+          ],
+          "value": 0.00152667
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            2
+          ],
+          "value": 0.00540195
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            2
+          ],
+          "value": 0.148298265
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            6,
+            2
+          ],
+          "value": 0.092410575
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": 0.008040105
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            2
+          ],
+          "value": -0.10141704
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            9,
+            2
+          ],
+          "value": -0.149363715
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": 0.0089055
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            11,
+            2
+          ],
+          "value": -0.86452518
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            2
+          ],
+          "value": -0.340628115
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            13,
+            2
+          ],
+          "value": 0.813184575
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913838163693,
+    "provably_inactive_units": 4
+  },
+  "64ec3a7cbec8dc8e": {
+    "private": {
+      "seed": 90,
+      "capacity": "spare",
+      "representation": "transformed",
+      "task": "add_drag",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "I implemented the extra -0.2*v term using the two unused hidden units, 1 and 3, which have all-zero weights. Unit 1 computes ReLU(v) with output weight -0.2. Unit 3 computes ReLU(-v) with output weight +0.2. Their sum is exactly -0.2*v for all inputs, not just on the domain, so all other behavior is unchanged. The estimated_c value is a rough hand estimate: the network's slope with respect to v at the origin is about -0.75, giving an original damping of roughly 0.75. That makes the new damping about 0.95; this figure is approximate.",
+      "estimated_c": 0.95,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            1
+          ],
+          "value": -0.2
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            1
+          ],
+          "value": -1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            3
+          ],
+          "value": 0.2
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913838163693,
+    "provably_inactive_units": 4
+  },
+  "de0ed8d503cedf08": {
+    "private": {
+      "seed": 90,
+      "capacity": "spare",
+      "representation": "transformed",
+      "task": "semantic_damping",
+      "coefficients": [
+        0.8996527161152876,
+        0.593348282107065,
+        0.25614421000945636,
+        0.8219909597463895
+      ],
+      "true_c": 0.593348282107065,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "The network was examined along the velocity axis with q=0 and u=0. Near v=0 its slope with respect to v is about -0.72 over roughly v in [-0.49, 0.67]. The slope grows steeper at larger |v|, which matches the quadratic drag term. So the linear damping coefficient is c \u2248 0.72, and this estimate is approximate. To add -c*v, I used hidden unit 1, which was unused (all-zero row). Its pre-activation is v+1, which stays positive on the domain, so the unit acts linearly there. Its output weight is -0.72, and b2 is raised by 0.72 to cancel the constant offset. All other units are unchanged, so restoring, drag and action responses are preserved.",
+      "estimated_c": 0.72,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            1
+          ],
+          "value": -0.72
+        },
+        {
+          "tensor": "b2",
+          "index": [
+            0
+          ],
+          "value": 0.52393424
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.5928913838163693,
+    "provably_inactive_units": 4
+  },
+  "dd52b15a93ca959b": {
+    "private": {
+      "seed": 91,
+      "capacity": "dense",
+      "representation": "original",
+      "task": "action_gain",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Scaled the force-input column of W1 (column 2) by 1.5 in all 12 rows. Each hidden pre-activation then becomes W1[i,0]*q + W1[i,1]*v + 1.5*W1[i,2]*u + b1[i]. This reproduces f_old(q,v,1.5u) exactly, and every other parameter is left unchanged. The damping coefficient was not estimated, so estimated_c is null.",
+      "estimated_c": null,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 0.056270145
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            2
+          ],
+          "value": 1.156588605
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            2,
+            2
+          ],
+          "value": -0.55291077
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": -1.200954045
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            2
+          ],
+          "value": 0.00201897
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            2
+          ],
+          "value": -1.300537425
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            6,
+            2
+          ],
+          "value": -0.26553357
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": -0.010380915
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            2
+          ],
+          "value": -0.56827017
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            9,
+            2
+          ],
+          "value": -0.00350205
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": 0.00497199
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            11,
+            2
+          ],
+          "value": 1.41158964
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.31118834069088563,
+    "provably_inactive_units": 1
+  },
+  "d15ee59ead5cd1ec": {
+    "private": {
+      "seed": 91,
+      "capacity": "dense",
+      "representation": "original",
+      "task": "add_drag",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Hidden unit 0 is always inactive on [-1,1]^3, because its maximum pre-activation is about -0.15. It is repurposed as a linear velocity channel: z0 = ReLU(v+2), which stays active across the domain, and W2[0] = -0.2. This adds -0.2*v - 0.4, so b2 is raised by 0.4 to cancel the constant. Everything else is unchanged on the domain. The original damping slope at the origin is estimated by hand as roughly c \u2248 0.42, giving about 0.62 after the edit.",
+      "estimated_c": 0.42,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            0
+          ],
+          "value": 2.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            0
+          ],
+          "value": -0.2
+        },
+        {
+          "tensor": "b2",
+          "index": [
+            0
+          ],
+          "value": 0.39832287
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.31118834069088563,
+    "provably_inactive_units": 1
+  },
+  "ed60e555c58eb2ec": {
+    "private": {
+      "seed": 91,
+      "capacity": "dense",
+      "representation": "original",
+      "task": "semantic_damping",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "I estimated c from the raw weights at about 0.42. At the origin, the net's slope with respect to v is about -0.417. Quadratic drag has zero slope at v=0, so this slope is essentially -c. The drag-like hinge units 4 and 10 only switch on for |v| above about 0.67, so they do not enter this estimate. The estimate is approximate: averaging the non-drag v-slope over the whole cube also gives about 0.42, but the mixed hidden units do not separate the terms cleanly. To add exactly -0.42*v, I used hidden unit 8. Within [-1,1]^3 this unit is always active, so it behaves linearly there. I raised its bias by 1.0 so it stays active after the change, and adjusted b2 by +0.47852618 to cancel the resulting constant shift. I then added 0.42/0.47852618 = 0.877695 to its v-weight. Because unit 8's output weight is -0.4785, this contributes exactly -0.42*v and leaves all other behaviour unchanged on the domain.",
+      "estimated_c": 0.42,
+      "patches": [
+        {
+          "tensor": "b1",
+          "index": [
+            8
+          ],
+          "value": 1.67800454
+        },
+        {
+          "tensor": "b2",
+          "index": [
+            0
+          ],
+          "value": 0.47684905
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            1
+          ],
+          "value": 0.87763
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.31118834069088563,
+    "provably_inactive_units": 1
+  },
+  "fe6f92c74175ed42": {
+    "private": {
+      "seed": 91,
+      "capacity": "dense",
+      "representation": "transformed",
+      "task": "action_gain",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Multiplying every first-layer weight on the u input by 1.5 gives W1'[:,2] = 1.5*W1[:,2]. Every hidden pre-activation then equals the original one evaluated at 1.5*u, so f_new(q,v,u) = f_old(q,v,1.5*u) exactly, and nothing else changes. The damping estimate is a rough hand calculation: the slope with respect to v at the origin, taken over the hidden units active there, is about -0.42. It is only a local estimate.",
+      "estimated_c": 0.42,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 0.02925927
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            2
+          ],
+          "value": -0.030955425
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            2,
+            2
+          ],
+          "value": 2.990738655
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": 0.008491725
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            2
+          ],
+          "value": -0.53347035
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            2
+          ],
+          "value": 0.00087237
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            6,
+            2
+          ],
+          "value": 1.814141115
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": -0.483314955
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            2
+          ],
+          "value": -1.739788185
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            9,
+            2
+          ],
+          "value": -2.79527748
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": -1.205752005
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            11,
+            2
+          ],
+          "value": -0.00196272
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.3111883279706237,
+    "provably_inactive_units": 1
+  },
+  "243fe6af4d5d1364": {
+    "private": {
+      "seed": 91,
+      "capacity": "dense",
+      "representation": "transformed",
+      "task": "add_drag",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Hidden unit 0 is always off on [-1,1]^3 because its pre-activation is at most about -0.078, so it is unused. I repurposed it as z0 = ReLU(v + 1.5). On the domain this equals v + 1.5, since the argument is always positive. Setting its output weight to -0.2 adds -0.2v - 0.3, and raising b2 by 0.3 cancels the constant. The result is exactly f_old - 0.2v on the intended domain, with everything else unchanged. The estimated_c of about 0.62 is a rough hand estimate, not an exact value. I read the original network's linear damping from its velocity slopes near the origin, which suggests roughly 0.42, then added the new 0.2.",
+      "estimated_c": 0.62,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            0
+          ],
+          "value": 1.5
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            0
+          ],
+          "value": -0.2
+        },
+        {
+          "tensor": "b2",
+          "index": [
+            0
+          ],
+          "value": 0.29832287
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.3111883279706237,
+    "provably_inactive_units": 1
+  },
+  "7daded006227d811": {
+    "private": {
+      "seed": 91,
+      "capacity": "dense",
+      "representation": "transformed",
+      "task": "semantic_damping",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Estimated c as the magnitude of \u2202f/\u2202v near the origin, where only units 1, 2, 4, 6, 7 and 11 are active; it comes to about 0.42. Units 3 and 5 are one-sided v hinges for the quadratic drag. Several units mix q, v and u, so the slope varies by region and the estimate is approximate. Hidden unit 0 never activates on [-1,1]^3. I repurposed it as an always-on linear v unit with W1 row [0,1,0], bias 1 and output weight -0.42. I offset b2 by +0.42 so the net change is exactly -0.42*v. All other units are unchanged.",
+      "estimated_c": 0.42,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            0
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            0
+          ],
+          "value": -0.42
+        },
+        {
+          "tensor": "b2",
+          "index": [
+            0
+          ],
+          "value": 0.41832287
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.3111883279706237,
+    "provably_inactive_units": 1
+  },
+  "da332b8f9668f5df": {
+    "private": {
+      "seed": 91,
+      "capacity": "spare",
+      "representation": "original",
+      "task": "action_gain",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "To implement f_old(q,v,1.5*u), I multiplied the u-input column of W1 (column 2) by 1.5 in every hidden row that has a nonzero u-weight. Every other parameter is unchanged, so the original function is kept apart from this input rescaling. Rows 12 and 13 are all zeros and need no change. A damping estimate was not needed for this edit, so estimated_c is null.",
+      "estimated_c": null,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 0.056270145
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            2
+          ],
+          "value": 1.156588605
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            2,
+            2
+          ],
+          "value": -0.55291077
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": -1.200954045
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            2
+          ],
+          "value": 0.00201897
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            2
+          ],
+          "value": -1.300537425
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            6,
+            2
+          ],
+          "value": -0.26553357
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": -0.010380915
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            2
+          ],
+          "value": -0.56827017
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            9,
+            2
+          ],
+          "value": -0.00350205
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": 0.00497199
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            11,
+            2
+          ],
+          "value": 1.41158964
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.31118834069088563,
+    "provably_inactive_units": 3
+  },
+  "058cdb2e42bfdfad": {
+    "private": {
+      "seed": 91,
+      "capacity": "spare",
+      "representation": "original",
+      "task": "add_drag",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Spare hidden units 12 and 13 had all-zero weights. I used them to add the exact term -0.2*v, since ReLU(v) - ReLU(-v) = v. Unit 12 now computes ReLU(v) with output weight -0.2, and unit 13 computes ReLU(-v) with output weight +0.2. No other weights change, so the original behavior is preserved. The damping value is a rough estimate read off the weights, not checked by running the network. The slope of the output with respect to v at the origin is about -0.42 in the original network, so its linear damping was roughly 0.42. After the edit it is roughly 0.62, which is the value reported.",
+      "estimated_c": 0.62,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            13,
+            1
+          ],
+          "value": -1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            12
+          ],
+          "value": -0.2
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            13
+          ],
+          "value": 0.2
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.31118834069088563,
+    "provably_inactive_units": 3
+  },
+  "6ada2ddbb8b5e337": {
+    "private": {
+      "seed": 91,
+      "capacity": "spare",
+      "representation": "original",
+      "task": "semantic_damping",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "Paired opposite-direction ReLU units (1/5/2 and 3/11) together form linear ridges in q, v and u. Their combined v-slope is about -0.136 - 0.280 \u2248 -0.417. Units 4 and 10 only switch on for |v| > 0.67, so they carry the quadratic drag. The remaining units have negligible v weights, which gives c \u2248 0.417. To double c, I used unused hidden unit 12 as ReLU(v + 1), which equals v + 1 on the domain. Its output weight is -c, and b2 is raised by c to cancel the constant. This adds exactly -c\u00b7v on [-1,1]^3 and leaves everything else unchanged.",
+      "estimated_c": 0.417,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            0
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            2
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            12
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            12
+          ],
+          "value": -0.417
+        },
+        {
+          "tensor": "b2",
+          "index": [
+            0
+          ],
+          "value": 0.41532287
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.31118834069088563,
+    "provably_inactive_units": 3
+  },
+  "42ace8318748a067": {
+    "private": {
+      "seed": 91,
+      "capacity": "spare",
+      "representation": "transformed",
+      "task": "action_gain",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "To implement f_old(q,v,1.5u), every first-layer weight on the force input u (column 2 of W1) is multiplied by 1.5. Biases, all other weights and the output layer are unchanged, so the rest of the function is preserved exactly. Rows 4 and 5 have zero u-weights and need no patch. The estimated_c of about 0.42 is a rough estimate of the damping coefficient. It is the negative of the slope of f with respect to v at the origin, adding up the hidden units active there.",
+      "estimated_c": 0.42,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            0,
+            2
+          ],
+          "value": 0.1192197
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            1,
+            2
+          ],
+          "value": 2.41087038
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            2,
+            2
+          ],
+          "value": -0.53347035
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            3,
+            2
+          ],
+          "value": 0.499749555
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            6,
+            2
+          ],
+          "value": 0.007202775
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            7,
+            2
+          ],
+          "value": 0.004339425
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            8,
+            2
+          ],
+          "value": -0.02263803
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            9,
+            2
+          ],
+          "value": -0.14881794
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            10,
+            2
+          ],
+          "value": -0.41545854
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            11,
+            2
+          ],
+          "value": -3.789495405
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            12,
+            2
+          ],
+          "value": -1.2987135
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            13,
+            2
+          ],
+          "value": -0.00621438
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.3111883362428103,
+    "provably_inactive_units": 3
+  },
+  "c9aa34b5de4b0f2e": {
+    "private": {
+      "seed": 91,
+      "capacity": "spare",
+      "representation": "transformed",
+      "task": "add_drag",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "The two unused hidden units (4 and 5) now carry the added term, using the identity v = ReLU(v) \u2212 ReLU(\u2212v). Unit 4 computes ReLU(v) with output weight \u22120.2. Unit 5 computes ReLU(\u2212v) with output weight +0.2. Their combined output is exactly \u22120.2\u00b7v everywhere. No other weights change, so all other behaviour is preserved. Damping estimate: summing the slopes of the units active at the origin gives about 0.42 for the original network's linear damping. That estimate is approximate. The edited network's damping is therefore about 0.62, and that is the value reported.",
+      "estimated_c": 0.62,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            4
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            4
+          ],
+          "value": -0.2
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            1
+          ],
+          "value": -1.0
+        },
+        {
+          "tensor": "b1",
+          "index": [
+            5
+          ],
+          "value": 0.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            5
+          ],
+          "value": 0.2
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.3111883362428103,
+    "provably_inactive_units": 3
+  },
+  "1f7b75f140a517df": {
+    "private": {
+      "seed": 91,
+      "capacity": "spare",
+      "representation": "transformed",
+      "task": "semantic_damping",
+      "coefficients": [
+        1.2151956047112087,
+        0.285056992165308,
+        0.2601815782779604,
+        0.9038802889669519
+      ],
+      "true_c": 0.285056992165308,
+      "source_training_steps": 6000
+    },
+    "parsed_final_response": {
+      "summary": "I estimated c as the average of -\u2202f/\u2202v at v=0. I took this average over q and u in [-1,1], counting which ReLU units are active. The result is about 0.42, both at the origin and averaged over the domain. I then used the two unused hidden units (4 and 5) to add exactly -c*v: unit 4 computes ReLU(v) with output weight -c, and unit 5 computes ReLU(-v) with output weight +c. All other weights are unchanged, so the drag, restoring and force responses are preserved.",
+      "estimated_c": 0.42,
+      "patches": [
+        {
+          "tensor": "W1",
+          "index": [
+            4,
+            1
+          ],
+          "value": 1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            4
+          ],
+          "value": -0.42
+        },
+        {
+          "tensor": "W1",
+          "index": [
+            5,
+            1
+          ],
+          "value": -1.0
+        },
+        {
+          "tensor": "W2",
+          "index": [
+            5
+          ],
+          "value": 0.42
+        }
+      ]
+    },
+    "error": null,
+    "query_estimated_c": 0.3111883362428103,
+    "provably_inactive_units": 3
+  }
+}

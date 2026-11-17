@@ -1,0 +1,31 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  72%|███████▏  | 223/310 [00:00<00:00, 1808.89it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2110.40it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 139250.96 examples/s]
+Generating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 36718/36718 [00:00<00:00, 726192.06 examples/s]
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 370123.28 examples/s]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (910805 > 131072). Running this sequence through the model will result in indexing errors
+[feedback] 30221 confident correct predictions from ordinary text (3963 distinct tokens; letters and ordinal items excluded)
+[feedback] native letters: next 0.90 +2 0.01
+[feedback] native other_ordinal: next 0.97 +2 0.00
+[feedback] centred=False lambda 0.001: held-out R^2 0.43
+[feedback]   letters: A o F o A replacing A (+2/next): g1.0:0.04/0.80 g2.0:0.15/0.61 g4.0:0.14/0.34 | added to A: g1.0:0.00/0.90 g2.0:0.03/0.86 g4.0:0.14/0.51
+[feedback]   other_ordinal: A o F o A replacing A (+2/next): g1.0:0.08/0.58 g2.0:0.07/0.46 g4.0:0.02/0.15 | added to A: g1.0:0.01/0.94 g2.0:0.05/0.74 g4.0:0.03/0.26
+[feedback] centred=False lambda 0.01: held-out R^2 0.44
+[feedback]   letters: A o F o A replacing A (+2/next): g1.0:0.01/0.84 g2.0:0.12/0.68 g4.0:0.17/0.51 | added to A: g1.0:0.00/0.90 g2.0:0.01/0.89 g4.0:0.15/0.61
+[feedback]   other_ordinal: A o F o A replacing A (+2/next): g1.0:0.06/0.65 g2.0:0.07/0.52 g4.0:0.03/0.24 | added to A: g1.0:0.01/0.97 g2.0:0.04/0.81 g4.0:0.03/0.35
+[feedback] centred=False lambda 0.1: held-out R^2 0.42
+[feedback]   letters: A o F o A replacing A (+2/next): g1.0:0.03/0.81 g2.0:0.03/0.85 g4.0:0.04/0.78 | added to A: g1.0:0.00/0.90 g2.0:0.00/0.91 g4.0:0.00/0.90
+[feedback]   other_ordinal: A o F o A replacing A (+2/next): g1.0:0.02/0.72 g2.0:0.04/0.72 g4.0:0.04/0.59 | added to A: g1.0:0.00/0.98 g2.0:0.01/0.96 g4.0:0.03/0.85
+[feedback] centred=True lambda 0.001: held-out R^2 0.43
+[feedback]   letters: A o F o A replacing A (+2/next): g1.0:0.03/0.80 g2.0:0.15/0.59 g4.0:0.12/0.36 | added to A: g1.0:0.00/0.90 g2.0:0.01/0.88 g4.0:0.11/0.50
+[feedback]   other_ordinal: A o F o A replacing A (+2/next): g1.0:0.09/0.58 g2.0:0.06/0.46 g4.0:0.01/0.14 | added to A: g1.0:0.01/0.94 g2.0:0.03/0.73 g4.0:0.01/0.22
+[feedback] centred=True lambda 0.01: held-out R^2 0.44
+[feedback]   letters: A o F o A replacing A (+2/next): g1.0:0.01/0.85 g2.0:0.12/0.62 g4.0:0.12/0.46 | added to A: g1.0:0.00/0.90 g2.0:0.00/0.89 g4.0:0.10/0.62
+[feedback]   other_ordinal: A o F o A replacing A (+2/next): g1.0:0.08/0.61 g2.0:0.08/0.47 g4.0:0.02/0.19 | added to A: g1.0:0.01/0.95 g2.0:0.03/0.76 g4.0:0.01/0.28
+[feedback] centred=True lambda 0.1: held-out R^2 0.44
+[feedback]   letters: A o F o A replacing A (+2/next): g1.0:0.01/0.84 g2.0:0.05/0.79 g4.0:0.09/0.70 | added to A: g1.0:0.00/0.91 g2.0:0.00/0.90 g4.0:0.03/0.82
+[feedback]   other_ordinal: A o F o A replacing A (+2/next): g1.0:0.04/0.73 g2.0:0.06/0.62 g4.0:0.02/0.42 | added to A: g1.0:0.01/0.97 g2.0:0.01/0.91 g4.0:0.03/0.65
+[feedback] SELECTED on non-letter domains: centred=True lambda 0.001 gamma 1.0: LETTERS +2 0.03 next 0.80; other ordinal +2 0.09
+[feedback] letters: A's own direct top-1 is the next item in 0.00; hard decode then feedback -> +2 0.07
+[feedback] other_ordinal: A's own direct top-1 is the next item in 0.13; hard decode then feedback -> +2 0.22
+[feedback] DONE

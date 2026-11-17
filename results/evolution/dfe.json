@@ -1,0 +1,3902 @@
+{
+ "E-LLM/E-LLM_1/g0": {
+  "genome_len": 0,
+  "parent_fitness": -1.245957937714411,
+  "effects": [
+   {
+    "dfit": 0.0015460768656339052,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.002035716696991541,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -6.332516495599627e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.019067193593946374,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0017601501996977742,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007618943200213835,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0021055815159343183,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00010983788524754345,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005424228758783567,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 5.3138574003241956e-05,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00023717388685318141,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0006130479217971718,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 1.9403034821285914e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00019351682858537167,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005070128536317497,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.02247031109582176,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.009378925006603867,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.017946191245573617,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0009126878867391497,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.002153875873773581,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0008573570579755163,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015796493506059495,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.009939341520657674,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0003888033068506491,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.004406000088784001,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0008145307248923483,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0029561160568847278,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0018256619281600273,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00045251947885827093,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00032708266226100235,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_1/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1295327782660025,
+  "effects": [
+   {
+    "dfit": -0.00010920733620878309,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 9.686953999343828e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.007210500143992382,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00034802706213654666,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0005355980159948981,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00026655994006441475,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0004033164703285408,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.012373669822409283,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00036320278741186485,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00017064544081213384,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002860295673601243,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00027672649302967756,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 6.0593808302700225e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007567605673104438,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0011466218216809043,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0005618228300592332,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00020932983461530164,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.01970443503523711,
+    "dacc": -0.018749999999999933,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001512357863249214,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00015775626816316723,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00010855308937607333,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00010495333262938722,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -5.292128334977164e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00021285235998225183,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00022184409899650426,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0031005307158920026,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001544645841931036,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0017525817806018917,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0027146234482644527,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0009858587407507446,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_1/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.1144707418541657,
+  "effects": [
+   {
+    "dfit": 3.7313581560782794e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0020895786234178537,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": 2.9579532565549016e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 2.4176003353248987e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001505320004071553,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001403117190056813,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 5.323404911994345e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0012507428982644342,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": 5.256195436231792e-06,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": 0.009858076040109243,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001132541557308242,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.006529445914202459,
+    "dacc": -0.018750000000000044,
+    "admissible": false
+   },
+   {
+    "dfit": 8.169101784138988e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0033392650744645813,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.000426365122257355,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.017957714837393723,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002975792325742077,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001360007938637997,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.004691201020614155,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007606449813464256,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.004361008573323444,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0023455941452994455,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00011041121470056758,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -2.9217347036869512e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 8.026890864143432e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.004126580324373075,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007653893582755256,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -5.919290269962296e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 9.924753976653378e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00026565783045939817,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_2/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1489404381427448,
+  "effects": [
+   {
+    "dfit": 0.00038967209839024797,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002024909437750022,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007854086128644688,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001197436125948137,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0014813140282057269,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001534704356163319,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.024941357460920743,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 3.58914228855145e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00029064501577513724,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.13903106109719365,
+    "dacc": -0.05625000000000002,
+    "admissible": false
+   },
+   {
+    "dfit": -0.0009729846467962933,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002839602719177936,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005640214076265693,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0041202750566298185,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00014461216778727248,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0004616270016413182,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 2.9859101050577763e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00012710783776137546,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00015906427724976524,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.01288491044833795,
+    "dacc": -0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": -0.024648687285662163,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -6.567335803997487e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001921423824387647,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0004793395943125667,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007906752376583004,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00016582034731982276,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00038427934341611625,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -1.2030104699078947e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0013524774549296126,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0030878068850141993,
+    "dacc": 0.02499999999999991,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_2/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.1257774839759804,
+  "effects": [
+   {
+    "dfit": 0.0006599425614695065,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006722401900334241,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 1.8502057355318513e-05,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006053368284484328,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0011387055827072334,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.015699538396438673,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0009609094500775406,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -4.728625353900284e-05,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 2.4221825879022774e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0057094734787823676,
+    "dacc": -0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0010563438889221732,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -7.55072687708136e-07,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00024577928707003593,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0011915305061847015,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0003289279717137994,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.002610602173081178,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.003253054128435906,
+    "dacc": -0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006508859514724463,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -7.732549711358949e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0008236519191995306,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00011299588368274271,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -9.818791295357343e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008795898582321104,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -1.6785957268394824e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005127488155267645,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00036799730733028113,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008042377448873594,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007312762318179011,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005929200618992603,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 8.501727279508486e-05,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_3/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.12959199048928,
+  "effects": [
+   {
+    "dfit": -0.0015233730766339715,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0008901812136172804,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 3.933047992177308e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0012494134367442289,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00017401588847865135,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0009509909024927321,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0016531071305507794,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0027731914422475246,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -4.184402350793093e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 8.772545406832144e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00016008400416489543,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 1.8996268045246012e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -3.23286221814989e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00030967827478889376,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0009068357481738509,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0004119600591365735,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.006441534093755807,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.01156374658021364,
+    "dacc": -0.03749999999999998,
+    "admissible": true
+   },
+   {
+    "dfit": 8.758111071083263e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 6.719856175951833e-07,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002677413838685361,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00048252342967303186,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001905950062792705,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0023242171053423633,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00041830917907637044,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.3848509327592182,
+    "dacc": -0.1875,
+    "admissible": false
+   },
+   {
+    "dfit": -0.0018558689116616733,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 9.651008731470512e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00020505559368766413,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00017458836373407394,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_3/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.0955852468017837,
+  "effects": [
+   {
+    "dfit": -0.01966111258807368,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005896938295337772,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008121512481009674,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00016368182841697276,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001393935250233458,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 3.7189062277231955e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0006055089354051191,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002019116769952367,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.004836198146222159,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0004695083887782392,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002912368916438979,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.011406796057417345,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0013661062926986212,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005647063255311835,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0014265798730777046,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0029524608340580905,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.006693974703375849,
+    "dacc": -0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007854204595787451,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0019442449614872626,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": 0.004152921907370821,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0004683373772422783,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.003983599696948614,
+    "dacc": -0.03125,
+    "admissible": true
+   },
+   {
+    "dfit": -2.6794057339518673e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.000356457209272687,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -3.979493339967277e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0010365735564847878,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0003638623922599393,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -8.985063323074804e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0013690886597030882,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00011191829835288658,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_4/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1580156514435658,
+  "effects": [
+   {
+    "dfit": -0.0002100617763061141,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -4.453313158592209e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00043941397889279976,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -2.7030879573342048e-05,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00015162235649768263,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00010100740473717451,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002584286790805468,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0016439426122816236,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007479044841602889,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0003754012504941784,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 3.6685902160549233e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0013585803564637455,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 2.2018283198255162e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.2214340973201614,
+    "dacc": -0.11249999999999999,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001968392462003976,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006759661802788752,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.013385744618426454,
+    "dacc": -0.03125,
+    "admissible": true
+   },
+   {
+    "dfit": -0.015436554998450314,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0013776169304036134,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.005522900707728651,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0010214092537352837,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.012861697845801157,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0009849040565315104,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00039337164344033226,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00010124568070746243,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002879356048652859,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0005276656360366783,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0014597883156965974,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00029978736420166463,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002427266415907514,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_4/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.1432229109705077,
+  "effects": [
+   {
+    "dfit": -5.537944816769169e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002442239740048091,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": 6.44637766527012e-05,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.008786883810535162,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.014481077507662032,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0017472632302086843,
+    "dacc": -0.006249999999999978,
+    "admissible": false
+   },
+   {
+    "dfit": 0.0003161903325235027,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0003863510093651268,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 8.720609330348239e-05,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -7.202733832034625e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.003282478051551241,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00023379025224135042,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.003539865689526689,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001025802470393522,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00018661353387861013,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 5.7361969084013253e-05,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00044279143039593905,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -9.485559567101731e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.003374006779631511,
+    "dacc": -1.1102230246251565e-16,
+    "admissible": true
+   },
+   {
+    "dfit": -0.006259858279372477,
+    "dacc": -0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0012879089190391824,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.005589614779455632,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002619137230794877,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.5657816408405778,
+    "dacc": -0.13125000000000003,
+    "admissible": false
+   },
+   {
+    "dfit": 6.54531118926549e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0019015934478374685,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 0.005499932158272713,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0017676044604741925,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": 0.000457064172951549,
+    "dacc": -0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": 0.007261831223149828,
+    "dacc": 0.018749999999999933,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_5/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.138348234712612,
+  "effects": [
+   {
+    "dfit": 0.0050196575233714125,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0012276762456167045,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001465365287731446,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 9.107130754282267e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.003774861575220667,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 4.3452324462123215e-05,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0013393117988016456,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007346353610044876,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0027202020719414577,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008179392985767642,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0011160606576594567,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0017755421838956398,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005165714712347391,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.017406207960448228,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008003902854398781,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008090167189949149,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00047138443333105684,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0014837748953142604,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00017046934808595537,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0006238809990464222,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015873307856963947,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.007539513439405621,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": 1.9272443023687913e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0010962464642942926,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -2.7909892378330525e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001553216308822769,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0003527295397363073,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001769106718711999,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.004520136734936342,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00466044585627956,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_5/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.1225877133983886,
+  "effects": [
+   {
+    "dfit": 7.353068212978542e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 4.9298987141899175e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0030114465858785966,
+    "dacc": -0.006249999999999867,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006275244202698094,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -2.5520983035765e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.014651115619926713,
+    "dacc": -0.018749999999999933,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00046042713220240117,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -4.2191354441500906e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0010895448736847335,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0010193618974880803,
+    "dacc": 0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00015044917527129442,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0037709991534939924,
+    "dacc": 1.1102230246251565e-16,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00019224986317567527,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0006811091676355296,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0025113507173954996,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -2.802952658398361e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0004939959413605699,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0009343837009510025,
+    "dacc": 1.1102230246251565e-16,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0004884120484347498,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00038256021798588336,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00020335491572054387,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001062450968311257,
+    "dacc": 0.006250000000000089,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00010796946589830547,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -3.254681368858314e-08,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0014680472697363722,
+    "dacc": 0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0012119033781345934,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0013855476514437193,
+    "dacc": 1.1102230246251565e-16,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0004369824833703184,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0005782099498901072,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002941703656689221,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_6/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1493134225573158,
+  "effects": [
+   {
+    "dfit": -0.0038398369884815597,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00011004721600338385,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.008057456664391838,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -9.066109196287364e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001804903562879101,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0014000226292409934,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.006179540802259131,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00038249517674548983,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00023252162645803764,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0025697942459375067,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -3.133282298217743e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0003091591293924445,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 6.873977690702304e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 1.5856916434131563e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.005033776245545685,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002607600094053364,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015952543501043248,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001255630140076347,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001282240089495179,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.01422858923760928,
+    "dacc": -0.0625,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00036987788625997275,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007766766619170529,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001429698792344558,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -4.0530029218555086e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002523476956410864,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002140938275261295,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.006403706967830658,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.000447310345771168,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0003284767619333717,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0022503409971250665,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_6/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.124213170298026,
+  "effects": [
+   {
+    "dfit": 4.173939814799965e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00013050819397886215,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -2.0462715474289794e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0012213480178617786,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0015160082097283034,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0008094106713540938,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0013746716256721747,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.023933948516787318,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -8.120897255126103e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005070169223471144,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0009288479166569275,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 2.5939647458894655e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0014465997839581135,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0318928914348362,
+    "dacc": -0.05625000000000002,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007550456182796594,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0009501710781478767,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0004418313750649272,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0025305254515843867,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.004609570464526591,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0018949438555866394,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 6.974011048455075e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001851422330946706,
+    "dacc": -0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0010868303288589232,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0012235104746649572,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.03292910023446893,
+    "dacc": -0.06874999999999998,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015165050193899354,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 6.710245215812982e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -6.909095536666854e-05,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00012211348075652495,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 9.393320215167478e-05,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_7/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1745912850179594,
+  "effects": [
+   {
+    "dfit": 0.001164745067944839,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0029465317886205877,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001364392941467507,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 5.627274658781545e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007312788045963359,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001048628723947287,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002382560938714029,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0011190486970007463,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -2.681209589350253e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.030557944515021473,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002167517371708394,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0017998645344050601,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0006252081744604343,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0033965839684242383,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": 9.968798403869883e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 5.740123015129939e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008491974193021168,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0011688171856802931,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0021213977408478524,
+    "dacc": 0.018749999999999933,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00029081166940159164,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002584888105048311,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00015701401280243665,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002714698435739571,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001239881131914533,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00043281596590549754,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015873164316870803,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": 3.418548585631953e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00528872491850052,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001085338066331154,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00018202472710981965,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_7/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.1542137602096774,
+  "effects": [
+   {
+    "dfit": -0.005523582109890235,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -2.4458859115839005e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005207776062887692,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015794607708812247,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0010260119350276042,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0012358140564174835,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0030208943557226142,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002847219206159046,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00038767147198082164,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 2.6243620959709446e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -4.306684422639151e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0018277878727532837,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 1.4729243412281434e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 1.2247581617108594e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0011735745669285702,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007092354222550945,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00034210809390078367,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0010747113658000629,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0003523669933200857,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0020499518694123697,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00041761632019188255,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.000308709470846269,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001522207589004232,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.005034206222626292,
+    "dacc": 0.0,
+    "admissible": false
+   },
+   {
+    "dfit": -0.0006141123987617458,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 2.901100379038013e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.015597069929935925,
+    "dacc": -0.03125,
+    "admissible": true
+   },
+   {
+    "dfit": -2.9752249246506324e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00034914846619349404,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.045873644379025746,
+    "dacc": -0.043749999999999956,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_8/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1405134972534143,
+  "effects": [
+   {
+    "dfit": -0.0003114249193458818,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007229486334834334,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008844894589856711,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0016713421413441232,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015815595223103163,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -8.519045950383664e-05,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 9.769734460873813e-05,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001441472933220167,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002735252826823853,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.005055862871813588,
+    "dacc": 0.03125,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0025390628667083526,
+    "dacc": 0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": 6.280188099494488e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0009019131393870339,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00046483995392909705,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0023844360286604527,
+    "dacc": 0.018749999999999933,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007096355257090181,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.01397396661341177,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -7.211975753307343e-05,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0011459303525043207,
+    "dacc": 0.0,
+    "admissible": false
+   },
+   {
+    "dfit": 0.000751667638542175,
+    "dacc": 0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -0.008712412942259107,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00021168316307029755,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.002209741852129854,
+    "dacc": 0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015854575147384864,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008741908241065577,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.006649584113620044,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0009018080658280692,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006822813040345821,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002478985488414631,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00027763927646451414,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM/E-LLM_8/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.1040781201969367,
+  "effects": [
+   {
+    "dfit": 0.0004197230882709846,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00023164194717550934,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -3.260190714948763e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00030170404061191647,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0014815173461102393,
+    "dacc": -0.006249999999999978,
+    "admissible": false
+   },
+   {
+    "dfit": -0.001336527895182238,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00018786901200673611,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0048263383214361966,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0028701982984786767,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -1.427504175799399e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0022865458391605475,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00016517534677396029,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0005251132068224695,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00038828867254792065,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00019930876442231238,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.000861494176206179,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0010880463669309393,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006086008303101131,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008980724000140494,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0037022472621175417,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -5.4055644431949545e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005408445926149419,
+    "dacc": -0.018749999999999933,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002582674409496999,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00022845635539869846,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015851912467041984,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007970368169480935,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.004967243320424863,
+    "dacc": -0.018749999999999933,
+    "admissible": true
+   },
+   {
+    "dfit": -2.4122252943792333e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002006517432164845,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 3.9111665683044805e-05,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM-free/E-LLM-free_1/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1390599076155923,
+  "effects": [
+   {
+    "dfit": -0.0004422968675499295,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -2.1930910588663366e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001711589997286378,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 6.627436669082165e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00031974393787104205,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.004183007817482709,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00023135637311511026,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 7.300404977295116e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00026494501071283594,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -6.908331270083501e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 5.685634823748842e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00015946369821895345,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 1.3174385822045664e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.02081853533309186,
+    "dacc": -0.03749999999999998,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006583823575057046,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -5.089751939513221e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002404508340987155,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0016414252197136658,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.000994535972131283,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0012997212383196732,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 1.9163242541253567e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.006030345387989522,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002178941617603458,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002484081094735746,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -4.6561633644026656e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00076246324315421,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.000252839391760018,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.008334577633650087,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0007376272595138733,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0027305342620820294,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM-free/E-LLM-free_1/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.1068596044569858,
+  "effects": [
+   {
+    "dfit": -0.002544148288143422,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00023529785103160172,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -3.186470712623901e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001711897741187851,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.003776630094216582,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007903978083050323,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0013475389205268584,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -1.6704249719667885e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -9.148849494522437e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001236758657614745,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.002562179912638296,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0016694353049389044,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0015950463479383892,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.000457115238532424,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.013625809639052022,
+    "dacc": -0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00026973539788732737,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -1.5972820983645164e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002716976232477464,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 4.878437757716014e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00045891112968088343,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007550286987680899,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002840683184330839,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -6.838987610535696e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00018829016480603755,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.000824290378659498,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001581608710694571,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0013890331712900217,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001155007832858157,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001754137367242503,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0027445492291007234,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM-free/E-LLM-free_2/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1352092272019945,
+  "effects": [
+   {
+    "dfit": -0.0008385894616367295,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00575345803808891,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002572372018767144,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 2.6219320716114325e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.01775578247616072,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005730472184950486,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0004804292388143061,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00041088519647014543,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001828474138165781,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007406728298520182,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001976598447073208,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0005178252831683494,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0005136558233060917,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -9.764571586856619e-05,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -4.506829573069915e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 2.5295272644054734e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -5.331907596106689e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001844361523399174,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0013836728539899923,
+    "dacc": 0.0,
+    "admissible": false
+   },
+   {
+    "dfit": 0.002431752174743451,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0006396932483767603,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0023230495789903216,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00029007459233976185,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0011880889156599128,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0010987004905473885,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0003990195007645969,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00018415260419724078,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00017119331605508492,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001109425270988007,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002264276178903124,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM-free/E-LLM-free_2/g10": {
+  "genome_len": 10,
+  "parent_fitness": -1.1197968750697327,
+  "effects": [
+   {
+    "dfit": -1.605983125063659e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002250702469610566,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.014782853817450814,
+    "dacc": -0.018749999999999933,
+    "admissible": true
+   },
+   {
+    "dfit": -0.026974443411745597,
+    "dacc": -0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -4.820602916888461e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0015065888641401237,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0007388716243439397,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002284660734585664,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -2.478965616337092e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 9.243791137114599e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 3.3416158112142824e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 6.08186950556977e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 5.346157849994704e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 1.9680128025223453e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00035994292702534736,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0009466979230638994,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.005432020961598116,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0014449688824242912,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0003715021070094249,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.008052112313453152,
+    "dacc": -0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00017582196451249033,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001597218928510724,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001748019288061009,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00010492852161392285,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001152379099221612,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00019053283904213458,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0003866597980959341,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 3.6814231134441044e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -7.517870108131319e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00011937553936158807,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM-free/E-LLM-free_3/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1572022110456601,
+  "effects": [
+   {
+    "dfit": -0.001892186101758897,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.000492472198675431,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 4.216808301871211e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.004437640507239937,
+    "dacc": 0.018749999999999933,
+    "admissible": true
+   },
+   {
+    "dfit": 0.003291144571267113,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0004179891606326258,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.003952015342656656,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -7.057551119937777e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00018772085895757407,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0016822977602715117,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002993986534420845,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00031931265839379996,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00014064053539186716,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0015613171883159804,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00014675396669194818,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0005571072892054385,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0009575255709932673,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0011371223808964714,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0001237024494911143,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002296879029017873,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.015381601030821868,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00025556124455761164,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0003281936631538418,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -3.2480520894662135e-05,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.004809378131176434,
+    "dacc": 0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -0.004016778172808655,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": -2.542150614304184e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 1.0233104694723494e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0006606427923543379,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001262051097000949,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM-free/E-LLM-free_3/g10": {
+  "genome_len": 8,
+  "parent_fitness": -1.1015501672925894,
+  "effects": [
+   {
+    "dfit": -5.5711728055074516e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0002300485473825109,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00031306903110817075,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 9.399166738144338e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -4.220605478666428e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0008762604615186742,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00045149850484449416,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0003141970169961983,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.003346969184349291,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.02274698384571816,
+    "dacc": 0.025000000000000022,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00030292136943899095,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -8.70772928451835e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00030919152195574284,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00018754304910539865,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 1.9560073269753175e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.08303797285479941,
+    "dacc": -0.018749999999999933,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00011627828644122928,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 1.7786587704904377e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.005819837105809578,
+    "dacc": -0.012499999999999956,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0015266623959178105,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006996402022196868,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.004787083089468069,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0003608272585553518,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0054933844687183875,
+    "dacc": 0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -2.4284631945148405e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001360608293907717,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.001591166475555017,
+    "dacc": 0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001038158111623444,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0010683425207389519,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 7.377776782968581e-05,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM-free/E-LLM-free_4/g5": {
+  "genome_len": 5,
+  "parent_fitness": -1.1332362689776345,
+  "effects": [
+   {
+    "dfit": -0.003702294109098281,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0014094669691986361,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0009518922714051303,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00039431211480422945,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005060339637568134,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0006086215871619061,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -6.2879058533305e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 8.754496229723685e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0021415268216513628,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 9.569921521901392e-08,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0006152609013954091,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00029030905570825993,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0013344603852603054,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0014761587255636144,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0001316497888181889,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00020007794664711476,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0012548174432593928,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -7.504520472156884e-05,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 6.619893247128417e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0008164111932273954,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.009398436997435144,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -2.5318877305835485e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0009463289607083425,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00047158521483647853,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.002899541304214104,
+    "dacc": 0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": 5.298719042867717e-06,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.004702621583419386,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00018159594328626127,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005325204518158433,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 7.929885032353923e-05,
+    "dacc": 0.0,
+    "admissible": true
+   }
+  ]
+ },
+ "E-LLM-free/E-LLM-free_4/g10": {
+  "genome_len": 9,
+  "parent_fitness": -1.121007804319379,
+  "effects": [
+   {
+    "dfit": -0.0009471447978284253,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0033334955864119387,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0026054970134281596,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0032708515442207986,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00030386253929459706,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001390663036727302,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0006383870233548361,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0008305019087855303,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.0002908160953667416,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 6.0563987062778324e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.030080632105818905,
+    "dacc": -0.06874999999999998,
+    "admissible": true
+   },
+   {
+    "dfit": -0.008640616142656654,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -4.8997376870696385e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00045600391458711087,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00017683505720911263,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -7.005298684803485e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 1.2188511027577675e-05,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0005347631144103637,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": 0.002355783409438983,
+    "dacc": 0.0,
+    "admissible": false
+   },
+   {
+    "dfit": 0.015352093306137293,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   },
+   {
+    "dfit": -0.011070470378035546,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001092455915931989,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0062360959753278156,
+    "dacc": -0.012500000000000067,
+    "admissible": true
+   },
+   {
+    "dfit": -0.1348340679629474,
+    "dacc": -0.13125000000000003,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00033495095995017543,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00020805671811108262,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.00026577743847155944,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.0028785968053852695,
+    "dacc": -0.018750000000000044,
+    "admissible": true
+   },
+   {
+    "dfit": 0.00023933985648905143,
+    "dacc": 0.0,
+    "admissible": true
+   },
+   {
+    "dfit": -0.001299546886002645,
+    "dacc": -0.006249999999999978,
+    "admissible": true
+   }
+  ]
+ }
+}

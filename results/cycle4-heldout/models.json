@@ -1,0 +1,242 @@
+[
+  {
+    "seed": 60,
+    "family": "duffing",
+    "source_rmse": 0.010807282945993174
+  },
+  {
+    "seed": 60,
+    "family": "pendulum",
+    "source_rmse": 0.010448527372420144
+  },
+  {
+    "seed": 60,
+    "family": "contact",
+    "source_rmse": 0.007732677281101123
+  },
+  {
+    "seed": 60,
+    "family": "vanderpol",
+    "source_rmse": 0.011342308360206917
+  },
+  {
+    "seed": 61,
+    "family": "duffing",
+    "source_rmse": 0.01794863554138288
+  },
+  {
+    "seed": 61,
+    "family": "pendulum",
+    "source_rmse": 0.01422203384199965
+  },
+  {
+    "seed": 61,
+    "family": "contact",
+    "source_rmse": 0.004252399396301396
+  },
+  {
+    "seed": 61,
+    "family": "vanderpol",
+    "source_rmse": 0.013229621344182525
+  },
+  {
+    "seed": 62,
+    "family": "duffing",
+    "source_rmse": 0.014505770958197835
+  },
+  {
+    "seed": 62,
+    "family": "pendulum",
+    "source_rmse": 0.015874160830951167
+  },
+  {
+    "seed": 62,
+    "family": "contact",
+    "source_rmse": 0.007217531876299149
+  },
+  {
+    "seed": 62,
+    "family": "vanderpol",
+    "source_rmse": 0.020050717139738324
+  },
+  {
+    "seed": 63,
+    "family": "duffing",
+    "source_rmse": 0.020034008771990127
+  },
+  {
+    "seed": 63,
+    "family": "pendulum",
+    "source_rmse": 0.01424009541253742
+  },
+  {
+    "seed": 63,
+    "family": "contact",
+    "source_rmse": 0.009435955045561157
+  },
+  {
+    "seed": 63,
+    "family": "vanderpol",
+    "source_rmse": 0.017603868314112467
+  },
+  {
+    "seed": 64,
+    "family": "duffing",
+    "source_rmse": 0.018422580913517315
+  },
+  {
+    "seed": 64,
+    "family": "pendulum",
+    "source_rmse": 0.013750353889879224
+  },
+  {
+    "seed": 64,
+    "family": "contact",
+    "source_rmse": 0.007241637493451111
+  },
+  {
+    "seed": 64,
+    "family": "vanderpol",
+    "source_rmse": 0.0126497894228804
+  },
+  {
+    "seed": 65,
+    "family": "duffing",
+    "source_rmse": 0.01183172538278817
+  },
+  {
+    "seed": 65,
+    "family": "pendulum",
+    "source_rmse": 0.013453656551583634
+  },
+  {
+    "seed": 65,
+    "family": "contact",
+    "source_rmse": 0.007460120078417682
+  },
+  {
+    "seed": 65,
+    "family": "vanderpol",
+    "source_rmse": 0.015712245010537196
+  },
+  {
+    "seed": 66,
+    "family": "duffing",
+    "source_rmse": 0.01078801422569583
+  },
+  {
+    "seed": 66,
+    "family": "pendulum",
+    "source_rmse": 0.012178617401884093
+  },
+  {
+    "seed": 66,
+    "family": "contact",
+    "source_rmse": 0.005867931752860741
+  },
+  {
+    "seed": 66,
+    "family": "vanderpol",
+    "source_rmse": 0.01152204459176014
+  },
+  {
+    "seed": 67,
+    "family": "duffing",
+    "source_rmse": 0.013240433165457983
+  },
+  {
+    "seed": 67,
+    "family": "pendulum",
+    "source_rmse": 0.017341091990173807
+  },
+  {
+    "seed": 67,
+    "family": "contact",
+    "source_rmse": 0.004689199507523744
+  },
+  {
+    "seed": 67,
+    "family": "vanderpol",
+    "source_rmse": 0.01386152533615082
+  },
+  {
+    "seed": 68,
+    "family": "duffing",
+    "source_rmse": 0.016198211531328926
+  },
+  {
+    "seed": 68,
+    "family": "pendulum",
+    "source_rmse": 0.017415556293848146
+  },
+  {
+    "seed": 68,
+    "family": "contact",
+    "source_rmse": 0.007014611149575094
+  },
+  {
+    "seed": 68,
+    "family": "vanderpol",
+    "source_rmse": 0.014310133766787662
+  },
+  {
+    "seed": 69,
+    "family": "duffing",
+    "source_rmse": 0.01707014744112529
+  },
+  {
+    "seed": 69,
+    "family": "pendulum",
+    "source_rmse": 0.013563311606105577
+  },
+  {
+    "seed": 69,
+    "family": "contact",
+    "source_rmse": 0.007994046169805829
+  },
+  {
+    "seed": 69,
+    "family": "vanderpol",
+    "source_rmse": 0.01565868392106194
+  },
+  {
+    "seed": 70,
+    "family": "duffing",
+    "source_rmse": 0.01268661775155878
+  },
+  {
+    "seed": 70,
+    "family": "pendulum",
+    "source_rmse": 0.01437348267769032
+  },
+  {
+    "seed": 70,
+    "family": "contact",
+    "source_rmse": 0.008097683502925522
+  },
+  {
+    "seed": 70,
+    "family": "vanderpol",
+    "source_rmse": 0.014867557559366806
+  },
+  {
+    "seed": 71,
+    "family": "duffing",
+    "source_rmse": 0.01100100491382426
+  },
+  {
+    "seed": 71,
+    "family": "pendulum",
+    "source_rmse": 0.01178979047255472
+  },
+  {
+    "seed": 71,
+    "family": "contact",
+    "source_rmse": 0.007249160497374309
+  },
+  {
+    "seed": 71,
+    "family": "vanderpol",
+    "source_rmse": 0.01155461182601685
+  }
+]

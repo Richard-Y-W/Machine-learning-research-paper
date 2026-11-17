@@ -1,0 +1,25 @@
+\paragraph{Qwen3-0.6B-Base, run 1.} Frozen in round 4 of 5 (15 programmes evaluated). Development successor rate 0.61 (unedited 0.04).
+\begin{Verbatim}[fontsize=\scriptsize,breaklines=true,breakanywhere=true]
+{"op": "attention_program", "layer": 21, "head": 0, "query_role": "final", "key_role": "queried_value", "contrast": "other_positions", "ridge": 1.0, "rank": 32, "rope_band": "low"}
+{"op": "copy_ov", "layer": 21, "from_head": 6, "to_head": 0}
+{"op": "scale_output", "layer": 21, "head": 1, "gain": 0.0}
+{"op": "scale_output", "layer": 21, "head": 0, "gain": 1.5}
+{"op": "attention_program", "layer": 21, "head": 6, "query_role": "final", "key_role": "queried_value", "contrast": "other_values", "ridge": 1.0, "rank": 32, "rope_band": "low"}
+{"op": "scale_output", "layer": 21, "head": 6, "gain": 1.5}
+\end{Verbatim}
+\paragraph{Qwen3-0.6B-Base, run 2.} Frozen in round 5 of 5 (15 programmes evaluated). Development successor rate 0.51 (unedited 0.04).
+\begin{Verbatim}[fontsize=\scriptsize,breaklines=true,breakanywhere=true]
+{"op": "attention_program", "layer": 21, "head": 5, "query_role": "final", "key_role": "queried_value", "contrast": "other_positions", "ridge": 1.0, "rank": 16, "rope_band": "low"}
+{"op": "copy_ov", "layer": 21, "from_head": 6, "to_head": 5}
+{"op": "scale_output", "layer": 21, "head": 4, "gain": 0.0}
+{"op": "scale_output", "layer": 21, "head": 5, "gain": 3.7}
+\end{Verbatim}
+\paragraph{Qwen3-1.7B-Base.} Frozen in round 4 of 5 (13 programmes evaluated). Development successor rate 0.65 (unedited 0.32).
+\begin{Verbatim}[fontsize=\scriptsize,breaklines=true,breakanywhere=true]
+{"op": "attention_program", "layer": 21, "head": 6, "query_role": "final", "key_role": "queried_value", "contrast": "other_values", "ridge": 3.0, "rank": 16, "rope_band": "low"}
+{"op": "scale_output", "layer": 21, "head": 6, "gain": 1.5}
+{"op": "copy_ov", "layer": 21, "from_head": 6, "to_head": 8}
+{"op": "copy_ov", "layer": 21, "from_head": 6, "to_head": 15}
+{"op": "scale_output", "layer": 21, "head": 8, "gain": 2.0}
+{"op": "scale_output", "layer": 21, "head": 15, "gain": 2.0}
+\end{Verbatim}

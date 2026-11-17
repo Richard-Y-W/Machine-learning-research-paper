@@ -1,0 +1,26 @@
+[
+  {
+    "seed": 0,
+    "family": "duffing",
+    "train_loss_last_batch": 0.0002201587485615164,
+    "base_rmse": 0.014290584203984524
+  },
+  {
+    "seed": 0,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00026651672669686377,
+    "base_rmse": 0.016643238862341498
+  },
+  {
+    "seed": 1,
+    "family": "duffing",
+    "train_loss_last_batch": 0.00013898240285925567,
+    "base_rmse": 0.010208087864969346
+  },
+  {
+    "seed": 1,
+    "family": "pendulum",
+    "train_loss_last_batch": 0.00015900557627901435,
+    "base_rmse": 0.01169989247325992
+  }
+]

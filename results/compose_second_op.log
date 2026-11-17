@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  97%|█████████▋| 301/310 [00:00<00:00, 2318.26it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2369.43it/s]
+[op2] capitalise: 15 single-token pairs, 30 prompts, native accuracy 0.67
+[op2] capitalise: stop (native competence too low)
+[op2] plural: 20 single-token pairs, 40 prompts, native accuracy 0.28
+[op2] plural: stop (native competence too low)
+[op2] past: 20 single-token pairs, 40 prompts, native accuracy 0.62
+[op2] past: stop (native competence too low)
+[op2] antonym: 16 single-token pairs, 32 prompts, native accuracy 0.69
+[op2] antonym: stop (native competence too low)
+[op2] DONE

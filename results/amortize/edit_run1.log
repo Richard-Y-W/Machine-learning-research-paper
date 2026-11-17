@@ -1,0 +1,11 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  55%|█████▍    | 171/311 [00:00<00:00, 1539.85it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 2195.53it/s]
+[edit] base: val(prompted) {256: 0.4, 384: 0.7666666666666667, 512: 0.8666666666666667} val(plain) {256: 0.03333333333333333, 384: 0.45, 512: 0.8333333333333334} median tok 288 retention 0.93 direct 0.15 (138s)
+[edit] round 1: sample acc@256 0.55 mean tok 255 | valid 4/4 | best 0.75 | kept None (not confirmed on the second sample) | edits 0 | val {256: 0.4, 384: 0.7666666666666667, 512: 0.8666666666666667} | $0.073 (attempt $0.07) | 151s
+[edit] round 2: sample acc@256 0.50 mean tok 251 | valid 4/4 | best 0.625 | kept None (not confirmed on the second sample) | edits 0 | val {256: 0.4, 384: 0.7666666666666667, 512: 0.8666666666666667} | $0.044 (attempt $0.12) | 133s
+[edit] round 3: sample acc@256 0.47 mean tok 264 | valid 4/4 | best 0.55 | kept 0 (-) | edits 1 | val {256: 0.4166666666666667, 384: 0.8333333333333334, 512: 0.85} | $0.061 (attempt $0.18) | 220s
+[edit] round 4: sample acc@256 0.75 mean tok 228 | valid 4/4 | best 0.775 | kept None (not confirmed on the second sample) | edits 1 | val {256: 0.4166666666666667, 384: 0.8333333333333334, 512: 0.85} | $0.050 (attempt $0.23) | 127s
+[edit] round 5: sample acc@256 0.62 mean tok 228 | valid 4/4 | best None | kept None (-) | edits 1 | val {256: 0.4166666666666667, 384: 0.8333333333333334, 512: 0.85} | $0.055 (attempt $0.28) | 83s
+[edit] round 6: sample acc@256 0.60 mean tok 239 | valid 4/4 | best None | kept None (-) | edits 1 | val {256: 0.4166666666666667, 384: 0.8333333333333334, 512: 0.85} | $0.056 (attempt $0.34) | 94s
+[edit] round 7: sample acc@256 0.57 mean tok 240 | valid 1/4 | best 0.6 | kept None (not confirmed on the second sample) | edits 1 | val {256: 0.4166666666666667, 384: 0.8333333333333334, 512: 0.85} | $0.066 (attempt $0.41) | 97s
+[edit] STOPPED: four consecutive rounds without an accepted edit; accepted edits 1
+[edit] DONE

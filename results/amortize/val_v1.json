@@ -1,0 +1,494 @@
+{
+ "dev_families": [
+  "F1",
+  "F2",
+  "F3",
+  "F4",
+  "F5"
+ ],
+ "held_families": [
+  "F6"
+ ],
+ "items": [
+  {
+   "family": "F1",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nd = 22\ncount = d\nd = 34\ntotal = 33\nm = total\ntotal = count\nprint(count)\n```",
+   "a": "22",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "d = 22\ncount = d\nd = 34\ntotal = 33\nm = total\ntotal = count\nprint(count)"
+  },
+  {
+   "family": "F1",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ntotal = 85\nres = total\ntotal = 61\nf = 33\nright = f\nf = res\nprint(total)\n```",
+   "a": "61",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "total = 85\nres = total\ntotal = 61\nf = 33\nright = f\nf = res\nprint(total)"
+  },
+  {
+   "family": "F1",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nx = 30\ntmp = x\nx = 69\nnum = 80\ng = num\nnum = tmp\nprint(g)\n```",
+   "a": "80",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "x = 30\ntmp = x\nx = 69\nnum = 80\ng = num\nnum = tmp\nprint(g)"
+  },
+  {
+   "family": "F1",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nright = 46\nf = right\nright = 27\nx = 71\nval = x\nx = f\nprint(val)\n```",
+   "a": "71",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "right = 46\nf = right\nright = 27\nx = 71\nval = x\nx = f\nprint(val)"
+  },
+  {
+   "family": "F1",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ne = 96\nd = e\ne = 90\ncount = 14\nres = count\ncount = d\nprint(res)\n```",
+   "a": "14",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "e = 96\nd = e\ne = 90\ncount = 14\nres = count\ncount = d\nprint(res)"
+  },
+  {
+   "family": "F1",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nval = 65\nt = val\nval = 52\nright = 22\ncount = right\nright = t\nprint(right)\n```",
+   "a": "65",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "val = 65\nt = val\nval = 52\nright = 22\ncount = right\nright = t\nprint(right)"
+  },
+  {
+   "family": "F2",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nres = 45\nval = 36\ns = 55\nright = res\nres = val\nval = right\ns = res\nprint(s)\n```",
+   "a": "36",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "res = 45\nval = 36\ns = 55\nright = res\nres = val\nval = right\ns = res\nprint(s)"
+  },
+  {
+   "family": "F2",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nright = 31\ne = 66\nres = 55\nu = right\nright = e\ne = u\nres = right\nprint(right)\n```",
+   "a": "66",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "right = 31\ne = 66\nres = 55\nu = right\nright = e\ne = u\nres = right\nprint(right)"
+  },
+  {
+   "family": "F2",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nm = 39\ns = 14\ng = 33\nval = m\nm = s\ns = val\ng = m\nprint(g)\n```",
+   "a": "14",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "m = 39\ns = 14\ng = 33\nval = m\nm = s\ns = val\ng = m\nprint(g)"
+  },
+  {
+   "family": "F2",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nd = 33\nu = 91\ng = 38\nk = d\nd = u\nu = k\ng = d\nprint(g)\n```",
+   "a": "91",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "d = 33\nu = 91\ng = 38\nk = d\nd = u\nu = k\ng = d\nprint(g)"
+  },
+  {
+   "family": "F2",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nx = 13\nright = 12\nv = 53\nb = x\nx = right\nright = b\nv = x\nprint(right)\n```",
+   "a": "13",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "x = 13\nright = 12\nv = 53\nb = x\nx = right\nright = b\nv = x\nprint(right)"
+  },
+  {
+   "family": "F2",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nd = 29\nleft = 92\np = 38\nt = d\nd = left\nleft = t\np = d\nprint(d)\n```",
+   "a": "92",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "d = 29\nleft = 92\np = 38\nt = d\nd = left\nleft = t\np = d\nprint(d)"
+  },
+  {
+   "family": "F3",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ne = 18\nn = 99\ne += 7\nn -= 14\ne -= 16\nn += 17\nprint(n)\n```",
+   "a": "102",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "e = 18\nn = 99\ne += 7\nn -= 14\ne -= 16\nn += 17\nprint(n)"
+  },
+  {
+   "family": "F3",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nacc = 25\nval = 68\nacc += 11\nval -= 6\nacc -= 15\nval += 11\nprint(val)\n```",
+   "a": "73",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "acc = 25\nval = 68\nacc += 11\nval -= 6\nacc -= 15\nval += 11\nprint(val)"
+  },
+  {
+   "family": "F3",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\na = 93\ntotal = 30\na += 16\ntotal -= 14\na -= 9\ntotal += 19\nprint(a)\n```",
+   "a": "100",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "a = 93\ntotal = 30\na += 16\ntotal -= 14\na -= 9\ntotal += 19\nprint(a)"
+  },
+  {
+   "family": "F3",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ny = 87\nz = 65\ny += 19\nz -= 14\ny -= 15\nz += 13\nprint(z)\n```",
+   "a": "64",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "y = 87\nz = 65\ny += 19\nz -= 14\ny -= 15\nz += 13\nprint(z)"
+  },
+  {
+   "family": "F3",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nh = 77\nn = 41\nh += 7\nn -= 15\nh -= 2\nn += 7\nprint(h)\n```",
+   "a": "82",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "h = 77\nn = 41\nh += 7\nn -= 15\nh -= 2\nn += 7\nprint(h)"
+  },
+  {
+   "family": "F3",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ntotal = 82\nres = 47\ntotal += 16\nres -= 17\ntotal -= 4\nres += 2\nprint(total)\n```",
+   "a": "94",
+   "kind": "int",
+   "n_lines": 7,
+   "code": "total = 82\nres = 47\ntotal += 16\nres -= 17\ntotal -= 4\nres += 2\nprint(total)"
+  },
+  {
+   "family": "F4",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ntmp = 39\nleft = 78\nif tmp > left:\n    item = tmp\nelse:\n    item = left\nitem = item + 17\nprint(item)\n```",
+   "a": "95",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "tmp = 39\nleft = 78\nif tmp > left:\n    item = tmp\nelse:\n    item = left\nitem = item + 17\nprint(item)"
+  },
+  {
+   "family": "F4",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nq = 21\nacc = 51\nif q < acc:\n    p = q\nelse:\n    p = acc\np = p + 6\nprint(p)\n```",
+   "a": "27",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "q = 21\nacc = 51\nif q < acc:\n    p = q\nelse:\n    p = acc\np = p + 6\nprint(p)"
+  },
+  {
+   "family": "F4",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ntmp = 71\nq = 76\nif tmp < q:\n    r = tmp\nelse:\n    r = q\nr = r + 17\nprint(r)\n```",
+   "a": "88",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "tmp = 71\nq = 76\nif tmp < q:\n    r = tmp\nelse:\n    r = q\nr = r + 17\nprint(r)"
+  },
+  {
+   "family": "F4",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nacc = 23\ne = 19\nif acc < e:\n    item = acc\nelse:\n    item = e\nitem = item + 15\nprint(item)\n```",
+   "a": "34",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "acc = 23\ne = 19\nif acc < e:\n    item = acc\nelse:\n    item = e\nitem = item + 15\nprint(item)"
+  },
+  {
+   "family": "F4",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nf = 71\ncount = 53\nif f > count:\n    r = f\nelse:\n    r = count\nr = r + 14\nprint(r)\n```",
+   "a": "85",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "f = 71\ncount = 53\nif f > count:\n    r = f\nelse:\n    r = count\nr = r + 14\nprint(r)"
+  },
+  {
+   "family": "F4",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nright = 63\ncount = 45\nif right > count:\n    v = right\nelse:\n    v = count\nv = v + 10\nprint(v)\n```",
+   "a": "73",
+   "kind": "int",
+   "n_lines": 8,
+   "code": "right = 63\ncount = 45\nif right > count:\n    v = right\nelse:\n    v = count\nv = v + 10\nprint(v)"
+  },
+  {
+   "family": "F5",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nk = 53\nfor count in range(2):\n    k += 2\nprint(k)\n```",
+   "a": "57",
+   "kind": "int",
+   "n_lines": 4,
+   "code": "k = 53\nfor count in range(2):\n    k += 2\nprint(k)"
+  },
+  {
+   "family": "F5",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ns = 24\nfor g in range(2):\n    s += 6\nprint(s)\n```",
+   "a": "36",
+   "kind": "int",
+   "n_lines": 4,
+   "code": "s = 24\nfor g in range(2):\n    s += 6\nprint(s)"
+  },
+  {
+   "family": "F5",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nb = 38\nfor total in range(2):\n    b += 4\nprint(b)\n```",
+   "a": "46",
+   "kind": "int",
+   "n_lines": 4,
+   "code": "b = 38\nfor total in range(2):\n    b += 4\nprint(b)"
+  },
+  {
+   "family": "F5",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nleft = 23\nfor b in range(2):\n    left += 5\nprint(left)\n```",
+   "a": "33",
+   "kind": "int",
+   "n_lines": 4,
+   "code": "left = 23\nfor b in range(2):\n    left += 5\nprint(left)"
+  },
+  {
+   "family": "F5",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nf = 16\nfor h in range(3):\n    f += 8\nprint(f)\n```",
+   "a": "40",
+   "kind": "int",
+   "n_lines": 4,
+   "code": "f = 16\nfor h in range(3):\n    f += 8\nprint(f)"
+  },
+  {
+   "family": "F5",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nm = 17\nfor f in range(4):\n    m += 7\nprint(m)\n```",
+   "a": "45",
+   "kind": "int",
+   "n_lines": 4,
+   "code": "m = 17\nfor f in range(4):\n    m += 7\nprint(m)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nitem = [42, 95, 16]\nitem[1] = 29\ny = item[0]\nitem[0] = item[1]\nprint(item[0] + y)\n```",
+   "a": "71",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "item = [42, 95, 16]\nitem[1] = 29\ny = item[0]\nitem[0] = item[1]\nprint(item[0] + y)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ne = [60, 89, 81]\ne[1] = 35\nq = e[0]\ne[0] = e[1]\nprint(e[0] + q)\n```",
+   "a": "95",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "e = [60, 89, 81]\ne[1] = 35\nq = e[0]\ne[0] = e[1]\nprint(e[0] + q)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nn = [39, 58, 23]\nn[1] = 53\nq = n[2]\nn[2] = n[1]\nprint(n[2] + q)\n```",
+   "a": "76",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "n = [39, 58, 23]\nn[1] = 53\nq = n[2]\nn[2] = n[1]\nprint(n[2] + q)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nh = [91, 69, 27]\nh[2] = 51\ntmp = h[1]\nh[1] = h[2]\nprint(h[1] + tmp)\n```",
+   "a": "120",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "h = [91, 69, 27]\nh[2] = 51\ntmp = h[1]\nh[1] = h[2]\nprint(h[1] + tmp)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nb = [13, 17, 89]\nb[0] = 43\ntotal = b[2]\nb[2] = b[0]\nprint(b[2] + total)\n```",
+   "a": "132",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "b = [13, 17, 89]\nb[0] = 43\ntotal = b[2]\nb[2] = b[0]\nprint(b[2] + total)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ncount = [34, 94, 49]\ncount[0] = 45\ny = count[2]\ncount[2] = count[0]\nprint(count[2] + y)\n```",
+   "a": "94",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "count = [34, 94, 49]\ncount[0] = 45\ny = count[2]\ncount[2] = count[0]\nprint(count[2] + y)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nw = [43, 54, 37]\nw[0] = 69\np = w[2]\nw[2] = w[0]\nprint(w[2] + p)\n```",
+   "a": "106",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "w = [43, 54, 37]\nw[0] = 69\np = w[2]\nw[2] = w[0]\nprint(w[2] + p)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nright = [34, 84, 27]\nright[2] = 85\nz = right[1]\nright[1] = right[2]\nprint(right[1] + z)\n```",
+   "a": "169",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "right = [34, 84, 27]\nright[2] = 85\nz = right[1]\nright[1] = right[2]\nprint(right[1] + z)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nb = [67, 29, 36]\nb[2] = 61\nf = b[1]\nb[1] = b[2]\nprint(b[1] + f)\n```",
+   "a": "90",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "b = [67, 29, 36]\nb[2] = 61\nf = b[1]\nb[1] = b[2]\nprint(b[1] + f)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nd = [94, 14, 54]\nd[2] = 35\nq = d[0]\nd[0] = d[2]\nprint(d[0] + q)\n```",
+   "a": "129",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "d = [94, 14, 54]\nd[2] = 35\nq = d[0]\nd[0] = d[2]\nprint(d[0] + q)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nw = [91, 47, 51]\nw[2] = 41\ny = w[0]\nw[0] = w[2]\nprint(w[0] + y)\n```",
+   "a": "132",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "w = [91, 47, 51]\nw[2] = 41\ny = w[0]\nw[0] = w[2]\nprint(w[0] + y)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ny = [84, 55, 94]\ny[2] = 53\nk = y[0]\ny[0] = y[2]\nprint(y[0] + k)\n```",
+   "a": "137",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "y = [84, 55, 94]\ny[2] = 53\nk = y[0]\ny[0] = y[2]\nprint(y[0] + k)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\na = [10, 60, 71]\na[0] = 21\ntotal = a[2]\na[2] = a[0]\nprint(a[2] + total)\n```",
+   "a": "92",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "a = [10, 60, 71]\na[0] = 21\ntotal = a[2]\na[2] = a[0]\nprint(a[2] + total)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nw = [63, 60, 93]\nw[1] = 58\ntmp = w[2]\nw[2] = w[1]\nprint(w[2] + tmp)\n```",
+   "a": "151",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "w = [63, 60, 93]\nw[1] = 58\ntmp = w[2]\nw[2] = w[1]\nprint(w[2] + tmp)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nz = [24, 88, 53]\nz[2] = 89\nm = z[0]\nz[0] = z[2]\nprint(z[0] + m)\n```",
+   "a": "113",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "z = [24, 88, 53]\nz[2] = 89\nm = z[0]\nz[0] = z[2]\nprint(z[0] + m)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nk = [25, 26, 82]\nk[2] = 76\nu = k[0]\nk[0] = k[2]\nprint(k[0] + u)\n```",
+   "a": "101",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "k = [25, 26, 82]\nk[2] = 76\nu = k[0]\nk[0] = k[2]\nprint(k[0] + u)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ng = [31, 26, 71]\ng[1] = 87\nres = g[2]\ng[2] = g[1]\nprint(g[2] + res)\n```",
+   "a": "158",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "g = [31, 26, 71]\ng[1] = 87\nres = g[2]\ng[2] = g[1]\nprint(g[2] + res)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ny = [69, 54, 43]\ny[0] = 92\nw = y[2]\ny[2] = y[0]\nprint(y[2] + w)\n```",
+   "a": "135",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "y = [69, 54, 43]\ny[0] = 92\nw = y[2]\ny[2] = y[0]\nprint(y[2] + w)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nx = [33, 96, 86]\nx[0] = 65\na = x[1]\nx[1] = x[0]\nprint(x[1] + a)\n```",
+   "a": "161",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "x = [33, 96, 86]\nx[0] = 65\na = x[1]\nx[1] = x[0]\nprint(x[1] + a)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nv = [50, 82, 73]\nv[1] = 34\nd = v[2]\nv[2] = v[1]\nprint(v[2] + d)\n```",
+   "a": "107",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "v = [50, 82, 73]\nv[1] = 34\nd = v[2]\nv[2] = v[1]\nprint(v[2] + d)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nc = [61, 51, 18]\nc[2] = 53\nz = c[0]\nc[0] = c[2]\nprint(c[0] + z)\n```",
+   "a": "114",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "c = [61, 51, 18]\nc[2] = 53\nz = c[0]\nc[0] = c[2]\nprint(c[0] + z)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nv = [42, 81, 54]\nv[0] = 50\nright = v[2]\nv[2] = v[0]\nprint(v[2] + right)\n```",
+   "a": "104",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "v = [42, 81, 54]\nv[0] = 50\nright = v[2]\nv[2] = v[0]\nprint(v[2] + right)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ncount = [31, 13, 73]\ncount[2] = 65\nk = count[0]\ncount[0] = count[2]\nprint(count[0] + k)\n```",
+   "a": "96",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "count = [31, 13, 73]\ncount[2] = 65\nk = count[0]\ncount[0] = count[2]\nprint(count[0] + k)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\na = [44, 43, 88]\na[0] = 97\nq = a[1]\na[1] = a[0]\nprint(a[1] + q)\n```",
+   "a": "140",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "a = [44, 43, 88]\na[0] = 97\nq = a[1]\na[1] = a[0]\nprint(a[1] + q)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nt = [98, 74, 51]\nt[1] = 61\nacc = t[2]\nt[2] = t[1]\nprint(t[2] + acc)\n```",
+   "a": "112",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "t = [98, 74, 51]\nt[1] = 61\nacc = t[2]\nt[2] = t[1]\nprint(t[2] + acc)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nb = [17, 82, 55]\nb[1] = 85\nleft = b[2]\nb[2] = b[1]\nprint(b[2] + left)\n```",
+   "a": "140",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "b = [17, 82, 55]\nb[1] = 85\nleft = b[2]\nb[2] = b[1]\nprint(b[2] + left)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ns = [34, 11, 35]\ns[1] = 53\ne = s[2]\ns[2] = s[1]\nprint(s[2] + e)\n```",
+   "a": "88",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "s = [34, 11, 35]\ns[1] = 53\ne = s[2]\ns[2] = s[1]\nprint(s[2] + e)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ng = [82, 99, 61]\ng[0] = 53\ns = g[1]\ng[1] = g[0]\nprint(g[1] + s)\n```",
+   "a": "152",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "g = [82, 99, 61]\ng[0] = 53\ns = g[1]\ng[1] = g[0]\nprint(g[1] + s)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\nv = [56, 42, 22]\nv[1] = 57\nc = v[2]\nv[2] = v[1]\nprint(v[2] + c)\n```",
+   "a": "79",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "v = [56, 42, 22]\nv[1] = 57\nc = v[2]\nv[2] = v[1]\nprint(v[2] + c)"
+  },
+  {
+   "family": "F6",
+   "q": "What does this Python program print? End your reply with `Answer: <number>`.\n```python\ny = [26, 48, 42]\ny[0] = 71\nn = y[2]\ny[2] = y[0]\nprint(y[2] + n)\n```",
+   "a": "113",
+   "kind": "int",
+   "n_lines": 5,
+   "code": "y = [26, 48, 42]\ny[0] = 71\nn = y[2]\ny[2] = y[0]\nprint(y[2] + n)"
+  }
+ ]
+}

@@ -1,0 +1,246 @@
+## Current model
+Accepted edits so far: 1.
+This round's sample (40 problems): acc@256 0.60, acc@384 0.97, mean generated tokens 239, unfinished at 384 tokens 0.03.
+Validation (held-out problems, aggregate only): acc@256 0.42 (original 0.40), acc@512 0.85 (original 0.87), median tokens 262 (original 288).
+Protected bounds: multiple-choice fitness must stay >= -1.0081; WikiText loss must stay <= 3.7179.
+Approximate share of thinking text by type (rule-based): re-checking 6%, state updates 32%, final answer 22%, restating / setup 12%, other 27%.
+
+## Example traces (short successes, correct but over budget, wrong or unfinished)
+### Example (family F4, 115 tokens, correct within 256; target 23)
+```python
+f = 28
+c = 16
+if f < c:
+    count = f
+else:
+    count = c
+count = count + 7
+print(count)
+```
+Model output:
+<think>
+Okay, let's see. The program starts with f being 28 and c being 16. Then it checks if f is less than c. Since 28 is greater than 16, the else clause is executed. So count becomes c, which is 16. Then count is set to count +7, so 16+7=23. Finally, print(count) which is 23. So the answer should be 23.
+</think>
+
+Answer: 23
+
+Answer: 23<|im_end|>
+
+### Example (family F4, 150 tokens, correct within 256; target 65)
+```python
+p = 63
+num = 20
+if p > num:
+    s = p
+else:
+    s = num
+s = s + 2
+print(s)
+```
+Model output:
+<think>
+Okay, let's see. The code starts with p being 63 and num being 20. The first condition is if p is greater than num. Since 63 is definitely greater than 20, the first part of the if statement runs. So s is set to p, which is 63. Then the code adds 2 to s, making it 65. Finally, it prints s, which is 65. So the answer should be 65. Let me check again. 63 + 2 is 65. Yep, that's right. Answer: 65.
+</think>
+
+Answer: 65
+
+The Python program prints 65.<|im_end|>
+
+### Example (family F2, 368 tokens, correct but over 256 tokens; target 98)
+```python
+tmp = 98
+f = 18
+v = 16
+c = tmp
+tmp = f
+f = c
+v = tmp
+print(f)
+```
+Model output:
+<think>
+Okay, let's see. The user provided a Python program and wants to know what it prints. Let me go through the code step by step.
+
+First, the variables are initialized: tmp is 98, f is 18, v is 16. Then c is set to tmp, which is 98. Then tmp is assigned to f, which was 18. Then f is assigned to c, which was 98. Finally, v is set to tmp, which is now 18. Then the print statement is executed, and we need to output f.
+
+So starting from the beginning: tmp was 98, then c = tmp, so c becomes 98. Then tmp = f (which was 18), so now tmp is 18. Then f = c (which is 98), so f is now 98. Then v is set to tmp (which is 18). Then print(f) would print 98.
+
+Wait, let me check again. Let me trace each step:
+
+Initial values:
+tmp = 98
+f = 18
+v = 16
+c = tmp → c becomes 98
+tmp = f → tmp becomes 18
+f = c → f becomes 98
+v = tmp → v becomes 18
+print(f) → print 98.
+
+Yes, so the output is 98. And the answer should be 98. So the final answer is 98.
+</think>
+
+Answer: 98
+
+The Python program initializes variables and modifies them step by step. After the assignments, the final value of `f` is printed, which is 98.  
+
+Answer: 98<|im_end|>
+
+### Example (family F2, 384 tokens, correct but over 256 tokens; target 71)
+```python
+acc = 54
+z = 71
+t = 88
+f = acc
+acc = z
+z = f
+t = acc
+print(acc)
+```
+Model output:
+<think>
+Okay, let's see. The Python code given is:
+
+acc = 54
+z = 71
+t = 88
+f = acc
+acc = z
+z = f
+t = acc
+print(acc)
+
+So, first, I need to figure out what each variable is and how they change step by step.
+
+Starting with the initial values: acc is 54, z is 71, t is 88. Then f is assigned to acc, which is 54. So now f = 54.
+
+Then, acc is set to z, which is 71. So now acc is 71.
+
+Next, z is set to f, which is 54. So now z is 54.
+
+Finally, t is set to acc, which is 71. So t becomes 71.
+
+So after all these assignments, the variables are:
+
+acc = 71
+z = 54
+t = 71
+
+Then the print statement is to print acc. Since acc is now 71, the output should be 71.
+
+Let me check again to make sure I didn't mix up any steps. Let me trace each line:
+
+1. Initialize acc=54, z=71, t=88.
+2. f = acc → f becomes 54.
+3. acc = z → acc becomes 71.
+4. z = f → z becomes 54.
+5. t = acc → t becomes 71.
+
+Yes, that's correct. So the final value of acc is 71. Therefore, the answer is 71.
+</think>
+
+Answer: 71
+
+The Python program prints the value of `acc` after all assignments. The steps show that `acc` starts at 54, becomes
+
+### Example (family F2, 152 tokens, correct within 256; target 38)
+```python
+h = 17
+r = 38
+g = 91
+u = h
+h = r
+r = u
+g = h
+print(h)
+```
+Model output:
+<think>
+Okay, let's see. The Python code has variables h, r, g, u. Initially, h is 17, r is 38, g is 91, and u is h, which is 17. Then, h is set to r (which is 38), r becomes u (which is 17), and then g is set to h (which is 38). So after these assignments, h is 38, r is 17, and g is 38. Then the print statement prints h, which is 38. So the answer should be 38, ending with Answer: 38.
+</think>
+
+Answer: 38<|im_end|>
+
+### Example (family F3, 365 tokens, correct but over 256 tokens; target 38)
+```python
+v = 36
+e = 95
+v += 13
+e -= 14
+v -= 11
+e += 16
+print(v)
+```
+Model output:
+<think>
+Okay, let's see. I need to run this Python code and figure out what it prints. Let's start by breaking down each line step by step.
+
+First, the variables v and e are initialized as 36 and 95 respectively. Then v is assigned 36 + 13, which is 49. Then e is assigned 95 - 14, which is 81. Then v is subtracted by 11, so 49 - 11 is 38. Finally, e is added by 16, making 81 + 16 equal to 97.
+
+The print statement is just outputting v, which after all these operations is 38. So the final answer should be 38. Let me check again to make sure I didn't make any mistakes. Yes, adding 13 to 36 gives 49, subtracting 14 from 95 gives 81, then subtracting 11 from 49 gives 38, and adding 16 to 81 gives 97. Wait, but the print statement is just printing v, which is 38. Oh right, because the code is v += 13, then e -= 14, then v -= 11, then e += 16. So the order is v gets updated, then e, then v, then e. But the print statement is only after v. So the final value of v is 38. So the answer is 38.
+</think>
+
+Answer: 38
+
+The Python program prints the final value of `v`, which is 38. 
+
+Answer: 38<|im_end|>
+
+## Diagnostics
+positions available: start 40, mid 120, recheck 11, end 40
+
+Direct logit attribution toward the end-of-thinking token </think>: value at 'end' positions minus value at 'mid' positions
+heads: L27h14:-0.97, L24h6:+0.89, L23h6:+0.86, L25h7:+0.80, L26h0:+0.69, L24h2:+0.67, L23h7:-0.54, L21h8:+0.50, L23h5:+0.46, L23h0:+0.39, L24h5:+0.38, L27h1:-0.34
+MLP neurons: L27n1574:+10.33, L27n1371:+6.93, L27n222:+0.78, L27n0:-0.72, L27n19:+0.50, L27n39:-0.50, L27n50:-0.50, L27n98:-0.48, L27n8:+0.47, L27n26:+0.46, L27n33:-0.44, L27n49:+0.41
+logit lens p(token) at 'end' / 'mid': L8: 0.000/0.000  L12: 0.000/0.000  L16: 0.000/0.000  L20: 0.000/0.000  L24: 0.000/0.000  L28: 0.999/0.000
+
+Direct logit attribution toward the re-check token ' Wait': value at 'recheck' positions minus value at 'mid' positions
+heads: L25h0:+0.91, L27h15:+0.78, L25h4:-0.55, L23h3:+0.47, L24h3:-0.41, L23h6:+0.41, L27h5:+0.38, L24h15:-0.36, L25h6:+0.34, L23h7:-0.32, L24h4:-0.30, L21h0:-0.21
+MLP neurons: L25n162:-1.19, L24n1610:+0.85, L22n67:+0.66, L26n20:+0.64, L24n400:+0.60, L23n179:+0.57, L19n1969:+0.48, L27n386:-0.47, L24n43:+0.34, L27n39:+0.33, L22n1366:-0.32, L25n198:+0.31
+logit lens p(token) at 'recheck' / 'mid': L8: 0.000/0.000  L12: 0.000/0.000  L16: 0.000/0.000  L20: 0.002/0.000  L24: 0.049/0.000  L28: 0.045/0.000
+
+## Results of your probes from the previous round
+- {"kind": "act_stats", "site": "attn", "layer": 23, "event": "recheck"} -> norm 69.094; largest coordinates 780:-11.61, 908:-11.33, 831:-11.31, 400:-11.14, 1701:+9.60, 1573:+8.87, 1202:+8.52, 959:-8.47
+- {"kind": "act_stats", "site": "mlp", "layer": 24, "event": "recheck"} -> norm 92.761; largest coordinates 1610:+48.46, 42:-30.74, 31:-28.40, 11:-24.72, 43:-23.91, 302:+20.56, 10:+11.74, 140:-11.50
+- {"kind": "sv_readout", "tensor": "L27.attn.o", "k": 0, "side": "left"} -> singular value 3.315; top tokens [' ', ',', ' (', ' we', ' and', ' is']; bottom tokens [' btnCancel', ' &_', ' thoải', ' TestUtils', '文化和', 'ilyn']
+
+## History (oldest first). Each candidate was scored on that round's fresh sample.
+Round 1: current model acc@256 0.55, acc@384 0.95, mean tokens 255; nothing kept (not confirmed on the second sample)
+  [0] scale L24.attn.o col[0:128] x0.6; scale L25.attn.o col[0:128] x0.7 -> acc@256 0.55, acc@384 0.95, mean tokens 252 (n=40)
+  [1] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.15 -> acc@256 0.75, acc@384 0.97, mean tokens 232 (n=40)
+  [2] rank1 L27.mlp.down u=tok: Wait v=act:mlp:L27:recheck alpha=-0.1 -> acc@256 0.50, acc@384 0.85, mean tokens 244 (n=20)
+  [3] scale L24.attn.o col[0:128] x0.85; scale L27.mlp.down col[1574] x1.12 -> acc@256 0.55, acc@384 0.95, mean tokens 247 (n=20)
+Round 2: current model acc@256 0.50, acc@384 0.95, mean tokens 251; nothing kept (not confirmed on the second sample)
+  [0] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.2 -> acc@256 0.45, acc@384 1.00, mean tokens 255 (n=20)
+  [1] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.15; rank1 L25.attn.o u=act:resid:L26:recheck - act:resid:L26:mid v=act:attn:L25:recheck alpha=-0.1 -> acc@256 0.62, acc@384 0.93, mean tokens 249 (n=40)
+  [2] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.1 -> acc@256 0.45, acc@384 0.93, mean tokens 251 (n=40)
+  [3] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.15; rank1 L26.attn.o u=act:resid:L27:end - act:resid:L27:recheck v=act:attn:L26:recheck alpha=+0.08 -> acc@256 0.50, acc@384 0.95, mean tokens 261 (n=20)
+Round 3: current model acc@256 0.47, acc@384 0.88, mean tokens 264; KEPT candidate 0
+  [0] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck alpha=-0.15; rank1 L25.attn.o u=act:resid:L26:recheck - act:resid:L26:mid v=act:attn:L25:recheck alpha=-0.1 -> acc@256 0.55, acc@384 0.90, mean tokens 249 (n=40)
+      rationale: Re-test the best recent combination: subtract the recheck-minus-mid residual direction from L24 and L25 attention outputs.
+  [1] rank1 L24.attn.o u=act:resid:L25:recheck - act:resid:L25:mid v=act:attn:L24:recheck - act:attn:L24:mid alpha=-0.15; rank1 L25.attn.o u=act:resid:L26:recheck - act:resid:L26:mid v=act:attn:L25:recheck - act:attn:L25:mid alpha=-0.1 -> acc@256 0.55, acc@384 0.88, mean tokens 249 (n=40)
+      rationale: Same subtraction, but keyed on the contrastive head pattern (recheck minus mid), so the edit fires mainly at recheck positions and leaves ordinary steps alone.
+  [2] scale L25.mlp.down col[162] x1.4; scale L24.mlp.down col[1610] x0.7 -> acc@256 0.45, acc@384 0.80, mean tokens 264 (n=20)
+      rationale: Conservative neuron-level edit: strengthen L25n162 (pushes against ' Wait') and weaken L24n1610 (pushes toward ' Wait').
+  [3] rank1 L25.mlp.down u=act:resid:L26:recheck - act:resid:L26:mid v=act:mlp:L25:recheck alpha=-0.1 -> acc@256 0.45, acc@384 0.85, mean tokens 255 (n=20)
+      rationale: MLP-side mechanism: when the L25 neuron pattern matches recheck positions, have L25.mlp.down write against the recheck-minus-mid residual direction.
+Round 4: current model acc@256 0.75, acc@384 0.95, mean tokens 228; nothing kept (not confirmed on the second sample)
+  [0] rank1 L27.mlp.down u=tok:<|im_end|> v=act:mlp:L27:end alpha=+0.08 -> acc@256 0.45, acc@384 0.50, mean tokens 261 (n=20)
+      rationale: Make L27 MLP write toward <|im_end|> when the end-of-thinking pattern fires, to shorten the post-think answer section.
+  [1] rank1 L24.attn.o u=act:resid:L25:start - act:resid:L25:mid v=act:attn:L24:start - act:attn:L24:mid alpha=-0.1 -> acc@256 0.70, acc@384 0.95, mean tokens 242 (n=20)
+      rationale: Reduce restating/setup: subtract start-minus-mid residual direction from L24 attn output when start-like head pattern appears.
+  [2] rank1 L23.attn.o u=act:resid:L24:recheck - act:resid:L24:mid v=act:attn:L23:recheck - act:attn:L23:mid alpha=-0.08; rank1 L27.attn.o u=tok: Wait v=act:attn:L27:recheck - act:attn:L27:mid alpha=-0.06 -> acc@256 0.78, acc@384 0.95, mean tokens 224 (n=40)
+      rationale: Extend recheck suppression to L23 and L27 heads that write ' Wait' (contrastive keys), conservative.
+  [3] scale L27.mlp.down col[1574] x1.1; scale L27.mlp.down col[1371] x1.1 -> acc@256 0.75, acc@384 0.95, mean tokens 228 (n=40)
+      rationale: Conservative: slightly strengthen natural end-of-thinking neurons so thinking ends as soon as answer is stated.
+Round 5: current model acc@256 0.62, acc@384 0.95, mean tokens 228; nothing kept (no candidate beat the current model)
+  [0] rank1 L23.attn.o u=act:resid:L24:recheck - act:resid:L24:mid v=act:attn:L23:recheck - act:attn:L23:mid alpha=-0.1; rank1 L27.attn.o u=tok: Wait v=act:attn:L27:recheck - act:attn:L27:mid alpha=-0.08 -> acc@256 0.60, acc@384 0.95, mean tokens 228 (n=40)
+      rationale: Retry round-4 best (L23 + L27 contrastive recheck suppression), slightly stronger.
+  [1] rank1 L24.attn.o u=act:resid:L25:start - act:resid:L25:mid v=act:attn:L24:start - act:attn:L24:mid alpha=-0.1; rank1 L23.attn.o u=act:resid:L24:recheck - act:resid:L24:mid v=act:attn:L23:recheck - act:attn:L23:mid alpha=-0.08 -> acc@256 0.60, acc@384 0.95, mean tokens 225 (n=40)
+      rationale: Combine setup/restating suppression at L24 with L23 recheck suppression.
+  [2] scale L24.mlp.down col[1610] x0.6; rank1 L27.attn.o u=tok: Wait v=act:attn:L27:recheck - act:attn:L27:mid alpha=-0.06 -> acc@256 0.60, acc@384 0.95, mean tokens 231 (n=20)
+      rationale: Conservative MLP-side: weaken L24n1610 (pushes Wait) and L27 attn Wait-writing with contrastive key.
+  [3] rank1 L26.attn.o u=act:resid:L27:end - act:resid:L27:mid v=act:attn:L26:end - act:attn:L26:mid alpha=+0.06; rank1 L23.attn.o u=act:resid:L24:recheck - act:resid:L24:mid v=act:attn:L23:recheck - act:attn:L23:mid alpha=-0.08 -> acc@256 0.55, acc@384 1.00, mean tokens 244 (n=20)
+      rationale: Encourage concluding once answer is stated: L26 attn writes end-minus-mid direction when end-like head pattern appears (contrastive key), small.
+
+Propose exactly 4 diverse mutations of the current model, and up to 6 probes.

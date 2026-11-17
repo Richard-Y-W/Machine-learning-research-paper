@@ -1,0 +1,351 @@
+{
+ "model": "Qwen/Qwen3-0.6B",
+ "n": 5,
+ "seed": "excheck",
+ "cells": {
+  "lookup_2hop/direct": {
+   "n": 5,
+   "acc": 0.2,
+   "acc_by_budget": null,
+   "hit_cap": 0.0,
+   "per_item_correct": [
+    false,
+    true,
+    false,
+    false,
+    false
+   ],
+   "per_item_tokens": [
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "mean_new_tokens": 7.0,
+   "unfinished": 0.0,
+   "seconds": 1.2,
+   "samples": [
+    {
+     "q": "Here is a list of links:\nS3 -> J7\nX1 -> R1\nF9 -> S3\nR1 -> L9\nJ7 -> P1\nE2 -> B9\nL6 -> X1\nP1 -> E2\nStart at L6 and follow the links exactly 2 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "R1",
+     "out": "Answer: <L6><|im_end|>",
+     "pred": "L6"
+    },
+    {
+     "q": "Here is a list of links:\nE6 -> J3\nV3 -> T3\nJ3 -> B5\nZ2 -> C3\nX7 -> Z2\nB5 -> Q2\nT3 -> X7\nH8 -> V3\nStart at E6 and follow the links exactly 2 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "B5",
+     "out": "Answer: <B5><|im_end|>",
+     "pred": "B5"
+    },
+    {
+     "q": "Here is a list of links:\nF4 -> B2\nM8 -> D6\nR3 -> Z7\nZ7 -> M8\nN7 -> K2\nL9 -> H5\nH5 -> R3\nK2 -> F4\nStart at N7 and follow the links exactly 2 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "F4",
+     "out": "Answer: <Z7><|im_end|>",
+     "pred": "Z7"
+    }
+   ]
+  },
+  "lookup_2hop/direct_fewshot": {
+   "n": 5,
+   "acc": 0.0,
+   "acc_by_budget": null,
+   "hit_cap": 0.0,
+   "per_item_correct": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "per_item_tokens": [
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "mean_new_tokens": 5.0,
+   "unfinished": 0.0,
+   "seconds": 2.8,
+   "samples": [
+    {
+     "q": "Here is a list of links:\nS3 -> J7\nX1 -> R1\nF9 -> S3\nR1 -> L9\nJ7 -> P1\nE2 -> B9\nL6 -> X1\nP1 -> E2\nStart at L6 and follow the links exactly 2 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "R1",
+     "out": "Answer: P1<|im_end|>",
+     "pred": "P1"
+    },
+    {
+     "q": "Here is a list of links:\nE6 -> J3\nV3 -> T3\nJ3 -> B5\nZ2 -> C3\nX7 -> Z2\nB5 -> Q2\nT3 -> X7\nH8 -> V3\nStart at E6 and follow the links exactly 2 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "B5",
+     "out": "Answer: P9<|im_end|>",
+     "pred": "P9"
+    },
+    {
+     "q": "Here is a list of links:\nF4 -> B2\nM8 -> D6\nR3 -> Z7\nZ7 -> M8\nN7 -> K2\nL9 -> H5\nH5 -> R3\nK2 -> F4\nStart at N7 and follow the links exactly 2 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "F4",
+     "out": "Answer: K2<|im_end|>",
+     "pred": "K2"
+    }
+   ]
+  },
+  "lookup_4hop/direct": {
+   "n": 5,
+   "acc": 0.0,
+   "acc_by_budget": null,
+   "hit_cap": 0.0,
+   "per_item_correct": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "per_item_tokens": [
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "mean_new_tokens": 7.0,
+   "unfinished": 0.0,
+   "seconds": 1.1,
+   "samples": [
+    {
+     "q": "Here is a list of links:\nV7 -> R7\nL8 -> V7\nB2 -> N1\nN4 -> L8\nG6 -> B2\nN1 -> J6\nZ2 -> N4\nR7 -> N8\nStart at Z2 and follow the links exactly 4 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "R7",
+     "out": "Answer: <N8><|im_end|>",
+     "pred": "N8"
+    },
+    {
+     "q": "Here is a list of links:\nK6 -> P5\nS1 -> L9\nP5 -> Q5\nC3 -> P3\nZ8 -> K6\nQ5 -> Q6\nP3 -> S1\nQ6 -> R6\nStart at Z8 and follow the links exactly 4 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "Q6",
+     "out": "Answer: <Z8><|im_end|>",
+     "pred": "Z8"
+    },
+    {
+     "q": "Here is a list of links:\nB1 -> G6\nQ6 -> V8\nS4 -> B6\nB6 -> N9\nG6 -> N5\nV8 -> S4\nJ4 -> B1\nS2 -> Q6\nStart at S2 and follow the links exactly 4 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "B6",
+     "out": "Answer: <B1><|im_end|>",
+     "pred": "B1"
+    }
+   ]
+  },
+  "lookup_4hop/direct_fewshot": {
+   "n": 5,
+   "acc": 0.4,
+   "acc_by_budget": null,
+   "hit_cap": 0.0,
+   "per_item_correct": [
+    false,
+    true,
+    false,
+    true,
+    false
+   ],
+   "per_item_tokens": [
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "mean_new_tokens": 5.0,
+   "unfinished": 0.0,
+   "seconds": 2.8,
+   "samples": [
+    {
+     "q": "Here is a list of links:\nV7 -> R7\nL8 -> V7\nB2 -> N1\nN4 -> L8\nG6 -> B2\nN1 -> J6\nZ2 -> N4\nR7 -> N8\nStart at Z2 and follow the links exactly 4 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "R7",
+     "out": "Answer: J6<|im_end|>",
+     "pred": "J6"
+    },
+    {
+     "q": "Here is a list of links:\nK6 -> P5\nS1 -> L9\nP5 -> Q5\nC3 -> P3\nZ8 -> K6\nQ5 -> Q6\nP3 -> S1\nQ6 -> R6\nStart at Z8 and follow the links exactly 4 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "Q6",
+     "out": "Answer: Q6<|im_end|>",
+     "pred": "Q6"
+    },
+    {
+     "q": "Here is a list of links:\nB1 -> G6\nQ6 -> V8\nS4 -> B6\nB6 -> N9\nG6 -> N5\nV8 -> S4\nJ4 -> B1\nS2 -> Q6\nStart at S2 and follow the links exactly 4 times. Which node do you reach? End your reply with `Answer: <node>`.",
+     "a": "B6",
+     "out": "Answer: J2<|im_end|>",
+     "pred": "J2"
+    }
+   ]
+  },
+  "code_noarith/direct": {
+   "n": 5,
+   "acc": 0.2,
+   "acc_by_budget": null,
+   "hit_cap": 0.4,
+   "per_item_correct": [
+    false,
+    true,
+    false,
+    false,
+    false
+   ],
+   "per_item_tokens": [
+    64,
+    56,
+    12,
+    64,
+    10
+   ],
+   "mean_new_tokens": 41.2,
+   "unfinished": 0.0,
+   "seconds": 6.7,
+   "samples": [
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 39\nb = a\na = 77\nd = 54\ne = d\nd = b\nprint(b)\n```",
+     "a": "39",
+     "out": "The Python program prints the value of `b`, which is initially set to `a`, which is set to `77`. Then `d` is set to `54`, and `e` is set to `d`. Finally, `b` is printed. \n\nSince `b` was set to `",
+     "pred": "54"
+    },
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 45\nb = a\na = 80\nd = 93\ne = d\nd = b\nprint(e)\n```",
+     "a": "93",
+     "out": "The Python program prints the value of `e`, which is assigned as `e = d`. Since `d = b` and `b = a`, and `a = 45`, the final value of `e` is:\n\n**Answer: 93**<|im_end|>",
+     "pred": "93"
+    },
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 91\nb = a\na = 79\nd = 53\ne = d\nd = b\nprint(d)\n```",
+     "a": "91",
+     "out": "The Python program prints the number **53**.<|im_end|>",
+     "pred": "53"
+    }
+   ]
+  },
+  "code_noarith/direct_fewshot": {
+   "n": 5,
+   "acc": 0.0,
+   "acc_by_budget": null,
+   "hit_cap": 0.0,
+   "per_item_correct": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "per_item_tokens": [
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "mean_new_tokens": 3.0,
+   "unfinished": 0.0,
+   "seconds": 1.8,
+   "samples": [
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 39\nb = a\na = 77\nd = 54\ne = d\nd = b\nprint(b)\n```",
+     "a": "39",
+     "out": "40<|im_end|>",
+     "pred": "40"
+    },
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 45\nb = a\na = 80\nd = 93\ne = d\nd = b\nprint(e)\n```",
+     "a": "93",
+     "out": "80<|im_end|>",
+     "pred": "80"
+    },
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 91\nb = a\na = 79\nd = 53\ne = d\nd = b\nprint(d)\n```",
+     "a": "91",
+     "out": "84<|im_end|>",
+     "pred": "84"
+    }
+   ]
+  },
+  "code_arith/direct": {
+   "n": 5,
+   "acc": 0.0,
+   "acc_by_budget": null,
+   "hit_cap": 0.2,
+   "per_item_correct": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "per_item_tokens": [
+    9,
+    55,
+    9,
+    11,
+    64
+   ],
+   "mean_new_tokens": 29.6,
+   "unfinished": 0.0,
+   "seconds": 6.6,
+   "samples": [
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 23\nb = a\na = 61\nd = 43\ne = d\nd = b\nc = b + a\nprint(c)\n```",
+     "a": "84",
+     "out": "The program prints:\n\n**61**<|im_end|>",
+     "pred": "61"
+    },
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 78\nb = a\na = 41\nd = 79\ne = d\nd = b\nc = b + a\nprint(c)\n```",
+     "a": "119",
+     "out": "The Python program prints the number **79**.\n\n```python\na = 78\nb = a\na = 41\nd = 79\ne = d\nd = b\nc = b + a\nprint(c)\n```<|im_end|>",
+     "pred": "79"
+    },
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 95\nb = a\na = 28\nd = 99\ne = d\nd = b\nc = b + a\nprint(c)\n```",
+     "a": "123",
+     "out": "The program prints:\n\n**95**<|im_end|>",
+     "pred": "95"
+    }
+   ]
+  },
+  "code_arith/direct_fewshot": {
+   "n": 5,
+   "acc": 0.2,
+   "acc_by_budget": null,
+   "hit_cap": 0.0,
+   "per_item_correct": [
+    false,
+    true,
+    false,
+    false,
+    false
+   ],
+   "per_item_tokens": [
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "mean_new_tokens": 4.0,
+   "unfinished": 0.0,
+   "seconds": 1.9,
+   "samples": [
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 23\nb = a\na = 61\nd = 43\ne = d\nd = b\nc = b + a\nprint(c)\n```",
+     "a": "84",
+     "out": "114<|im_end|>",
+     "pred": "114"
+    },
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 78\nb = a\na = 41\nd = 79\ne = d\nd = b\nc = b + a\nprint(c)\n```",
+     "a": "119",
+     "out": "119<|im_end|>",
+     "pred": "119"
+    },
+    {
+     "q": "What does this Python program print? Answer with only the number.\n```python\na = 95\nb = a\na = 28\nd = 99\ne = d\nd = b\nc = b + a\nprint(c)\n```",
+     "a": "123",
+     "out": "119<|im_end|>",
+     "pred": "119"
+    }
+   ]
+  }
+ }
+}

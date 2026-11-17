@@ -1,0 +1,18 @@
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Qwen3-0.6B-Base} & \multicolumn{2}{c}{Qwen3-1.7B-Base} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Condition & $v{+}1$ & $v$ & $v{+}1$ & $v$ \\
+\midrule
+Unedited model & .07 & .34 & .03 & .40 \\
+Edit, gain 1 & .36 & .23 & .26 & .28 \\
+Edit, gain 2 & .53 & .17 & .39 & .21 \\
+Edit, gain 3 & .60 & .14 & .42 & .20 \\
+Edit, gain 4 & .66 & .11 & .47 & .18 \\
+\midrule
+Edit (gain 3), successor head removed & .03 & .39 & .02 & .43 \\
+Attention fitted to a wrong position & .06 & .32 & .05 & .33 \\
+Gain only, native attention & .17 & .33 & .05 & .40 \\
+Edit with another head's output projection & .04 & .27 & .09 & .28 \\
+\bottomrule
+\end{tabular}

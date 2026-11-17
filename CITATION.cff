@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the accompanying preprint."
+title: "Routing Edits: Reusing a Successor Circuit through Attention Weight Changes"
+type: software
+authors:
+  - family-names: Wang
+    given-names: Yucheng
+    affiliation: University of Wisconsin-Madison
+    email: ywang3574@wisc.edu
+repository-code: "https://github.com/Richard-Y-W/Machine-learning-research-paper"
+license: MIT
+abstract: >-
+  Research code and saved experimental results for a closed-form attention
+  routing edit that reuses a successor-associated circuit in two Qwen3 models.
+  The accompanying preprint reports causal controls, collateral effects,
+  comparisons with gradient methods, and an LLM-guided primitive search.
+preferred-citation:
+  type: article
+  title: "Routing Edits: Reusing a Successor Circuit through Attention Weight Changes"
+  authors:
+    - family-names: Wang
+      given-names: Yucheng
+      affiliation: University of Wisconsin-Madison
+      email: ywang3574@wisc.edu
+  year: 2026
+  notes: Preprint
+  url: "https://github.com/Richard-Y-W/Machine-learning-research-paper"

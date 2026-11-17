@@ -1,0 +1,26 @@
+W1113 14:51:42.021000 41172 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+Loading weights:  12%|#1        | 36/310 [00:00<00:00, 355.36it/s]
+Loading weights:  25%|##4       | 77/310 [00:00<00:00, 378.29it/s]
+Loading weights:  38%|###7      | 117/310 [00:00<00:00, 384.99it/s]
+Loading weights:  50%|#####     | 156/310 [00:00<00:00, 383.83it/s]
+Loading weights:  63%|######3   | 196/310 [00:00<00:00, 384.35it/s]
+Loading weights:  76%|#######5  | 235/310 [00:00<00:00, 383.39it/s]
+Loading weights:  92%|#########1| 284/310 [00:00<00:00, 406.05it/s]
+Loading weights: 100%|##########| 310/310 [00:00<00:00, 403.18it/s]
+<LOCAL_REPOSITORY>\experiments\evolution\baselines_cli.py:269: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  loss = loss / len(enc.items); loss.backward(); total += float(loss)
+[grad] step 5 loss 0.8682 dev fit -0.8110 adm True
+[grad] step 10 loss 0.5699 dev fit -0.5030 adm False
+[grad] step 15 loss 0.2471 dev fit -0.1929 adm False
+[grad] step 20 loss 0.0468 dev fit -0.0337 adm False
+[grad] step 25 loss 0.0096 dev fit -0.0066 adm False
+[grad] step 30 loss 0.0008 dev fit -0.0006 adm False
+[grad] step 35 loss 0.0003 dev fit -0.0002 adm False
+[grad] step 40 loss 0.0001 dev fit -0.0001 adm False
+[grad] step 45 loss 0.0000 dev fit -0.0000 adm False
+[grad] step 50 loss 0.0000 dev fit -0.0000 adm False
+[grad] step 55 loss 0.0000 dev fit -0.0000 adm False
+[grad] step 60 loss 0.0000 dev fit -0.0000 adm False

@@ -1,0 +1,156 @@
+W1113 15:33:57.161000 1032 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  12%|#1        | 37/310 [00:00<00:00, 354.52it/s]Loading weights:  28%|##7       | 86/310 [00:00<00:00, 425.71it/s]Loading weights:  42%|####1     | 129/310 [00:00<00:00, 416.43it/s]Loading weights:  55%|#####5    | 171/310 [00:00<00:00, 358.70it/s]Loading weights:  67%|######7   | 208/310 [00:00<00:00, 356.02it/s]Loading weights:  85%|########4 | 263/310 [00:00<00:00, 414.43it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 420.49it/s]
+[E-LLM_3] gen 4: parent -1.1489 valid 6/6 improving 6 admissible+ 6 accepted 1 -> -1.1365 (92.5s, $0.0613)
+[E-LLM_3] gen 5: parent -1.1365 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.1296 (73.8s, $0.0583)
+[E-LLM_3] gen 6: parent -1.1296 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.1237 (72.0s, $0.0519)
+[E-LLM_3] gen 7: parent -1.1237 valid 6/6 improving 4 admissible+ 4 accepted 0 -> -1.1150 (73.7s, $0.0515)
+[E-LLM_3] gen 8: parent -1.1150 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.1036 (70.7s, $0.0513)
+[E-LLM_3] gen 9: parent -1.1036 valid 1/6 improving 1 admissible+ 1 accepted 0 -> -1.0974 (51.5s, $0.0380)
+[E-LLM_3] gen 10: parent -1.0974 valid 1/6 improving 1 admissible+ 1 accepted 0 -> -1.0956 (50.5s, $0.0352)
+[E-LLM_4] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.1855 (74.7s, $0.0372)
+[E-LLM_4] gen 2: parent -1.1855 valid 6/6 improving 1 admissible+ 1 accepted 0 -> -1.1797 (80.4s, $0.0433)
+[E-LLM_4] gen 3: parent -1.1797 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.1723 (80.7s, $0.0446)
+[E-LLM_4] gen 4: parent -1.1723 valid 6/6 improving 5 admissible+ 5 accepted 5 -> -1.1630 (75.3s, $0.0558)
+[E-LLM_4] gen 5: parent -1.1630 valid 6/6 improving 3 admissible+ 3 accepted 1 -> -1.1580 (71.6s, $0.0504)
+[E-LLM_4] gen 6: parent -1.1580 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.1553 (69.1s, $0.0504)
+[E-LLM_4] gen 7: parent -1.1553 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1526 (80.5s, $0.0497)
+[E-LLM_4] gen 8: parent -1.1526 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.1497 (75.8s, $0.0490)
+[E-LLM_4] gen 9: parent -1.1497 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.1469 (75.4s, $0.0507)
+[E-LLM_4] gen 10: parent -1.1469 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.1432 (79.8s, $0.0572)
+[E-LLM_5] gen 1: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.1966 (76.1s, $0.0380)
+[E-LLM_5] gen 2: parent -1.1966 valid 6/6 improving 5 admissible+ 5 accepted 3 -> -1.1581 (89.4s, $0.0359)
+[E-LLM_5] gen 3: parent -1.1581 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.1555 (92.5s, $0.0440)
+[E-LLM_5] gen 4: parent -1.1555 valid 6/6 improving 4 admissible+ 4 accepted 0 -> -1.1501 (82.8s, $0.0449)
+[E-LLM_5] gen 5: parent -1.1501 valid 6/6 improving 5 admissible+ 5 accepted 3 -> -1.1383 (90.1s, $0.0498)
+[E-LLM_5] gen 6: parent -1.1383 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1312 (76.6s, $0.0584)
+[E-LLM_5] gen 7: parent -1.1312 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.1288 (74.6s, $0.0487)
+[E-LLM_5] gen 8: parent -1.1288 valid 6/6 improving 1 admissible+ 1 accepted 1 -> -1.1287 (78.9s, $0.0476)
+[E-LLM_5] gen 9: parent -1.1287 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.1260 (79.2s, $0.0472)
+[E-LLM_5] gen 10: parent -1.1260 valid 6/6 improving 5 admissible+ 5 accepted 2 -> -1.1226 (89.0s, $0.0549)
+[E-LLM_6] gen 1: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.2198 (74.4s, $0.0368)
+[E-LLM_6] gen 2: parent -1.2198 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.1681 (78.4s, $0.0451)
+[E-LLM_6] gen 3: parent -1.1681 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.1567 (93.8s, $0.0577)
+[E-LLM_6] gen 4: parent -1.1567 valid 6/6 improving 5 admissible+ 5 accepted 0 -> -1.1524 (82.1s, $0.0526)
+[E-LLM_6] gen 5: parent -1.1524 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.1493 (82.0s, $0.0561)
+[E-LLM_6] gen 6: parent -1.1493 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1452 (89.1s, $0.0549)
+[E-LLM_6] gen 7: parent -1.1452 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.1382 (76.5s, $0.0541)
+[E-LLM_6] gen 8: parent -1.1382 valid 6/6 improving 5 admissible+ 5 accepted 3 -> -1.1352 (82.5s, $0.0560)
+[E-LLM_6] gen 9: parent -1.1352 valid 6/6 improving 4 admissible+ 4 accepted 1 -> -1.1281 (71.4s, $0.0534)
+[E-LLM_6] gen 10: parent -1.1281 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.1242 (71.1s, $0.0521)
+[E-LLM_7] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.1978 (75.0s, $0.0388)
+[E-LLM_7] gen 2: parent -1.1978 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.1925 (79.0s, $0.0419)
+[E-LLM_7] gen 3: parent -1.1925 valid 6/6 improving 4 admissible+ 4 accepted 1 -> -1.1870 (81.8s, $0.0437)
+[E-LLM_7] gen 4: parent -1.1870 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.1805 (76.6s, $0.0476)
+[E-LLM_7] gen 5: parent -1.1805 valid 6/6 improving 5 admissible+ 5 accepted 5 -> -1.1746 (83.7s, $0.0541)
+[E-LLM_7] gen 6: parent -1.1746 valid 6/6 improving 6 admissible+ 6 accepted 4 -> -1.1697 (83.4s, $0.0572)
+[E-LLM_7] gen 7: parent -1.1697 valid 6/6 improving 2 admissible+ 2 accepted 0 -> -1.1670 (78.6s, $0.0614)
+[E-LLM_7] gen 8: parent -1.1670 valid 6/6 improving 5 admissible+ 5 accepted 2 -> -1.1593 (73.2s, $0.0554)
+[E-LLM_7] gen 9: parent -1.1593 valid 6/6 improving 1 admissible+ 1 accepted 1 -> -1.1570 (65.2s, $0.0521)
+[E-LLM_7] gen 10: parent -1.1570 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.1542 (80.5s, $0.0616)
+[E-LLM_8] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted 1 -> -1.2275 (75.3s, $0.0373)
+[E-LLM_8] gen 2: parent -1.2275 valid 6/6 improving 6 admissible+ 4 accepted 4 -> -1.1888 (79.7s, $0.0384)
+[E-LLM_8] gen 3: parent -1.1888 valid 6/6 improving 6 admissible+ 6 accepted 4 -> -1.1568 (87.8s, $0.0575)
+[E-LLM_8] gen 4: parent -1.1568 valid 6/6 improving 5 admissible+ 5 accepted 2 -> -1.1464 (77.0s, $0.0472)
+[E-LLM_8] gen 5: parent -1.1464 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.1405 (77.9s, $0.0490)
+[E-LLM_8] gen 6: parent -1.1405 valid 6/6 improving 3 admissible+ 3 accepted 2 -> -1.1321 (76.6s, $0.0537)
+[E-LLM_8] gen 7: parent -1.1321 valid 6/6 improving 6 admissible+ 5 accepted 0 -> -1.1274 (80.6s, $0.0490)
+[E-LLM_8] gen 8: parent -1.1274 valid 6/6 improving 6 admissible+ 6 accepted 3 -> -1.1196 (87.0s, $0.0594)
+[E-LLM_8] gen 9: parent -1.1196 valid 6/6 improving 6 admissible+ 5 accepted 1 -> -1.1109 (92.5s, $0.0548)
+[E-LLM_8] gen 10: parent -1.1109 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.1041 (95.9s, $0.0560)
+W1113 17:17:36.626000 10204 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  12%|#2        | 38/310 [00:00<00:00, 360.68it/s]Loading weights:  28%|##8       | 88/310 [00:00<00:00, 438.74it/s]Loading weights:  43%|####2     | 133/310 [00:00<00:00, 367.18it/s]Loading weights:  55%|#####5    | 171/310 [00:00<00:00, 340.59it/s]Loading weights:  66%|######6   | 206/310 [00:00<00:00, 332.24it/s]Loading weights:  79%|#######9  | 245/310 [00:00<00:00, 347.17it/s]Loading weights:  94%|#########3| 290/310 [00:00<00:00, 376.21it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 375.70it/s]
+[R-LLM_8] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted None -> -1.2460 (90.3s, $0.0490)
+[R-LLM_8] gen 2: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted None -> -1.2460 (31.3s, $0.0370)
+[R-LLM_8] gen 3: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted None -> -1.2460 (30.7s, $0.0356)
+[R-LLM_8] gen 4: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted None -> -1.2460 (32.7s, $0.0370)
+[R-LLM_8] gen 5: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted None -> -1.2460 (27.5s, $0.0347)
+[R-LLM_8] gen 6: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted None -> -1.2460 (31.6s, $0.0355)
+[R-LLM_8] gen 7: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted None -> -1.2460 (31.7s, $0.0357)
+[R-LLM_8] gen 8: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted None -> -1.2460 (30.8s, $0.0361)
+[R-LLM_8] gen 9: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted None -> -1.2460 (31.2s, $0.0370)
+[R-LLM_8] gen 10: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted None -> -1.2460 (31.0s, $0.0372)
+W1113 17:27:08.789000 33236 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  12%|#1        | 37/310 [00:00<00:00, 337.11it/s]Loading weights:  25%|##4       | 76/310 [00:00<00:00, 365.49it/s]Loading weights:  36%|###6      | 113/310 [00:00<00:00, 350.89it/s]Loading weights:  49%|####9     | 152/310 [00:00<00:00, 359.73it/s]Loading weights:  62%|######1   | 191/310 [00:00<00:00, 364.81it/s]Loading weights:  75%|#######5  | 234/310 [00:00<00:00, 374.81it/s]Loading weights:  90%|########9 | 278/310 [00:00<00:00, 390.62it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 391.06it/s]
+[E-LLM-nohist_1] gen 1: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.2254 (94.1s, $0.0367)
+[E-LLM-nohist_1] gen 2: parent -1.2254 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.1865 (76.1s, $0.0357)
+[E-LLM-nohist_1] gen 3: parent -1.1865 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.1579 (73.4s, $0.0361)
+[E-LLM-nohist_1] gen 4: parent -1.1579 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1466 (70.2s, $0.0346)
+[E-LLM-nohist_1] gen 5: parent -1.1466 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.1325 (70.9s, $0.0320)
+[E-LLM-nohist_1] gen 6: parent -1.1325 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.1287 (71.7s, $0.0341)
+[E-LLM-nohist_1] gen 7: parent -1.1287 valid 6/6 improving 1 admissible+ 1 accepted 5 -> -1.1196 (71.3s, $0.0339)
+[E-LLM-nohist_1] gen 8: parent -1.1196 valid 6/6 improving 1 admissible+ 1 accepted 3 -> -1.1164 (73.1s, $0.0340)
+[E-LLM-nohist_1] gen 9: parent -1.1164 valid 6/6 improving 0 admissible+ 0 accepted None -> -1.1164 (71.5s, $0.0349)
+[E-LLM-nohist_1] gen 10: parent -1.1164 valid 6/6 improving 0 admissible+ 0 accepted None -> -1.1164 (49.1s, $0.0345)
+[E-LLM-nohist_2] gen 1: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.2102 (72.3s, $0.0368)
+[E-LLM-nohist_2] gen 2: parent -1.2102 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1964 (73.8s, $0.0367)
+[E-LLM-nohist_2] gen 3: parent -1.1964 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.1809 (74.0s, $0.0371)
+[E-LLM-nohist_2] gen 4: parent -1.1809 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.1714 (71.7s, $0.0378)
+[E-LLM-nohist_2] gen 5: parent -1.1714 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.1681 (74.5s, $0.0355)
+[E-LLM-nohist_2] gen 6: parent -1.1681 valid 6/6 improving 1 admissible+ 1 accepted 4 -> -1.1667 (74.3s, $0.0349)
+[E-LLM-nohist_2] gen 7: parent -1.1667 valid 6/6 improving 1 admissible+ 1 accepted 1 -> -1.1651 (71.8s, $0.0345)
+[E-LLM-nohist_2] gen 8: parent -1.1651 valid 6/6 improving 0 admissible+ 0 accepted None -> -1.1651 (74.3s, $0.0348)
+[E-LLM-nohist_2] gen 9: parent -1.1651 valid 6/6 improving 1 admissible+ 1 accepted 5 -> -1.1636 (50.9s, $0.0366)
+[E-LLM-nohist_2] gen 10: parent -1.1636 valid 6/6 improving 0 admissible+ 0 accepted None -> -1.1636 (75.0s, $0.0367)
+[E-LLM-nohist_3] gen 1: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.2207 (79.4s, $0.0381)
+[E-LLM-nohist_3] gen 2: parent -1.2207 valid 6/6 improving 6 admissible+ 6 accepted 0 -> -1.1948 (71.1s, $0.0347)
+[E-LLM-nohist_3] gen 3: parent -1.1948 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.1865 (71.9s, $0.0327)
+[E-LLM-nohist_3] gen 4: parent -1.1865 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.1805 (69.9s, $0.0341)
+[E-LLM-nohist_3] gen 5: parent -1.1805 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.1767 (74.5s, $0.0374)
+[E-LLM-nohist_3] gen 6: parent -1.1767 valid 6/6 improving 2 admissible+ 1 accepted 5 -> -1.1757 (69.3s, $0.0331)
+[E-LLM-nohist_3] gen 7: parent -1.1757 valid 6/6 improving 2 admissible+ 2 accepted 3 -> -1.1734 (65.6s, $0.0349)
+[E-LLM-nohist_3] gen 8: parent -1.1734 valid 1/6 improving 0 admissible+ 0 accepted None -> -1.1734 (49.7s, $0.0216)
+[E-LLM-nohist_3] gen 9: parent -1.1734 valid 6/6 improving 1 admissible+ 1 accepted 4 -> -1.1733 (44.0s, $0.0313)
+[E-LLM-nohist_3] gen 10: parent -1.1733 valid 6/6 improving 1 admissible+ 1 accepted 4 -> -1.1713 (70.3s, $0.0349)
+[E-LLM-nohist_4] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.1930 (73.3s, $0.0363)
+[E-LLM-nohist_4] gen 2: parent -1.1930 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.1823 (72.2s, $0.0368)
+[E-LLM-nohist_4] gen 3: parent -1.1823 valid 6/6 improving 1 admissible+ 1 accepted 3 -> -1.1735 (79.3s, $0.0374)
+[E-LLM-nohist_4] gen 4: parent -1.1735 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.1693 (75.8s, $0.0371)
+[E-LLM-nohist_4] gen 5: parent -1.1693 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.1653 (72.3s, $0.0353)
+[E-LLM-nohist_4] gen 6: parent -1.1653 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1632 (75.8s, $0.0373)
+[E-LLM-nohist_4] gen 7: parent -1.1632 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.1626 (75.0s, $0.0383)
+[E-LLM-nohist_4] gen 8: parent -1.1626 valid 6/6 improving 1 admissible+ 1 accepted 0 -> -1.1606 (71.1s, $0.0339)
+[E-LLM-nohist_4] gen 9: parent -1.1606 valid 6/6 improving 1 admissible+ 1 accepted 2 -> -1.1568 (69.7s, $0.0333)
+[E-LLM-nohist_4] gen 10: parent -1.1568 valid 6/6 improving 0 admissible+ 0 accepted None -> -1.1568 (71.9s, $0.0353)
+W1113 18:23:59.658000 26140 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  13%|#2        | 40/310 [00:00<00:00, 384.88it/s]Loading weights:  28%|##8       | 87/310 [00:00<00:00, 425.75it/s]Loading weights:  42%|####1     | 130/310 [00:00<00:00, 361.29it/s]Loading weights:  54%|#####4    | 168/310 [00:00<00:00, 338.62it/s]Loading weights:  66%|######6   | 206/310 [00:00<00:00, 344.24it/s]Loading weights:  83%|########2 | 257/310 [00:00<00:00, 394.34it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 408.66it/s]
+[E-LLM-free_1] gen 1: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.1791 (92.8s, $0.0371)
+[E-LLM-free_1] gen 2: parent -1.1791 valid 6/6 improving 6 admissible+ 6 accepted 5 -> -1.1519 (74.9s, $0.0371)
+[E-LLM-free_1] gen 3: parent -1.1519 valid 6/6 improving 1 admissible+ 1 accepted 5 -> -1.1509 (83.3s, $0.0484)
+[E-LLM-free_1] gen 4: parent -1.1509 valid 6/6 improving 1 admissible+ 1 accepted 0 -> -1.1499 (83.6s, $0.0463)
+[E-LLM-free_1] gen 5: parent -1.1499 valid 6/6 improving 3 admissible+ 3 accepted 3 -> -1.1391 (96.6s, $0.0573)
+[E-LLM-free_1] gen 6: parent -1.1391 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.1257 (65.5s, $0.0495)
+[E-LLM-free_1] gen 7: parent -1.1257 valid 6/6 improving 5 admissible+ 5 accepted 3 -> -1.1170 (81.2s, $0.0547)
+[E-LLM-free_1] gen 8: parent -1.1170 valid 6/6 improving 5 admissible+ 5 accepted 0 -> -1.1125 (79.2s, $0.0568)
+[E-LLM-free_1] gen 9: parent -1.1125 valid 6/6 improving 3 admissible+ 3 accepted 5 -> -1.1106 (83.2s, $0.0602)
+[E-LLM-free_1] gen 10: parent -1.1106 valid 6/6 improving 1 admissible+ 1 accepted 5 -> -1.1069 (96.5s, $0.0606)
+[E-LLM-free_2] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted 5 -> -1.2198 (74.0s, $0.0344)
+[E-LLM-free_2] gen 2: parent -1.2198 valid 6/6 improving 6 admissible+ 6 accepted 3 -> -1.1698 (80.7s, $0.0455)
+[E-LLM-free_2] gen 3: parent -1.1698 valid 6/6 improving 5 admissible+ 5 accepted 0 -> -1.1452 (84.2s, $0.0526)
+[E-LLM-free_2] gen 4: parent -1.1452 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.1401 (82.3s, $0.0557)
+[E-LLM-free_2] gen 5: parent -1.1401 valid 6/6 improving 2 admissible+ 2 accepted 5 -> -1.1352 (71.8s, $0.0517)
+[E-LLM-free_2] gen 6: parent -1.1352 valid 6/6 improving 4 admissible+ 4 accepted 0 -> -1.1310 (78.0s, $0.0547)
+[E-LLM-free_2] gen 7: parent -1.1310 valid 6/6 improving 4 admissible+ 4 accepted 3 -> -1.1265 (86.6s, $0.0558)
+[E-LLM-free_2] gen 8: parent -1.1265 valid 6/6 improving 4 admissible+ 4 accepted 1 -> -1.1226 (87.4s, $0.0608)
+[E-LLM-free_2] gen 9: parent -1.1226 valid 6/6 improving 3 admissible+ 3 accepted 0 -> -1.1207 (78.1s, $0.0513)
+[E-LLM-free_2] gen 10: parent -1.1207 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.1198 (73.9s, $0.0528)
+[E-LLM-free_3] gen 1: parent -1.2460 valid 6/6 improving 3 admissible+ 3 accepted 4 -> -1.2293 (74.6s, $0.0387)
+[E-LLM-free_3] gen 2: parent -1.2293 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.2106 (81.6s, $0.0396)
+[E-LLM-free_3] gen 3: parent -1.2106 valid 6/6 improving 6 admissible+ 6 accepted 3 -> -1.1918 (85.0s, $0.0438)
+[E-LLM-free_3] gen 4: parent -1.1918 valid 6/6 improving 6 admissible+ 6 accepted 2 -> -1.1732 (88.6s, $0.0534)
+[E-LLM-free_3] gen 5: parent -1.1732 valid 6/6 improving 6 admissible+ 6 accepted 2 -> -1.1572 (85.1s, $0.0530)
+[E-LLM-free_3] gen 6: parent -1.1572 valid 6/6 improving 6 admissible+ 6 accepted 5 -> -1.1057 (97.5s, $0.0672)
+[E-LLM-free_3] gen 7: parent -1.1057 valid 6/6 improving 1 admissible+ 1 accepted 4 -> -1.1027 (90.5s, $0.0711)
+[E-LLM-free_3] gen 8: parent -1.1027 valid 1/6 improving 0 admissible+ 0 accepted None -> -1.1027 (59.2s, $0.0583)
+[E-LLM-free_3] gen 9: parent -1.1027 valid 1/6 improving 0 admissible+ 0 accepted None -> -1.1027 (35.5s, $0.0573)
+[E-LLM-free_3] gen 10: parent -1.1027 valid 6/6 improving 2 admissible+ 2 accepted 4 -> -1.1016 (55.6s, $0.0606)
+[E-LLM-free_4] gen 1: parent -1.2460 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.1943 (75.5s, $0.0367)
+[E-LLM-free_4] gen 2: parent -1.1943 valid 6/6 improving 5 admissible+ 5 accepted 4 -> -1.1567 (78.5s, $0.0409)
+[E-LLM-free_4] gen 3: parent -1.1567 valid 6/6 improving 3 admissible+ 3 accepted 1 -> -1.1520 (87.1s, $0.0538)
+[E-LLM-free_4] gen 4: parent -1.1520 valid 6/6 improving 5 admissible+ 5 accepted 5 -> -1.1438 (80.9s, $0.0495)
+[E-LLM-free_4] gen 5: parent -1.1438 valid 6/6 improving 4 admissible+ 4 accepted 4 -> -1.1332 (80.1s, $0.0588)
+[E-LLM-free_4] gen 6: parent -1.1332 valid 6/6 improving 0 admissible+ 0 accepted None -> -1.1332 (76.5s, $0.0537)
+[E-LLM-free_4] gen 7: parent -1.1332 valid 6/6 improving 2 admissible+ 2 accepted 1 -> -1.1297 (56.1s, $0.0511)
+[E-LLM-free_4] gen 8: parent -1.1297 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.1248 (89.2s, $0.0602)
+[E-LLM-free_4] gen 9: parent -1.1248 valid 6/6 improving 2 admissible+ 2 accepted 2 -> -1.1235 (78.8s, $0.0596)
+[E-LLM-free_4] gen 10: parent -1.1235 valid 6/6 improving 4 admissible+ 4 accepted 2 -> -1.1210 (80.5s, $0.0589)
+STAGE1_API_DONE

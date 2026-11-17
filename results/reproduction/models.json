@@ -1,0 +1,10 @@
+[
+  {
+    "seed": 3,
+    "family": "duffing",
+    "train_seconds": 5.226542399963364,
+    "parameters": 1217,
+    "train_loss_last_batch": 0.000285062356851995,
+    "base_rmse": 0.016773530329127675
+  }
+]

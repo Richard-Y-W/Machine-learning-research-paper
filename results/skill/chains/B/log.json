@@ -1,0 +1,372 @@
+{
+ "name": "B",
+ "generations": [
+  {
+   "gen": 1,
+   "parent_fitness": -4.617499351501465,
+   "parent": {
+    "fitness": -4.617499351501465,
+    "acc": 0.029411764815449715,
+    "protected": -0.6802927135140635,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.169419765472412
+   },
+   "accepted": 5,
+   "meta": {
+    "call": "skill_B_g01",
+    "cost_usd": 0.05472298,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Baseline: ENC prompts mostly copy the input letter (arrow format) or emit a bare space (paren format). The logit lens shows the correct letter appears around L21\u201324 (p\u22480.09). Heads L23h14 and L21h6 dominate positive attribution, while L23h7 and L22h9 are negative. Hypotheses: (1) amplify the successor heads; (2) remove the competing negative heads; (3) use trigger-conditioned rank-1 writes that push ENC states toward the 'letter after' state and away from the bare-space token. The first tries are diverse in layer, mechanism and magnitude, including a conservative head scaling."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: amplify the two top successor heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.5}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.5}]",
+     "desc": "scale L23.attn.o col[1792:1920] x1.5; scale L21.attn.o col[768:896] x1.5",
+     "ev": {
+      "fitness": -4.34261417388916,
+      "acc": 0.029411764815449715,
+      "protected": -0.6848291192320175,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1690914630889893
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.2749, acc 0.029, dprot -0.0045, dNLL -0.0003"
+    },
+    {
+     "k": 1,
+     "rationale": "Stronger amplification of successor heads, plus the L25 helper heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 2.0}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 2.0}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.5}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.5}]",
+     "desc": "scale L23.attn.o col[1792:1920] x2; scale L21.attn.o col[768:896] x2; scale L25.attn.o col[1024:1152] x1.5; scale L25.attn.o col[1152:1280] x1.5",
+     "ev": {
+      "fitness": -4.068260669708252,
+      "acc": 0.0882352963089943,
+      "protected": -0.6924364967659737,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.194469690322876
+     },
+     "admissible": false,
+     "improves": true,
+     "delta": "dfit +0.5492, acc 0.088, dprot -0.0121, dNLL +0.0250"
+    },
+    {
+     "k": 2,
+     "rationale": "Remove negative-attribution heads (likely copy/competitor heads) and boost the main successor head.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.3}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 9, \"factor\": 0.3}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.5}]",
+     "desc": "scale L23.attn.o col[896:1024] x0.3; scale L22.attn.o col[1152:1280] x0.3; scale L23.attn.o col[1792:1920] x1.5",
+     "ev": {
+      "fitness": -4.321269989013672,
+      "acc": 0.029411764815449715,
+      "protected": -0.6800610919094956,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.173007011413574
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.2962, acc 0.029, dprot +0.0002, dNLL +0.0036"
+    },
+    {
+     "k": 3,
+     "rationale": "Trigger-conditioned steering in L23 attention output: push ENC states toward the 'letter after' residual state.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.attn.o\", \"u\": \"act:resid:L28:The letter after {x} is - act:resid:L28:ENC: {x} ->\", \"v\": \"act:attn:L23:ENC: {x} ->\", \"alpha\": 0.3}]",
+     "desc": "rank1 L23.attn.o u=act:resid:L28:The letter after {x} is - act:resid:L28:ENC: {x} -> v=act:attn:L23:ENC: {x} -> alpha=+0.3",
+     "ev": {
+      "fitness": -4.367463111877441,
+      "acc": 0.029411764815449715,
+      "protected": -0.6760430076974444,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1708457469940186
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.2500, acc 0.029, dprot +0.0042, dNLL +0.0014"
+    },
+    {
+     "k": 4,
+     "rationale": "Suppress the bare-space output in the paren format via an MLP write gated on ENC-paren activations.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L26.mlp.down\", \"u\": \"tok: \", \"v\": \"act:mlp:L26:ENC({x}) =\", \"alpha\": -0.3}]",
+     "desc": "rank1 L26.mlp.down u=tok:  v=act:mlp:L26:ENC({x}) = alpha=-0.3",
+     "ev": {
+      "fitness": -5.988644599914551,
+      "acc": 0.029411764815449715,
+      "protected": -0.6760529472803076,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.3748486042022705
+     },
+     "admissible": false,
+     "improves": false,
+     "delta": "dfit -1.3711, acc 0.029, dprot +0.0042, dNLL +0.2054"
+    },
+    {
+     "k": 5,
+     "rationale": "Mid-layer bridge: make the ENC paren state resemble the 'letter after' state at L21, so downstream successor heads engage.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L20.mlp.down\", \"u\": \"act:resid:L21:The letter after {x} is - act:resid:L21:ENC({x}) =\", \"v\": \"act:mlp:L20:ENC({x}) =\", \"alpha\": 0.25}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.3}]",
+     "desc": "rank1 L20.mlp.down u=act:resid:L21:The letter after {x} is - act:resid:L21:ENC({x}) = v=act:mlp:L20:ENC({x}) = alpha=+0.25; scale L21.attn.o col[768:896] x1.3",
+     "ev": {
+      "fitness": -4.213245868682861,
+      "acc": 0.05882352963089943,
+      "protected": -0.6812575424245249,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.16768479347229
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.4043, acc 0.059, dprot -0.0010, dNLL -0.0017"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 137.6,
+   "genome_len": 1
+  },
+  {
+   "gen": 2,
+   "parent_fitness": -4.213245868682861,
+   "parent": {
+    "fitness": -4.213245868682861,
+    "acc": 0.05882352963089943,
+    "protected": -0.6812575424245249,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.16768479347229
+   },
+   "accepted": 3,
+   "meta": {
+    "call": "skill_B_g02",
+    "cost_usd": 0.06170118,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "The successor heads L21h6, L23h14 and L25h8/9 carry the correct letter. Amplifying them raises fitness, but a 2x scale pushed WikiText NLL out of bounds. The accepted L20 bridge maps the paren-format ENC state onto the 'letter after' state. Plan: moderate head boosts, the same bridge for the colon format, the L23 steering edit combined with a head boost, removal of competitor heads, and a careful attempt to suppress the bare-space output in the paren format. Magnitudes stay moderate to keep NLL within bounds."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Conservative: moderately boost the main successor heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.5}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.2}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.2}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.2}]",
+     "desc": "scale L23.attn.o col[1792:1920] x1.5; scale L21.attn.o col[768:896] x1.2; scale L25.attn.o col[1024:1152] x1.2; scale L25.attn.o col[1152:1280] x1.2",
+     "ev": {
+      "fitness": -3.9969544410705566,
+      "acc": 0.0882352963089943,
+      "protected": -0.6844909053683902,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1718623638153076
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.2163, acc 0.088, dprot -0.0032, dNLL +0.0042"
+    },
+    {
+     "k": 1,
+     "rationale": "Apply the accepted L20 bridge to the colon format too, plus a boost to L23h14.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L20.mlp.down\", \"u\": \"act:resid:L21:The letter after {x} is - act:resid:L21:ENC: {x} ->\", \"v\": \"act:mlp:L20:ENC: {x} ->\", \"alpha\": 0.25}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.4}]",
+     "desc": "rank1 L20.mlp.down u=act:resid:L21:The letter after {x} is - act:resid:L21:ENC: {x} -> v=act:mlp:L20:ENC: {x} -> alpha=+0.25; scale L23.attn.o col[1792:1920] x1.4",
+     "ev": {
+      "fitness": -4.258213996887207,
+      "acc": 0.05882352963089943,
+      "protected": -0.677771446799549,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1753032207489014
+     },
+     "admissible": true,
+     "improves": false,
+     "delta": "dfit -0.0450, acc 0.059, dprot +0.0035, dNLL +0.0076"
+    },
+    {
+     "k": 2,
+     "rationale": "Combine the L23 steering edit (earlier +0.25) with a successor-head boost.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.attn.o\", \"u\": \"act:resid:L28:The letter after {x} is - act:resid:L28:ENC: {x} ->\", \"v\": \"act:attn:L23:ENC: {x} ->\", \"alpha\": 0.3}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.4}]",
+     "desc": "rank1 L23.attn.o u=act:resid:L28:The letter after {x} is - act:resid:L28:ENC: {x} -> v=act:attn:L23:ENC: {x} -> alpha=+0.3; scale L23.attn.o col[1792:1920] x1.4",
+     "ev": {
+      "fitness": -3.893827199935913,
+      "acc": 0.05882352963089943,
+      "protected": -0.6758906032152784,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1703526973724365
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.3194, acc 0.059, dprot +0.0054, dNLL +0.0027"
+    },
+    {
+     "k": 3,
+     "rationale": "Strengthen the paren bridge one layer later (L19 MLP) so the L21/L23 successor heads engage.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L19.mlp.down\", \"u\": \"act:resid:L20:The letter after {x} is - act:resid:L20:ENC({x}) =\", \"v\": \"act:mlp:L19:ENC({x}) =\", \"alpha\": 0.25}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.3}]",
+     "desc": "rank1 L19.mlp.down u=act:resid:L20:The letter after {x} is - act:resid:L20:ENC({x}) = v=act:mlp:L19:ENC({x}) = alpha=+0.25; scale L23.attn.o col[1792:1920] x1.3",
+     "ev": {
+      "fitness": -3.847968101501465,
+      "acc": 0.20588235557079315,
+      "protected": -0.6777410566185912,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1713292598724365
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.3653, acc 0.206, dprot +0.0035, dNLL +0.0036"
+    },
+    {
+     "k": 4,
+     "rationale": "Damp the negative/copy heads and boost the successor heads.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L24.attn.o\", \"head\": 5, \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 9, \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.5}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.2}]",
+     "desc": "scale L24.attn.o col[640:768] x0.5; scale L23.attn.o col[896:1024] x0.5; scale L22.attn.o col[1152:1280] x0.5; scale L23.attn.o col[1792:1920] x1.5; scale L21.attn.o col[768:896] x1.2",
+     "ev": {
+      "fitness": -3.870417356491089,
+      "acc": 0.23529411852359772,
+      "protected": -0.6838125310993444,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1737122535705566
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.3428, acc 0.235, dprot -0.0026, dNLL +0.0060"
+    },
+    {
+     "k": 5,
+     "rationale": "Gently suppress the bare-space output in the paren format via the L25 attention output, gated on paren ENC.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L25.attn.o\", \"u\": \"tok: \", \"v\": \"act:attn:L25:ENC({x}) =\", \"alpha\": -0.1}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 14, \"factor\": 1.3}]",
+     "desc": "rank1 L25.attn.o u=tok:  v=act:attn:L25:ENC({x}) = alpha=-0.1; scale L23.attn.o col[1792:1920] x1.3",
+     "ev": {
+      "fitness": -4.11589241027832,
+      "acc": 0.05882352963089943,
+      "protected": -0.6828856421285309,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.1725668907165527
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0974, acc 0.059, dprot -0.0016, dNLL +0.0049"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 135.9,
+   "genome_len": 2
+  },
+  {
+   "gen": 3,
+   "parent_fitness": -3.847968101501465,
+   "parent": {
+    "fitness": -3.847968101501465,
+    "acc": 0.20588235557079315,
+    "protected": -0.6777410566185912,
+    "protected_acc": 0.7166666666666667,
+    "nll": 3.1713292598724365
+   },
+   "accepted": 0,
+   "meta": {
+    "call": "skill_B_g03",
+    "cost_usd": 0.04670977999999999,
+    "error": null,
+    "stop": "end_turn",
+    "analysis": "Two bridges accepted (L20, L19 MLP for paren format). Colon format already partially works via successor heads (L21h6, L23h14, L25h8/9). Main errors: copying the input letter (copy heads L23h7, L22h9, L24h5) and bare space in the paren format. Protected margin is ~0.023, NLL margin ~0.018. Options: damp the copy heads (gen2 [4] gave +0.34, acc 0.235), add a colon-format bridge at L19, boost the L25 successor heads, and add a bridge from the generic 'letter after' direction at L18 for generalization."
+   },
+   "offspring": [
+    {
+     "k": 0,
+     "rationale": "Damp copy heads plus a mild successor boost (repeat of gen2[4], which gave +0.34 but did not win).",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L24.attn.o\", \"head\": 5, \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 9, \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L21.attn.o\", \"head\": 6, \"factor\": 1.2}]",
+     "desc": "scale L24.attn.o col[640:768] x0.5; scale L23.attn.o col[896:1024] x0.5; scale L22.attn.o col[1152:1280] x0.5; scale L21.attn.o col[768:896] x1.2",
+     "ev": {
+      "fitness": -3.5522029399871826,
+      "acc": 0.29411765933036804,
+      "protected": -0.6811225876833003,
+      "protected_acc": 0.7,
+      "nll": 3.177616834640503
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.2958, acc 0.294, dprot -0.0034, dNLL +0.0063"
+    },
+    {
+     "k": 1,
+     "rationale": "Colon-format bridge at L19 MLP, mirroring the accepted paren bridge.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L19.mlp.down\", \"u\": \"act:resid:L20:The letter after {x} is - act:resid:L20:ENC: {x} ->\", \"v\": \"act:mlp:L19:ENC: {x} ->\", \"alpha\": 0.2}]",
+     "desc": "rank1 L19.mlp.down u=act:resid:L20:The letter after {x} is - act:resid:L20:ENC: {x} -> v=act:mlp:L19:ENC: {x} -> alpha=+0.2",
+     "ev": {
+      "fitness": -4.433957099914551,
+      "acc": 0.11764705926179886,
+      "protected": -0.6736999034998007,
+      "protected_acc": 0.7333333333333334,
+      "nll": 3.180199384689331
+     },
+     "admissible": true,
+     "improves": false,
+     "delta": "dfit -0.5860, acc 0.118, dprot +0.0040, dNLL +0.0089"
+    },
+    {
+     "k": 2,
+     "rationale": "Conservative: boost the L25 successor heads h8 and h9.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 8, \"factor\": 1.3}, {\"op\": \"scale\", \"tensor\": \"L25.attn.o\", \"head\": 9, \"factor\": 1.3}]",
+     "desc": "scale L25.attn.o col[1024:1152] x1.3; scale L25.attn.o col[1152:1280] x1.3",
+     "ev": {
+      "fitness": -3.7874226570129395,
+      "acc": 0.20588235557079315,
+      "protected": -0.6793300196683656,
+      "protected_acc": 0.7333333333333334,
+      "nll": 3.172703742980957
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.0605, acc 0.206, dprot -0.0016, dNLL +0.0014"
+    },
+    {
+     "k": 3,
+     "rationale": "Earlier general bridge at L18, keyed on the paren format, to drive successor circuits upstream.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L18.mlp.down\", \"u\": \"act:resid:L19:The letter after {x} is - act:resid:L19:ENC({x}) =\", \"v\": \"act:mlp:L18:ENC({x}) =\", \"alpha\": 0.2}]",
+     "desc": "rank1 L18.mlp.down u=act:resid:L19:The letter after {x} is - act:resid:L19:ENC({x}) = v=act:mlp:L18:ENC({x}) = alpha=+0.2",
+     "ev": {
+      "fitness": -3.943706750869751,
+      "acc": 0.23529411852359772,
+      "protected": -0.6728079642790059,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.173654079437256
+     },
+     "admissible": true,
+     "improves": false,
+     "delta": "dfit -0.0957, acc 0.235, dprot +0.0049, dNLL +0.0023"
+    },
+    {
+     "k": 4,
+     "rationale": "Combine copy-head damping with the colon bridge.",
+     "raw_ops": "[{\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.5}, {\"op\": \"scale\", \"tensor\": \"L22.attn.o\", \"head\": 9, \"factor\": 0.5}, {\"op\": \"rank1\", \"tensor\": \"L19.mlp.down\", \"u\": \"act:resid:L20:The letter after {x} is - act:resid:L20:ENC: {x} ->\", \"v\": \"act:mlp:L19:ENC: {x} ->\", \"alpha\": 0.15}]",
+     "desc": "scale L23.attn.o col[896:1024] x0.5; scale L22.attn.o col[1152:1280] x0.5; rank1 L19.mlp.down u=act:resid:L20:The letter after {x} is - act:resid:L20:ENC: {x} -> v=act:mlp:L19:ENC: {x} -> alpha=+0.15",
+     "ev": {
+      "fitness": -4.0710015296936035,
+      "acc": 0.20588235557079315,
+      "protected": -0.674859002007482,
+      "protected_acc": 0.7166666666666667,
+      "nll": 3.179823875427246
+     },
+     "admissible": true,
+     "improves": false,
+     "delta": "dfit -0.2230, acc 0.206, dprot +0.0029, dNLL +0.0085"
+    },
+    {
+     "k": 5,
+     "rationale": "Late steering through L23 attention output, plus mild copy-head damping.",
+     "raw_ops": "[{\"op\": \"rank1\", \"tensor\": \"L23.attn.o\", \"u\": \"act:resid:L28:The letter after {x} is - act:resid:L28:ENC: {x} ->\", \"v\": \"act:attn:L23:ENC: {x} ->\", \"alpha\": 0.25}, {\"op\": \"scale\", \"tensor\": \"L24.attn.o\", \"head\": 5, \"factor\": 0.6}, {\"op\": \"scale\", \"tensor\": \"L23.attn.o\", \"head\": 7, \"factor\": 0.6}]",
+     "desc": "rank1 L23.attn.o u=act:resid:L28:The letter after {x} is - act:resid:L28:ENC: {x} -> v=act:attn:L23:ENC: {x} -> alpha=+0.25; scale L24.attn.o col[640:768] x0.6; scale L23.attn.o col[896:1024] x0.6",
+     "ev": {
+      "fitness": -3.6846446990966797,
+      "acc": 0.20588235557079315,
+      "protected": -0.6732269717380405,
+      "protected_acc": 0.7333333333333334,
+      "nll": 3.1750993728637695
+     },
+     "admissible": true,
+     "improves": true,
+     "delta": "dfit +0.1633, acc 0.206, dprot +0.0045, dNLL +0.0038"
+    }
+   ],
+   "n_valid": 6,
+   "seconds": 124.7,
+   "genome_len": 3
+  }
+ ],
+ "base": {
+  "fitness": -4.617499351501465,
+  "acc": 0.029411764815449715,
+  "protected": -0.6802927135140635,
+  "protected_acc": 0.7166666666666667,
+  "nll": 3.169419765472412
+ }
+}

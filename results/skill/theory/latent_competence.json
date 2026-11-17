@@ -1,0 +1,50 @@
+{
+ "seq3/practice": [
+  0.875,
+  16
+ ],
+ "seq3/held": [
+  0.714,
+  7
+ ],
+ "seq2/practice": [
+  0.25,
+  16
+ ],
+ "seq2/held": [
+  0.286,
+  7
+ ],
+ "seq_nospace/practice": [
+  0.0,
+  16
+ ],
+ "seq_nospace/held": [
+  0.0,
+  7
+ ],
+ "alpha_list/practice": [
+  1.0,
+  16
+ ],
+ "alpha_list/held": [
+  1.0,
+  7
+ ],
+ "letter_after_quote/practice": [
+  0.0,
+  17
+ ],
+ "letter_after_quote/held": [
+  0.0,
+  8
+ ],
+ "next_letter_colon/practice": [
+  0.0,
+  17
+ ],
+ "next_letter_colon/held": [
+  0.0,
+  8
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "seed": 90,
+  "capacity": "dense",
+  "representation": "transformed",
+  "task": "add_drag",
+  "coefficients": [
+    0.8996527161152876,
+    0.593348282107065,
+    0.25614421000945636,
+    0.8219909597463895
+  ],
+  "true_c": 0.593348282107065,
+  "source_training_steps": 6000
+}

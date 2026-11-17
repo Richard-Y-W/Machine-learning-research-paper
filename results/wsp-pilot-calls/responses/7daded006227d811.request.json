@@ -1,0 +1,76 @@
+{
+  "model": "claude-opus-5-5",
+  "system": "You are editing a neural network directly from numerical weights. No tools are available. Return the requested final JSON patch with a brief public explanation.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are performing direct weight-space programming. Reason from the raw numerical weights below; you have no tools, execution, examples, probes, or feedback. Produce explicit numerical parameter replacements, not code or a training recipe. You may change existing tensor entries but cannot change architecture. Unlisted entries remain identical.\nInputs x=[q,v,u] are physical position, velocity, applied force. Output is acceleration. This network was trained to approximate the family -k*sin(q)-c*v-a*v*abs(v)+g*u, with positive unknown coefficients. Coefficient values are NOT supplied. The intended domain is [-1,1]^3.\nArchitecture: z=ReLU(W1*x+b1); f(x)=sum_i W2[i]*z[i]+b2[0]. W1 shape [12,3]; b1 and W2 length 12; b2 length 1. All indices are zero-based. Some representations may contain unused hidden capacity.\nRequest: Infer the unknown positive linear viscous damping coefficient c from these weights, then double that coefficient ONLY: f_new(x)=f_old(x)-c*v. Preserve the quadratic drag, restoring response, action response, and other original behavior. Report your estimated_c.\nWeights:\n{\"W1\":[[0.03847286,0.04137233,0.01950618],[2.8824764,0.01341098,-0.02063695],[0.98196247,-1.18989678,1.99382577],[-0.00590007,-1.72920729,0.00566115],[-0.09222223,-6.152e-05,-0.3556469],[-0.00257471,0.34353078,0.00058158],[-0.62094781,-0.66237048,1.20942741],[0.3571043,-0.50246567,-0.32220997],[-0.58271243,0.69269849,-1.15985879],[0.96913142,1.03238869,-1.86351832],[0.35808695,0.43938152,-0.80383467],[-0.42626116,0.00239661,-0.00130848]],\"b1\":[-0.17747384,2.31759166,0.78689655,-1.15596427,0.63648479,-0.23239694,0.65400518,0.67774455,-0.45846028,-0.98583395,-0.4446013,0.34233696],\"W2\":[0.44390255,-0.22263318,0.23612686,0.24946238,-0.50974183,-1.26875843,0.20590041,0.00092372,-0.4049663,-0.12227817,-0.02516573,1.52154743],\"b2\":[-0.00167713]}\nReturn JSON with summary (brief public explanation, not detailed chain of thought), estimated_c (number for semantic damping, otherwise null), and patches. Each patch is {tensor: W1/b1/W2/b2, index: [row,column] for W1 or [i] for vectors, value: a numerical replacement}. Do not return an executable expression. Use enough decimal precision. If you cannot find an edit, return an empty patches list."
+    }
+  ],
+  "max_tokens": 4096,
+  "thinking": {
+    "type": "adaptive"
+  },
+  "output_config": {
+    "effort": "medium",
+    "format": {
+      "type": "json_schema",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "summary": {
+            "type": "string"
+          },
+          "estimated_c": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "patches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tensor": {
+                  "type": "string",
+                  "enum": [
+                    "W1",
+                    "b1",
+                    "W2",
+                    "b2"
+                  ]
+                },
+                "index": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "tensor",
+                "index",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "summary",
+          "estimated_c",
+          "patches"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

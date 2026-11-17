@@ -1,0 +1,36 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  88%|████████▊ | 273/310 [00:00<00:00, 2228.73it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 2351.91it/s]
+[lookup2] native lookup with ordinary-word values by format: {'colon': 0.53, 'equals': 0.585, 'arrow': 0.675} -> using 'arrow'
+[lookup2] native letters  : lookup 0.94 successor 0.01
+[lookup2] native numwords : lookup 0.93 successor 0.00
+[lookup2] native days     : lookup 0.28 successor 0.12
+[lookup2] native months   : lookup 0.59 successor 0.04
+[lookup2] native ordinals : lookup 0.75 successor 0.04
+[lookup2] a heads attending from the final position to the queried value (mean attention): L16h14 0.38, L6h11 0.34, L22h7 0.33, L19h5 0.33, L12h0 0.29, L16h10 0.28, L3h10 0.28, L19h9 0.26, L16h7 0.26, L19h8 0.25, L20h6 0.23, L21h8 0.21
+[lookup2] a in A's own layer 21: h8 0.21, h15 0.13, h9 0.08, h13 0.07, h11 0.06, h1 0.06; A itself (h6) 0.01
+[lookup2] b oracle, A looks where L16h14 looks: letters succ 0.01/look 0.93 numwords succ 0.01/look 0.91 days succ 0.32/look 0.13 months succ 0.09/look 0.58 ordinals succ 0.12/look 0.59
+[lookup2] b oracle, A looks where L6h11 looks: letters succ 0.02/look 0.92 numwords succ 0.02/look 0.92 days succ 0.23/look 0.16 months succ 0.07/look 0.58 ordinals succ 0.07/look 0.66
+[lookup2] b oracle, A looks where L22h7 looks: letters succ 0.00/look 0.95 numwords succ 0.00/look 0.93 days succ 0.28/look 0.13 months succ 0.03/look 0.65 ordinals succ 0.07/look 0.69
+[lookup2] b oracle, A looks where L19h5 looks: letters succ 0.03/look 0.92 numwords succ 0.06/look 0.87 days succ 0.18/look 0.19 months succ 0.08/look 0.56 ordinals succ 0.23/look 0.49
+[lookup2] b oracle, A looks where L12h0 looks: letters succ 0.04/look 0.90 numwords succ 0.02/look 0.90 days succ 0.28/look 0.15 months succ 0.16/look 0.50 ordinals succ 0.15/look 0.61
+[lookup2] b oracle, A looks where L16h10 looks: letters succ 0.03/look 0.91 numwords succ 0.00/look 0.92 days succ 0.18/look 0.22 months succ 0.07/look 0.60 ordinals succ 0.10/look 0.65
+[lookup2] b oracle, A looks where L21h8 looks: letters succ 0.00/look 0.95 numwords succ 0.00/look 0.94 days succ 0.11/look 0.28 months succ 0.01/look 0.65 ordinals succ 0.07/look 0.70
+[lookup2] b oracle, A looks where L21h15 looks: letters succ 0.00/look 0.95 numwords succ 0.00/look 0.96 days succ 0.08/look 0.33 months succ 0.00/look 0.67 ordinals succ 0.04/look 0.73
+[lookup2] b oracle, A attends only to the queried value: letters succ 0.18/look 0.75 numwords succ 0.12/look 0.79 days succ 0.49/look 0.06 months succ 0.56/look 0.17 ordinals succ 0.48/look 0.30
+[lookup2] b   same with A's output x2.0: letters succ 0.58/look 0.30 numwords succ 0.42/look 0.43 days succ 0.68/look 0.01 months succ 0.78/look 0.01 ordinals succ 0.75/look 0.08
+[lookup2] b   same with A's output x3.0: letters succ 0.69/look 0.19 numwords succ 0.62/look 0.14 days succ 0.79/look 0.00 months succ 0.74/look 0.00 ordinals succ 0.77/look 0.04
+[lookup2] c EDIT retrieval:h8 gain 1.0: letters succ 0.00/look 0.94 numwords succ 0.01/look 0.93 days succ 0.10/look 0.29 months succ 0.01/look 0.63 ordinals succ 0.03/look 0.76 | word lookup 0.66 | sequences 0.57 | WikiText loss 3.229 (base 3.169)
+[lookup2] c EDIT retrieval:h8 gain 2.0: letters succ 0.01/look 0.94 numwords succ 0.01/look 0.91 days succ 0.15/look 0.21 months succ 0.03/look 0.60 ordinals succ 0.07/look 0.68 | word lookup 0.68 | sequences 0.57 | WikiText loss 3.230 (base 3.169)
+[lookup2] c EDIT retrieval:h8 gain 3.0: letters succ 0.03/look 0.92 numwords succ 0.06/look 0.85 days succ 0.20/look 0.16 months succ 0.09/look 0.50 ordinals succ 0.10/look 0.61 | word lookup 0.70 | sequences 1.00 | WikiText loss 3.234 (base 3.169)
+[lookup2] c EDIT retrieval:h15 gain 1.0: letters succ 0.00/look 0.95 numwords succ 0.00/look 0.94 days succ 0.11/look 0.27 months succ 0.03/look 0.61 ordinals succ 0.03/look 0.74 | word lookup 0.68 | sequences 0.86 | WikiText loss 3.219 (base 3.169)
+[lookup2] c EDIT retrieval:h15 gain 2.0: letters succ 0.00/look 0.95 numwords succ 0.01/look 0.94 days succ 0.14/look 0.24 months succ 0.03/look 0.62 ordinals succ 0.03/look 0.74 | word lookup 0.68 | sequences 0.86 | WikiText loss 3.220 (base 3.169)
+[lookup2] c EDIT retrieval:h15 gain 3.0: letters succ 0.00/look 0.95 numwords succ 0.01/look 0.94 days succ 0.15/look 0.21 months succ 0.03/look 0.61 ordinals succ 0.03/look 0.73 | word lookup 0.66 | sequences 0.86 | WikiText loss 3.225 (base 3.169)
+[lookup2] c EDIT retrieval:h9 gain 1.0: letters succ 0.00/look 0.94 numwords succ 0.01/look 0.94 days succ 0.07/look 0.32 months succ 0.01/look 0.65 ordinals succ 0.05/look 0.71 | word lookup 0.67 | sequences 0.57 | WikiText loss 3.227 (base 3.169)
+[lookup2] c EDIT retrieval:h9 gain 2.0: letters succ 0.01/look 0.93 numwords succ 0.03/look 0.91 days succ 0.12/look 0.27 months succ 0.02/look 0.62 ordinals succ 0.12/look 0.62 | word lookup 0.67 | sequences 0.57 | WikiText loss 3.227 (base 3.169)
+[lookup2] c EDIT retrieval:h9 gain 3.0: letters succ 0.04/look 0.89 numwords succ 0.07/look 0.85 days succ 0.14/look 0.24 months succ 0.06/look 0.57 ordinals succ 0.16/look 0.55 | word lookup 0.66 | sequences 1.00 | WikiText loss 3.229 (base 3.169)
+[lookup2] c EDIT control_nonretrieval:h3 gain 1.0: letters succ 0.00/look 0.95 numwords succ 0.00/look 0.95 days succ 0.10/look 0.27 months succ 0.03/look 0.61 ordinals succ 0.03/look 0.76 | word lookup 0.66 | sequences 0.86 | WikiText loss 3.218 (base 3.169)
+[lookup2] c EDIT control_nonretrieval:h3 gain 2.0: letters succ 0.00/look 0.95 numwords succ 0.00/look 0.95 days succ 0.10/look 0.26 months succ 0.03/look 0.60 ordinals succ 0.03/look 0.76 | word lookup 0.66 | sequences 0.86 | WikiText loss 3.219 (base 3.169)
+[lookup2] c EDIT control_nonretrieval:h3 gain 3.0: letters succ 0.00/look 0.95 numwords succ 0.00/look 0.95 days succ 0.10/look 0.26 months succ 0.03/look 0.60 ordinals succ 0.03/look 0.74 | word lookup 0.68 | sequences 0.71 | WikiText loss 3.222 (base 3.169)
+[lookup2] c EDIT control_gain_only gain 1.0: letters succ 0.01/look 0.94 numwords succ 0.00/look 0.93 days succ 0.12/look 0.28 months succ 0.04/look 0.59 ordinals succ 0.04/look 0.75 | word lookup 0.67 | sequences 1.00 | WikiText loss 3.169 (base 3.169)
+[lookup2] c EDIT control_gain_only gain 2.0: letters succ 0.01/look 0.93 numwords succ 0.03/look 0.87 days succ 0.17/look 0.22 months succ 0.06/look 0.55 ordinals succ 0.07/look 0.68 | word lookup 0.68 | sequences 1.00 | WikiText loss 3.191 (base 3.169)
+[lookup2] c EDIT control_gain_only gain 3.0: letters succ 0.04/look 0.90 numwords succ 0.06/look 0.81 days succ 0.18/look 0.20 months succ 0.10/look 0.54 ordinals succ 0.12/look 0.63 | word lookup 0.67 | sequences 1.00 | WikiText loss 3.283 (base 3.169)
+[lookup2] DONE (148s)

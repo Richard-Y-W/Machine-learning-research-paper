@@ -1,0 +1,19 @@
+Unedited model on development data (ordinals is the ordinal development domain): {"attention_to_queried_value_by_head": [0.06, 0.09, 0.02, 0.0, 0.06, 0.01, 0.03, 0.0, 0.28, 0.04, 0.0, 0.05, 0.05, 0.11, 0.05, 0.22], "word_lookup_accuracy": 0.655, "wikitext_loss": 2.833, "dev_successor_rate": 0.28, "dev_lookup_rate": 0.467}
+
+
+## Your attempt 1
+Analysis: None
+Code:
+```python
+
+```
+Execution error: KeyError: 'build'
+Traceback (most recent call last):
+  File "/workspace/wsp/experiments/compose/opus_design.py", line 148, in main
+    new = ns["build"](data); row["build_seconds"] = round(time.time() - t0, 1)
+          ~~^^^^^^^^^
+KeyError: 'build'
+
+
+
+Attempt 2 of 3. Return JSON with "analysis" and "code".

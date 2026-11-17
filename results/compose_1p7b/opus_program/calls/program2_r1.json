@@ -1,0 +1,30 @@
+{
+ "label": "program2_r1",
+ "model": "claude-opus-5-5",
+ "effort": "high",
+ "ledger_id": "9a66b68d04844acc9ae6f06c1a3aba08",
+ "seconds": 13.2,
+ "stop_reason": "end_turn",
+ "usage": {
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 3364
+  },
+  "cache_creation_input_tokens": 3364,
+  "cache_read_input_tokens": 0,
+  "inference_geo": "global",
+  "input_tokens": 38,
+  "output_tokens": 1008,
+  "output_tokens_details": {
+   "thinking_tokens": 583
+  },
+  "server_tool_use": null,
+  "service_tier": "standard",
+  "speed": "standard"
+ },
+ "cost_usd": 0.0427018,
+ "error": null,
+ "user_text": "No programmes have been tried yet.\n\nRound 1 of 5. Return up to 3 programmes.",
+ "response_text": "{\"analysis\":\"L21h6 looks like a successor head. Ablating it gives the largest drop in next-item margin. In the oracle, feeding it the value vector from one item later gives two-steps-ahead answers 97% of the time, so its OV circuit maps an attended item to that item's successor. It barely attends to the queried value in lookups (0.03). Hypothesis: if its QK is reprogrammed so the final position attends to the queried value token, its existing OV will write the successor. Copy heads such as L22h7 and L16h14 will compete by writing the plain value. This round tests three things: the bare reprogramming (A), whether boosting output gain is needed (B), and whether removing the late copy head L22h7 shifts answers from lookup to successor (C). I use the low rope band so attention does not depend on distance, and contrast against other values so the head picks the queried line's value specifically.\",\"candidates\":[{\"rationale\":\"Base hypothesis: reprogramming only L21h6's attention to the queried value is enough for its successor OV to produce the next item.\",\"ops\":[{\"op\":\"attention_program\",\"layer\":21,\"head\":6,\"query_role\":\"final\",\"key_role\":\"queried_value\",\"contrast\":\"other_values\",\"ridge\":0.1,\"rank\":32,\"rope_band\":\"low\"}]}]}",
+ "utc": "2026-11-16T02:18:40.528191+00:00"
+}

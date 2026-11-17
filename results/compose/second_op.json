@@ -1,0 +1,21 @@
+{
+ "model": "Qwen/Qwen3-0.6B-Base",
+ "ops": {
+  "capitalise": {
+   "native_acc": 0.6666666666666666,
+   "verdict": "native competence below .80; stop"
+  },
+  "plural": {
+   "native_acc": 0.275,
+   "verdict": "native competence below .80; stop"
+  },
+  "past": {
+   "native_acc": 0.625,
+   "verdict": "native competence below .80; stop"
+  },
+  "antonym": {
+   "native_acc": 0.6875,
+   "verdict": "native competence below .80; stop"
+  }
+ }
+}

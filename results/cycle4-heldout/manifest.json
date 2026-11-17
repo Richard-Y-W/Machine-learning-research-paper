@@ -1,0 +1,40 @@
+{
+  "config": {
+    "output": "results/cycle4-heldout",
+    "seed_start": 60,
+    "seeds": 12,
+    "families": [
+      "duffing",
+      "pendulum",
+      "contact",
+      "vanderpol"
+    ],
+    "budgets": [
+      16,
+      64
+    ],
+    "methods": [
+      "source",
+      "warm_full",
+      "fresh_full",
+      "learned_head",
+      "linear_residual",
+      "cubic_residual",
+      "rbf_residual",
+      "ard_rbf_residual",
+      "neural_residual"
+    ]
+  },
+  "status": "complete",
+  "started_utc": "2026-11-11T04:40:02.529596+00:00",
+  "source_sha256": "47472c355d9aa3297af8e64e1160ce4689e58da1a006dbf89667259e63a77c05",
+  "git_commit": "5edaad82501a7bd9e31419fbf76ef4052bb0585b",
+  "torch": "2.9.0+cpu",
+  "noise_std": 0.01,
+  "physics_library_supplied": false,
+  "task": "few-shot adaptation from actual changed-environment acceleration observations",
+  "primary": "nonlinear shift, 64 labels: RBF residual minus warm full; RBF residual minus learned head",
+  "rows": 1728,
+  "elapsed_seconds": 715.6109235000331,
+  "completed_utc": "2026-11-11T04:51:58.206240+00:00"
+}

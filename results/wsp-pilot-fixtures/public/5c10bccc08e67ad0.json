@@ -1,0 +1,99 @@
+{
+  "case_id": "5c10bccc08e67ad0",
+  "prompt": "You are performing direct weight-space programming. Reason from the raw numerical weights below; you have no tools, execution, examples, probes, or feedback. Produce explicit numerical parameter replacements, not code or a training recipe. You may change existing tensor entries but cannot change architecture. Unlisted entries remain identical.\nInputs x=[q,v,u] are physical position, velocity, applied force. Output is acceleration. This network was trained to approximate the family -k*sin(q)-c*v-a*v*abs(v)+g*u, with positive unknown coefficients. Coefficient values are NOT supplied. The intended domain is [-1,1]^3.\nArchitecture: z=ReLU(W1*x+b1); f(x)=sum_i W2[i]*z[i]+b2[0]. W1 shape [12,3]; b1 and W2 length 12; b2 length 1. All indices are zero-based. Some representations may contain unused hidden capacity.\nRequest: Implement f_new(q,v,u)=f_old(q,v,1.5*u), preserving the entire original function apart from this input transformation.\nWeights:\n{\"W1\":[[-0.17503149,-0.37261771,0.6680058],[0.08215498,0.17803102,-0.31834357],[-0.79491325,0.0037879,0.00101778],[-0.00934126,0.01433943,0.12081358],[0.16881153,1.12393025,0.0036013],[0.07584327,0.00150363,0.09886551],[-0.26688021,0.00155639,-0.01741529],[-0.12883078,0.64003074,0.00536007],[0.31699779,0.03288285,-0.06761136],[-0.00507991,-1.40315856,0.00565977],[0.31111891,1.4242284,-0.94520923],[-0.1100997,-0.49188477,0.32369996]],\"b1\":[-0.18278197,0.08649832,0.64969913,-0.29493878,-0.80035399,-0.48198007,-0.23002392,-0.42951226,0.23990723,-0.92998064,-0.09949693,0.03345683],\"W2\":[0.78633182,-1.63906532,0.62022038,-0.27017483,-0.22868373,-0.01890268,-1.4176879,-0.3207717,-0.39129271,0.30728929,-0.28997196,0.84849863],\"b2\":[-0.19606576]}\nReturn JSON with summary (brief public explanation, not detailed chain of thought), estimated_c (number for semantic damping, otherwise null), and patches. Each patch is {tensor: W1/b1/W2/b2, index: [row,column] for W1 or [i] for vectors, value: a numerical replacement}. Do not return an executable expression. Use enough decimal precision. If you cannot find an edit, return an empty patches list.",
+  "weights": {
+    "W1": [
+      [
+        -0.17503149,
+        -0.37261771,
+        0.6680058
+      ],
+      [
+        0.08215498,
+        0.17803102,
+        -0.31834357
+      ],
+      [
+        -0.79491325,
+        0.0037879,
+        0.00101778
+      ],
+      [
+        -0.00934126,
+        0.01433943,
+        0.12081358
+      ],
+      [
+        0.16881153,
+        1.12393025,
+        0.0036013
+      ],
+      [
+        0.07584327,
+        0.00150363,
+        0.09886551
+      ],
+      [
+        -0.26688021,
+        0.00155639,
+        -0.01741529
+      ],
+      [
+        -0.12883078,
+        0.64003074,
+        0.00536007
+      ],
+      [
+        0.31699779,
+        0.03288285,
+        -0.06761136
+      ],
+      [
+        -0.00507991,
+        -1.40315856,
+        0.00565977
+      ],
+      [
+        0.31111891,
+        1.4242284,
+        -0.94520923
+      ],
+      [
+        -0.1100997,
+        -0.49188477,
+        0.32369996
+      ]
+    ],
+    "b1": [
+      -0.18278197,
+      0.08649832,
+      0.64969913,
+      -0.29493878,
+      -0.80035399,
+      -0.48198007,
+      -0.23002392,
+      -0.42951226,
+      0.23990723,
+      -0.92998064,
+      -0.09949693,
+      0.03345683
+    ],
+    "W2": [
+      0.78633182,
+      -1.63906532,
+      0.62022038,
+      -0.27017483,
+      -0.22868373,
+      -0.01890268,
+      -1.4176879,
+      -0.3207717,
+      -0.39129271,
+      0.30728929,
+      -0.28997196,
+      0.84849863
+    ],
+    "b2": [
+      -0.19606576
+    ]
+  }
+}

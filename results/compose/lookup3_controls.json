@@ -1,0 +1,489 @@
+{
+ "gain": 3.0,
+ "native": {
+  "letters": {
+   "successor": 0.02,
+   "lookup": 0.9
+  },
+  "numwords": {
+   "successor": 0.017,
+   "lookup": 0.907
+  },
+  "days": {
+   "successor": 0.137,
+   "lookup": 0.357
+  },
+  "months": {
+   "successor": 0.037,
+   "lookup": 0.737
+  },
+  "ordinals": {
+   "successor": 0.093,
+   "lookup": 0.63
+  }
+ },
+ "host": {
+  "h6": {
+   "letters": {
+    "successor": 0.6,
+    "lookup": 0.203
+   },
+   "numwords": {
+    "successor": 0.533,
+    "lookup": 0.25
+   },
+   "days": {
+    "successor": 0.66,
+    "lookup": 0.01
+   },
+   "months": {
+    "successor": 0.637,
+    "lookup": 0.033
+   },
+   "ordinals": {
+    "successor": 0.69,
+    "lookup": 0.05
+   },
+   "attention_on_value": 0.777
+  },
+  "h0": {
+   "letters": {
+    "successor": 0.003,
+    "lookup": 0.027
+   },
+   "numwords": {
+    "successor": 0.0,
+    "lookup": 0.013
+   },
+   "days": {
+    "successor": 0.01,
+    "lookup": 0.023
+   },
+   "months": {
+    "successor": 0.007,
+    "lookup": 0.013
+   },
+   "ordinals": {
+    "successor": 0.0,
+    "lookup": 0.01
+   },
+   "attention_on_value": 0.777
+  },
+  "h3": {
+   "letters": {
+    "successor": 0.01,
+    "lookup": 0.927
+   },
+   "numwords": {
+    "successor": 0.027,
+    "lookup": 0.91
+   },
+   "days": {
+    "successor": 0.027,
+    "lookup": 0.493
+   },
+   "months": {
+    "successor": 0.027,
+    "lookup": 0.68
+   },
+   "ordinals": {
+    "successor": 0.047,
+    "lookup": 0.727
+   },
+   "attention_on_value": 0.777
+  },
+  "h8": {
+   "letters": {
+    "successor": 0.007,
+    "lookup": 0.843
+   },
+   "numwords": {
+    "successor": 0.0,
+    "lookup": 0.897
+   },
+   "days": {
+    "successor": 0.0,
+    "lookup": 0.743
+   },
+   "months": {
+    "successor": 0.003,
+    "lookup": 0.807
+   },
+   "ordinals": {
+    "successor": 0.02,
+    "lookup": 0.903
+   },
+   "attention_on_value": 0.777
+  },
+  "h10": {
+   "letters": {
+    "successor": 0.003,
+    "lookup": 0.813
+   },
+   "numwords": {
+    "successor": 0.007,
+    "lookup": 0.423
+   },
+   "days": {
+    "successor": 0.053,
+    "lookup": 0.227
+   },
+   "months": {
+    "successor": 0.017,
+    "lookup": 0.21
+   },
+   "ordinals": {
+    "successor": 0.033,
+    "lookup": 0.173
+   },
+   "attention_on_value": 0.777
+  },
+  "h13": {
+   "letters": {
+    "successor": 0.0,
+    "lookup": 0.867
+   },
+   "numwords": {
+    "successor": 0.007,
+    "lookup": 0.87
+   },
+   "days": {
+    "successor": 0.0,
+    "lookup": 0.68
+   },
+   "months": {
+    "successor": 0.0,
+    "lookup": 0.803
+   },
+   "ordinals": {
+    "successor": 0.02,
+    "lookup": 0.88
+   },
+   "attention_on_value": 0.777
+  },
+  "h15": {
+   "letters": {
+    "successor": 0.023,
+    "lookup": 0.893
+   },
+   "numwords": {
+    "successor": 0.013,
+    "lookup": 0.883
+   },
+   "days": {
+    "successor": 0.193,
+    "lookup": 0.35
+   },
+   "months": {
+    "successor": 0.04,
+    "lookup": 0.66
+   },
+   "ordinals": {
+    "successor": 0.087,
+    "lookup": 0.623
+   },
+   "attention_on_value": 0.777
+  }
+ },
+ "neighbour_removed_native": {
+  "letters": {
+   "successor": 0.02,
+   "lookup": 0.897
+  },
+  "numwords": {
+   "successor": 0.017,
+   "lookup": 0.907
+  },
+  "days": {
+   "successor": 0.137,
+   "lookup": 0.36
+  },
+  "months": {
+   "successor": 0.037,
+   "lookup": 0.737
+  },
+  "ordinals": {
+   "successor": 0.093,
+   "lookup": 0.63
+  }
+ },
+ "edit": {
+  "letters": {
+   "successor": 0.6,
+   "lookup": 0.203
+  },
+  "numwords": {
+   "successor": 0.533,
+   "lookup": 0.25
+  },
+  "days": {
+   "successor": 0.66,
+   "lookup": 0.01
+  },
+  "months": {
+   "successor": 0.637,
+   "lookup": 0.033
+  },
+  "ordinals": {
+   "successor": 0.69,
+   "lookup": 0.05
+  }
+ },
+ "neighbour_removed_edit": {
+  "letters": {
+   "successor": 0.613,
+   "lookup": 0.19
+  },
+  "numwords": {
+   "successor": 0.517,
+   "lookup": 0.257
+  },
+  "days": {
+   "successor": 0.667,
+   "lookup": 0.013
+  },
+  "months": {
+   "successor": 0.66,
+   "lookup": 0.03
+  },
+  "ordinals": {
+   "successor": 0.69,
+   "lookup": 0.053
+  }
+ },
+ "counterfactual": {
+  "adjacent_allowed": {
+   "native": {
+    "letters": {
+     "successor": 0.02,
+     "lookup": 0.91
+    },
+    "numwords": {
+     "successor": 0.017,
+     "lookup": 0.94
+    },
+    "days": {
+     "successor": 0.1,
+     "lookup": 0.587
+    },
+    "months": {
+     "successor": 0.023,
+     "lookup": 0.78
+    },
+    "ordinals": {
+     "successor": 0.1,
+     "lookup": 0.71
+    }
+   },
+   "edit": {
+    "letters": {
+     "successor": 0.653,
+     "lookup": 0.203
+    },
+    "numwords": {
+     "successor": 0.56,
+     "lookup": 0.257
+    },
+    "days": {
+     "successor": 0.743,
+     "lookup": 0.05
+    },
+    "months": {
+     "successor": 0.72,
+     "lookup": 0.057
+    },
+    "ordinals": {
+     "successor": 0.8,
+     "lookup": 0.067
+    }
+   }
+  },
+  "successor_present": {
+   "native": {
+    "letters": {
+     "successor": 0.063,
+     "lookup": 0.837
+    },
+    "numwords": {
+     "successor": 0.05,
+     "lookup": 0.88
+    },
+    "days": {
+     "successor": 0.137,
+     "lookup": 0.56
+    },
+    "months": {
+     "successor": 0.16,
+     "lookup": 0.72
+    },
+    "ordinals": {
+     "successor": 0.097,
+     "lookup": 0.667
+    }
+   },
+   "edit": {
+    "letters": {
+     "successor": 0.66,
+     "lookup": 0.14
+    },
+    "numwords": {
+     "successor": 0.65,
+     "lookup": 0.17
+    },
+    "days": {
+     "successor": 0.713,
+     "lookup": 0.03
+    },
+    "months": {
+     "successor": 0.687,
+     "lookup": 0.033
+    },
+    "ordinals": {
+     "successor": 0.777,
+     "lookup": 0.023
+    }
+   }
+  },
+  "long_table": {
+   "native": {
+    "letters": {
+     "successor": 0.01,
+     "lookup": 0.987
+    },
+    "numwords": {
+     "successor": 0.003,
+     "lookup": 0.947
+    },
+    "months": {
+     "successor": 0.023,
+     "lookup": 0.87
+    },
+    "ordinals": {
+     "successor": 0.073,
+     "lookup": 0.853
+    }
+   },
+   "edit": {
+    "letters": {
+     "successor": 0.617,
+     "lookup": 0.277
+    },
+    "numwords": {
+     "successor": 0.56,
+     "lookup": 0.263
+    },
+    "months": {
+     "successor": 0.763,
+     "lookup": 0.063
+    },
+    "ordinals": {
+     "successor": 0.783,
+     "lookup": 0.083
+    }
+   }
+  }
+ },
+ "swap_distinct": {
+  "letters": {
+   "n": 286,
+   "donor_successor": 0.671,
+   "own_successor": 0.01,
+   "own_value": 0.231
+  },
+  "numwords": {
+   "n": 278,
+   "donor_successor": 0.406,
+   "own_successor": 0.029,
+   "own_value": 0.356
+  },
+  "days": {
+   "n": 251,
+   "donor_successor": 0.657,
+   "own_successor": 0.052,
+   "own_value": 0.255
+  },
+  "months": {
+   "n": 279,
+   "donor_successor": 0.606,
+   "own_successor": 0.0,
+   "own_value": 0.186
+  },
+  "ordinals": {
+   "n": 277,
+   "donor_successor": 0.56,
+   "own_successor": 0.007,
+   "own_value": 0.296
+  }
+ },
+ "structural_null": [
+  {
+   "letters": {
+    "successor": 0.003,
+    "lookup": 0.917
+   },
+   "numwords": {
+    "successor": 0.007,
+    "lookup": 0.91
+   },
+   "days": {
+    "successor": 0.167,
+    "lookup": 0.347
+   },
+   "months": {
+    "successor": 0.02,
+    "lookup": 0.75
+   },
+   "ordinals": {
+    "successor": 0.043,
+    "lookup": 0.683
+   },
+   "attention_on_value": 0.01
+  },
+  {
+   "letters": {
+    "successor": 0.0,
+    "lookup": 0.92
+   },
+   "numwords": {
+    "successor": 0.007,
+    "lookup": 0.917
+   },
+   "days": {
+    "successor": 0.107,
+    "lookup": 0.367
+   },
+   "months": {
+    "successor": 0.017,
+    "lookup": 0.723
+   },
+   "ordinals": {
+    "successor": 0.127,
+    "lookup": 0.497
+   },
+   "attention_on_value": 0.01
+  },
+  {
+   "letters": {
+    "successor": 0.077,
+    "lookup": 0.643
+   },
+   "numwords": {
+    "successor": 0.007,
+    "lookup": 0.88
+   },
+   "days": {
+    "successor": 0.1,
+    "lookup": 0.307
+   },
+   "months": {
+    "successor": 0.033,
+    "lookup": 0.703
+   },
+   "ordinals": {
+    "successor": 0.053,
+    "lookup": 0.517
+   },
+   "attention_on_value": 0.071
+  }
+ ]
+}
