@@ -1,0 +1,39 @@
+W1119 23:17:02.581000 43392 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  12%|#1        | 37/310 [00:00<00:00, 347.98it/s]Loading weights:  25%|##4       | 77/310 [00:00<00:00, 362.71it/s]Loading weights:  41%|####1     | 128/310 [00:00<00:00, 426.94it/s]Loading weights:  55%|#####5    | 171/310 [00:00<00:00, 418.83it/s]Loading weights:  69%|######9   | 214/310 [00:00<00:00, 387.69it/s]Loading weights:  82%|########1 | 254/310 [00:00<00:00, 375.81it/s]Loading weights:  94%|#########4| 292/310 [00:00<00:00, 374.62it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 388.36it/s]
+Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'wikitext-103-raw-v1' at C:\Users\Richard Wang\.cache\huggingface\datasets\Salesforce___wikitext\wikitext-103-raw-v1\0.0.0\b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri Nov 13 00:10:05 2026).
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (262210 > 131072). Running this sequence through the model will result in indexing errors
+[robust] unedited: successor 0.089 | seq 0.593 | word lookup 0.650 | WikiText-val 2.9427 (448s)
+[robust] direct_archived_g3.0: successor 0.579 | seq 0.230 | word lookup 0.525 | WikiText-val 3.2701 (588s)
+[robust] spare head for the copied design: h4 (group [4, 5])
+== 2026-11-20 02:25:10 start robustness 0.6B
+W1120 02:25:19.186000 35608 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  11%|#         | 33/310 [00:00<00:00, 316.63it/s]Loading weights:  22%|##2       | 69/310 [00:00<00:00, 326.54it/s]Loading weights:  35%|###4      | 108/310 [00:00<00:00, 338.54it/s]Loading weights:  47%|####7     | 147/310 [00:00<00:00, 356.07it/s]Loading weights:  59%|#####9    | 184/310 [00:00<00:00, 358.14it/s]Loading weights:  72%|#######2  | 224/310 [00:00<00:00, 369.43it/s]Loading weights:  90%|########9 | 278/310 [00:00<00:00, 419.85it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 395.43it/s]
+Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'wikitext-103-raw-v1' at C:\Users\Richard Wang\.cache\huggingface\datasets\Salesforce___wikitext\wikitext-103-raw-v1\0.0.0\b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri Nov 13 00:10:05 2026).
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (262210 > 131072). Running this sequence through the model will result in indexing errors
+[robust] unedited: cached {'successor': 0.0889, 'word_lookup': 0.65, 'seq': 0.5929, 'wiki_nll': 2.9427}
+[robust] direct_archived_g3.0: cached {'successor': 0.5794, 'word_lookup': 0.525, 'seq': 0.23, 'wiki_nll': 3.2701}
+[robust] spare head for the copied design: h4 (group [4, 5])
+[robust] copied_g1.0: successor 0.373 | seq 0.581 | word lookup 0.675 | WikiText-val 2.9794 (283s)
+[robust] copied_g1.5: successor 0.483 | seq 0.529 | word lookup 0.640 | WikiText-val 3.0218 (279s)
+[robust] copied_g2.0: successor 0.541 | seq 0.464 | word lookup 0.625 | WikiText-val 3.0826 (283s)
+[robust] copied_g3.0: successor 0.597 | seq 0.366 | word lookup 0.515 | WikiText-val 3.2550 (285s)
+[robust] copied_g4.0: successor 0.612 | seq 0.297 | word lookup 0.400 | WikiText-val 3.4854 (282s)
+[robust] copied_g6.0: successor 0.587 | seq 0.231 | word lookup 0.140 | WikiText-val 4.0666 (282s)
+[robust] direct_archived_g1.0: successor 0.349 | seq 0.303 | word lookup 0.670 | WikiText-val 3.0073 (295s)
+[robust] direct_archived_g2.0: successor 0.534 | seq 0.251 | word lookup 0.635 | WikiText-val 3.1060 (304s)
+[robust] direct_archived_g3.0: cached {'successor': 0.5794, 'word_lookup': 0.525, 'seq': 0.23, 'wiki_nll': 3.2701}
+[robust] direct_archived_g4.0: successor 0.613 | seq 0.211 | word lookup 0.405 | WikiText-val 3.4920 (299s)
+[robust] refit 1: lambda 1.0, held-out attention 0.80, cosine with archived bilinear form 0.543 (141s)
+[robust] direct_refit1_g3.0: successor 0.583 | seq 0.340 | word lookup 0.560 | WikiText-val 3.3187 (299s)
+[robust] refit 2: lambda 1.0, held-out attention 0.75, cosine with archived bilinear form 0.549 (141s)
+[robust] direct_refit2_g3.0: successor 0.575 | seq 0.347 | word lookup 0.575 | WikiText-val 3.2448 (277s)
+[robust] refit 3: lambda 1.0, held-out attention 0.76, cosine with archived bilinear form 0.554 (120s)
+[robust] direct_refit3_g3.0: successor 0.569 | seq 0.296 | word lookup 0.540 | WikiText-val 3.2351 (254s)
+[robust] refit 4: lambda 1.0, held-out attention 0.79, cosine with archived bilinear form 0.551 (124s)
+[robust] direct_refit4_g3.0: successor 0.609 | seq 0.294 | word lookup 0.530 | WikiText-val 3.2688 (256s)
+[robust] refit 5: lambda 1.0, held-out attention 0.86, cosine with archived bilinear form 0.560 (120s)
+[robust] direct_refit5_g3.0: successor 0.592 | seq 0.367 | word lookup 0.555 | WikiText-val 3.2131 (271s)
+[robust] DONE (4595s)
+== 2026-11-20 03:41:57 exit 0

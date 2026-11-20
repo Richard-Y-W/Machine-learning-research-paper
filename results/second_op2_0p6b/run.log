@@ -1,0 +1,112 @@
+== 2026-11-20 05:35:27 start second op 0.6B
+W1120 05:36:09.225000 45668 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<00:32,  9.46it/s]Loading weights:  11%|#         | 33/310 [00:00<00:01, 175.19it/s]Loading weights:  19%|#9        | 59/310 [00:00<00:01, 210.75it/s]Loading weights:  28%|##7       | 86/310 [00:00<00:00, 231.57it/s]Loading weights:  38%|###8      | 118/310 [00:00<00:00, 258.77it/s]Loading weights:  46%|####6     | 144/310 [00:00<00:00, 236.53it/s]Loading weights:  55%|#####4    | 170/310 [00:00<00:00, 240.57it/s]Loading weights:  63%|######3   | 196/310 [00:00<00:00, 238.91it/s]Loading weights:  74%|#######3  | 229/310 [00:00<00:00, 256.24it/s]Loading weights:  88%|########8 | 273/310 [00:01<00:00, 305.74it/s]Loading weights: 100%|##########| 310/310 [00:01<00:00, 268.14it/s]
+[op2b] capitalise: 15 pairs, 45 prompts, native 8-shot accuracy 1.00
+[op2b] capitalise: verified ablation drops: L22h7 -0.83, L23h6 -0.69, L18h3 -0.45, L17h13 -0.44, L20h15 -0.39, L19h0 -0.35, L19h2 -0.33, L18h1 -0.30
+[op2b] capitalise: L22h7     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: L23h6     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: L18h3     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: L17h13    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: L20h15    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: L19h0     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: top2      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: top4      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: top8      value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: top16     value patch f(donor) 0.00 (own 0.91) | output patch f(donor) 0.00 (own 1.00)
+[op2b] capitalise: best value group L22h7 -> no head group of <= 8 carries the operation through its value path
+[op2b] plural: 20 pairs, 60 prompts, native 8-shot accuracy 1.00
+[op2b] plural: verified ablation drops: L24h12 -2.57, L18h4 -1.48, L19h13 -0.70, L13h0 -0.51, L18h2 -0.51, L8h14 -0.48, L23h6 -0.48, L18h5 -0.45
+[op2b] plural: L24h12    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L18h4     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L19h13    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L13h0     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L18h2     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L8h14     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: top2      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: top4      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: top8      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: top16     value patch f(donor) 0.00 (own 0.92) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: best value group L24h12 -> no head group of <= 8 carries the operation through its value path
+[op2b] past: 20 pairs, 60 prompts, native 8-shot accuracy 1.00
+[op2b] past: verified ablation drops: L19h6 -0.72, L18h5 -0.54, L18h4 -0.47, L16h11 -0.45, L13h0 -0.41, L6h10 -0.37, L14h12 -0.37, L20h15 -0.33
+[op2b] past: L19h6     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L18h5     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L18h4     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L16h11    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L13h0     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L6h10     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: top2      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: top4      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: top8      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: top16     value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: best value group L19h6 -> no head group of <= 8 carries the operation through its value path
+[op2b] antonym: 16 pairs, 48 prompts, native 8-shot accuracy 0.90
+[op2b] antonym: verified ablation drops: L22h8 -2.12, L17h0 -2.09, L19h2 -1.30, L25h15 -0.83, L27h15 -0.62, L23h15 -0.62, L17h6 -0.53, L21h0 -0.53
+[op2b] antonym: L22h8     value patch f(donor) 0.00 (own 0.90) | output patch f(donor) 0.00 (own 0.90)
+[op2b] antonym: L17h0     value patch f(donor) 0.00 (own 0.94) | output patch f(donor) 0.00 (own 0.92)
+[op2b] antonym: L19h2     value patch f(donor) 0.00 (own 0.94) | output patch f(donor) 0.00 (own 0.90)
+[op2b] antonym: L25h15    value patch f(donor) 0.00 (own 0.92) | output patch f(donor) 0.00 (own 0.90)
+[op2b] antonym: L27h15    value patch f(donor) 0.00 (own 0.90) | output patch f(donor) 0.00 (own 0.90)
+[op2b] antonym: L23h15    value patch f(donor) 0.00 (own 0.90) | output patch f(donor) 0.00 (own 0.92)
+[op2b] antonym: top2      value patch f(donor) 0.00 (own 0.90) | output patch f(donor) 0.00 (own 0.83)
+[op2b] antonym: top4      value patch f(donor) 0.00 (own 0.83) | output patch f(donor) 0.00 (own 0.69)
+[op2b] antonym: top8      value patch f(donor) 0.00 (own 0.56) | output patch f(donor) 0.00 (own 0.58)
+[op2b] antonym: top16     value patch f(donor) 0.00 (own 0.54) | output patch f(donor) 0.00 (own 0.48)
+[op2b] antonym: best value group L22h8 -> no head group of <= 8 carries the operation through its value path
+[op2b] upper_letter: 26 pairs, 78 prompts, native 8-shot accuracy 1.00
+[op2b] upper_letter: verified ablation drops: L24h5 -1.61, L23h6 -1.29, L19h8 -1.04, L17h6 -0.81, L25h4 -0.67, L22h9 -0.64, L18h5 -0.61, L22h1 -0.61
+[op2b] upper_letter: L24h5     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L23h6     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L19h8     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L17h6     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L25h4     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L22h9     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.42 (own 0.58)
+[op2b] upper_letter: top2      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: top4      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: top8      value patch f(donor) 0.68 (own 0.32) | output patch f(donor) 0.97 (own 0.03)
+[op2b] upper_letter: top16     value patch f(donor) 0.03 (own 0.55) | output patch f(donor) 0.14 (own 0.86)
+[op2b] upper_letter: best value group top8 -> routable candidate
+[op2b] card_to_ord: only 10 single-token pairs; skip
+[op2b] word_to_digit: only 0 single-token pairs; skip
+[op2b] digit_to_word: only 0 single-token pairs; skip
+[op2b] male_female: 20 pairs, 60 prompts, native 8-shot accuracy 0.98
+[op2b] male_female: verified ablation drops: L23h11 -1.56, L22h8 -0.90, L19h8 -0.85, L17h1 -0.81, L17h6 -0.70, L15h6 -0.69, L18h5 -0.64, L22h5 -0.61
+[op2b] male_female: L23h11    value patch f(donor) 0.00 (own 0.82) | output patch f(donor) 0.00 (own 0.85)
+[op2b] male_female: L22h8     value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 0.85)
+[op2b] male_female: L19h8     value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 0.97)
+[op2b] male_female: L17h1     value patch f(donor) 0.00 (own 0.92) | output patch f(donor) 0.00 (own 0.98)
+[op2b] male_female: L17h6     value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 0.98)
+[op2b] male_female: L15h6     value patch f(donor) 0.00 (own 0.92) | output patch f(donor) 0.00 (own 0.98)
+[op2b] male_female: top2      value patch f(donor) 0.00 (own 0.75) | output patch f(donor) 0.00 (own 0.72)
+[op2b] male_female: top4      value patch f(donor) 0.00 (own 0.62) | output patch f(donor) 0.00 (own 0.68)
+[op2b] male_female: top8      value patch f(donor) 0.00 (own 0.38) | output patch f(donor) 0.02 (own 0.63)
+[op2b] male_female: top16     value patch f(donor) 0.00 (own 0.13) | output patch f(donor) 0.00 (own 0.28)
+[op2b] male_female: best value group L23h11 -> no head group of <= 8 carries the operation through its value path
+[op2b] country_capital: 20 pairs, 60 prompts, native 8-shot accuracy 1.00
+[op2b] country_capital: verified ablation drops: L19h6 -0.76, L22h5 -0.61, L19h2 -0.49, L26h7 -0.49, L26h1 -0.47, L17h3 -0.46, L19h9 -0.41, L17h6 -0.36
+[op2b] country_capital: L19h6     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L22h5     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L19h2     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L26h7     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L26h1     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L17h3     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: top2      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: top4      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: top8      value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: top16     value patch f(donor) 0.00 (own 0.90) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: best value group L19h6 -> no head group of <= 8 carries the operation through its value path
+[op2b] english_french: 18 pairs, 54 prompts, native 8-shot accuracy 1.00
+[op2b] english_french: verified ablation drops: L23h10 -0.48, L19h13 -0.46, L19h6 -0.46, L15h6 -0.35, L19h2 -0.32, L22h15 -0.26, L17h2 -0.24, L27h14 -0.23
+[op2b] english_french: L23h10    value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] english_french: L19h13    value patch f(donor) 0.00 (own 0.94) | output patch f(donor) 0.00 (own 0.96)
+[op2b] english_french: L19h6     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 0.98)
+[op2b] english_french: L15h6     value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] english_french: L19h2     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] english_french: L22h15    value patch f(donor) 0.00 (own 0.96) | output patch f(donor) 0.00 (own 1.00)
+[op2b] english_french: top2      value patch f(donor) 0.00 (own 0.93) | output patch f(donor) 0.00 (own 1.00)
+[op2b] english_french: top4      value patch f(donor) 0.00 (own 0.93) | output patch f(donor) 0.00 (own 0.98)
+[op2b] english_french: top8      value patch f(donor) 0.00 (own 0.76) | output patch f(donor) 0.00 (own 1.00)
+[op2b] english_french: top16     value patch f(donor) 0.20 (own 0.30) | output patch f(donor) 0.00 (own 0.94)
+[op2b] english_french: best value group L23h10 -> no head group of <= 8 carries the operation through its value path
+[op2b] DONE (5464s)
+== 2026-11-20 07:07:20 exit 0

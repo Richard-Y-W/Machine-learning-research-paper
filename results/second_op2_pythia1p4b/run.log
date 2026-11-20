@@ -1,0 +1,76 @@
+== 2026-11-20 12:20:46 start second op pythia
+W1120 12:20:57.140000 35164 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/292 [00:00<?, ?it/s]Loading weights:   1%|1         | 3/292 [00:00<00:10, 28.18it/s]Loading weights:   3%|2         | 8/292 [00:00<00:07, 40.37it/s]Loading weights:   4%|4         | 13/292 [00:00<00:09, 29.35it/s]Loading weights:   9%|9         | 27/292 [00:00<00:05, 52.58it/s]Loading weights:  11%|#1        | 33/292 [00:00<00:07, 34.85it/s]Loading weights:  14%|#4        | 41/292 [00:01<00:06, 39.25it/s]Loading weights:  18%|#8        | 54/292 [00:01<00:04, 56.50it/s]Loading weights:  21%|##        | 61/292 [00:01<00:04, 47.31it/s]Loading weights:  23%|##2       | 67/292 [00:01<00:05, 40.35it/s]Loading weights:  25%|##5       | 73/292 [00:01<00:06, 35.51it/s]Loading weights:  29%|##9       | 86/292 [00:02<00:04, 44.30it/s]Loading weights:  34%|###3      | 99/292 [00:02<00:03, 53.54it/s]Loading weights:  36%|###5      | 105/292 [00:02<00:03, 48.87it/s]Loading weights:  38%|###8      | 111/292 [00:02<00:04, 45.09it/s]Loading weights:  45%|####4     | 130/292 [00:02<00:02, 64.15it/s]Loading weights:  47%|####6     | 137/292 [00:02<00:02, 64.94it/s]Loading weights:  49%|####9     | 144/292 [00:02<00:02, 64.20it/s]Loading weights:  52%|#####2    | 153/292 [00:03<00:02, 66.87it/s]Loading weights:  55%|#####4    | 160/292 [00:03<00:03, 43.12it/s]Loading weights:  57%|#####6    | 166/292 [00:03<00:02, 42.93it/s]Loading weights:  60%|#####9    | 175/292 [00:03<00:02, 47.96it/s]Loading weights:  62%|######2   | 182/292 [00:03<00:02, 47.79it/s]Loading weights:  65%|######4   | 189/292 [00:04<00:02, 41.71it/s]Loading weights:  66%|######6   | 194/292 [00:04<00:02, 35.21it/s]Loading weights:  69%|######8   | 201/292 [00:04<00:02, 37.74it/s]Loading weights:  73%|#######3  | 214/292 [00:04<00:01, 53.74it/s]Loading weights:  76%|#######5  | 221/292 [00:04<00:01, 47.66it/s]Loading weights:  82%|########1 | 238/292 [00:04<00:00, 59.17it/s]Loading weights:  84%|########3 | 245/292 [00:05<00:00, 49.37it/s]Loading weights: 100%|##########| 292/292 [00:05<00:00, 56.67it/s]
+[op2b] capitalise: only 0 single-token pairs; skip
+[op2b] plural: 19 pairs, 57 prompts, native 8-shot accuracy 1.00
+[op2b] plural: verified ablation drops: L14h12 -1.17, L11h14 -1.07, L20h6 -0.79, L7h5 -0.72, L1h4 -0.38, L13h6 -0.31, L15h0 -0.31, L22h13 -0.28
+[op2b] plural: L14h12    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L11h14    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L20h6     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L7h5      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L1h4      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: L13h6     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: top2      value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: top4      value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: top8      value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: top16     value patch f(donor) 0.00 (own 0.95) | output patch f(donor) 0.00 (own 1.00)
+[op2b] plural: best value group L14h12 -> no head group of <= 8 carries the operation through its value path
+[op2b] past: 20 pairs, 60 prompts, native 8-shot accuracy 1.00
+[op2b] past: verified ablation drops: L7h5 -0.92, L22h9 -0.90, L11h14 -0.59, L14h12 -0.36, L10h4 -0.36, L7h15 -0.29, L10h6 -0.22, L12h0 -0.19
+[op2b] past: L7h5      value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L22h9     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L11h14    value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L14h12    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L10h4     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: L7h15     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: top2      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: top4      value patch f(donor) 0.00 (own 0.98) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: top8      value patch f(donor) 0.00 (own 0.93) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: top16     value patch f(donor) 0.00 (own 0.73) | output patch f(donor) 0.00 (own 1.00)
+[op2b] past: best value group L7h5 -> no head group of <= 8 carries the operation through its value path
+[op2b] antonym: 16 pairs, 48 prompts, native 8-shot accuracy 0.92
+[op2b] antonym: verified ablation drops: L12h9 -2.21, L10h4 -2.16, L15h0 -1.74, L14h12 -1.71, L13h2 -1.33, L9h12 -1.04, L11h14 -0.40, L10h3 -0.39
+[op2b] antonym: L12h9     value patch f(donor) 0.00 (own 0.90) | output patch f(donor) 0.00 (own 0.92)
+[op2b] antonym: L10h4     value patch f(donor) 0.00 (own 0.90) | output patch f(donor) 0.00 (own 0.92)
+[op2b] antonym: L15h0     value patch f(donor) 0.00 (own 0.81) | output patch f(donor) 0.00 (own 0.83)
+[op2b] antonym: L14h12    value patch f(donor) 0.00 (own 0.88) | output patch f(donor) 0.00 (own 0.92)
+[op2b] antonym: L13h2     value patch f(donor) 0.00 (own 0.85) | output patch f(donor) 0.00 (own 0.88)
+[op2b] antonym: L9h12     value patch f(donor) 0.00 (own 0.90) | output patch f(donor) 0.00 (own 0.92)
+[op2b] antonym: top2      value patch f(donor) 0.00 (own 0.79) | output patch f(donor) 0.00 (own 0.90)
+[op2b] antonym: top4      value patch f(donor) 0.00 (own 0.00) | output patch f(donor) 0.00 (own 0.48)
+[op2b] antonym: top8      value patch f(donor) 0.00 (own 0.00) | output patch f(donor) 0.02 (own 0.33)
+[op2b] antonym: top16     value patch f(donor) 0.00 (own 0.00) | output patch f(donor) 0.00 (own 0.21)
+[op2b] antonym: best value group L12h9 -> no head group of <= 8 carries the operation through its value path
+[op2b] upper_letter: 26 pairs, 78 prompts, native 8-shot accuracy 1.00
+[op2b] upper_letter: verified ablation drops: L14h12 -2.20, L7h5 -1.17, L15h15 -0.79, L12h0 -0.61, L10h4 -0.55, L7h3 -0.51, L11h8 -0.45, L18h14 -0.41
+[op2b] upper_letter: L14h12    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L7h5      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L15h15    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L12h0     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L10h4     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: L7h3      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: top2      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: top4      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: top8      value patch f(donor) 0.00 (own 0.01) | output patch f(donor) 0.00 (own 1.00)
+[op2b] upper_letter: top16     value patch f(donor) 0.00 (own 0.00) | output patch f(donor) 0.67 (own 0.33)
+[op2b] upper_letter: best value group L14h12 -> no head group of <= 8 carries the operation through its value path
+[op2b] card_to_ord: only 10 single-token pairs; skip
+[op2b] word_to_digit: only 9 single-token pairs; skip
+[op2b] digit_to_word: only 9 single-token pairs; skip
+[op2b] male_female: 19 pairs, 57 prompts, native 8-shot accuracy 0.72
+[op2b] country_capital: 17 pairs, 51 prompts, native 8-shot accuracy 1.00
+[op2b] country_capital: verified ablation drops: L14h12 -1.41, L18h14 -0.80, L7h5 -0.63, L11h11 -0.57, L10h4 -0.56, L15h15 -0.55, L17h6 -0.45, L11h1 -0.39
+[op2b] country_capital: L14h12    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L18h14    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L7h5      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L11h11    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L10h4     value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: L15h15    value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: top2      value patch f(donor) 0.00 (own 1.00) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: top4      value patch f(donor) 0.00 (own 0.96) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: top8      value patch f(donor) 0.00 (own 0.55) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: top16     value patch f(donor) 0.00 (own 0.16) | output patch f(donor) 0.00 (own 1.00)
+[op2b] country_capital: best value group L14h12 -> no head group of <= 8 carries the operation through its value path
+[op2b] english_french: only 7 single-token pairs; skip
+[op2b] DONE (5330s)
+== 2026-11-20 13:49:55 exit 0

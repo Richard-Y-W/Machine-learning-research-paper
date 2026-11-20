@@ -1,0 +1,31 @@
+== 2026-11-20 07:51:58 start robustness 1.7B
+W1120 07:52:07.357000 36492 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   4%|3         | 11/310 [00:00<00:02, 100.41it/s]Loading weights:   7%|7         | 22/310 [00:00<00:02, 104.54it/s]Loading weights:  11%|#         | 33/310 [00:00<00:02, 95.84it/s] Loading weights:  14%|#3        | 43/310 [00:00<00:03, 87.69it/s]Loading weights:  19%|#9        | 59/310 [00:00<00:02, 106.01it/s]Loading weights:  24%|##3       | 74/310 [00:00<00:02, 113.55it/s]Loading weights:  28%|##8       | 88/310 [00:00<00:02, 108.95it/s]Loading weights:  33%|###2      | 102/310 [00:00<00:01, 115.07it/s]Loading weights:  38%|###8      | 118/310 [00:01<00:01, 120.35it/s]Loading weights:  43%|####2     | 132/310 [00:01<00:01, 120.66it/s]Loading weights:  47%|####6     | 145/310 [00:01<00:01, 114.69it/s]Loading weights:  51%|#####     | 157/310 [00:01<00:01, 106.72it/s]Loading weights:  54%|#####4    | 168/310 [00:01<00:01, 103.89it/s]Loading weights:  58%|#####7    | 179/310 [00:01<00:01, 99.04it/s] Loading weights:  61%|######    | 189/310 [00:01<00:01, 95.17it/s]Loading weights:  64%|######4   | 199/310 [00:01<00:01, 93.68it/s]Loading weights:  68%|######7   | 210/310 [00:02<00:01, 94.48it/s]Loading weights:  71%|#######   | 220/310 [00:02<00:00, 94.80it/s]Loading weights:  74%|#######4  | 230/310 [00:02<00:00, 93.71it/s]Loading weights:  78%|#######8  | 243/310 [00:02<00:00, 99.97it/s]Loading weights:  82%|########1 | 253/310 [00:02<00:00, 94.23it/s]Loading weights:  85%|########4 | 263/310 [00:02<00:00, 90.80it/s]Loading weights:  88%|########8 | 273/310 [00:02<00:00, 91.35it/s]Loading weights:  93%|#########2| 287/310 [00:02<00:00, 95.63it/s]Loading weights:  96%|#########5| 297/310 [00:02<00:00, 95.96it/s]Loading weights: 100%|##########| 310/310 [00:02<00:00, 103.96it/s]
+Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'wikitext-103-raw-v1' at C:\Users\Richard Wang\.cache\huggingface\datasets\Salesforce___wikitext\wikitext-103-raw-v1\0.0.0\b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri Nov 13 00:10:05 2026).
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (262210 > 131072). Running this sequence through the model will result in indexing errors
+[robust] unedited: successor 0.104 | seq 0.611 | word lookup 0.640 | WikiText-val 2.6185 (705s)
+[robust] direct_archived_g3.0: successor 0.437 | seq 0.373 | word lookup 0.565 | WikiText-val 2.8109 (734s)
+[robust] spare head for the copied design: h4 (group [4, 5])
+[robust] copied_g1.0: successor 0.324 | seq 0.624 | word lookup 0.625 | WikiText-val 2.6387 (712s)
+[robust] copied_g1.5: successor 0.384 | seq 0.606 | word lookup 0.610 | WikiText-val 2.6649 (688s)
+[robust] copied_g2.0: successor 0.413 | seq 0.563 | word lookup 0.580 | WikiText-val 2.7022 (692s)
+[robust] copied_g3.0: successor 0.443 | seq 0.466 | word lookup 0.540 | WikiText-val 2.8094 (742s)
+[robust] copied_g4.0: successor 0.470 | seq 0.411 | word lookup 0.470 | WikiText-val 2.9540 (738s)
+[robust] copied_g6.0: successor 0.510 | seq 0.370 | word lookup 0.275 | WikiText-val 3.3319 (701s)
+[robust] direct_archived_g1.0: successor 0.288 | seq 0.493 | word lookup 0.605 | WikiText-val 2.6517 (692s)
+[robust] direct_archived_g2.0: successor 0.396 | seq 0.406 | word lookup 0.595 | WikiText-val 2.7091 (691s)
+[robust] direct_archived_g3.0: cached {'successor': 0.4367, 'word_lookup': 0.565, 'seq': 0.3729, 'wiki_nll': 2.8109}
+[robust] direct_archived_g4.0: successor 0.469 | seq 0.361 | word lookup 0.475 | WikiText-val 2.9510 (752s)
+[robust] refit 1: lambda 1.0, held-out attention 0.77, cosine with archived bilinear form 0.331 (362s)
+[robust] direct_refit1_g3.0: successor 0.414 | seq 0.473 | word lookup 0.555 | WikiText-val 2.7914 (734s)
+[robust] refit 2: lambda 1.0, held-out attention 0.79, cosine with archived bilinear form 0.319 (334s)
+[robust] direct_refit2_g3.0: successor 0.398 | seq 0.490 | word lookup 0.540 | WikiText-val 2.8014 (741s)
+[robust] refit 3: lambda 1.0, held-out attention 0.71, cosine with archived bilinear form 0.324 (340s)
+[robust] direct_refit3_g3.0: successor 0.386 | seq 0.413 | word lookup 0.575 | WikiText-val 2.7980 (733s)
+[robust] refit 4: lambda 1.0, held-out attention 0.73, cosine with archived bilinear form 0.313 (367s)
+[robust] direct_refit4_g3.0: successor 0.416 | seq 0.451 | word lookup 0.560 | WikiText-val 2.8018 (775s)
+[robust] refit 5: lambda 1.0, held-out attention 0.73, cosine with archived bilinear form 0.337 (347s)
+[robust] direct_refit5_g3.0: successor 0.422 | seq 0.484 | word lookup 0.585 | WikiText-val 2.7887 (732s)
+[robust] DONE (13344s)
+== 2026-11-20 11:34:39 exit 0

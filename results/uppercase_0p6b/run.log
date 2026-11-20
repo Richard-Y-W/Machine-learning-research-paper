@@ -1,0 +1,11 @@
+W1120 13:50:54.627000 3872 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  12%|#1        | 36/310 [00:00<00:00, 341.66it/s]Loading weights:  26%|##6       | 81/310 [00:00<00:00, 396.67it/s]Loading weights:  39%|###9      | 121/310 [00:00<00:00, 394.33it/s]Loading weights:  52%|#####1    | 161/310 [00:00<00:00, 383.74it/s]Loading weights:  65%|######4   | 200/310 [00:00<00:00, 362.64it/s]Loading weights:  78%|#######7  | 241/310 [00:00<00:00, 374.91it/s]Loading weights:  92%|#########1| 284/310 [00:00<00:00, 383.73it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 395.82it/s]
+[upper] A0 native plain lookups (letters): lowercase 0.92 uppercase 0.00
+[upper] A1 oracle in plain lookups, K heads, gamma 1.0: uppercase 0.10 lowercase 0.10
+[upper] A1 oracle in plain lookups, K heads, gamma 2.0: uppercase 0.12 lowercase 0.00
+[upper] A1 oracle in plain lookups, K heads, gamma 3.0: uppercase 0.23 lowercase 0.00
+[upper] A1 oracle in plain lookups, others heads, gamma 1.0: uppercase 0.00 lowercase 0.96
+[upper] A1 oracle in plain lookups, others heads, gamma 2.0: uppercase 0.00 lowercase 0.80
+[upper] A1 oracle in plain lookups, others heads, gamma 3.0: uppercase 0.00 lowercase 0.77
+[upper] gate failed (best oracle uppercase 0.23 < 0.30): the head group does not uppercase a routed lookup value without a task cue. STOP.
+[upper] DONE (580s)

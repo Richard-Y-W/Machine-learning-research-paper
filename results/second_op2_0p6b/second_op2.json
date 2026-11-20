@@ -1,0 +1,1671 @@
+{
+ "model": "Qwen/Qwen3-0.6B-Base",
+ "capitalise": {
+  "pairs": 15,
+  "prompts": 45,
+  "native_acc": 1.0,
+  "verified": [
+   {
+    "layer": 22,
+    "head": 7,
+    "attribution": 0.8088204264640808,
+    "d_margin": -0.8275256156921387
+   },
+   {
+    "layer": 23,
+    "head": 6,
+    "attribution": 0.6613959670066833,
+    "d_margin": -0.6901288032531738
+   },
+   {
+    "layer": 18,
+    "head": 3,
+    "attribution": 0.40960103273391724,
+    "d_margin": -0.4491405487060547
+   },
+   {
+    "layer": 17,
+    "head": 13,
+    "attribution": 0.3974553346633911,
+    "d_margin": -0.43500852584838867
+   },
+   {
+    "layer": 20,
+    "head": 15,
+    "attribution": 0.3493792414665222,
+    "d_margin": -0.3924598693847656
+   },
+   {
+    "layer": 19,
+    "head": 0,
+    "attribution": 0.22877897322177887,
+    "d_margin": -0.3524456024169922
+   },
+   {
+    "layer": 19,
+    "head": 2,
+    "attribution": 0.3494345247745514,
+    "d_margin": -0.32809019088745117
+   },
+   {
+    "layer": 18,
+    "head": 1,
+    "attribution": 0.2584148943424225,
+    "d_margin": -0.3023643493652344
+   },
+   {
+    "layer": 24,
+    "head": 5,
+    "attribution": 0.2866073548793793,
+    "d_margin": -0.29126739501953125
+   },
+   {
+    "layer": 17,
+    "head": 3,
+    "attribution": 0.1597522348165512,
+    "d_margin": -0.2621150016784668
+   },
+   {
+    "layer": 21,
+    "head": 0,
+    "attribution": 0.1255737692117691,
+    "d_margin": -0.18060922622680664
+   },
+   {
+    "layer": 22,
+    "head": 9,
+    "attribution": 0.14667920768260956,
+    "d_margin": -0.17854928970336914
+   },
+   {
+    "layer": 23,
+    "head": 15,
+    "attribution": 0.1508796215057373,
+    "d_margin": -0.14539480209350586
+   },
+   {
+    "layer": 25,
+    "head": 4,
+    "attribution": 0.14865700900554657,
+    "d_margin": -0.1410222053527832
+   },
+   {
+    "layer": 19,
+    "head": 12,
+    "attribution": 0.13317961990833282,
+    "d_margin": -0.13080835342407227
+   },
+   {
+    "layer": 22,
+    "head": 8,
+    "attribution": 0.12475898861885071,
+    "d_margin": -0.12506628036499023
+   }
+  ],
+  "oracle": {
+   "L22h7": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L23h6": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L18h3": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L17h13": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L20h15": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L19h0": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9777777777777777
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top16": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9111111111111111
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   }
+  },
+  "best_value_group": "L22h7",
+  "verdict": "no head group of <= 8 carries the operation through its value path"
+ },
+ "plural": {
+  "pairs": 20,
+  "prompts": 60,
+  "native_acc": 1.0,
+  "verified": [
+   {
+    "layer": 24,
+    "head": 12,
+    "attribution": 2.0609774589538574,
+    "d_margin": -2.5657052993774414
+   },
+   {
+    "layer": 18,
+    "head": 4,
+    "attribution": 0.9421656131744385,
+    "d_margin": -1.4809131622314453
+   },
+   {
+    "layer": 19,
+    "head": 13,
+    "attribution": 0.6746453642845154,
+    "d_margin": -0.6995267868041992
+   },
+   {
+    "layer": 13,
+    "head": 0,
+    "attribution": 0.3695465326309204,
+    "d_margin": -0.5122852325439453
+   },
+   {
+    "layer": 18,
+    "head": 2,
+    "attribution": 0.4776120185852051,
+    "d_margin": -0.5061044692993164
+   },
+   {
+    "layer": 8,
+    "head": 14,
+    "attribution": 0.32004013657569885,
+    "d_margin": -0.47899484634399414
+   },
+   {
+    "layer": 23,
+    "head": 6,
+    "attribution": 0.3818904757499695,
+    "d_margin": -0.4784736633300781
+   },
+   {
+    "layer": 18,
+    "head": 5,
+    "attribution": 0.2874544560909271,
+    "d_margin": -0.44684839248657227
+   },
+   {
+    "layer": 19,
+    "head": 2,
+    "attribution": 0.41426417231559753,
+    "d_margin": -0.42530155181884766
+   },
+   {
+    "layer": 16,
+    "head": 11,
+    "attribution": 0.3570150136947632,
+    "d_margin": -0.4025259017944336
+   },
+   {
+    "layer": 20,
+    "head": 15,
+    "attribution": 0.35174813866615295,
+    "d_margin": -0.39186716079711914
+   },
+   {
+    "layer": 12,
+    "head": 0,
+    "attribution": 0.3563489317893982,
+    "d_margin": -0.38704442977905273
+   },
+   {
+    "layer": 6,
+    "head": 10,
+    "attribution": 0.3175120949745178,
+    "d_margin": -0.3717522621154785
+   },
+   {
+    "layer": 17,
+    "head": 13,
+    "attribution": 0.26370933651924133,
+    "d_margin": -0.3619709014892578
+   },
+   {
+    "layer": 16,
+    "head": 14,
+    "attribution": 0.24648898839950562,
+    "d_margin": -0.3577275276184082
+   },
+   {
+    "layer": 18,
+    "head": 3,
+    "attribution": 0.24679049849510193,
+    "d_margin": -0.30701780319213867
+   }
+  ],
+  "oracle": {
+   "L24h12": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L18h4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L19h13": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L13h0": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L18h2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L8h14": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top16": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9166666666666666
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   }
+  },
+  "best_value_group": "L24h12",
+  "verdict": "no head group of <= 8 carries the operation through its value path"
+ },
+ "past": {
+  "pairs": 20,
+  "prompts": 60,
+  "native_acc": 1.0,
+  "verified": [
+   {
+    "layer": 19,
+    "head": 6,
+    "attribution": 0.5440187454223633,
+    "d_margin": -0.7183070182800293
+   },
+   {
+    "layer": 18,
+    "head": 5,
+    "attribution": 0.386245995759964,
+    "d_margin": -0.5434203147888184
+   },
+   {
+    "layer": 18,
+    "head": 4,
+    "attribution": 0.25612300634384155,
+    "d_margin": -0.4740943908691406
+   },
+   {
+    "layer": 16,
+    "head": 11,
+    "attribution": 0.39977219700813293,
+    "d_margin": -0.44904470443725586
+   },
+   {
+    "layer": 13,
+    "head": 0,
+    "attribution": 0.3174460530281067,
+    "d_margin": -0.4082803726196289
+   },
+   {
+    "layer": 6,
+    "head": 10,
+    "attribution": 0.20154400169849396,
+    "d_margin": -0.3714566230773926
+   },
+   {
+    "layer": 14,
+    "head": 12,
+    "attribution": 0.2494712769985199,
+    "d_margin": -0.36820459365844727
+   },
+   {
+    "layer": 20,
+    "head": 15,
+    "attribution": 0.283918559551239,
+    "d_margin": -0.3280906677246094
+   },
+   {
+    "layer": 17,
+    "head": 2,
+    "attribution": 0.2295096218585968,
+    "d_margin": -0.31656646728515625
+   },
+   {
+    "layer": 21,
+    "head": 15,
+    "attribution": 0.23866085708141327,
+    "d_margin": -0.296689510345459
+   },
+   {
+    "layer": 19,
+    "head": 2,
+    "attribution": 0.25785720348358154,
+    "d_margin": -0.2778491973876953
+   },
+   {
+    "layer": 16,
+    "head": 14,
+    "attribution": 0.2075372338294983,
+    "d_margin": -0.27440452575683594
+   },
+   {
+    "layer": 18,
+    "head": 2,
+    "attribution": 0.20524582266807556,
+    "d_margin": -0.24912738800048828
+   },
+   {
+    "layer": 25,
+    "head": 0,
+    "attribution": 0.19504329562187195,
+    "d_margin": -0.2238450050354004
+   },
+   {
+    "layer": 24,
+    "head": 6,
+    "attribution": 0.19552235305309296,
+    "d_margin": -0.20900917053222656
+   },
+   {
+    "layer": 22,
+    "head": 9,
+    "attribution": 0.20071958005428314,
+    "d_margin": -0.17144346237182617
+   }
+  ],
+  "oracle": {
+   "L19h6": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L18h5": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L18h4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L16h11": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L13h0": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L6h10": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top16": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9833333333333333
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   }
+  },
+  "best_value_group": "L19h6",
+  "verdict": "no head group of <= 8 carries the operation through its value path"
+ },
+ "antonym": {
+  "pairs": 16,
+  "prompts": 48,
+  "native_acc": 0.8958333134651184,
+  "verified": [
+   {
+    "layer": 22,
+    "head": 8,
+    "attribution": 2.2885358333587646,
+    "d_margin": -2.1193623542785645
+   },
+   {
+    "layer": 17,
+    "head": 0,
+    "attribution": 1.101711630821228,
+    "d_margin": -2.0907721519470215
+   },
+   {
+    "layer": 19,
+    "head": 2,
+    "attribution": 0.8244311809539795,
+    "d_margin": -1.304121494293213
+   },
+   {
+    "layer": 25,
+    "head": 15,
+    "attribution": 0.8565047383308411,
+    "d_margin": -0.8270454406738281
+   },
+   {
+    "layer": 27,
+    "head": 15,
+    "attribution": 0.5770012736320496,
+    "d_margin": -0.6221809387207031
+   },
+   {
+    "layer": 23,
+    "head": 15,
+    "attribution": 0.5458835959434509,
+    "d_margin": -0.6214427947998047
+   },
+   {
+    "layer": 17,
+    "head": 6,
+    "attribution": 0.3441956043243408,
+    "d_margin": -0.5347552299499512
+   },
+   {
+    "layer": 21,
+    "head": 0,
+    "attribution": 0.43664026260375977,
+    "d_margin": -0.530428409576416
+   },
+   {
+    "layer": 19,
+    "head": 6,
+    "attribution": 0.28869131207466125,
+    "d_margin": -0.4866642951965332
+   },
+   {
+    "layer": 9,
+    "head": 7,
+    "attribution": 0.3124704360961914,
+    "d_margin": -0.34192848205566406
+   },
+   {
+    "layer": 18,
+    "head": 2,
+    "attribution": 0.3099000155925751,
+    "d_margin": -0.33597803115844727
+   },
+   {
+    "layer": 14,
+    "head": 13,
+    "attribution": 0.2779715359210968,
+    "d_margin": -0.32175207138061523
+   },
+   {
+    "layer": 16,
+    "head": 8,
+    "attribution": 0.24033188819885254,
+    "d_margin": -0.3047142028808594
+   },
+   {
+    "layer": 26,
+    "head": 7,
+    "attribution": 0.24973809719085693,
+    "d_margin": -0.25894927978515625
+   },
+   {
+    "layer": 23,
+    "head": 10,
+    "attribution": 0.2438380867242813,
+    "d_margin": -0.2508373260498047
+   },
+   {
+    "layer": 24,
+    "head": 9,
+    "attribution": 0.2361011505126953,
+    "d_margin": -0.2493758201599121
+   }
+  ],
+  "oracle": {
+   "L22h8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.8958333333333334
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.8958333333333334
+    }
+   },
+   "L17h0": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9375
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9166666666666666
+    }
+   },
+   "L19h2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9375
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.8958333333333334
+    }
+   },
+   "L25h15": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9166666666666666
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.8958333333333334
+    }
+   },
+   "L27h15": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.8958333333333334
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.8958333333333334
+    }
+   },
+   "L23h15": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.8958333333333334
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9166666666666666
+    }
+   },
+   "top2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.8958333333333334
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.8333333333333334
+    }
+   },
+   "top4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.8333333333333334
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.6875
+    }
+   },
+   "top8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.5625
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.5833333333333334
+    }
+   },
+   "top16": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.5416666666666666
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.4791666666666667
+    }
+   }
+  },
+  "best_value_group": "L22h8",
+  "verdict": "no head group of <= 8 carries the operation through its value path"
+ },
+ "upper_letter": {
+  "pairs": 26,
+  "prompts": 78,
+  "native_acc": 1.0,
+  "verified": [
+   {
+    "layer": 24,
+    "head": 5,
+    "attribution": 1.5259838104248047,
+    "d_margin": -1.6068010330200195
+   },
+   {
+    "layer": 23,
+    "head": 6,
+    "attribution": 1.1994889974594116,
+    "d_margin": -1.2943000793457031
+   },
+   {
+    "layer": 19,
+    "head": 8,
+    "attribution": 0.9501157999038696,
+    "d_margin": -1.0448946952819824
+   },
+   {
+    "layer": 17,
+    "head": 6,
+    "attribution": 0.5388237833976746,
+    "d_margin": -0.8056111335754395
+   },
+   {
+    "layer": 25,
+    "head": 4,
+    "attribution": 0.6881534457206726,
+    "d_margin": -0.6658234596252441
+   },
+   {
+    "layer": 22,
+    "head": 9,
+    "attribution": 0.3324209451675415,
+    "d_margin": -0.6385102272033691
+   },
+   {
+    "layer": 18,
+    "head": 5,
+    "attribution": 0.4777897596359253,
+    "d_margin": -0.6146645545959473
+   },
+   {
+    "layer": 22,
+    "head": 1,
+    "attribution": 0.5874111652374268,
+    "d_margin": -0.6079254150390625
+   },
+   {
+    "layer": 18,
+    "head": 13,
+    "attribution": 0.5065187215805054,
+    "d_margin": -0.5698070526123047
+   },
+   {
+    "layer": 22,
+    "head": 7,
+    "attribution": 0.37460675835609436,
+    "d_margin": -0.41149425506591797
+   },
+   {
+    "layer": 19,
+    "head": 0,
+    "attribution": 0.26922065019607544,
+    "d_margin": -0.39683055877685547
+   },
+   {
+    "layer": 22,
+    "head": 0,
+    "attribution": 0.33057621121406555,
+    "d_margin": -0.3510169982910156
+   },
+   {
+    "layer": 22,
+    "head": 8,
+    "attribution": 0.31861746311187744,
+    "d_margin": -0.3430767059326172
+   },
+   {
+    "layer": 21,
+    "head": 6,
+    "attribution": 0.32373476028442383,
+    "d_margin": -0.32951927185058594
+   },
+   {
+    "layer": 19,
+    "head": 2,
+    "attribution": 0.27666783332824707,
+    "d_margin": -0.3167695999145508
+   },
+   {
+    "layer": 15,
+    "head": 3,
+    "attribution": 0.21731022000312805,
+    "d_margin": -0.24732303619384766
+   }
+  ],
+  "oracle": {
+   "L24h5": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L23h6": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L19h8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L17h6": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L25h4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L22h9": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.4230769230769231,
+     "own_op": 0.5769230769230769
+    }
+   },
+   "top2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top8": {
+    "value": {
+     "donor_op": 0.6794871794871795,
+     "own_op": 0.32051282051282054
+    },
+    "output": {
+     "donor_op": 0.9743589743589743,
+     "own_op": 0.02564102564102564
+    }
+   },
+   "top16": {
+    "value": {
+     "donor_op": 0.02564102564102564,
+     "own_op": 0.5512820512820513
+    },
+    "output": {
+     "donor_op": 0.14102564102564102,
+     "own_op": 0.8589743589743589
+    }
+   }
+  },
+  "best_value_group": "top8",
+  "verdict": "routable candidate"
+ },
+ "card_to_ord": {
+  "pairs": 10,
+  "verdict": "too few single-token pairs"
+ },
+ "word_to_digit": {
+  "pairs": 0,
+  "verdict": "too few single-token pairs"
+ },
+ "digit_to_word": {
+  "pairs": 0,
+  "verdict": "too few single-token pairs"
+ },
+ "male_female": {
+  "pairs": 20,
+  "prompts": 60,
+  "native_acc": 0.9833333492279053,
+  "verified": [
+   {
+    "layer": 23,
+    "head": 11,
+    "attribution": 1.3710447549819946,
+    "d_margin": -1.5570437908172607
+   },
+   {
+    "layer": 22,
+    "head": 8,
+    "attribution": 1.1033508777618408,
+    "d_margin": -0.9001820087432861
+   },
+   {
+    "layer": 19,
+    "head": 8,
+    "attribution": 0.6537891626358032,
+    "d_margin": -0.8542215824127197
+   },
+   {
+    "layer": 17,
+    "head": 1,
+    "attribution": 0.5910623073577881,
+    "d_margin": -0.8098957538604736
+   },
+   {
+    "layer": 17,
+    "head": 6,
+    "attribution": 0.4454059898853302,
+    "d_margin": -0.701728105545044
+   },
+   {
+    "layer": 15,
+    "head": 6,
+    "attribution": 0.47322240471839905,
+    "d_margin": -0.6851608753204346
+   },
+   {
+    "layer": 18,
+    "head": 5,
+    "attribution": 0.5099506378173828,
+    "d_margin": -0.6431295871734619
+   },
+   {
+    "layer": 22,
+    "head": 5,
+    "attribution": 0.5761833190917969,
+    "d_margin": -0.614687442779541
+   },
+   {
+    "layer": 18,
+    "head": 6,
+    "attribution": 0.5605489015579224,
+    "d_margin": -0.574871301651001
+   },
+   {
+    "layer": 17,
+    "head": 3,
+    "attribution": 0.39511868357658386,
+    "d_margin": -0.5658135414123535
+   },
+   {
+    "layer": 16,
+    "head": 9,
+    "attribution": 0.4046277403831482,
+    "d_margin": -0.490276575088501
+   },
+   {
+    "layer": 23,
+    "head": 10,
+    "attribution": 0.45022469758987427,
+    "d_margin": -0.4535195827484131
+   },
+   {
+    "layer": 14,
+    "head": 13,
+    "attribution": 0.4098297357559204,
+    "d_margin": -0.44510531425476074
+   },
+   {
+    "layer": 18,
+    "head": 1,
+    "attribution": 0.3073641359806061,
+    "d_margin": -0.3498847484588623
+   },
+   {
+    "layer": 26,
+    "head": 7,
+    "attribution": 0.3088630139827728,
+    "d_margin": -0.30214905738830566
+   },
+   {
+    "layer": 25,
+    "head": 4,
+    "attribution": 0.2992534637451172,
+    "d_margin": -0.28601932525634766
+   }
+  ],
+  "oracle": {
+   "L23h11": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.8166666666666667
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.85
+    }
+   },
+   "L22h8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9833333333333333
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.85
+    }
+   },
+   "L19h8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9833333333333333
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9666666666666667
+    }
+   },
+   "L17h1": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9166666666666666
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9833333333333333
+    }
+   },
+   "L17h6": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9833333333333333
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9833333333333333
+    }
+   },
+   "L15h6": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9166666666666666
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9833333333333333
+    }
+   },
+   "top2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.75
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.7166666666666667
+    }
+   },
+   "top4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.6166666666666667
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.6833333333333333
+    }
+   },
+   "top8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.38333333333333336
+    },
+    "output": {
+     "donor_op": 0.016666666666666666,
+     "own_op": 0.6333333333333333
+    }
+   },
+   "top16": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.13333333333333333
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.2833333333333333
+    }
+   }
+  },
+  "best_value_group": "L23h11",
+  "verdict": "no head group of <= 8 carries the operation through its value path"
+ },
+ "country_capital": {
+  "pairs": 20,
+  "prompts": 60,
+  "native_acc": 1.0,
+  "verified": [
+   {
+    "layer": 19,
+    "head": 6,
+    "attribution": 0.5033989548683167,
+    "d_margin": -0.7564182281494141
+   },
+   {
+    "layer": 22,
+    "head": 5,
+    "attribution": 0.45380836725234985,
+    "d_margin": -0.6117191314697266
+   },
+   {
+    "layer": 19,
+    "head": 2,
+    "attribution": 0.44783878326416016,
+    "d_margin": -0.48891448974609375
+   },
+   {
+    "layer": 26,
+    "head": 7,
+    "attribution": 0.49627113342285156,
+    "d_margin": -0.485015869140625
+   },
+   {
+    "layer": 26,
+    "head": 1,
+    "attribution": 0.44667693972587585,
+    "d_margin": -0.47122764587402344
+   },
+   {
+    "layer": 17,
+    "head": 3,
+    "attribution": 0.3782007098197937,
+    "d_margin": -0.4642353057861328
+   },
+   {
+    "layer": 19,
+    "head": 9,
+    "attribution": 0.26949581503868103,
+    "d_margin": -0.41155147552490234
+   },
+   {
+    "layer": 17,
+    "head": 6,
+    "attribution": 0.2445475310087204,
+    "d_margin": -0.36450958251953125
+   },
+   {
+    "layer": 22,
+    "head": 8,
+    "attribution": 0.3446269631385803,
+    "d_margin": -0.3517732620239258
+   },
+   {
+    "layer": 23,
+    "head": 10,
+    "attribution": 0.31847819685935974,
+    "d_margin": -0.32474708557128906
+   },
+   {
+    "layer": 27,
+    "head": 15,
+    "attribution": 0.17605875432491302,
+    "d_margin": -0.19291114807128906
+   },
+   {
+    "layer": 17,
+    "head": 14,
+    "attribution": 0.14941221475601196,
+    "d_margin": -0.177215576171875
+   },
+   {
+    "layer": 19,
+    "head": 12,
+    "attribution": 0.1555444896221161,
+    "d_margin": -0.17458724975585938
+   },
+   {
+    "layer": 18,
+    "head": 4,
+    "attribution": 0.13755638897418976,
+    "d_margin": -0.17155742645263672
+   },
+   {
+    "layer": 22,
+    "head": 7,
+    "attribution": 0.1583666354417801,
+    "d_margin": -0.1587352752685547
+   },
+   {
+    "layer": 18,
+    "head": 1,
+    "attribution": 0.13709354400634766,
+    "d_margin": -0.15370941162109375
+   }
+  ],
+  "oracle": {
+   "L19h6": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L22h5": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L19h2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L26h7": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L26h1": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L17h3": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9833333333333333
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top16": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   }
+  },
+  "best_value_group": "L19h6",
+  "verdict": "no head group of <= 8 carries the operation through its value path"
+ },
+ "english_french": {
+  "pairs": 18,
+  "prompts": 54,
+  "native_acc": 1.0,
+  "verified": [
+   {
+    "layer": 23,
+    "head": 10,
+    "attribution": 0.4873880445957184,
+    "d_margin": -0.4845571517944336
+   },
+   {
+    "layer": 19,
+    "head": 13,
+    "attribution": 0.38633114099502563,
+    "d_margin": -0.46491146087646484
+   },
+   {
+    "layer": 19,
+    "head": 6,
+    "attribution": 0.29648634791374207,
+    "d_margin": -0.4568500518798828
+   },
+   {
+    "layer": 15,
+    "head": 6,
+    "attribution": 0.12946324050426483,
+    "d_margin": -0.3541994094848633
+   },
+   {
+    "layer": 19,
+    "head": 2,
+    "attribution": 0.28707990050315857,
+    "d_margin": -0.32315731048583984
+   },
+   {
+    "layer": 22,
+    "head": 15,
+    "attribution": 0.15722347795963287,
+    "d_margin": -0.25740909576416016
+   },
+   {
+    "layer": 17,
+    "head": 2,
+    "attribution": 0.09545019268989563,
+    "d_margin": -0.24315357208251953
+   },
+   {
+    "layer": 27,
+    "head": 14,
+    "attribution": 0.1944214254617691,
+    "d_margin": -0.22978782653808594
+   },
+   {
+    "layer": 16,
+    "head": 13,
+    "attribution": 0.13163433969020844,
+    "d_margin": -0.1940908432006836
+   },
+   {
+    "layer": 22,
+    "head": 10,
+    "attribution": 0.12196250259876251,
+    "d_margin": -0.1559438705444336
+   },
+   {
+    "layer": 26,
+    "head": 1,
+    "attribution": 0.15323679149150848,
+    "d_margin": -0.1543264389038086
+   },
+   {
+    "layer": 26,
+    "head": 7,
+    "attribution": 0.15723668038845062,
+    "d_margin": -0.15425777435302734
+   },
+   {
+    "layer": 17,
+    "head": 14,
+    "attribution": 0.12334436178207397,
+    "d_margin": -0.1484842300415039
+   },
+   {
+    "layer": 22,
+    "head": 7,
+    "attribution": 0.15934908390045166,
+    "d_margin": -0.14757537841796875
+   },
+   {
+    "layer": 18,
+    "head": 15,
+    "attribution": 0.1107599139213562,
+    "d_margin": -0.12899112701416016
+   },
+   {
+    "layer": 12,
+    "head": 6,
+    "attribution": 0.09214793890714645,
+    "d_margin": -0.09628486633300781
+   }
+  ],
+  "oracle": {
+   "L23h10": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9814814814814815
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L19h13": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9444444444444444
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9629629629629629
+    }
+   },
+   "L19h6": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9814814814814815
+    }
+   },
+   "L15h6": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9814814814814815
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L19h2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "L22h15": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9629629629629629
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top2": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9259259259259259
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top4": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.9259259259259259
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9814814814814815
+    }
+   },
+   "top8": {
+    "value": {
+     "donor_op": 0.0,
+     "own_op": 0.7592592592592593
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 1.0
+    }
+   },
+   "top16": {
+    "value": {
+     "donor_op": 0.2037037037037037,
+     "own_op": 0.2962962962962963
+    },
+    "output": {
+     "donor_op": 0.0,
+     "own_op": 0.9444444444444444
+    }
+   }
+  },
+  "best_value_group": "L23h10",
+  "verdict": "no head group of <= 8 carries the operation through its value path"
+ }
+}

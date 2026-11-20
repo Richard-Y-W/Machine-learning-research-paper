@@ -1,0 +1,228 @@
+{
+ "model": "Qwen/Qwen3-0.6B-Base",
+ "n_per_type": 120,
+ "instruction": "Each line pairs a word with an item. For the last word, do not repeat its item: answer with the item that comes right after it in its usual order (after c comes d, after Monday comes Tuesday, after three comes four).\n\n",
+ "example": "Each line pairs a word with an item. For the last word, do not repeat its item: answer with the item that comes right after it in its usual order (after c comes d, after Monday comes Tuesday, after three comes four).\n\norange -> March\npeach -> January\nstatue -> June\napple -> September\norange -> April\n\ngarlic -> February\ntrumpet -> July\nbanana -> May\ntrumpet -> August\n\npeach -> November\ngrape -> April\nonion -> July\ngrape -> May\n\ncamera -> June\ncanoe -> April\nwagon -> January\npeach -> November\nblanket -> September\nwagon ->",
+ "results": {
+  "unedited|plain": {
+   "letters": {
+    "successor": 0.008333333333333333,
+    "lookup": 0.9333333333333333
+   },
+   "numwords": {
+    "successor": 0.008333333333333333,
+    "lookup": 0.9083333333333333
+   },
+   "days": {
+    "successor": 0.15,
+    "lookup": 0.38333333333333336
+   },
+   "months": {
+    "successor": 0.0,
+    "lookup": 0.85
+   },
+   "ordinals": {
+    "successor": 0.041666666666666664,
+    "lookup": 0.7583333333333333
+   }
+  },
+  "unedited|instruct": {
+   "letters": {
+    "successor": 0.09166666666666666,
+    "lookup": 0.825
+   },
+   "numwords": {
+    "successor": 0.058333333333333334,
+    "lookup": 0.8083333333333333
+   },
+   "days": {
+    "successor": 0.06666666666666667,
+    "lookup": 0.4083333333333333
+   },
+   "months": {
+    "successor": 0.0,
+    "lookup": 0.55
+   },
+   "ordinals": {
+    "successor": 0.11666666666666667,
+    "lookup": 0.7083333333333334
+   }
+  },
+  "unedited|fewshot_other": {
+   "letters": {
+    "successor": 0.21666666666666667,
+    "lookup": 0.075
+   },
+   "numwords": {
+    "successor": 0.175,
+    "lookup": 0.008333333333333333
+   },
+   "days": {
+    "successor": 0.4083333333333333,
+    "lookup": 0.016666666666666666
+   },
+   "months": {
+    "successor": 0.19166666666666668,
+    "lookup": 0.05
+   },
+   "ordinals": {
+    "successor": 0.2916666666666667,
+    "lookup": 0.0
+   }
+  },
+  "unedited|fewshot_same": {
+   "letters": {
+    "successor": 0.2,
+    "lookup": 0.016666666666666666
+   },
+   "numwords": {
+    "successor": 0.225,
+    "lookup": 0.03333333333333333
+   },
+   "days": {
+    "successor": 0.2833333333333333,
+    "lookup": 0.0
+   },
+   "months": {
+    "successor": 0.175,
+    "lookup": 0.016666666666666666
+   },
+   "ordinals": {
+    "successor": 0.3416666666666667,
+    "lookup": 0.016666666666666666
+   }
+  },
+  "unedited|instruct_same": {
+   "letters": {
+    "successor": 0.3333333333333333,
+    "lookup": 0.008333333333333333
+   },
+   "numwords": {
+    "successor": 0.25833333333333336,
+    "lookup": 0.041666666666666664
+   },
+   "days": {
+    "successor": 0.25,
+    "lookup": 0.0
+   },
+   "months": {
+    "successor": 0.18333333333333332,
+    "lookup": 0.041666666666666664
+   },
+   "ordinals": {
+    "successor": 0.39166666666666666,
+    "lookup": 0.0
+   }
+  },
+  "direct_edit_g3|plain": {
+   "letters": {
+    "successor": 0.625,
+    "lookup": 0.175
+   },
+   "numwords": {
+    "successor": 0.575,
+    "lookup": 0.2
+   },
+   "days": {
+    "successor": 0.725,
+    "lookup": 0.0
+   },
+   "months": {
+    "successor": 0.675,
+    "lookup": 0.09166666666666666
+   },
+   "ordinals": {
+    "successor": 0.775,
+    "lookup": 0.058333333333333334
+   }
+  },
+  "direct_edit_g3|instruct": {
+   "letters": {
+    "successor": 0.6666666666666666,
+    "lookup": 0.15833333333333333
+   },
+   "numwords": {
+    "successor": 0.575,
+    "lookup": 0.1
+   },
+   "days": {
+    "successor": 0.4666666666666667,
+    "lookup": 0.06666666666666667
+   },
+   "months": {
+    "successor": 0.6083333333333333,
+    "lookup": 0.11666666666666667
+   },
+   "ordinals": {
+    "successor": 0.7,
+    "lookup": 0.025
+   }
+  },
+  "direct_edit_g3|fewshot_other": {
+   "letters": {
+    "successor": 0.4,
+    "lookup": 0.03333333333333333
+   },
+   "numwords": {
+    "successor": 0.35,
+    "lookup": 0.025
+   },
+   "days": {
+    "successor": 0.475,
+    "lookup": 0.0
+   },
+   "months": {
+    "successor": 0.4083333333333333,
+    "lookup": 0.008333333333333333
+   },
+   "ordinals": {
+    "successor": 0.4083333333333333,
+    "lookup": 0.0
+   }
+  },
+  "direct_edit_g3|fewshot_same": {
+   "letters": {
+    "successor": 0.26666666666666666,
+    "lookup": 0.0
+   },
+   "numwords": {
+    "successor": 0.3416666666666667,
+    "lookup": 0.016666666666666666
+   },
+   "days": {
+    "successor": 0.175,
+    "lookup": 0.125
+   },
+   "months": {
+    "successor": 0.18333333333333332,
+    "lookup": 0.041666666666666664
+   },
+   "ordinals": {
+    "successor": 0.275,
+    "lookup": 0.05
+   }
+  },
+  "direct_edit_g3|instruct_same": {
+   "letters": {
+    "successor": 0.275,
+    "lookup": 0.0
+   },
+   "numwords": {
+    "successor": 0.2833333333333333,
+    "lookup": 0.008333333333333333
+   },
+   "days": {
+    "successor": 0.15833333333333333,
+    "lookup": 0.075
+   },
+   "months": {
+    "successor": 0.25833333333333336,
+    "lookup": 0.025
+   },
+   "ordinals": {
+    "successor": 0.3,
+    "lookup": 0.03333333333333333
+   }
+  }
+ }
+}

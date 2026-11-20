@@ -1,0 +1,38 @@
+== 2026-11-20 07:07:22 start learning 0.6B
+W1120 07:07:29.604000 44512 torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  10%|#         | 31/310 [00:00<00:00, 293.21it/s]Loading weights:  20%|#9        | 61/310 [00:00<00:00, 290.99it/s]Loading weights:  29%|##9       | 91/310 [00:00<00:00, 280.37it/s]Loading weights:  39%|###8      | 120/310 [00:00<00:00, 276.64it/s]Loading weights:  48%|####8     | 150/310 [00:00<00:00, 281.17it/s]Loading weights:  58%|#####8    | 181/310 [00:00<00:00, 283.26it/s]Loading weights:  71%|#######1  | 221/310 [00:00<00:00, 316.16it/s]Loading weights:  85%|########5 | 264/310 [00:00<00:00, 347.85it/s]Loading weights: 100%|##########| 310/310 [00:00<00:00, 330.73it/s]
+Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'wikitext-103-raw-v1' at C:\Users\Richard Wang\.cache\huggingface\datasets\Salesforce___wikitext\wikitext-103-raw-v1\0.0.0\b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Fri Nov 13 00:10:05 2026).
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (262210 > 131072). Running this sequence through the model will result in indexing errors
+[lind] Q_gradient_routing_g3: training 262144 parameters
+C:\Users\Richard Wang\Machine-learning-research-paper\experiments\compose\learning_ind.py:69: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  hist.append((step, round(float(loss), 4))); print(f"[lind]   step {step}: loss {float(loss):.4f}", flush=True)
+[lind]   step 0: loss 6.1393
+[lind]   step 50: loss 0.4113
+[lind]   step 100: loss 0.0678
+[lind]   step 150: loss 0.0503
+[lind]   step 200: loss 0.0719
+[lind]   step 250: loss 0.0066
+[lind]   step 299: loss 0.0013
+[lind] Q_gradient_routing_g3: successor 0.656 | seq 0.617 | word lookup 0.520 | WikiText-val 3.1854
+[lind] Fm_same_params_composed: training 393216 parameters
+[lind]   step 0: loss 2.6262
+[lind]   step 50: loss 0.0226
+[lind]   step 100: loss 0.0181
+[lind]   step 150: loss 0.0058
+[lind]   step 200: loss 0.0076
+[lind]   step 250: loss 0.0898
+[lind]   step 299: loss 0.0028
+[lind] Fm_same_params_composed: successor 0.781 | seq 0.639 | word lookup 0.660 | WikiText-val 3.0149
+[lind] F_layers18_24_composed: training 44040192 parameters
+[lind]   step 0: loss 2.5163
+[lind]   step 50: loss 0.0008
+[lind]   step 100: loss 0.0016
+[lind]   step 150: loss 0.0003
+[lind]   step 200: loss 0.0004
+[lind]   step 250: loss 0.0002
+[lind]   step 299: loss 0.0002
+[lind] F_layers18_24_composed: successor 0.974 | seq 0.631 | word lookup 0.850 | WikiText-val 2.9734
+[lind] DONE (2661s)
+== 2026-11-20 07:51:56 exit 0
